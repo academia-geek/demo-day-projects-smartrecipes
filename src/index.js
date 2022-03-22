@@ -5,6 +5,7 @@ import AppRouter from './routers/AppRouter';
 import { store } from './redux/store/store';
 
 
+import './styles/css/index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
