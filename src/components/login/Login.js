@@ -62,11 +62,11 @@ const Login = () => {
 
                 <IconCol>
                     <FcGoogle
-                        className='IconLogin'
+                        className='iconLogin'
                         onClick={handleGoogle}
                     />
                     <ImFacebook2
-                        className='IconLogin'
+                        className='iconLogin'
                         onClick={handleFacebook}
                     />
                 </IconCol>
