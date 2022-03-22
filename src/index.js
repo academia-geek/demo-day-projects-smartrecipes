@@ -15,7 +15,7 @@ import { GoblalStyles } from './styles/styledComponents/goblalStyles';
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
-      <GoblalStyles/>
+      <GoblalStyles />
       <AppRouter />
     </React.StrictMode>
   </Provider>,
