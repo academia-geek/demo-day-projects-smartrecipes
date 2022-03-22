@@ -2,6 +2,7 @@
 # ignore readme
 README.md
 .md
+/ .vscode
 # dependencies
 /node_modules
 /.pnp
