@@ -7,6 +7,7 @@ import { login, loginFacebook, loginGoogle } from '../../redux/action/actionLogi
 import { ButtonLogin, DivLogin, FormLogin, IconCol } from '../../styles/styledComponents/LoginStyled';
 import { FcGoogle } from "react-icons/fc";
 import { ImFacebook2 } from "react-icons/im";
+import { ContainerFondo } from '../../styles/styledComponents/containerFondo';
 
 const Login = () => {
 
@@ -33,7 +34,8 @@ const Login = () => {
     }
 
     return (
-       
+       <>
+        <ContainerFondo/>
         <DivLogin>
              Login :v
             <FormLogin onSubmit={handleLogin}>
@@ -76,6 +78,7 @@ const Login = () => {
             </FormLogin>
 
         </DivLogin>
+        </>
     )
 }
 

@@ -1,14 +1,24 @@
 import React from "react";
-import { ProductoStyled, SeguimientoPreciosStyled } from "../../../../styles/styledComponents/PagPrincipalStyles";
 
-const SeguimientoPrecios = () => {
+import {
+  ProductoStyled,
+  SeguimientoPreciosStyled,
+} from "../../../../styles/styledComponents/PagPrincipalStyles";
+
+const SeguimientoPrecios = ({ data }) => {
   return (
-    
     <SeguimientoPreciosStyled>
-      <ProductoStyled>
-        <img alt="producto1"></img>
-        <p>nombre</p>
-      </ProductoStyled>
+      {data.map((producto, index) => {
+        if (index < 3) {
+          return (
+            <ProductoStyled key={index}>
+              <img alt="producto1" src={producto.img}></img>
+              <p>{producto.name}</p>
+            </ProductoStyled>
+          );
+        }
+        return ''
+      })}
     </SeguimientoPreciosStyled>
   );
 };

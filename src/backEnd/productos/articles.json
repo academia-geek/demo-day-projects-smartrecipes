@@ -7,13 +7,7 @@
     "weight": "600 Gr",
     "price": "$2.650"
   },
-  {
-    "id": 1,
-    "img": "https://static.merqueo.com/images/products/app/58c66395-d7cf-48a2-a21e-0f7013241d2a.jpg",
-    "name": "Tomate Chonto",
-    "weight": "1000 Gr",
-    "price": "$4.300"
-  },
+
   {
     "id": 2,
     "img": "https://static.merqueo.com/images/products/app/4aa9f60f-5f7d-40b9-8cb3-f5f64c574d38.jpg",
@@ -21,13 +15,7 @@
     "weight": "225 Gr",
     "price": "$3.500"
   },
-  {
-    "id": 3,
-    "img": "https://static.merqueo.com/images/products/app/63874609-2822-4bb0-be15-8e0c96b36be0.png",
-    "name": "Tomate Cherry",
-    "weight": "500 Gr",
-    "price": "$5.900"
-  },
+
   {
     "id": 4,
     "img": "https://static.merqueo.com/images/products/app/7b80d169-513e-41ee-825f-19cbe2592c8a.jpg",
