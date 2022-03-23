@@ -7,7 +7,7 @@
   },
   {
     "img": "https://static.merqueo.com/images/products/app/cf270158-03ae-47fe-899f-aba1e6dc99b0.jpg",
-    "name": "Tomate Chonto x Bolsa (4 - 5 Und Aprox) 600 Gr",
+    "name": "Tomate Chonto",
     "weight": "600 Gr",
     "price": "$2.650"
   },
@@ -19,7 +19,7 @@
   },
   {
     "img": "https://static.merqueo.com/images/products/app/6f62f193-36d0-4ce5-aa7b-649a121329e4.jpg",
-    "name": "Tomate Larga vida bolsa (2 a 3 Und)",
+    "name": "Tomate Larga",
     "weight": "500 Gr",
     "price": "$2.800"
   },
@@ -31,31 +31,26 @@
   },
   {
     "img": "https://static.merqueo.com/images/products/app/4aa9f60f-5f7d-40b9-8cb3-f5f64c574d38.jpg",
-    "name": "Tomate Cherry x Domo",
+    "name": "Tomate Cherry",
     "weight": "225 Gr",
     "price": "$3.500"
   },
-  {
-    "img": "/_nuxt/img/2dc028d.svg",
-    "name": "Tomate Cherry Tipo Uva 1 Domo",
-    "weight": "500 Gr",
-    "price": "$7.200"
-  },
+  
   {
     "img": "https://static.merqueo.com/images/products/app/63874609-2822-4bb0-be15-8e0c96b36be0.png",
-    "name": "Tomate Cherry x Domo",
+    "name": "Tomate Cherry",
     "weight": "500 Gr",
     "price": "$5.900"
   },
   {
     "img": "https://static.merqueo.com/images/products/app/7b80d169-513e-41ee-825f-19cbe2592c8a.jpg",
-    "name": "Tomate Cherry Mix 1 Domo",
+    "name": "Tomate Cherry",
     "weight": "500 Gr",
     "price": "$12.900"
   },
   {
     "img": "https://static.merqueo.com/images/products/app/1468bddd-beef-42eb-bd3e-a8428bc0f8f4.jpg",
-    "name": "Cebolla Blanca Pelada x Malla (3-4 Und Aprox) 600 Gr",
+    "name": "Cebolla Blanca",
     "weight": "600 Gr",
     "price": "$3.200"
   },
@@ -67,31 +62,31 @@
   },
   {
     "img": "https://static.merqueo.com/images/products/app/d9ee243c-52a1-4467-9443-04e35556b501.jpg",
-    "name": "Cebolla Larga x Malla 500 Gr",
+    "name": "Cebolla Larga",
     "weight": "500 Gr",
     "price": "$2.400"
   },
   {
     "img": "/_nuxt/img/2dc028d.svg",
-    "name": "Cebolla Puerro (2 a 3 und)",
+    "name": "Cebolla Puerro",
     "weight": "500 Gr",
     "price": "$3.300"
   },
   {
     "img": "https://static.merqueo.com/images/products/app/a1ed15c5-a25d-4014-bfc9-fbf46d991ff0.jpg",
-    "name": "Zanahoria x Paquete (3-4 Und Aprox) 600 Gr 600 Gr",
+    "name": "Zanahoria",
     "weight": "600 Gr",
     "price": "$2.300"
   },
   {
     "img": "https://static.merqueo.com/images/products/app/6e44c48e-5d9b-4807-b510-eb2e148e75d9.jpg",
-    "name": "Zanahorias de Colores x Bandeja",
+    "name": "Zanahorias de Colores",
     "weight": "200 Gr",
     "price": "$7.900"
   },
   {
     "img": "https://static.merqueo.com/images/products/app/7e0f11c8-43a3-4d05-9659-be7b206c15cf.jpg",
-    "name": "Repollo Blanco (1 Und)",
+    "name": "Repollo Blanco",
     "weight": "450 Gr",
     "price": "$4.200"
   },
@@ -103,13 +98,13 @@
   },
   {
     "img": "https://static.merqueo.com/images/products/app/e1346bec-712f-4bd9-b941-dfc5226c5c87.jpg",
-    "name": "Lechuga Batavia x Unidad",
+    "name": "Lechuga Batavia",
     "weight": "700 Gr",
     "price": "$3.100"
   },
   {
     "img": "/_nuxt/img/2dc028d.svg",
-    "name": "Lechuga Crespa x Unidad 180 Gr",
+    "name": "Lechuga Crespa",
     "weight": "180 Gr",
     "price": "$1.800"
   },
@@ -121,13 +116,13 @@
   },
   {
     "img": "https://static.merqueo.com/images/products/app/7f5097a0-da40-43d5-9abd-219e917d31a9.jpg",
-    "name": "Cogollos (2 a 3 Und)",
+    "name": "Cogollos",
     "weight": "200 Gr",
     "price": "$3.800"
   },
   {
     "img": "https://static.merqueo.com/images/products/app/97a4336a-f0ac-4830-85c3-ca1125d861cc.jpg",
-    "name": "Rugula x Bandeja",
+    "name": "Rugula",
     "weight": "150 Gr",
     "price": "$3.250"
   },
@@ -139,16 +134,11 @@
   },
   {
     "img": "https://static.merqueo.com/images/products/app/39311b91-ffd8-454d-9ee8-8f19dd56d2a3.jpg",
-    "name": "Espinaca x Paquete",
+    "name": "Espinaca",
     "weight": "300 Gr",
     "price": "$3.900"
   },
-  {
-    "img": "/_nuxt/img/2dc028d.svg",
-    "name": "Espinaca Hojas",
-    "weight": "200 Gr",
-    "price": "$3.500"
-  },
+  
   {
     "img": "https://static.merqueo.com/images/products/app/bdcf10b7-6ca6-4d59-8ba5-ad36f6c1b79d.jpg",
     "name": "Acelga",
@@ -163,49 +153,49 @@
   },
   {
     "img": "https://static.merqueo.com/images/products/app/9c3b23f0-2b7c-473f-9540-723587e7da55.jpg",
-    "name": "Apio Entero x Paquete",
+    "name": "Apio Entero",
     "weight": "500 Gr",
     "price": "$2.500"
   },
   {
     "img": "https://static.merqueo.com/images/products/app/5b6d7040-6dec-409b-b096-1ba3922ddfc9.jpg",
-    "name": "Kale liso hidropónico",
+    "name": "Kale liso",
     "weight": "130 Gr",
     "price": "$2.500"
   },
   {
     "img": "https://static.merqueo.com/images/products/app/465e134a-2b7f-4cb3-8b49-e499b8582e00.jpg",
-    "name": "Apio x Tallo bandeja",
+    "name": "Apio",
     "weight": "500 Gr",
     "price": "$3.500"
   },
   {
     "img": "/_nuxt/img/2dc028d.svg",
-    "name": "Rabanos x Bandeja",
+    "name": "Rabanos",
     "weight": "200 Gr",
     "price": "$3.800"
   },
   {
     "img": "https://static.merqueo.com/images/products/app/da1c07d7-3896-40c0-8081-f503b0e567f1.jpg",
-    "name": "Alcachofa bandeja",
+    "name": "Alcachofa",
     "weight": "550 Gr",
     "price": "$8.500"
   },
   {
     "img": "https://static.merqueo.com/images/products/app/da2449a9-083c-460d-b4d7-c597114a8404.jpg",
-    "name": "Brócoli x unidad",
+    "name": "Brócoli",
     "weight": "400 Gr",
     "price": "$4.500"
   },
   {
     "img": "https://static.merqueo.com/images/products/app/ab1d2c34-35b5-465f-baf0-b224933ff208.jpg",
-    "name": "Ajo x 3 Unidades x Malla",
+    "name": "Ajo",
     "weight": "90 Gr",
     "price": "$1.900"
   },
   {
     "img": "https://static.merqueo.com/images/products/app/193d315d-7497-4c99-a728-3b3aa52f2286.jpg",
-    "name": "Jengibre x Bandeja",
+    "name": "Jengibre",
     "weight": "250 Gr",
     "price": "$2.800"
   },
@@ -216,20 +206,14 @@
     "price": "$5.100"
   },
   {
-    "img": "/_nuxt/img/2dc028d.svg",
-    "name": "Plátano Verde x Paquete (3-4 Und Aprox) 1.5 Kg",
-    "weight": "1.5 Kg",
-    "price": "$9.900"
-  },
-  {
     "img": "https://static.merqueo.com/images/products/app/7100e83e-2822-4d71-9909-01f63481c7df.jpg",
-    "name": "Platano Maduro x Paquete (3 a 4 und)",
+    "name": "Platano Maduro",
     "weight": "1.5 Kg",
     "price": "$9.900"
   },
   {
     "img": "https://static.merqueo.com/images/products/app/9c5403ee-62ac-443c-a6cd-728e6415fb01.jpg",
-    "name": "Mazorca Entera (2 a 3 Und)",
+    "name": "Mazorca Entera",
     "weight": "900 Gr",
     "price": "$6.500"
   },
@@ -241,31 +225,31 @@
   },
   {
     "img": "https://static.merqueo.com/images/products/app/d865e09e-ed5f-4503-8c22-b8948db7ff96.jpg",
-    "name": "Cubios paquete",
+    "name": "Cubios",
     "weight": "500 Gr",
     "price": "$2.900"
   },
   {
     "img": "https://static.merqueo.com/images/products/app/fa019197-0b97-482f-997a-965544f2093f.jpg",
-    "name": "Chuguas paquete",
+    "name": "Chuguas",
     "weight": "300 Gr",
     "price": "$3.300"
   },
   {
-    "img": "/_nuxt/img/2dc028d.svg",
-    "name": "Ahuyama x Unidad",
+    "img": "https://static.merqueo.com/images/products/large/03199e88-65db-4217-83b0-9226a3389051.jpg",
+    "name": "Ahuyama",
     "weight": "600 Gr",
     "price": "$2.500"
   },
   {
     "img": "https://static.merqueo.com/images/products/app/c4db1561-bc5a-4eb4-b38c-5aff0002c25d.jpg",
-    "name": "Ahuyama zacata Malla (1 - 2 Und)",
+    "name": "Ahuyama zacata",
     "weight": "1000 Gr",
     "price": "$3.200"
   },
   {
     "img": "https://static.merqueo.com/images/products/app/86cd12a5-f644-4473-ba0c-aeaaeb76548c.jpg",
-    "name": "Habichuela x Paquete",
+    "name": "Habichuela",
     "weight": "500 Gr",
     "price": "$3.900"
   },
@@ -277,25 +261,25 @@
   },
   {
     "img": "https://static.merqueo.com/images/products/app/5e82ae3a-2c05-4daf-98eb-bbcf2c4144a2.jpg",
-    "name": "Zucchini Verde x Bandeja (2 a 3 Und)",
+    "name": "Zucchini Verde",
     "weight": "800 Gr",
     "price": "$4.500"
   },
   {
     "img": "https://static.merqueo.com/images/products/app/104ca089-bb89-4601-ba80-f3edfebe2a5c.jpg",
-    "name": "Zucchini Amarillo x Bandeja (3 a 4 Und)",
+    "name": "Zucchini Amarillo",
     "weight": "1 Kg",
     "price": "$4.800"
   },
   {
     "img": "/_nuxt/img/2dc028d.svg",
-    "name": "Remolacha x Paquete (2 a 3 Und)",
+    "name": "Remolacha",
     "weight": "500 Gr",
     "price": "$1.800"
   },
   {
     "img": "https://static.merqueo.com/images/products/app/20e314e7-2cfc-4bb7-a50d-b31abe1dc96c.jpg",
-    "name": "Berenjena x Paquete (1 - 2 Und aprox)",
+    "name": "Berenjena",
     "weight": "300 Gr",
     "price": "$3.200"
   },
@@ -307,7 +291,7 @@
   },
   {
     "img": "https://static.merqueo.com/images/products/app/07088893-a2b2-4922-94e0-1d1afee2e059.jpg",
-    "name": "Guisantes x bandeja",
+    "name": "Guisantes",
     "weight": "200 Gr",
     "price": "$6.800"
   },
@@ -319,14 +303,8 @@
   },
   {
     "img": "https://static.merqueo.com/images/products/app/72b38cf7-a66b-47bb-bb26-ed7437774cb2.jpg",
-    "name": "Champiñón Blanco Tajado",
+    "name": "Champiñón Blanco",
     "weight": "500 Gr",
     "price": "$11.850"
-  },
-  {
-    "img": "/_nuxt/img/2dc028d.svg",
-    "name": "Champiñón Blanco Tajado Peq",
-    "weight": "250 Gr",
-    "price": "$6.300"
   }
 ]
