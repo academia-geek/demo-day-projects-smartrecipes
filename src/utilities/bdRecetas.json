@@ -1,0 +1,871 @@
+{
+    "recetas":[
+        {
+                "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_9c7bf63acab9db77dbeb96e8db8354d0",
+                "label": "Arroz con Pollo",
+                "image": "https://res.cloudinary.com/sarapalacio01/image/upload/v1647990546/DemoDay/24e03d58dbdba663192dd89e7d314b49_obutxc.jpg",
+                "time": "120 min",
+                "porciones" : "8-10 porciones",
+                "url": "http://www.seriouseats.com/recipes/2012/04/nicaraguan-arroz-con-pollo-recipe.html",
+                "shareAs": "http://www.edamam.com/recipe/nicaraguan-arroz-con-pollo-recipe-9c7bf63acab9db77dbeb96e8db8354d0/pollo",
+                "yield": 10.0,
+                "dietLabels": [],
+                "healthLabels": [
+                    "Sin huevo",
+                    "Sin cacahuetes",
+                    "Libre de frutos secos",
+                    "Sin soja",
+                    "Sin pescado",
+                    "Sin marisco",
+                    "Sin crustáceos",
+                    "Sin apio",
+                    "Sin mostaza",
+                    "Sin sésamo",
+                    "Sin altramuces",
+                    "Sin moluscos",
+                    "Sin alcohol",
+                    "Sin sulfitos"
+                ],
+                "cautions": [
+                    "Sulfitos"
+                ],
+                "ingredientLines": [
+                    "Para el pollo",
+                    "1 pollo grande entero (de 1,5 a 2,5 kilos), cortado en 8 trozos, sin piel",
+                    "1 cebolla amarilla o blanca mediana, pelada y cortada en 6 trozos",
+                    "1 pimiento verde mediano, sin semillas y cortado en cuartos",
+                    "6 dientes de ajo, pelados y machacados",
+                    "1 cucharada de sal",
+                    "2 cucharaditas de granos de pimienta negra",
+                    "8 tazas de agua fría",
+                    "1 lima partida por la mitad",
+                    "Para el arroz",
+                    "2 cucharadas de mantequilla sin sal",
+                    "1 cucharada de aceite de oliva",
+                    "1 cebolla amarilla o blanca mediana, finamente picada (aproximadamente 1 taza)",
+                    "1 diente de ajo mediano, picado (aproximadamente 1 cucharadita)",
+                    "2 cucharaditas de sal",
+                    "2 cucharadas de pasta de tomate",
+                    "2 tazas de arroz blanco de grano largo",
+                    "2 zanahorias medianas, peladas y cortadas en dados pequeños (aproximadamente 1 taza)",
+                    "4 tazas de caldo de pollo",
+                    "Para el Arroz con Pollo",
+                    "3 cucharadas de mantequilla sin sal",
+                    "8 onzas de salchicha ahumada (como Lil' Smokies) o salchicha Kielbasa, cortada en rondas de 1/4 de pulgada de grosor",
+                    "1/4 de libra de jamón en rodajas, picado grueso",
+                    "1 cebolla amarilla o blanca mediana, finamente picada (aproximadamente 1 taza)",
+                    "3/4 de taza de pimientos del piquillo escurridos en lata o en frasco, finamente picados",
+                    "2 cucharadas de pasta de tomate",
+                    "6 cucharadas de ketchup",
+                    "3/4 de taza de aceitunas rellenas de pimiento, en rodajas",
+                    "1/3 de taza de alcaparras, escurridas",
+                    "1 1/2 tazas de guisantes congelados",
+                    "Sal",
+                    "1 taza (2 onzas) de queso parmesano finamente rallado (opcional)",
+                    "Tostada blanca con mantequilla (opcional)"
+                ],
+                "calories": 7183.957738590475,
+                "totalWeight": 7191.419386216878,
+                "totalTime": 120.0,
+                "cuisineType": [
+                    "italiana"
+                ],
+                "mealType": [
+                    "almuerzo/cena"
+                ],
+                "dishType": [
+                    "plato fuerte"
+                ]
+            },
+            {
+                "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_159dce87cf3c70cd50c565d25d6c946f",
+                "label": "Tinga de Pollo",
+                "image": "https://res.cloudinary.com/sarapalacio01/image/upload/v1647991459/DemoDay/1228ee13ddaeba789a151e48095b9c95_ztxtaj.png",
+                "time": "55 min",
+                "porciones" : "2-4 porciones",
+                "source": "Food52",
+                "url": "https://food52.com/recipes/80894-tinga-de-pollo",
+                "shareAs": "http://www.edamam.com/recipe/tinga-de-pollo-159dce87cf3c70cd50c565d25d6c946f/pollo",
+                "yield": 4.0,
+                "dietLabels": [
+                    "Low-Carb"
+                ],
+                "healthLabels": [
+                    "Mediterráneo",
+                    "Sin lácteos",
+                    "Sin Gluten",
+                    "Sin trigo",
+                    "Sin huevo",
+                    "Sin cacahuetes",
+                    "Sin frutos secos",
+                    "Sin soja",
+                    "Sin pescado",
+                    "Sin marisco",
+                    "Sin cerdo",
+                    "Sin carne roja",
+                    "Sin crustáceos",
+                    "Sin apio",
+                    "Sin mostaza",
+                    "Sin sésamo",
+                    "Sin altramuces",
+                    "Sin moluscos",
+                    "Sin alcohol",
+                    "Sin sulfitos",
+                    "Kosher"
+                ],
+                "cautions": [],
+                "ingredientLines": [
+                    "1 pound (455 grams) skinless, boneless chicken breast",
+                    "2 large white onions, 1 halved and 1 sliced",
+                    "6 garlic cloves, 3 whole and 3 sliced",
+                    "1 tablespoon salt, plus more to taste",
+                    "3 tablespoons vegetable oil",
+                    "4 dried or canned chipotle chiles, chopped to a paste",
+                    "9 plum tomatoes, roughly chopped"
+                ],
+                "calories": 7183.957738590475,
+                "totalWeight": 7191.419386216878,
+                "totalTime": 120.0,
+                "cuisineType": [
+                    "italiana"
+                ],
+                "mealType": [
+                    "almuerzo/cena"
+                ],
+                "dishType": [
+                    "plato fuerte"
+                ]
+            },
+            {
+                "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_2b141f65cc3e429d0e42ba96700ade06",
+                "label": "Pollo al limón y al romero (Pollo Arrosto) ",
+                "image": "https://res.cloudinary.com/sarapalacio01/image/upload/v1647992186/DemoDay/ee57e40c3c1fb69a13974ca0a3839411_xxufmt.jpg",
+                "source": "Saveur",
+                "url": "http://www.saveur.com/article/Recipes/Lemon-and-Rosemary-Chicken-Pollo-Arrosto",
+                "shareAs": "http://www.edamam.com/recipe/lemon-and-rosemary-chicken-pollo-arrosto-2b141f65cc3e429d0e42ba96700ade06/pollo",
+                "yield": 4.0,
+                "dietLabels": [
+                    "Low-Carb"
+                ],
+                "healthLabels": [
+                    "Consciente del azúcar",
+                    "Keto-Friendly",
+                    "Paleo",
+                    "Mediterráneo",
+                    "Sin lácteos",
+                    "Sin Gluten",
+                    "Sin trigo",
+                    "Sin huevo",
+                    "Sin maní",
+                    "Sin frutos secos",
+                    "Sin soja",
+                    "Sin pescado",
+                    "Sin marisco",
+                    "Sin cerdo",
+                    "Sin carne roja",
+                    "Sin crustáceos",
+                    "Sin apio",
+                    "Sin mostaza",
+                    "Sin sésamo",
+                    "Sin altramuces",
+                    "Sin moluscos",
+                    "Sin alcohol",
+                    "Sin sulfitos",
+                    "Kosher",
+                    "Inmunosupresor"
+                ],
+                "cautions": [
+                    "Sulfites"
+                ],
+                "ingredientLines": [
+                    "1 (3 ½ lb.) de pollo, cortado en 8 trozos",
+                    "½ taza de aceite de oliva extra virgen",
+                    "½ taza de hojas frescas de romero",
+                    "¼ de taza de zumo de limón fresco",
+                    "10 dientes de ajo, cortados en rodajas finas",
+                    "1 limón, sin cáscara, con la médula y la pulpa picadas",
+                    "Agregar sal y pimienta negra recién molida, al gusto"
+                ],
+                "calories": 3382.5002022016533,
+                "totalWeight": 1872.945251481965,
+                "totalTime": 0.0,
+                "cuisineType": [
+                    "mediterránea"
+                ],
+                "mealType": [
+                    "almuerzo/cena"
+                ],
+                "dishType": [
+                    "plato fuerte"
+                ]
+            },
+            {
+                "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_e166b7c072f03e26aef3b065bfc3bdf7",
+                "label": "Pollo Al Burro",
+                "image": "https://res.cloudinary.com/sarapalacio01/image/upload/v1647995258/DemoDay/b1ea9ad8f430c68bc193bfb2df1ce159_egqecr.jpg",
+                "source": "San Francisco Gate",
+                "time": "100 min",
+                "porciones" : "2-4 porciones",
+                "url": "http://www.sfgate.com/food/recipes/detail.html?rid=18131&sorig=qs",
+                "shareAs": "http://www.edamam.com/recipe/pollo-al-burro-e166b7c072f03e26aef3b065bfc3bdf7/pollo",
+                "yield": 16.0,
+                "dietLabels": [
+                    "Low-Carb"
+                ],
+                "healthLabels": [
+                    "Consciente del azúcar",
+                    "Bajo en Potasio",
+                    "Amigable con los riñones",
+                    "Keto-Friendly", "Keto-Friendly",
+                    "Sin huevo",
+                    "Sin cacahuetes",
+                    "Sin frutos secos",
+                    "Sin soja",
+                    "Sin pescado",
+                    "Sin marisco",
+                    "Sin cerdo",
+                    "Sin carne roja",
+                    "Sin crustáceos",
+                    "Sin apio",
+                    "Sin mostaza",
+                    "Sin sésamo",
+                    "Sin altramuces",
+                    "Sin moluscos",
+                    "Sin alcohol",
+                    "Sin sulfitos",
+                    "Inmunosupresor"
+                ],
+                "cautions": [
+                    "Sulfitos"
+                ],
+                "ingredientLines": [
+                    "4 medias pechugas de pollo de 6 onzas, deshuesadas y con piel",
+                    "Sal al gusto",
+                    "1/2 taza de harina para todo uso o según sea necesario",
+                    "1 libra de mantequilla sin sal, a temperatura ambiente",
+                    "1 limón o lima, sin semillas y en cuartos"
+                ],
+                "calories": 4491.30536031,
+                "totalWeight": 1261.037249342301,
+                "totalTime": 0.0,
+                "cuisineType": [
+                    "mediterránea"
+                ],
+                "mealType": [
+                    "almuerzo/cena"
+                ],
+                "dishType": [
+                    "pan"
+                ]
+            },
+            {
+
+            },
+            {
+                "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_020bd700a57a7e7f769da860460472c7",
+                "label": "Estofado mexicano de lentejas con chorizo ",
+                "image": "https://res.cloudinary.com/sarapalacio01/image/upload/v1647996105/DemoDay/c251810ab90417106b90243d660c4fb4_aydhqb.jpg",
+                "source": "The Daily Meal",
+                "time": "240 min",
+                "porciones" : "6-8 porciones",
+                "url": "http://www.thedailymeal.com/recipes/slow-cooker-mexican-lentil-stew-chorizo-recipe",
+                "shareAs": "http://www.edamam.com/recipe/slow-cooker-mexican-lentil-stew-with-chorizo-020bd700a57a7e7f769da860460472c7/lenteja",
+                "yield": 10.0,
+                "dietLabels": [
+                    "Alto contenido en fibra"
+                ],
+                "healthLabels": [
+                    "Consciente del azúcar",
+                    "Sin Gluten",
+                    "Sin trigo",
+                    "Sin huevo",
+                    "Sin cacahuetes",
+                    "Sin frutos secos",
+                    "Sin soja",
+                    "Sin pescado",
+                    "Sin marisco",
+                    "Sin crustáceos",
+                    "Sin mostaza",
+                    "Sin sésamo",
+                    "Sin altramuces",
+                    "Sin moluscos",
+                    "Sin alcohol",
+                    "Sin sulfitos"
+                ],
+                "cautions": [
+                    "Huevos",
+                    "Lácteos",
+                    "Sulfitos"
+                ],
+                "ingredientLines": [
+                    "5 Tazas de caldo de verduras",
+                    "1/4 de cucharadita de orégano seco",
+                    "1 cucharadita de sal",
+                    "Pimienta, al gusto",
+                    "1 lata de catorce onzas de tomates picados",
+                    "1 chile chipotle seco pequeño",
+                    "1 hoja de laurel",
+                    "1 cebolla picada",
+                    "3 tallos de apio, picados",
+                    "3 zanahorias picadas",
+                    "3 papas, peladas y cortadas en cubos pequeños",
+                    "1 taza de lentejas verdes secas",
+                    "11 onzas de chorizo",
+                    "Tortillas, para servir",
+                    "Crema agria, para servir"
+                ],
+                "calories": 2800.6489787809314,
+                "totalWeight": 3052.0978269297902,
+                "totalTime": 0.0,
+                "cuisineType": [
+                    "mexicana",
+                    "mediterránea"
+                ],
+                "mealType": [
+                    "almuerzo/cena"
+                ],
+                "dishType": [
+                    "plato principal"
+                ]
+            },
+            {
+                "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_0abf34685c57f110cd29a8c265f0c0c2",
+                "label": "Lentejas chilenas",
+                "image": "https://res.cloudinary.com/sarapalacio01/image/upload/v1647996381/DemoDay/a6bdbb011b37c9d44347aa23433da15f_qntpxb.gif",
+                "source": "veganeasy.org",
+                "time": "40 min",
+                "porciones" : "4 porciones",
+                "url": "https://www.veganeasy.org/recipes/chilean-lentejas/",
+                "shareAs": "http://www.edamam.com/recipe/chilean-lentejas-0abf34685c57f110cd29a8c265f0c0c2/lenteja",
+                "yield": 6.0,
+                "dietLabels": [
+                    "Alto en Fibra",
+                    "Bajo en grasas"
+                ],
+                "healthLabels": [
+                    "Consciente del azúcar",
+                    "Mediterráneo",
+                    "Sin lácteos",
+                    "Sin Gluten",
+                    "Sin trigo",
+                    "Sin huevo",
+                    "Sin cacahuetes",
+                    "Sin frutos secos",
+                    "Sin soja",
+                    "Sin pescado",
+                    "Sin marisco",
+                    "Sin cerdo",
+                    "Sin carne roja",
+                    "Sin crustáceos",
+                    "Sin apio",
+                    "Sin mostaza",
+                    "Sin sésamo",
+                    "Sin altramuces",
+                    "Sin moluscos",
+                    "Sin alcohol",
+                    "Sin sulfitos",
+                    "Kosher"
+                ],
+                "cautions": [],
+                "ingredientLines": [
+                    "1 1/2 tazas de lentejas",
+                    "4 tazas de caldo de verduras (puede usar cubo de caldo)",
+                    "sal y pimienta al gusto",
+                    "1 cucharadita de aceite de oliva",
+                    "1 cebolla mediana picada",
+                    "1 zanahoria mediana picada",
+                    "2 dientes de ajo picados",
+                    "1 cucharadita de pimentón",
+                    "1/2 cucharadita de comino",
+                    "1 cucharadita de orégano",
+                    "1/2 taza de arroz",
+                    "1 cucharada de perejil picado"
+                ],
+                "calories": 1516.8465765771202,
+                "totalWeight": 1495.9672278146602,
+                "totalTime": 0.0,
+                "cuisineType": [
+                    "Oriente Medio",
+                    "sudamericano"
+                ],
+                "mealType": [
+                    "almuerzo/cena"
+                ],
+                "dishType": [
+                    "plato principal"
+                ]
+            },
+            {
+                "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_638ac91276e251d81d750d840ee91919",
+                "label": "Ensalada a la Almoraina",
+                "image": "https://res.cloudinary.com/sarapalacio01/image/upload/v1647996858/DemoDay/1599746751_283541_1599746937_noticiarelacionadaprincipal_normal_lyysci.jpg",
+                "time": "20 min",
+                "porciones" : "4 porciones",
+                "source": "Cookstr",
+                "url": "http://www.cookstr.com/recipes/ensalada-a-la-almoraina",
+                "shareAs": "http://www.edamam.com/recipe/ensalada-a-la-almoraina-638ac91276e251d81d750d840ee91919/ensalada",
+                "yield": 4.0,
+                "dietLabels": [
+                    "Bajo en carbohidratos"
+                ],
+                "healthLabels": [
+                    "Consciente del azúcar",
+                    "Amigable con los riñones",
+                    "Keto-Friendly", "Keto-Friendly",
+                    "Vegetariano",
+                    "Pescador",
+                    "Paleo",
+                    "Mediterráneo",
+                    "Sin lácteos",
+                    "Sin Gluten",
+                    "Sin trigo",
+                    "Sin cacahuetes",
+                    "Sin frutos secos",
+                    "Sin soja",
+                    "Sin pescado",
+                    "Sin marisco",
+                    "Sin cerdo",
+                    "Sin carne roja",
+                    "Sin crustáceos",
+                    "Sin apio",
+                    "Sin mostaza",
+                    "Sin sésamo",
+                    "Sin altramuces",
+                    "Sin moluscos",
+                    "Sin alcohol",
+                    "Sin sulfitos",
+                    "Kosher",
+                    "Inmunosupresor"
+                ],
+                "cautions": [
+                    "Sulfitos"
+                ],
+                "ingredientLines": [
+                    "2 tomates maduros, sin piel y picados",
+                    "½ cucharadita de comino triturado o molido",
+                    "1 diente de ajo machacado",
+                    "1 cucharadita de pimentón",
+                    "6 cucharadas de aceite de oliva",
+                    "3 cucharadas de vinagre de vino tinto",
+                    "Sal",
+                    "Pimienta recién molida",
+                    "1 escarola cortada en trozos",
+                    "Aceitunas negras curadas y rodajas o trozos de huevo duro para decorar"
+                ],
+                "calories": 799.0876375000001,
+                "totalWeight": 437.5519046541359,
+                "totalTime": 30.0,
+                "cuisineType": [
+                    "mediterránea"
+                ],
+                "mealType": [
+                    "almuerzo/cena"
+                ],
+                "dishType": [
+                    "ensalada"
+                ]
+            },
+            {
+                "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_a5caff3afab210e754f38d8ed2096436",
+                "label": "Ensalada de Pulpo",
+                "image": "https://res.cloudinary.com/sarapalacio01/image/upload/v1647998308/DemoDay/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2013__08__octopus-salad-vertical-b-1200-aabc643d7b4743af921e0e350ab51bd8_zjvfaz.webp",
+                "time": "135 min",
+                "porciones": "4 porciones",
+                "source": "Simply Recipes",
+                "url": "https://www.simplyrecipes.com/recipes/ensalada_de_pulpo_octopus_salad/",
+                "shareAs": "http://www.edamam.com/recipe/octopus-salad-ensalada-de-pulpo-a5caff3afab210e754f38d8ed2096436/ensalada",
+                "yield": 4.0,
+                "dietLabels": [
+                    "Bajo en carbohidratos"
+                ],
+                "healthLabels": [
+                    "Consciente del azúcar",
+                    "Pescadores",
+                    "Paleo",
+                    "Mediterránea",
+                    "Sin lácteos",
+                    "Sin Gluten",
+                    "Sin trigo",
+                    "Sin huevo",
+                    "Sin cacahuetes",
+                    "Sin frutos secos",
+                    "Sin soja",
+                    "Sin pescado",
+                    "Sin cerdo",
+                    "Sin carne roja",
+                    "Sin crustáceos",
+                    "Sin apio",
+                    "Sin mostaza",
+                    "Sin sésamo",
+                    "Sin lupino",
+                    "Sin sulfitos",
+                    "Inmunosupresor"
+                ],
+                "cautions": [
+                    "Sulfitos"
+                ],
+                "ingredientLines": [
+                    "Un pulpo de un kilo, limpio",
+                    "Sal",
+                    "Varias ramitas grandes de orégano fresco",
+                    "Varias ramitas grandes de perejil fresco",
+                    "Varias ramitas de cilantro fresco",
+                    "1 taza de pepino sin semillas y picado (pelado si las cáscaras son gruesas y amargas, si no, déjelas)",
+                    "1/2 taza de cebolla roja finamente picada",
+                    "3 cebollas verdes, cortadas en rodajas, incluyendo algunos de los extremos verdes más oscuros",
+                    "1 jalapeño fresco, sin semillas y picado (comprueba el picor, si es muy picante, usa sólo una pequeña cantidad)",
+                    "1/2 taza (suelta) de cilantro fresco picado, incluidos los tallos tiernos",
+                    "1/2 cucharadita de orégano seco",
+                    "2 cucharadas de zumo de lima",
+                    "2 cucharadas de vinagre de sidra",
+                    "1/4 de taza de aceite de oliva",
+                    "2 tazas de tomates picados y sin semillas"
+                ],
+                "calories": 1396.0050423554255,
+                "totalWeight": 1605.2492120702104,
+                "totalTime": 0.0,
+                "cuisineType": [
+                    "caribeña"
+                ],
+                "mealType": [
+                    "almuerzo/cena"
+                ],
+                "dishType": [
+                    "ensalada"
+                ]
+            },
+            {
+                "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_4a1864794b3e4a99dd15b43af93172d6",
+                "label": "Ensalada De Bacalao",
+                "image": "https://res.cloudinary.com/sarapalacio01/image/upload/v1647998629/DemoDay/a5127dd2ea8e85316ffb40e457a765c7_wg91gz.jpg",
+                "time": "45 min",
+                "porciones": "4-6 porciones",
+                "source": "PBS Food",
+                "url": "http://www.pbs.org/food/recipes/ensalada-de-bacalao-salt-cod-salad/",
+                "shareAs": "http://www.edamam.com/recipe/ensalada-de-bacalao-salt-cod-salad-4a1864794b3e4a99dd15b43af93172d6/ensalada",
+                "yield": 4.0,
+                "dietLabels": [
+                    "Alto en proteínas",
+                    "alto en fibra",
+                    "Bajo en carbohidratos"
+                ],
+                "healthLabels": [
+                    "Pescatariano",
+                    "Mediterráneo",
+                    "Sin Gluten",
+                    "Sin trigo",
+                    "Sin huevo",
+                    "Sin cacahuetes",
+                    "Sin frutos secos",
+                    "Sin soja",
+                    "Sin marisco",
+                    "Sin cerdo",
+                    "Sin carne roja",
+                    "Sin crustáceos",
+                    "Sin apio",
+                    "Sin mostaza",
+                    "Sin sésamo",
+                    "Sin altramuces",
+                    "Sin moluscos",
+                    "Sin alcohol",
+                    "Sin sulfitos",
+                    "Kosher"
+                ],
+                "cautions": [
+                    "Sulfitos"
+                ],
+                "ingredientLines": [
+                    "2 lbs. de bacalao seco deshuesado y salado",
+                    "1 taza de leche entera",
+                    "1 cebolla roja grande cortada en rodajas finas",
+                    "2 a 3 cebollas blancas y verdes, finamente picadas",
+                    "1/4 de taza de cilantro picado",
+                    "1 aguacate sin hueso, pelado y en rodajas",
+                    "1/2 taza de tomates cherry cortados por la mitad",
+                    "1/2 taza de aceite de oliva extra virgen",
+                    "1/4 de taza de vinagre de vino tinto",
+                    "Zumo de 1 lima",
+                    "2 dientes de ajo picados",
+                    "Sal y pimienta negra recién molida al gusto"
+                ],
+                "calories": 4199.153914592201,
+                "totalWeight": 1877.5505442200001,
+                "totalTime": 212.0,
+                "cuisineType": [
+                    "americana"
+                ],
+                "mealType": [
+                    "almuerzo/cena"
+                ],
+                "dishType": [
+                    "ensalada"
+                ]
+            },
+            {
+                "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_3c8fbb26b738cb187a7507104d23dba3",
+                "label": "Ensalada de Tostada Crujiente",
+                "image": "https://res.cloudinary.com/sarapalacio01/image/upload/v1648001249/DemoDay/75648251a6fd4dd528ee5fe6db03b6ba_oeq4c2.jpg",
+                "source": "Food Network",
+                "time": "20 min",
+                "porciones": "4 porciones",
+                "url": "https://www.foodnetwork.com/recipes/valerie-bertinelli/crunchy-tostada-ensalada-3666721",
+                "shareAs": "http://www.edamam.com/recipe/crunchy-tostada-ensalada-3c8fbb26b738cb187a7507104d23dba3/ensalada",
+                "yield": 6.0,
+                "dietLabels": [
+                    "Alto contenido en fibra"
+                ],
+                "healthLabels": [
+                    "Sin Gluten",
+                    "Sin trigo",
+                    "Sin huevo",
+                    "Sin cacahuetes",
+                    "Sin frutos secos",
+                    "Sin soja",
+                    "Sin pescado",
+                    "Sin marisco",
+                    "Sin cerdo",
+                    "Sin carne roja",
+                    "Sin crustáceos",
+                    "Sin apio",
+                    "Sin mostaza",
+                    "Sin sésamo",
+                    "Sin altramuces",
+                    "Sin moluscos",
+                    "Sin alcohol"
+                ],
+                "cautions": [
+                    "Huevos",
+                    "Leche",
+                    "Frutos secos",
+                    "Sulfitos"
+                ],
+                "ingredientLines": [
+                    "1/2 taza de vinagre de sidra de manzana",
+                    "1/4 de taza de aceite de oliva extra virgen",
+                    "1 cucharadita de miel",
+                    "1 cucharadita de puré de chipotles en adobo",
+                    "1/2 cucharadita de comino",
+                    "1/2 cucharadita de sal kosher",
+                    "1/4 cucharadita de cilantro",
+                    "Seis tortillas de maíz amarillas de 5 1/2 pulgadas",
+                    "Aceite de canola, para pincelar",
+                    "Sal kosher",
+                    "2 tomates Roma, cortados en dados de 1/2 pulgada",
+                    "1/2 taza de hojas de cilantro fresco (aproximadamente 1/2 manojo)",
+                    "1/2 taza de aceitunas negras cortadas en rodajas",
+                    "2 corazones de lechuga romana, cortados por la mitad a lo largo y en cintas de 1/4 de pulgada",
+                    "2 tazas de frijoles refritos, receta siguiente",
+                    "2 remolachas rojas pequeñas asadas, cortadas en juliana (aproximadamente 1/2 taza)",
+                    "6 cucharadas de parmesano rallado",
+                    "1/4 de taza de aceite de coco refinado, derretido (véase la nota de la cocinera)",
+                    "1/2 taza de cebolla amarilla finamente picada (aproximadamente 1/2 cebolla mediana)",
+                    "1 cucharada de ajo picado (unos 3 dientes grandes)",
+                    "1 cucharadita de comino",
+                    "1/2 cucharadita de cilantro",
+                    "Sal Kosher",
+                    "Dos latas de 15,5 onzas de judías pintas, escurridas y enjuagadas",
+                    "1 taza de caldo de pollo, más lo necesario",
+                    "2 cucharaditas de puré de chipotles en adobo",
+                    "1 cucharada de zumo de lima fresco, más trozos de lima, para servir",
+                    "2 cucharadas de queso fresco desmenuzado",
+                    "2 cucharadas de cilantro fresco picado"
+                ],
+                "calories": 3230.3154504907598,
+                "totalWeight": 2485.0482384457036,
+                "totalTime": 65.0,
+                "cuisineType": [
+                    "suramericana"
+                ],
+                "mealType": [
+                    "almuerzo/cena"
+                ],
+                "dishType": [
+                    "sandwiches"
+                ]
+
+            },
+            {
+                "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_433bceba67b542c29ead7d0c75bee4ec",
+                "label": "Postre De Cocada",
+                "image": "https://res.cloudinary.com/sarapalacio01/image/upload/v1648001552/DemoDay/picf2HJXC_eu9fhq.jpg",
+                "source": "recipezaar.com",
+                "time": "20 min",
+                "porciones": "6-8 porciones",
+                "url": "http://www.recipezaar.com/Postre-de-Cocada-24972",
+                "shareAs": "http://www.edamam.com/recipe/postre-de-cocada-433bceba67b542c29ead7d0c75bee4ec/postre",
+                "yield": 6.0,
+                "dietLabels": [
+                    "Alto en Fibra",
+                    "Bajo en sodio"
+                ],
+                "healthLabels": [
+                    "Vegetariano",
+                    "Pescador",
+                    "Sin Gluten",
+                    "Sin trigo",
+                    "Sin cacahuetes",
+                    "Sin soja",
+                    "Sin pescado",
+                    "Sin marisco",
+                    "Sin cerdo",
+                    "Sin carne roja",
+                    "Sin crustáceos",
+                    "Sin apio",
+                    "Sin mostaza",
+                    "Sin sésamo",
+                    "Sin altramuces",
+                    "Sin moluscos",
+                    "Kosher"
+                ],
+                "cautions": [
+                    "Nueces"
+                ],
+                "ingredientLines": [
+                    "1 coco fresco mediano, con mucho líquido en su interior (1 3/4 de libra)",
+                    "6 yemas de huevo grandes",
+                    "1 taza de azúcar",
+                    "1 1/2 cucharadas de jerez dulce o seco de buena calidad",
+                    "1 1/2 cucharadas de mantequilla sin sal, cortada en trocitos",
+                    "1/2 taza de almendras laminadas",
+                    "3 cucharadas de leche o nata para montar"
+                ],
+                "calories": 3091.9109999994316,
+                "totalWeight": 833.4249999996259,
+                "totalTime": 0.0,
+                "cuisineType": [
+                    "americana"
+                ],
+                "mealType": [
+                    "almuerzo/cena"
+                ],
+                "dishType": [
+                    "postres"
+                ]
+            },
+            {
+                "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_edf6d965506fb9c24a4e4d0fa4313eb0",
+                "label": "Postre chajá cake",
+                "image": "https://res.cloudinary.com/sarapalacio01/image/upload/v1648002127/DemoDay/546a1d81b71ac08136acc2ace3be309f_mjcjga.jpg",
+                "source": "womensweeklyfood.com.au",
+                "time": "165 min",
+                "porciones": "6-8 porciones",
+                "url": "https://www.womensweeklyfood.com.au/recipes/postre-chaja-cake-4002",
+                "shareAs": "http://www.edamam.com/recipe/postre-chaj%C3%A1-cake-edf6d965506fb9c24a4e4d0fa4313eb0/postre",
+                "yield": 8.0,
+                "dietLabels": [],
+                "healthLabels": [
+                    "Vegetariano",
+                    "Pescatariano",
+                    "Sin cacahuetes",
+                    "Sin frutos secos",
+                    "Sin soja",
+                    "Sin pescado",
+                    "Sin marisco",
+                    "Sin cerdo",
+                    "Sin carne roja",
+                    "Sin crustáceos",
+                    "Sin apio",
+                    "Sin mostaza",
+                    "Sin sésamo",
+                    "Sin altramuces",
+                    "Sin moluscos",
+                    "Kosher"
+                ],
+                "cautions": [
+                    "Trigo",
+                    "Sulfitos"
+                ],
+                "ingredientLines": [
+                    "395 gramos de leche condensada en lata",
+                    "6 huevos, separados",
+                    "1/2 taza (110g) de azúcar en polvo",
+                    "1 cucharadita de extracto de vainilla",
+                    "2 cucharaditas de agua tibia",
+                    "1/2 taza (75g) de harina de pastel o de harina común",
+                    "1/4 de taza (35g) de harina de maíz",
+                    "1/4 de cucharadita de cremor tártaro",
+                    "300 mililitros de nata espesa",
+                    "1 cucharada de azúcar glas",
+                    "120 gramos de cáscaras de merengue compradas, machacadas",
+                    "2 (160g) kiwis dorados, pelados, cortados en gajos finos",
+                    "Flores blancas comestibles",
+                    "1/2 taza (110g) de azúcar en polvo",
+                    "1/2 taza (125ml) de agua",
+                    "1 1/2 cucharadas de ron de baja graduación"
+                ],
+                "calories": 4563.03240219213,
+                "totalWeight": 1881.4552061421239,
+                "totalTime": 165.0,
+                "cuisineType": [
+                    "americana"
+                ],
+                "mealType": [
+                    "almuerzo/cena"
+                ],
+                "dishType": [
+                    "postres"
+                ]
+            },
+            {
+                "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_71314d8f3dff95842a08c177b3d9e8dc",
+                "label": "Un postre para Cinco de Mayo: Flan",
+                "image": "https://res.cloudinary.com/sarapalacio01/image/upload/v1648001944/DemoDay/P5020701_wo2skx.jpg",
+                "time":"60 min",
+                "porciones": "6 porciones",
+                "source": "yearofthepancake.blogspot.com",
+                "url": "http://yearofthepancake.blogspot.com/2011/05/un-postre-para-cinco-de-mayo-flan.html",
+                "shareAs": "http://www.edamam.com/recipe/un-postre-para-cinco-de-mayo-flan-71314d8f3dff95842a08c177b3d9e8dc/postre",
+                "yield": 6.0,
+                "dietLabels": [
+                    "Equilibrado",
+                    "Bajo en sodio"
+                ],
+                "healthLabels": [
+                    "Amigable con el riñón",
+                    "Vegetariano",
+                    "Pescador",
+                    "Sin gluten",
+                    "Sin trigo",
+                    "Sin cacahuetes",
+                    "Sin frutos secos",
+                    "Sin soja",
+                    "Sin pescado",
+                    "Sin marisco",
+                    "Sin cerdo",
+                    "Sin carne roja",
+                    "Sin crustáceos",
+                    "Sin apio",
+                    "Sin mostaza",
+                    "Sin sésamo",
+                    "Sin altramuces",
+                    "Sin moluscos",
+                    "Sin alcohol",
+                    "Sin aceite añadido",
+                    "Kosher"
+                ],
+                "cautions": [],
+                "ingredientLines": [
+                    "1/3 de taza de azúcar",
+                    "2 huevos",
+                    "1 leche evaporada de 13 onzas",
+                    "1/4 de taza de azúcar",
+                    "1 cucharadita de vainilla**",
+                    "una pizca de sal"
+                ],
+                "calories": 1080.4246928375,
+                "totalWeight": 575.8104672916667,
+                "totalTime": 0.0,
+                "cuisineType": [
+                    "suramericana"
+                ],
+                "mealType": [
+                    "snack"
+                ],
+                "dishType": [
+                    "desserts",
+                    "cinco de mayo",
+                    "ocasiones especiales"
+                ]
+            }
+    ]
+}
