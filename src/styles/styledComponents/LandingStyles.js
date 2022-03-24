@@ -137,7 +137,6 @@ export const NextButton = styled(Button)`
 `;
 
 // UserOptions
-
 export const OptionsContainer = styled(Container)`
     height: 85vh;
     .TitleOptions {
@@ -184,5 +183,31 @@ export const OptionsContainer = styled(Container)`
             width: 80%;
             margin: 5rem auto 6rem;
         }
+    }
+`;
+
+//Custom Menu
+export const DivOptions = styled.div`
+    
+    height: 100vh;
+    .titleMenu {
+        background-image: url(https://res.cloudinary.com/david-b/image/upload/v1648067424/AG/demoday/vegetables_1_hgzxx2.svg);
+        text-align: center;
+        height: 86px;
+    }
+    .titleMenu > h4 {
+        font-family: 'Roboto';
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 90px;
+        text-shadow: -1px 0 #FFFF, 0 1px #FFFF, 1px 0 #FFFF, 0 -1px #FFFF;
+    }
+    .cardTitle {
+        background-color: green;
+    }
+    @media only screen and (max-width: 610px) {
+        padding-top: 2.5rem;
+        height: auto;
+        
     }
 `;

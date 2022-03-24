@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { NextButton, WelcomeContainer } from '../styles/styledComponents/LandingStyles'
+import { NextButton, WelcomeContainer } from '../../styles/styledComponents/LandingStyles'
+
 
 const Welcome = () => {
   return (

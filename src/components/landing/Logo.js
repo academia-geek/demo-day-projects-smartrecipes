@@ -1,7 +1,8 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import { ButtonLogo, DivLogo, ImgLogo } from '../styles/styledComponents/LandingStyles'
+import { ButtonLogo, DivLogo, ImgLogo } from '../../styles/styledComponents/LandingStyles'
+
 
 const Logo = () => {
   return (

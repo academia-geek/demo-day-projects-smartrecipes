@@ -21,8 +21,8 @@ export const FormLogin = styled(Form)`
 `;
 
 export const ButtonLogin = styled(Button)`
-  background-color: #f3d184;
-  color: #333333;
+  background-color: #FF5757;
+  color: #FFFF;
   border: none;
   width: 50%;
   font-size: 15px;
@@ -30,12 +30,12 @@ export const ButtonLogin = styled(Button)`
   margin: 10px Auto 0px;
   text-align: center;
   &:hover {
-    background-color: #242f3e;
+    background-color: #008037;
     color: #ffffff;
   }
   &:focus {
     outline: none;
-    background-color: #242f3e;
+    background-color: #FF5757;
     color: #ffffff;
   }
   @media only screen and (max-width: 600px) {

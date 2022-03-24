@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { NextButton, OptionsContainer } from '../styles/styledComponents/LandingStyles'
+import { NextButton, OptionsContainer } from '../../styles/styledComponents/LandingStyles'
+
 
 const UserOption = () => {
   return (
