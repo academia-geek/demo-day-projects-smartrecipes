@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { urlbdr } from '../../utilities/urlRecipes';
-import { Card, Col} from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import axios from 'axios';
 import { Row } from 'react-bootstrap';
 import { BiTimer } from "react-icons/bi";

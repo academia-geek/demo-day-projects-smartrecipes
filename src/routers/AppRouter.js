@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Calendario from "../components/afterLogin/calendario/Calendario";
+import ListaProductos from "../components/afterLogin/listaProductos/ListaProductos";
 import ContainerPagPrincipal from "../components/afterLogin/pagPrincipalLog/containerPagPrincipal/ContainerPagPrincipal";
 import CustomMenu from "../components/landing/CustomMenu";
 import Logo from "../components/landing/Logo";
@@ -28,6 +30,8 @@ const AppRouter = () => {
         <Route path="/recetaindchef" element={<RecetaIndChef />} />
 
         <Route path="/home" element={<ContainerPagPrincipal/>} />
+        <Route path="/productos" element={<ListaProductos/>} />
+        <Route path="/calendario" element={<Calendario/>} />
 
 
       </Routes>

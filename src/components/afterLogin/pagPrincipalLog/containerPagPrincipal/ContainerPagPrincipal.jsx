@@ -25,7 +25,7 @@ const ContainerPagPrincipal = () => {
   return (
     <>
       <Header />
-      <SeguimientoPrecios data={data} />
+      <SeguimientoPrecios data={data} limit={3}/>
       <BotonPerfilUser/>
       <Calendario/>
     </>
