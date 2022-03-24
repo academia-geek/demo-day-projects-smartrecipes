@@ -5,7 +5,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const GoblalStyles = createGlobalStyle`
 body, html {
-  height: 100%;
+  height: 100%; //auto
 }
 
 * {
