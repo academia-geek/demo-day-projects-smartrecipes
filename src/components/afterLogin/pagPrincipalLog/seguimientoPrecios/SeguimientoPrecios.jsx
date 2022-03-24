@@ -1,6 +1,7 @@
 import React from "react";
 
 import {
+  ContainerImage,
   ProductoStyled,
   SeguimientoPreciosStyled,
 } from "../../../../styles/styledComponents/PagPrincipalStyles";
@@ -12,13 +13,19 @@ const SeguimientoPrecios = ({ data }) => {
         if (index < 3) {
           return (
             <ProductoStyled key={index}>
+              <ContainerImage>
               <img alt="producto1" src={producto.img}></img>
-              <p>{producto.name}</p>
+              <p className="bottom-right">{producto.price}</p>
+              </ContainerImage>
+              <p>{producto.name}</p>              
             </ProductoStyled>
           );
         }
         return ''
       })}
+      <div className="containerButton">
+      <button type="button">Todos los productos</button>
+      </div>
     </SeguimientoPreciosStyled>
   );
 };
