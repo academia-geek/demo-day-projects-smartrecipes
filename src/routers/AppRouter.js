@@ -28,11 +28,8 @@ const AppRouter = () => {
         <Route path="/recetaindchef" element={<RecetaIndChef />} />
 
         <Route path="/home" element={<ContainerPagPrincipal/>} />
-<<<<<<< HEAD
-=======
 
 
->>>>>>> f8c1addc977256373f614b6d0b7e6844fe936893
       </Routes>
     </BrowserRouter>
   );
