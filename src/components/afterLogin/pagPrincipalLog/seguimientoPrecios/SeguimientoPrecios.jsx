@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import {
   ContainerImage,
@@ -6,11 +7,12 @@ import {
   SeguimientoPreciosStyled,
 } from "../../../../styles/styledComponents/PagPrincipalStyles";
 
-const SeguimientoPrecios = ({ data }) => {
+const SeguimientoPrecios = ({ data , limit}) => {
+  
   return (
     <SeguimientoPreciosStyled>
       {data.map((producto, index) => {
-        if (index < 3) {
+        if (index < limit) {
           return (
             <ProductoStyled key={index}>
               <ContainerImage>
@@ -24,7 +26,9 @@ const SeguimientoPrecios = ({ data }) => {
         return ''
       })}
       <div className="containerButton">
+      <Link to='/productos' state={data}>
       <button type="button">Todos los productos</button>
+      </Link>
       </div>
     </SeguimientoPreciosStyled>
   );
