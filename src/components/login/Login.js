@@ -37,7 +37,6 @@ const Login = () => {
      
        
         <DivLogin>
-             Login :v
             <FormLogin onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Correo</Form.Label>
@@ -74,6 +73,8 @@ const Login = () => {
                 </IconCol>
 
                 <Link to="/register" className='registerLogin'>Registrarse</Link>
+                <br/>
+                <Link to="/Calendar" className='registerLogin'>Calendario</Link>
 
             </FormLogin>
 

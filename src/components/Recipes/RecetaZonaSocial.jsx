@@ -3,7 +3,6 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Card } from 'react-bootstrap';
-import { Col } from 'react-bootstrap';
 import { CardText, CardZonaSocial, ContainerSeccionChef, ContainerTextoReceta, ImgUsuario, ImgZonaSocial, TextoReceta, TitleRecetas } from '../../styles/styledComponents/RecipesStyle';
 import { urlsocial } from '../../utilities/urlRecipes';
 import NavBarRecipes from './NavBarRecipes'

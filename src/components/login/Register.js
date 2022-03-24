@@ -3,8 +3,12 @@ import React from 'react'
 import { ButtonLogin, FormLogin } from '../../styles/styledComponents/LoginStyled'
 import * as Yup from 'yup';
 import { Form } from 'react-bootstrap'
+//import { useDispatch } from 'react-redux';
+//import { register } from '../../redux/action/actionRegister';
 
 const Register = () => {
+
+    //const dispatch = useDispatch()
 
     const formik = useFormik({
         initialValues: {
@@ -14,7 +18,7 @@ const Register = () => {
             Repeatpassword: ''
         },
         validationSchema: Yup.object().shape({
-            name: Yup.string('ashjaks').required("El nombre es obligatorio"),
+            name: Yup.string().required("El nombre es obligatorio"),
             email: Yup.string().email("Email no valido").required("El email es obligatorio"),
             password: Yup.string().required().oneOf([Yup.ref("Repeatpassword")], "Contraseñas no coinciden"),
             Repeatpassword: Yup.string().required()
@@ -29,8 +33,7 @@ const Register = () => {
 
 
     return (
-        <div>Register
-
+        <div>
             <FormLogin onSubmit={formik.handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Label>Nombre</Form.Label>

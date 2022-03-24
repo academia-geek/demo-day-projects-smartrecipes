@@ -5,6 +5,7 @@ README.md
 / .vscode
 # dependencies
 /node_modules
+/src/backEnd/node_modules
 /.pnp
 .pnp.js
 

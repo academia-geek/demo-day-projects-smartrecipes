@@ -1,1 +1,1 @@
-export const productsUrl = 'http://localhost:3001/productos/'
+export const productsUrl = 'https://smart-recipes-demo.herokuapp.com/productos'
