@@ -1,263 +1,251 @@
-{"productos" : 
-  [
-  {
-    "id": 0,
-    "img": "https://static.merqueo.com/images/products/app/cf270158-03ae-47fe-899f-aba1e6dc99b0.jpg",
-    "name": "Tomate Chonto",
-    "weight": "600 Gr",
-    "price": "$2.650"
-  },
-  {
-    "id": 1,
-    "img": "https://static.merqueo.com/images/products/app/58c66395-d7cf-48a2-a21e-0f7013241d2a.jpg",
-    "name": "Tomate Chonto",
-    "weight": "1000 Gr",
-    "price": "$4.300"
-  },
-  {
-    "id": 2,
-    "img": "https://static.merqueo.com/images/products/app/4aa9f60f-5f7d-40b9-8cb3-f5f64c574d38.jpg",
-    "name": "Tomate Cherry",
-    "weight": "225 Gr",
-    "price": "$3.500"
-  },
-  {
-    "id": 3,
-    "img": "https://static.merqueo.com/images/products/app/63874609-2822-4bb0-be15-8e0c96b36be0.png",
-    "name": "Tomate Cherry",
-    "weight": "500 Gr",
-    "price": "$5.900"
-  },
-  {
-    "id": 4,
-    "img": "https://static.merqueo.com/images/products/app/7b80d169-513e-41ee-825f-19cbe2592c8a.jpg",
-    "name": "Tomate Cherry",
-    "weight": "500 Gr",
-    "price": "$12.900"
-  },
-  {
-    "id": 5,
-    "img": "https://static.merqueo.com/images/products/app/04f5f8c9-a81c-461c-8c8e-0ae61bd0c246.jpg",
-    "name": "Pimenton",
-    "weight": "600 Gr",
-    "price": "$4.200"
-  },
-  {
-    "id": 6,
-    "img": "https://static.merqueo.com/images/products/large/1468bddd-beef-42eb-bd3e-a8428bc0f8f4.jpg",
-    "name": "Cebolla Blanca",
-    "weight": "600 Gr",
-    "price": "$3.200"
-  },
-  {
-    "id": 7,
-    "img": "https://static.merqueo.com/images/products/app/4a314445-f55d-46b7-9e02-9a7d02e7c0da.jpg",
-    "name": "Cebolla Roja",
-    "weight": "600 Gr",
-    "price": "$3.200"
-  },
-  {
-    "id": 8,
-    "img": "https://static.merqueo.com/images/products/app/a1ed15c5-a25d-4014-bfc9-fbf46d991ff0.jpg",
-    "name": "Zanahoria",
-    "weight": "600 Gr",
-    "price": "$2.300"
-  },
-  {
-    "id": 9,
-    "img": "https://static.merqueo.com/images/products/app/6e44c48e-5d9b-4807-b510-eb2e148e75d9.jpg",
-    "name": "Zanahorias",
-    "weight": "200 Gr",
-    "price": "$7.900"
-  },
-  {
-    "id": 10,
-    "img": "https://static.merqueo.com/images/products/app/7e0f11c8-43a3-4d05-9659-be7b206c15cf.jpg",
-    "name": "Repollo Blanco",
-    "weight": "450 Gr",
-    "price": "$4.200"
-  },
-  {
-    "id": 11,
-    "img": "https://static.merqueo.com/images/products/app/59179a3f-9668-400d-93ec-d1f12d568271.jpg",
-    "name": "Repollo Morado",
-    "weight": "450 Gr",
-    "price": "$4.200"
-  },
-  {
-    "id": 12,
-    "img": "https://static.merqueo.com/images/products/large/e1346bec-712f-4bd9-b941-dfc5226c5c87.jpg",
-    "name": "Lechuga Batavia",
-    "weight": "700 Gr",
-    "price": "$3.100"
-  },
-  {
-    "id": 13,
-    "img": "https://static.merqueo.com/images/products/app/44298716-fe65-414f-a313-877ae6afcc19.jpg",
-    "name": "Lechuga Crespa",
-    "weight": "180 Gr",
-    "price": "$1.800"
-  },
-  {
-    "id": 14,
-    "img": "https://static.merqueo.com/images/products/app/7f5097a0-da40-43d5-9abd-219e917d31a9.jpg",
-    "name": "Cogollos",
-    "weight": "200 Gr",
-    "price": "$3.800"
-  },
-  {
-    "id": 15,
-    "img": "https://static.merqueo.com/images/products/app/97a4336a-f0ac-4830-85c3-ca1125d861cc.jpg",
-    "name": "Rugula",
-    "weight": "150 Gr",
-    "price": "$3.250"
-  },
-  {
-    "id": 16,
-    "img": "https://static.merqueo.com/images/products/app/39311b91-ffd8-454d-9ee8-8f19dd56d2a3.jpg",
-    "name": "Espinaca",
-    "weight": "300 Gr",
-    "price": "$3.900"
-  },
-  {
-    "id": 17,
-    "img": "https://static.merqueo.com/images/products/app/bdcf10b7-6ca6-4d59-8ba5-ad36f6c1b79d.jpg",
-    "name": "Acelga",
-    "weight": "500 Gr",
-    "price": "$1.800"
-  },
-  {
-    "id": 18,
-    "img": "https://static.merqueo.com/images/products/large/5c431760-92a1-4bd8-a625-c09c425a2db1.jpg",
-    "name": "Kale Crespo",
-    "weight": "130 Gr",
-    "price": "$2.800"
-  },
-  {
-    "id": 19,
-    "img": "https://static.merqueo.com/images/products/app/9c3b23f0-2b7c-473f-9540-723587e7da55.jpg",
-    "name": "Apio Entero",
-    "weight": "500 Gr",
-    "price": "$2.500"
-  },
-  {
-    "id": 20,
-    "img": "https://static.merqueo.com/images/products/app/5b6d7040-6dec-409b-b096-1ba3922ddfc9.jpg",
-    "name": "Kale liso hidropónico",
-    "weight": "130 Gr",
-    "price": "$2.500"
-  },
-  {
-    "id": 21,
-    "img": "https://static.merqueo.com/images/products/app/465e134a-2b7f-4cb3-8b49-e499b8582e00.jpg",
-    "name": "Apio",
-    "weight": "500 Gr",
-    "price": "$3.500"
-  },
-  {
-    "id": 22,
-    "img": "https://static.merqueo.com/images/products/app/bd8f7f6a-4972-4a55-b832-2b56289885fb.jpg",
-    "name": "Rabanos",
-    "weight": "200 Gr",
-    "price": "$3.800"
-  },
-  {
-    "id": 23,
-    "img": "https://static.merqueo.com/images/products/app/ab1d2c34-35b5-465f-baf0-b224933ff208.jpg",
-    "name": "Ajo",
-    "weight": "90 Gr",
-    "price": "$1.900"
-  },
-  {
-    "id": 24,
-    "img": "https://static.merqueo.com/images/products/large/193d315d-7497-4c99-a728-3b3aa52f2286.jpg",
-    "name": "Jengibre",
-    "weight": "250 Gr",
-    "price": "$2.800"
-  },
-  {
-    "id": 25,
-    "img": "https://static.merqueo.com/images/products/app/b13d38dc-2efb-426a-9152-a5de9861260a.jpg",
-    "name": "Plátano Verde",
-    "weight": "750 Gr",
-    "price": "$5.100"
-  },
-  {
-    "id": 26,
-    "img": "https://static.merqueo.com/images/products/app/4b555f04-0cfb-493c-8733-39dcd2898287.jpg",
-    "name": "Plátano Verde",
-    "weight": "1.5 Kg",
-    "price": "$9.900"
-  },
-  {
-    "id": 27,
-    "img": "https://static.merqueo.com/images/products/app/9c5403ee-62ac-443c-a6cd-728e6415fb01.jpg",
-    "name": "Mazorca Entera",
-    "weight": "900 Gr",
-    "price": "$6.500"
-  },
-  {
-    "id": 28,
-    "img": "https://static.merqueo.com/images/products/app/d865e09e-ed5f-4503-8c22-b8948db7ff96.jpg",
-    "name": "Cubios",
-    "weight": "500 Gr",
-    "price": "$2.900"
-  },
-  {
-    "id": 29,
-    "img": "https://static.merqueo.com/images/products/app/fa019197-0b97-482f-997a-965544f2093f.jpg",
-    "name": "Chuguas",
-    "weight": "300 Gr",
-    "price": "$3.300"
-  },
-  {
-    "id": 30,
-    "img": "https://static.merqueo.com/images/products/large/03199e88-65db-4217-83b0-9226a3389051.jpg",
-    "name": "Ahuyama",
-    "weight": "600 Gr",
-    "price": "$2.500"
-  },
-  {
-    "id": 31,
-    "img": "https://static.merqueo.com/images/products/app/c4db1561-bc5a-4eb4-b38c-5aff0002c25d.jpg",
-    "name": "Ahuyama zacata",
-    "weight": "1000 Gr",
-    "price": "$3.200"
-  },
-  {
-    "id": 32,
-    "img": "https://static.merqueo.com/images/products/app/104ca089-bb89-4601-ba80-f3edfebe2a5c.jpg",
-    "name": "Zucchini Amarillo",
-    "weight": "1 Kg",
-    "price": "$4.800"
-  },
-  {
-    "id": 33,
-    "img": "https://static.merqueo.com/images/products/app/20e314e7-2cfc-4bb7-a50d-b31abe1dc96c.jpg",
-    "name": "Berenjena",
-    "weight": "300 Gr",
-    "price": "$3.200"
-  },
-  {
-    "id": 34,
-    "img": "https://static.merqueo.com/images/products/app/07088893-a2b2-4922-94e0-1d1afee2e059.jpg",
-    "name": "Guisantes",
-    "weight": "200 Gr",
-    "price": "$6.800"
-  },
-  {
-    "id": 35,
-    "img": "https://static.merqueo.com/images/products/app/275f6bbb-3722-4a89-958d-17a0b75049e6.jpg",
-    "name": "Raíces Chinas",
-    "weight": "250 Gr",
-    "price": "$1.950"
-  },
-  {
-    "id": 36,
-    "img": "https://static.merqueo.com/images/products/large/72b38cf7-a66b-47bb-bb26-ed7437774cb2.jpg",
-    "name": "Champiñón Blanco",
-    "weight": "500 Gr",
-    "price": "$11.850"
-  }
-]
+{
+  "productos": [
+    {
+      "id": 0,
+      "img": "https://static.merqueo.com/images/products/app/cf270158-03ae-47fe-899f-aba1e6dc99b0.jpg",
+      "name": "Tomate Chonto",
+      "weight": "600 Gr",
+      "price": "$2.650"      
+    },
+
+    {
+      "id": 2,
+      "img": "https://static.merqueo.com/images/products/app/4aa9f60f-5f7d-40b9-8cb3-f5f64c574d38.jpg",
+      "name": "Tomate Cherry",
+      "weight": "225 Gr",
+      "price": "$3.500"
+    },
+
+    {
+      "id": 4,
+      "img": "https://static.merqueo.com/images/products/app/7b80d169-513e-41ee-825f-19cbe2592c8a.jpg",
+      "name": "Tomate Cherry",
+      "weight": "500 Gr",
+      "price": "$12.900"
+    },
+    {
+      "id": 5,
+      "img": "https://static.merqueo.com/images/products/app/04f5f8c9-a81c-461c-8c8e-0ae61bd0c246.jpg",
+      "name": "Pimenton",
+      "weight": "600 Gr",
+      "price": "$4.200"
+    },
+    {
+      "id": 6,
+      "img": "https://static.merqueo.com/images/products/large/1468bddd-beef-42eb-bd3e-a8428bc0f8f4.jpg",
+      "name": "Cebolla Blanca",
+      "weight": "600 Gr",
+      "price": "$3.200"
+    },
+    {
+      "id": 7,
+      "img": "https://static.merqueo.com/images/products/app/4a314445-f55d-46b7-9e02-9a7d02e7c0da.jpg",
+      "name": "Cebolla Roja",
+      "weight": "600 Gr",
+      "price": "$3.200"
+    },
+    {
+      "id": 8,
+      "img": "https://static.merqueo.com/images/products/app/a1ed15c5-a25d-4014-bfc9-fbf46d991ff0.jpg",
+      "name": "Zanahoria",
+      "weight": "600 Gr",
+      "price": "$2.300"
+    },
+    {
+      "id": 9,
+      "img": "https://static.merqueo.com/images/products/app/6e44c48e-5d9b-4807-b510-eb2e148e75d9.jpg",
+      "name": "Zanahorias",
+      "weight": "200 Gr",
+      "price": "$7.900"
+    },
+    {
+      "id": 10,
+      "img": "https://static.merqueo.com/images/products/app/7e0f11c8-43a3-4d05-9659-be7b206c15cf.jpg",
+      "name": "Repollo Blanco",
+      "weight": "450 Gr",
+      "price": "$4.200"
+    },
+    {
+      "id": 11,
+      "img": "https://static.merqueo.com/images/products/app/59179a3f-9668-400d-93ec-d1f12d568271.jpg",
+      "name": "Repollo Morado",
+      "weight": "450 Gr",
+      "price": "$4.200"
+    },
+    {
+      "id": 12,
+      "img": "https://static.merqueo.com/images/products/large/e1346bec-712f-4bd9-b941-dfc5226c5c87.jpg",
+      "name": "Lechuga Batavia",
+      "weight": "700 Gr",
+      "price": "$3.100"
+    },
+    {
+      "id": 13,
+      "img": "https://static.merqueo.com/images/products/app/44298716-fe65-414f-a313-877ae6afcc19.jpg",
+      "name": "Lechuga Crespa",
+      "weight": "180 Gr",
+      "price": "$1.800"
+    },
+    {
+      "id": 14,
+      "img": "https://static.merqueo.com/images/products/app/7f5097a0-da40-43d5-9abd-219e917d31a9.jpg",
+      "name": "Cogollos",
+      "weight": "200 Gr",
+      "price": "$3.800"
+    },
+    {
+      "id": 15,
+      "img": "https://static.merqueo.com/images/products/app/97a4336a-f0ac-4830-85c3-ca1125d861cc.jpg",
+      "name": "Rugula",
+      "weight": "150 Gr",
+      "price": "$3.250"
+    },
+    {
+      "id": 16,
+      "img": "https://static.merqueo.com/images/products/app/39311b91-ffd8-454d-9ee8-8f19dd56d2a3.jpg",
+      "name": "Espinaca",
+      "weight": "300 Gr",
+      "price": "$3.900"
+    },
+    {
+      "id": 17,
+      "img": "https://static.merqueo.com/images/products/app/bdcf10b7-6ca6-4d59-8ba5-ad36f6c1b79d.jpg",
+      "name": "Acelga",
+      "weight": "500 Gr",
+      "price": "$1.800"
+    },
+    {
+      "id": 18,
+      "img": "https://static.merqueo.com/images/products/large/5c431760-92a1-4bd8-a625-c09c425a2db1.jpg",
+      "name": "Kale Crespo",
+      "weight": "130 Gr",
+      "price": "$2.800"
+    },
+    {
+      "id": 19,
+      "img": "https://static.merqueo.com/images/products/app/9c3b23f0-2b7c-473f-9540-723587e7da55.jpg",
+      "name": "Apio Entero",
+      "weight": "500 Gr",
+      "price": "$2.500"
+    },
+    {
+      "id": 20,
+      "img": "https://static.merqueo.com/images/products/app/5b6d7040-6dec-409b-b096-1ba3922ddfc9.jpg",
+      "name": "Kale liso hidropónico",
+      "weight": "130 Gr",
+      "price": "$2.500"
+    },
+    {
+      "id": 21,
+      "img": "https://static.merqueo.com/images/products/app/465e134a-2b7f-4cb3-8b49-e499b8582e00.jpg",
+      "name": "Apio",
+      "weight": "500 Gr",
+      "price": "$3.500"
+    },
+    {
+      "id": 22,
+      "img": "https://static.merqueo.com/images/products/app/bd8f7f6a-4972-4a55-b832-2b56289885fb.jpg",
+      "name": "Rabanos",
+      "weight": "200 Gr",
+      "price": "$3.800"
+    },
+    {
+      "id": 23,
+      "img": "https://static.merqueo.com/images/products/app/ab1d2c34-35b5-465f-baf0-b224933ff208.jpg",
+      "name": "Ajo",
+      "weight": "90 Gr",
+      "price": "$1.900"
+    },
+    {
+      "id": 24,
+      "img": "https://static.merqueo.com/images/products/large/193d315d-7497-4c99-a728-3b3aa52f2286.jpg",
+      "name": "Jengibre",
+      "weight": "250 Gr",
+      "price": "$2.800"
+    },
+    {
+      "id": 25,
+      "img": "https://static.merqueo.com/images/products/app/b13d38dc-2efb-426a-9152-a5de9861260a.jpg",
+      "name": "Plátano Verde",
+      "weight": "750 Gr",
+      "price": "$5.100"
+    },
+    {
+      "id": 26,
+      "img": "https://static.merqueo.com/images/products/app/4b555f04-0cfb-493c-8733-39dcd2898287.jpg",
+      "name": "Plátano Verde",
+      "weight": "1.5 Kg",
+      "price": "$9.900"
+    },
+    {
+      "id": 27,
+      "img": "https://static.merqueo.com/images/products/app/9c5403ee-62ac-443c-a6cd-728e6415fb01.jpg",
+      "name": "Mazorca Entera",
+      "weight": "900 Gr",
+      "price": "$6.500"
+    },
+    {
+      "id": 28,
+      "img": "https://static.merqueo.com/images/products/app/d865e09e-ed5f-4503-8c22-b8948db7ff96.jpg",
+      "name": "Cubios",
+      "weight": "500 Gr",
+      "price": "$2.900"
+    },
+    {
+      "id": 29,
+      "img": "https://static.merqueo.com/images/products/app/fa019197-0b97-482f-997a-965544f2093f.jpg",
+      "name": "Chuguas",
+      "weight": "300 Gr",
+      "price": "$3.300"
+    },
+    {
+      "id": 30,
+      "img": "https://static.merqueo.com/images/products/large/03199e88-65db-4217-83b0-9226a3389051.jpg",
+      "name": "Ahuyama",
+      "weight": "600 Gr",
+      "price": "$2.500"
+    },
+    {
+      "id": 31,
+      "img": "https://static.merqueo.com/images/products/app/c4db1561-bc5a-4eb4-b38c-5aff0002c25d.jpg",
+      "name": "Ahuyama zacata",
+      "weight": "1000 Gr",
+      "price": "$3.200"
+    },
+    {
+      "id": 32,
+      "img": "https://static.merqueo.com/images/products/app/104ca089-bb89-4601-ba80-f3edfebe2a5c.jpg",
+      "name": "Zucchini Amarillo",
+      "weight": "1 Kg",
+      "price": "$4.800"
+    },
+    {
+      "id": 33,
+      "img": "https://static.merqueo.com/images/products/app/20e314e7-2cfc-4bb7-a50d-b31abe1dc96c.jpg",
+      "name": "Berenjena",
+      "weight": "300 Gr",
+      "price": "$3.200"
+    },
+    {
+      "id": 34,
+      "img": "https://static.merqueo.com/images/products/app/07088893-a2b2-4922-94e0-1d1afee2e059.jpg",
+      "name": "Guisantes",
+      "weight": "200 Gr",
+      "price": "$6.800"
+    },
+    {
+      "id": 35,
+      "img": "https://static.merqueo.com/images/products/app/275f6bbb-3722-4a89-958d-17a0b75049e6.jpg",
+      "name": "Raíces Chinas",
+      "weight": "250 Gr",
+      "price": "$1.950"
+    },
+    {
+      "id": 36,
+      "img": "https://static.merqueo.com/images/products/large/72b38cf7-a66b-47bb-bb26-ed7437774cb2.jpg",
+      "name": "Champiñón Blanco",
+      "weight": "500 Gr",
+      "price": "$11.850"
+    }
+  ]
 }

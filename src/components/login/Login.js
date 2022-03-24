@@ -8,6 +8,7 @@ import { ButtonLogin, DivLogin, FormLogin, IconCol } from '../../styles/styledCo
 import { FcGoogle } from "react-icons/fc";
 import { ImFacebook2 } from "react-icons/im";
 
+
 const Login = () => {
 
     const dispatch = useDispatch();
@@ -33,6 +34,7 @@ const Login = () => {
     }
 
     return (
+     
        
         <DivLogin>
              Login :v
@@ -76,6 +78,7 @@ const Login = () => {
             </FormLogin>
 
         </DivLogin>
+      
     )
 }
 
