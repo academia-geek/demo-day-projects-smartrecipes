@@ -13,7 +13,7 @@ const CardMenu = ({ data }) => {
       <h4> Comparación de precios</h4>
       <Row xs={1} md={4} className="g-3">
         {
-          sliceProducto.map(producto => (
+          data.map(producto => (
             <Col key={producto.id} className='cardMenu'>
               <Card style={{ width: '11rem'}} className='mx-auto' >
                 <Card.Img variant="top" src={producto.img} />

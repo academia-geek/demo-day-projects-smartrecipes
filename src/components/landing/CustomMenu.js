@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { fetchProduct } from '../../helpers/fetchProduct'
+import { productsUrl } from '../../helpers/producsUrl'
 import { urlOptions } from '../../helpers/url'
 import { DivOptions } from '../../styles/styledComponents/LandingStyles'
 import { ButtonLogin } from '../../styles/styledComponents/LoginStyled'
@@ -13,7 +14,7 @@ const CustomMenu = () => {
     const [data, setData] = useState([])
 
     useEffect(() => {
-        fetchProduct(urlOptions)
+        fetchProduct(productsUrl)
             .then(data => setData(data))
     }, [])
 
