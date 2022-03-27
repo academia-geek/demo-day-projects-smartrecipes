@@ -11,7 +11,9 @@ top: 0px; */
   background-color: ${VerdeLima};
   width: 300px;
   z-index: 2;
-  height: 100vh;
+  height:100%;
+
+  top: 0px;
   ul{
     list-style: none;
     div{

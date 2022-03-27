@@ -11,6 +11,7 @@ import Ubicacion from './top/ubicacion/Ubicacion'
 
 const MainApp = () => {
   return (
+    <>
     <ContainerAppStyle>
       <SideBarMenu/>
     <DivFlex>
@@ -20,10 +21,11 @@ const MainApp = () => {
       <Idioma/>
     </ContainerAppTopStyle>
     <SliderApp/>
-    <Productos/>
+    {/* <Productos/> */}
     <Recetas/>
     </DivFlex>
     </ContainerAppStyle>
+    </>
   )
 }
 

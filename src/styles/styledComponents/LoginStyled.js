@@ -24,6 +24,17 @@ export const FormLogin = styled(Form)`
   @media only screen and (max-width: 600px) {
     width: 90%;
   }
+  .error{
+    color: red;   
+    border: 1px solid red; 
+  }
+  .error-message{
+    color: red;
+    margin: 0px;
+    padding: 0px;
+    
+    
+  }
 `;
 
 export const ButtonLogin = styled(Button)`
