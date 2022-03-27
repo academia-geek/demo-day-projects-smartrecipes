@@ -6,28 +6,61 @@ import {
   FormLogin,
 } from "../../styles/styledComponents/LoginStyled";
 import * as Yup from "yup";
-
-
+// import fileUpload2 from "../../helpers/fileUpload2";
+import fileUpload from "../../helpers/fileUpload";
+let url = ''
 export const FormRegister = () => {
+
+  const handleFileChange =  (e) => {
+    const file = e.target.files[0];  
+    
+    url = fileUpload(file)
+    .then((res) => {
+        console.log('res' , res);
+        return res
+      })
+      .catch((err) => {
+        console.log('error' , err);
+      });
+   
+      
+  };
+    //ESTE ES INDEFINIDO
+   
+  ;
   const initialValues = {
     name: "",
     email: "",
     password: "",
+    photo: "",
     repeatPassword: "",
     alergia: false,
     checked: [],
-  }
+  };
   const validationSchema = Yup.object().shape({
     name: Yup.string().required("El nombre es requerido lorem ipsum"),
-    email: Yup.string().email("El email no es válido").required("El email es requerido"),
+    email: Yup.string()
+      .email("El email no es válido")
+      .required("El email es requerido"),
     // create Yup schema for password with min 6 characters and max 20 characters and at least one number
-    password: Yup.string().min(6, "La contraseña debe tener al menos 6 caracteres").max(20, "La contraseña debe tener máximo 20 caracteres").required("La contraseña es requerida").matches(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/, "La contraseña debe tener al menos una letra y un número"),
+    password: Yup.string()
+      .min(6, "La contraseña debe tener al menos 6 caracteres")
+      .max(20, "La contraseña debe tener máximo 20 caracteres")
+      .required("La contraseña es requerida")
+      .matches(
+        /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/,
+        "La contraseña debe tener al menos una letra y un número"
+      ),
 
-    repeatPassword: Yup.string().required("La contraseña es requerida").oneOf([Yup.ref("password")], "Las contraseñas no coinciden"),
-      })
-  
+    repeatPassword: Yup.string()
+      .required("La contraseña es requerida")
+      .oneOf([Yup.ref("password")], "Las contraseñas no coinciden"),
+    // validate file Yup
+    // handle file change Yup
+    photo: Yup.string().required("La foto es requerida"),
+  });
+
   return (
-    
     <Formik
       initialValues={initialValues}
       onSubmit={(values, { setSubmitting }) => {
@@ -36,7 +69,6 @@ export const FormRegister = () => {
           setSubmitting(false);
         }, 400);
       }}
-
       validationSchema={validationSchema}
     >
       {(props) => (
@@ -45,7 +77,6 @@ export const FormRegister = () => {
           This first checkbox will result in a boolean value being stored. Note that the `value` prop
           on the <Field/> is omitted
         */}
-        
 
           {/* 
           Multiple checkboxes with the same name attribute, but different
@@ -54,124 +85,150 @@ export const FormRegister = () => {
           logic will be taken care of for you.
         */}
 
-          <FormLogin.Group className="mb-3" controlId="formBasicName" >
+          <FormLogin.Group className="mb-3" controlId="formBasicName">
             <FormLogin.Label>Nombre</FormLogin.Label>
             <FormLogin.Control
-            as = {Field}
-            className={props.errors.name ? 'error' : ''}
+              as={Field}
+              className={props.errors.name ? "error" : ""}
               type="text"
               placeholder="Ingrese su Nombre"
               name="name"
-              
-           
             />
-            <ErrorMessage className="error-message" name="name" component="small" />
+            <ErrorMessage
+              className="error-message"
+              name="name"
+              component="small"
+            />
           </FormLogin.Group>
           <FormLogin.Group className="mb-3" controlId="formBasicEmail">
             <FormLogin.Label>Email</FormLogin.Label>
             <FormLogin.Control
-            as = {Field}
-            className={props.errors.email ? 'error' : ''}
+              as={Field}
+              className={props.errors.email ? "error" : ""}
               type="email"
               placeholder="Ingrese su email"
-              name="email"          
+              name="email"
             />
-            <ErrorMessage  name="email" className="error-message" component="small" />
+            <ErrorMessage
+              name="email"
+              className="error-message"
+              component="small"
+            />
           </FormLogin.Group>
 
           <FormLogin.Group className="mb-3" controlId="formBasicPassword">
             <FormLogin.Label>Contraseña</FormLogin.Label>
             <FormLogin.Control
-            as = {Field}
-            className={props.errors.password ? 'error' : ''}
+              as={Field}
+              className={props.errors.password ? "error" : ""}
               type="password"
               placeholder="Ingrese su contraseña"
               name="password"
-         
             />
-            <ErrorMessage name="password" className="error-message" component="small" />
+            <ErrorMessage
+              name="password"
+              className="error-message"
+              component="small"
+            />
+          </FormLogin.Group>
+          <FormLogin.Group className="mb-3" controlId="formUploadImg">
+            <FormLogin.Label>Foto de perfil</FormLogin.Label>
+            <FormLogin.Control
+              as={Field}
+              className={props.errors.photo ? "error" : ""}
+              type="file"
+              value={url.length > 1 ? url : props.values.photo}
+              name="photo"
+              onChange={handleFileChange}
+            />
+            <ErrorMessage
+              name="photo"
+              className="error-message"
+              component="small"
+            />
           </FormLogin.Group>
 
           <FormLogin.Group className="mb-3" controlId="formBasicPassword2">
             <FormLogin.Label>Repita la contraseña</FormLogin.Label>
             <FormLogin.Control
-            as = {Field}
+              as={Field}
               type="password"
               placeholder="Repita su contraseña"
-              className={props.errors.repeatPassword ? 'error' : ''}
+              className={props.errors.repeatPassword ? "error" : ""}
               name="repeatPassword"
-             
             />
-            <ErrorMessage name="repeatPassword" className="error-message" component="small" />
+            <ErrorMessage
+              name="repeatPassword"
+              className="error-message"
+              component="small"
+            />
           </FormLogin.Group>
           <FormLogin.Label>
-            <FormLogin.Check
-            
-            as = {Field} type="checkbox" name="alergia" />
+            <FormLogin.Check as={Field} type="checkbox" name="alergia" />
             {`Alergias ${props.values.alergia}`}
           </FormLogin.Label>
 
-          {props.values.alergia && <FormLogin.Group>
-            <FormLogin.Label>Alergias</FormLogin.Label>
-            <div id="checkbox-group">Checked</div>
-            <div role="group" aria-labelledby="checkbox-group">
-              <FormLogin.Label>Soja</FormLogin.Label>
-              <Field
-                type="checkbox"
-                id="alergia1"
-                name="checked"
-                value="Soja"
-              />
-              <FormLogin.Label>Pescado</FormLogin.Label>
-              <Field
-                type="checkbox"
-                id="alergia2"
-                name="checked"
-                value="Pescado"
-              />
-              <FormLogin.Label>Mariscos</FormLogin.Label>
-              <Field
-                type="checkbox"
-                id="alergia3"
-                name="checked"
-                value="Mariscos"
-              />
-              <FormLogin.Label>Lacteos</FormLogin.Label>
-              <Field
-                type="checkbox"
-                id="alergia4"
-                name="checked"
-                value="Lacteos"
-              />
-              <FormLogin.Label>Mani</FormLogin.Label>
-              <Field
-                type="checkbox"
-                id="alergia5"
-                name="checked"
-                value="Mani"
-              />
-              <FormLogin.Label>Apio</FormLogin.Label>
-              <Field
-                type="checkbox"
-                id="alergia6"
-                name="checked"
-                value="Apio"
-              />
-              <FormLogin.Label>Mostaza</FormLogin.Label>
+          {props.values.alergia && (
+            <FormLogin.Group>
+              <FormLogin.Label>Alergias</FormLogin.Label>
+              <div id="checkbox-group">Checked</div>
+              <div role="group" aria-labelledby="checkbox-group">
+                <FormLogin.Label>Soja</FormLogin.Label>
+                <Field
+                  type="checkbox"
+                  id="alergia1"
+                  name="checked"
+                  value="Soja"
+                />
+                <FormLogin.Label>Pescado</FormLogin.Label>
+                <Field
+                  type="checkbox"
+                  id="alergia2"
+                  name="checked"
+                  value="Pescado"
+                />
+                <FormLogin.Label>Mariscos</FormLogin.Label>
+                <Field
+                  type="checkbox"
+                  id="alergia3"
+                  name="checked"
+                  value="Mariscos"
+                />
+                <FormLogin.Label>Lacteos</FormLogin.Label>
+                <Field
+                  type="checkbox"
+                  id="alergia4"
+                  name="checked"
+                  value="Lacteos"
+                />
+                <FormLogin.Label>Mani</FormLogin.Label>
+                <Field
+                  type="checkbox"
+                  id="alergia5"
+                  name="checked"
+                  value="Mani"
+                />
+                <FormLogin.Label>Apio</FormLogin.Label>
+                <Field
+                  type="checkbox"
+                  id="alergia6"
+                  name="checked"
+                  value="Apio"
+                />
+                <FormLogin.Label>Mostaza</FormLogin.Label>
 
-              <Field
-                type="checkbox"
-                id="alergia7"
-                name="checked"
-                value="Mostaza"
-              />
-            </div>
-          </FormLogin.Group>
-}
+                <Field
+                  type="checkbox"
+                  id="alergia7"
+                  name="checked"
+                  value="Mostaza"
+                />
+              </div>
+            </FormLogin.Group>
+          )}
           {/*  <Link to="/register" className='registerLogin'>Registrarse</Link> */}
 
           <button type="submit">Submit</button>
-        
         </FormLogin>
       )}
     </Formik>
