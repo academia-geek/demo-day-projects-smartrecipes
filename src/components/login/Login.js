@@ -1,7 +1,7 @@
 import React from 'react'
 import { Form } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
 import { login, loginFacebook, loginGoogle } from '../../redux/action/actionLogin';
 import { ButtonLogin, DivLogin, FormLogin, IconCol } from '../../styles/styledComponents/LoginStyled';
@@ -12,7 +12,7 @@ import { ImFacebook2 } from "react-icons/im";
 const Login = () => {
 
     const dispatch = useDispatch();
-
+const navigate = useNavigate()
     const [values, handleInputChange] = useForm({
         email: '',
         password: ''
@@ -23,14 +23,17 @@ const Login = () => {
     const handleLogin = (e) => {
         e.preventDefault();
         dispatch(login(email, password))
+        navigate('/home')
     }
 
     const handleGoogle = () => {
         dispatch(loginGoogle());
+        navigate('/home')
     }
 
     const handleFacebook = () => {
         dispatch(loginFacebook());
+        navigate('/home')
     }
 
     return (

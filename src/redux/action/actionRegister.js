@@ -10,25 +10,31 @@ import { types } from "../types/types";
 
 
 
-export const registroEmailPasswordNombre = (email, password, name, img) => {
+export const registroEmailPasswordNombre = (values) => {
+  const {name, email, repeatPassword , photo, alergia, checked   } = values
+  
   return (dispatch) => {
     const auth = getAuth();
-    createUserWithEmailAndPassword(auth, email, password)
+    createUserWithEmailAndPassword(auth, email, repeatPassword)
       .then(async ({ user }) => {
         await updateProfile(auth.currentUser, { displayName: name });
 
-        dispatch(registerSincrono(user.email, user.uid, user.displayName));
+        dispatch(registerSincrono(user.email, user.uid, user.displayName)
+        
+        );
         // dispatch(registerUserAsync(name,email,user.uid,img))
         const newUser = {
-          displayName: user.displayName,
+          name: user.displayName,
           email: user.email,
-          photoUrl: img,
+          photoUrl: photo,
           uid: user.uid,
+          alergia,
+          checked
         };
-        addDoc(collection(db, "users"), newUser)
+        addDoc(collection(db, "usuarios"), newUser)
           .then((resp) => {
             dispatch(
-              registerUserSync(user.displayName, user.email, user.uid, img)
+              registerUserSync(user.displayName, user.email, user.uid, photo)
             );
           })
           .catch((error) => {
@@ -73,9 +79,9 @@ export const registerSincrono = (email, password, name) => {
 //   };
 // };
 
-export const registerUserSync = (nombre, email, uid, img) => {
+export const registerUserSync = (nombre, email, uid, photo) => {
   return {
-    type: registerLocalTypes.registerLocal,
-    payload: { nombre, email, uid, img },
+    type: types.registerUser,
+    payload: { nombre, email, uid, photo }
   };
 };

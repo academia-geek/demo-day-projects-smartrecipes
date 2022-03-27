@@ -8,13 +8,17 @@ import {
 import * as Yup from "yup";
 // import fileUpload2 from "../../helpers/fileUpload2";
 import fileUpload from "../../helpers/fileUpload";
+import { useDispatch } from "react-redux";
+import { registroEmailPasswordNombre } from "../../redux/action/actionRegister";
+import { useNavigate } from "react-router-dom";
 let url = ''
 export const FormRegister = () => {
-
-  const handleFileChange =  (e) => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const handleFileChange = async (e) => {
     const file = e.target.files[0];  
     
-    url = fileUpload(file)
+    url = await fileUpload(file)
     .then((res) => {
         console.log('res' , res);
         return res
@@ -23,7 +27,7 @@ export const FormRegister = () => {
         console.log('error' , err);
       });
    
-      
+      console.log('url en file change', url)
   };
     //ESTE ES INDEFINIDO
    
@@ -32,7 +36,7 @@ export const FormRegister = () => {
     name: "",
     email: "",
     password: "",
-    photo: "",
+    photo: '',
     repeatPassword: "",
     alergia: false,
     checked: [],
@@ -57,15 +61,24 @@ export const FormRegister = () => {
       .oneOf([Yup.ref("password")], "Las contraseñas no coinciden"),
     // validate file Yup
     // handle file change Yup
-    photo: Yup.string().required("La foto es requerida"),
+   
+    
   });
 
   return (
     <Formik
       initialValues={initialValues}
       onSubmit={(values, { setSubmitting }) => {
+        console.log('url en file on submit', url)
+        let {photo} = values
+
+        photo = url
+        const values1 = {...values, photo}
+
         setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
+          alert(JSON.stringify(values1, null, 2));
+          dispatch(registroEmailPasswordNombre(values1))
+          navigate('/login')
           setSubmitting(false);
         }, 400);
       }}
@@ -133,14 +146,16 @@ export const FormRegister = () => {
           </FormLogin.Group>
           <FormLogin.Group className="mb-3" controlId="formUploadImg">
             <FormLogin.Label>Foto de perfil</FormLogin.Label>
-            <FormLogin.Control
-              as={Field}
+            <input                    
               className={props.errors.photo ? "error" : ""}
-              type="file"
-              value={url.length > 1 ? url : props.values.photo}
+              type="file"             
               name="photo"
               onChange={handleFileChange}
+              // value is external from Formik 
+           
+              
             />
+
             <ErrorMessage
               name="photo"
               className="error-message"
