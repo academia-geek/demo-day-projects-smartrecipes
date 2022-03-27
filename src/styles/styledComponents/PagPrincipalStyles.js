@@ -21,18 +21,13 @@ export const CalendarioStyled = styled.div`
 
 export const SeguimientoPreciosStyled = styled.div`
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  .containerButton {
-    display: flex;
-    justify-content: flex-end;
-    width: 90%;
-    button {
-      border-radius: 10px;
-    }
-  }
+  display: flex;  
+  flex-direction: row;
+  
+overflow-x: scroll;
+ 
+  gap: 20px;
+ 
   margin-bottom: 25px;
 `;
 export const ContainerImage = styled.div`
@@ -49,7 +44,7 @@ export const ContainerImage = styled.div`
 
 export const ProductoStyled = styled.div`
   img {
-    width: 100px;
+    width: 150px;
   }
 `;
 

@@ -2,7 +2,7 @@
 import { initializeApp } from "firebase/app";
 import {getFirestore} from 'firebase/firestore';
 import { FacebookAuthProvider, GoogleAuthProvider } from "firebase/auth";
-
+import { getStorage , ref} from "firebase/storage";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -20,13 +20,22 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 
+
+
+
+
 const google =  new GoogleAuthProvider();
 const facebook = new FacebookAuthProvider()
 const db = getFirestore();
-
+// Get a reference to the storage service, which is used to create references in your storage bucket
+const storage = getStorage(app);
+// Create a storage reference from our storage service
+const storageRef = ref(storage);
 export{
     app,
     google,
     db,
-    facebook
+    facebook,
+    storage,
+    storageRef
 }

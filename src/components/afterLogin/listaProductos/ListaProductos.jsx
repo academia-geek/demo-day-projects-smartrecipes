@@ -1,17 +1,16 @@
-import React from 'react'
-import { useLocation } from 'react-router-dom'
-import Header from '../pagPrincipalLog/header/Header'
-import SeguimientoPrecios from '../pagPrincipalLog/seguimientoPrecios/SeguimientoPrecios'
+import React from "react";
+import { useSelector } from "react-redux";
+import SeguimientoPrecios from "../pagPrincipalLog/seguimientoPrecios/SeguimientoPrecios";
 
 const ListaProductos = () => {
-  const location = useLocation()
-  const data = location.state
+  const { productos } = useSelector((store) => store.add);
   return (
     <>
-      <Header/>
-      <SeguimientoPrecios data={data} limit={20}/>
+      <h3>Seguimiento de precios</h3>
+      <p>Productos con más variacion</p>
+      <SeguimientoPrecios data={productos} limit={20} />
     </>
-  )
-}
+  );
+};
 
-export default ListaProductos
+export default ListaProductos;

@@ -1,27 +1,62 @@
+import { collection, getDocs } from 'firebase/firestore'
 import React, { useEffect, useState } from 'react'
 import { Container } from 'react-bootstrap'
+import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { db } from '../../firebase/firebaseConfig'
 import { fetchProduct } from '../../helpers/fetchProduct'
 import { productsUrl } from '../../helpers/producsUrl'
+import { actionAdd } from '../../redux/action/actionAdd'
+import { ContainerAppStyle } from '../../styles/styledComponents/ContainerApp'
 import { DivOptions } from '../../styles/styledComponents/LandingStyles'
 import { ButtonLogin } from '../../styles/styledComponents/LoginStyled'
+import MainApp from '../mainApp/MainApp'
+import SideBarMenu from '../SideBarMenu/SideBarMenu'
 import CardMenu from './CardMenu'
 
 
-const CustomMenu = () => {
-
+const CustomMenu =  () => {
+    const dispatch = useDispatch()
     const [data, setData] = useState([])
+    const [loading, setLoading] = useState(true)	
+    const getFromFirebase = async () => {
+
+        const querySnapshot = await getDocs(collection(db, "dataprecios"));
+
+        querySnapshot.forEach((doc) => {
+            productos.push({
+              id: doc.id,
+              data: doc.data(),
+            })
+          });
+    }
+    
+    let productos = []
+    
 
     useEffect(() => {
         fetchProduct(productsUrl)
             .then(data => setData(data))
+        dispatch(actionAdd(data))
+        setLoading(false)        
+        getFromFirebase()
+        console.log('productos', productos)
     }, [])
 
-    console.log('Estoy en data', data);
+    if(loading){
+        return (<h1>Cargando</h1> )
+    }
+   
 
 
     return (
-        <DivOptions >CustomMenuxz
+        <>
+     
+        <MainApp/>
+        
+
+        {/*         
+        <DivOptions >
             <Container className='titleMenu'>
                 <h4>Menú Personalizado</h4>
             </Container>
@@ -39,7 +74,8 @@ const CustomMenu = () => {
                     <ButtonLogin> Registro </ButtonLogin>
                 </Link >
             </Container>
-        </DivOptions>
+        </DivOptions> */}
+        </>
     )
 }
 

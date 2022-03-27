@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Calendario from "../components/afterLogin/calendario/Calendario";
 import ListaProductos from "../components/afterLogin/listaProductos/ListaProductos";
 import ContainerPagPrincipal from "../components/afterLogin/pagPrincipalLog/containerPagPrincipal/ContainerPagPrincipal";
+import Calendar from "../components/calendar/Calendar";
 import CustomMenu from "../components/landing/CustomMenu";
 import Logo from "../components/landing/Logo";
 import UserOption from "../components/landing/UserOption";
@@ -31,7 +32,7 @@ const AppRouter = () => {
 
         <Route path="/home" element={<ContainerPagPrincipal/>} />
         <Route path="/productos" element={<ListaProductos/>} />
-        <Route path="/calendario" element={<Calendario/>} />
+        <Route path="/calendario" element={<Calendar/>} />
 
 
       </Routes>
