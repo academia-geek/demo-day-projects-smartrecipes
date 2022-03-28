@@ -1,8 +1,11 @@
 import React from 'react'
+import { BotonPerfilUserStyled } from '../../../../styles/styledComponents/PagPrincipalStyles'
 
 const BotonPerfilUser = () => {
   return (
-    <div>BotonPerfilUser</div>
+    <BotonPerfilUserStyled>
+      <p>Ve a tu perfil</p>
+    </BotonPerfilUserStyled>
   )
 }
 

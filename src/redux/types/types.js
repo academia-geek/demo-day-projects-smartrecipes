@@ -3,3 +3,11 @@ export const types = {
     logout: 'logout',
     register: 'register'
 }
+
+export const addTypes = {
+    addProductos : 'addProductos',
+    addRecetas : 'addRecetas',
+    addProductosCiudad : 'addProductosCiudad',
+    search : 'search'
+
+}

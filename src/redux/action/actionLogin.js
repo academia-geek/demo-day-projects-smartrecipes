@@ -1,87 +1,127 @@
-import { getAuth, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
-import { facebook, google } from "../../firebase/firebaseConfig";
+import {
+  getAuth,
+  signInWithPopup,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { facebook, google, db } from "../../firebase/firebaseConfig";
+
+
+import {
+  addDoc,
+  collection,
+ 
+} from "@firebase/firestore";
+
+import { registerUserSync } from "./actionRegister";
 import { types } from "../types/types";
 
-
-// Login Asyncronic
-
 export const login = (email, password) => {
-    return (dispatch) => {
-        const auth = getAuth();
-        signInWithEmailAndPassword(auth, email,password)
-        .then(({user}) => {
-            dispatch(
-                loginSin(user.uid, user.displayName)
-            )
-            console.log('Bienvenido');
-        })
-        .catch(e => {
-            console.log(e);
-            console.log('El usuario no existe');
-        })
-    }
-}
-
-// login syncronic
-
-export const loginSin = (id, displayname) => {
-    return {
-        type: types.login,
-        payload: {
-            id,
-            displayname
-        }
-    }
-}
-
-// Login Google
+  return (dispatch) => {
+    const auth = getAuth();
+    signInWithEmailAndPassword(auth, email, password)
+      .then(({ user }) => {
+        dispatch(loginSincrono(user.uid, user.displayName));
+        console.log("Bienvenid@");
+      })
+      .catch((e) => {
+        console.log("El usuario no existe");
+      });
+  };
+};
+// export const logoutAsincrono = () =>{
+//
+//     return (dispatch) =>{
+//
+//        const auth = getAuth();
+//
+//         signInWithEmailAndPassword(auth,email,password)
+//        .then(({user}) =>{
+//              dispatch(
+//                 loginSincrono(user.uid,user.displayName)
+//              )
+//              console.log('Bienvenid@');
+//        })
+//        .catch(e =>{
+//             console.log('El usuario no existe');
+//        })
+//     }
+// }
 
 export const loginGoogle = () => {
-    return(dispatch) => {
-        const auth = getAuth();
-        signInWithPopup(auth,google)
-        .then(({user}) => {
-            dispatch(loginSin(user.uid, user.displayName))
-        })
-        .catch (e => {
-            console.log(e);
-        })
-    }
-}
-
-// Login Facebook 
-
+  return (dispatch) => {
+    const auth = getAuth();
+    signInWithPopup(auth, google)
+      .then(({ user }) => {
+        // console.log('user', user)
+        const { uid, displayName, photoURL, email } = user;
+        dispatch(loginSincrono(displayName, email, uid, photoURL));
+        console.log(`Bienvenid@ ${user.displayName}`);
+        const newUser = {
+          displayName: user.displayName,
+          email: user.email,
+          photoUrl: photoURL,
+          uid: user.uid,
+        };
+        addDoc(collection(db, "users"), newUser)
+          .then((resp) => {
+            dispatch(
+              registerUserSync(user.displayName, user.email, user.uid, photoURL)
+            );
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+};
 export const loginFacebook = () => {
-    return(dispatch) => {
-        const auth = getAuth();
-        signInWithPopup(auth,facebook)
-        .then(({user}) => {
-            dispatch(loginSin(user.uid, user.displayName))
-        })
-        .catch (e => {
-            console.log(e);
-        })
-    }
-}
+  return (dispatch) => {
+    const auth = getAuth();
+    signInWithPopup(auth, facebook)
+      .then(({ user }) => {
+        const { uid, displayName, photoURL, email } = user;
+        dispatch(loginSincrono(displayName, email, uid, photoURL));
+        console.log(`Bienvenid@ ${user.displayName}`);
+        const newUser = {
+          displayName: user.displayName,
+          email: user.email,
+          photoUrl: photoURL,
+          uid: user.uid,
+        };
+        addDoc(collection(db, "users"), newUser)
+          .then((resp) => {
+            dispatch(
+              registerUserSync(user.displayName, user.email, user.uid, photoURL)
+            );
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+};
 
-// Logout 
+export const loginSincrono = (displayName, email, uid, photoURL) => {
+  return {
+    type: types.login,
+    payload: {
+      displayName,
+      email,
+      uid,
+      photoURL,
+    },
+  };
+};
 
-export const logout = () => {
-    return(dispatch) => {
-        const auth = getAuth()
-        signOut(auth)
-        .then (user => {
-            dispatch(logoutSyn())
-        })
-        .catch (e => {
-            console.log(e);
-        })
-    }
-    
-}
+export const logoutSincrono = () => {
+  return {
+    type: types.logout,
+  };
+};
 
-export const logoutSyn = () => {
-    return {
-        type: types.logout
-    }
-}
