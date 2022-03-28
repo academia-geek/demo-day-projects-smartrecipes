@@ -17,7 +17,7 @@ import CardMenu from './CardMenu'
 
 const CustomMenu =  () => {
     const dispatch = useDispatch()
-    const [data, setData] = useState([])
+    
     const [loading, setLoading] = useState(true)	
     const getFromFirebase = async () => {
 
@@ -29,18 +29,16 @@ const CustomMenu =  () => {
               data: doc.data(),
             })
           });
+          dispatch(actionAdd(productos))
     }
     
     let productos = []
     
 
     useEffect(() => {
-        fetchProduct(productsUrl)
-            .then(data => setData(data))
-        dispatch(actionAdd(data))
+        
+        getFromFirebase()       
         setLoading(false)        
-        getFromFirebase()
-        console.log('productos', productos)
     }, [])
 
     if(loading){
