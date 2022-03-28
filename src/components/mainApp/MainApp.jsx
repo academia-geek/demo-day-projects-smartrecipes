@@ -20,15 +20,18 @@ const MainApp = () => {
   const [loading, setLoading] = useState(true)	
   const getFromFirebase = async () => {
 
-      const querySnapshot = await getDocs(collection(db, "dataprecios"));
+      const querySnapshot = await getDocs(collection(db, "merqueo/bogota/Precios"));
 
       querySnapshot.forEach((doc) => {
           productos.push({
             id: doc.id,
             data: doc.data(),
+
           })
+        
         });
         dispatch(actionAdd(productos))
+        console.log('productos', productos)   
         setLoading(false) 
   }
   
@@ -38,7 +41,7 @@ const MainApp = () => {
   useEffect(() => {
       
       getFromFirebase()       
-             
+      
   }, [])
 
   if(loading){

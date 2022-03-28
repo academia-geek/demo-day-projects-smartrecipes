@@ -8,34 +8,32 @@ import {
   SeguimientoPreciosStyled,
 } from "../../../../styles/styledComponents/PagPrincipalStyles";
 
-const SeguimientoPrecios = ({limit}) => {
-  const {productosCiudad : {productos}} = useSelector(store => store.add);
+const SeguimientoPrecios = ({ limit }) => {
+  const { productos } = useSelector((store) => store.add);
   // iterate object
- Object.values(productos).map(data => {
-   return'';
-  });
+
   return (
     <SeguimientoPreciosStyled>
-      
-      {productos !== undefined && Object.values(productos).map((producto, index) => {
-        
-        if (index < limit) {
-          return (
-            <ProductoStyled key={index}>
-              <ContainerImage>
-              <img alt="producto1" src={producto.img}></img>
-              <p className="bottom-right">{producto.price}</p>
-              </ContainerImage>
-              <p>{producto.name}</p>              
-            </ProductoStyled>
-          );
-        }
-        return ''
-      })}
+      {
+        productos.map((producto, index) => {
+          console.log("producto", producto);
+          if (index < limit) {
+            return (
+              <ProductoStyled key={index}>
+                <ContainerImage>
+                  <img alt="producto1" src={producto.data.img}></img>
+                  <p className="bottom-right">{producto.data.price}</p>
+                </ContainerImage>
+                <p>{producto.data.name}</p>
+              </ProductoStyled>
+            );
+          }
+          return "";
+        })}
       <div className="containerButton">
-      <Link to='/productos' state={productos}>
-      <button type="button">Todos los productos</button>
-      </Link>
+        <Link to="/productos" state={productos}>
+          <button type="button">Todos los productos</button>
+        </Link>
       </div>
     </SeguimientoPreciosStyled>
   );
