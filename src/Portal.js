@@ -1,13 +1,27 @@
 import React, { Component } from 'react'
-import reactDom from 'react-dom'
+import ReactDOM from 'react-dom'
 
 const portalRoot = document.getElementById('portal')
 
 export class Portal extends Component {
+
+  constructor() {
+    super();
+    this.el = document.createElement('div');
+  }
+
+  componentDidMount = () => {
+    portalRoot.appendChild(this.el);
+  }
+
+  componentWillUnmount = () => {
+    portalRoot.removeChild(this.el);
+  }
+
   render() {
-    return (
-      <div>Portal</div>
-    )
+    const { children } = this.props;
+
+    return ReactDOM.createPortal(children, this.el)
   }
 }
 
