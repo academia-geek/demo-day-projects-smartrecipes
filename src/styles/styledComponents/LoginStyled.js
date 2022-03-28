@@ -2,12 +2,18 @@ import { Button, Col, Form } from "react-bootstrap";
 import styled from "styled-components";
 
 export const DivLogin = styled.div`
+position: absolute;
+  top: 0%;
+  
   padding-top: 6rem;
   padding-bottom: 5.5rem;
   width: 100%;
-`;
+  z-index: 2;
+  
+  `;
 
 export const FormLogin = styled(Form)`
+
   width: 35%;
   display: block;
   margin: 15px Auto;
@@ -18,11 +24,22 @@ export const FormLogin = styled(Form)`
   @media only screen and (max-width: 600px) {
     width: 90%;
   }
+  .error{
+    color: red;   
+    border: 1px solid red; 
+  }
+  .error-message{
+    color: red;
+    margin: 0px;
+    padding: 0px;
+    
+    
+  }
 `;
 
 export const ButtonLogin = styled(Button)`
-  background-color: #f3d184;
-  color: #333333;
+  background-color: #FF5757;
+  color: #FFFF;
   border: none;
   width: 50%;
   font-size: 15px;
@@ -30,12 +47,12 @@ export const ButtonLogin = styled(Button)`
   margin: 10px Auto 0px;
   text-align: center;
   &:hover {
-    background-color: #242f3e;
+    background-color: #008037;
     color: #ffffff;
   }
   &:focus {
     outline: none;
-    background-color: #242f3e;
+    background-color: #FF5757;
     color: #ffffff;
   }
   @media only screen and (max-width: 600px) {
