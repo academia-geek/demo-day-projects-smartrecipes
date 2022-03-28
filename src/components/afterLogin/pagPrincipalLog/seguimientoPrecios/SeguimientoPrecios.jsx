@@ -16,7 +16,7 @@ const SeguimientoPrecios = ({ limit }) => {
     <SeguimientoPreciosStyled>
       {
         productos.map((producto, index) => {
-          console.log("producto", producto);
+          
           if (index < limit) {
             return (
               <ProductoStyled key={index}>

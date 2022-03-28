@@ -31,7 +31,7 @@ const MainApp = () => {
         
         });
         dispatch(actionAdd(productos))
-        console.log('productos', productos)   
+     
         setLoading(false) 
   }
   

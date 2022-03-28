@@ -9,5 +9,8 @@ export const addTypes = {
     addRecetas : 'addRecetas',
     addProductosCiudad : 'addProductosCiudad',
     search : 'search'
+}
 
+export const funtionalTypes = {
+    setCity : 'setCity',
 }

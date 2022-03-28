@@ -29,7 +29,7 @@ export const actionAddCiudad = (ciudad, uid, data) => {
   };
 };
 // Search
-export const searchAsync = (uid, producto) => {
+export const searchAsync = (producto) => {
   console.log("producto on search Async", producto);
   return async (dispatch) => {
     // const traerCollection = collection(db, "dataprecios").id('3utTuDXQpab1uPaHM9g1');
@@ -39,7 +39,7 @@ export const searchAsync = (uid, producto) => {
 
     const q = await query(
       traerCollection,
-      where(documentId(), "<=", producto, ">=", producto, "+", "z")
+      where(documentId(), ">=", producto, '<=', producto + '\uf8ff')
     );
     const datos = await getDocs(q);
     console.log("datos", datos);
