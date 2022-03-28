@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 import {
@@ -7,11 +8,17 @@ import {
   SeguimientoPreciosStyled,
 } from "../../../../styles/styledComponents/PagPrincipalStyles";
 
-const SeguimientoPrecios = ({ data , limit}) => {
-  
+const SeguimientoPrecios = ({limit}) => {
+  const {productosCiudad : {productos}} = useSelector(store => store.add);
+  // iterate object
+ Object.values(productos).map(data => {
+   return'';
+  });
   return (
     <SeguimientoPreciosStyled>
-      {data.map((producto, index) => {
+      
+      {productos !== undefined && Object.values(productos).map((producto, index) => {
+        
         if (index < limit) {
           return (
             <ProductoStyled key={index}>
@@ -26,7 +33,7 @@ const SeguimientoPrecios = ({ data , limit}) => {
         return ''
       })}
       <div className="containerButton">
-      <Link to='/productos' state={data}>
+      <Link to='/productos' state={productos}>
       <button type="button">Todos los productos</button>
       </Link>
       </div>

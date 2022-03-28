@@ -7,5 +7,7 @@ export const types = {
 export const addTypes = {
     addProductos : 'addProductos',
     addRecetas : 'addRecetas',
+    addProductosCiudad : 'addProductosCiudad',
+    search : 'search'
 
 }

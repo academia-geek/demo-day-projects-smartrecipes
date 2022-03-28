@@ -1,4 +1,9 @@
 
+import { collection, getDocs } from 'firebase/firestore'
+import { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { db } from '../../firebase/firebaseConfig'
+import { actionAdd } from '../../redux/action/actionAdd'
 import { ContainerAppStyle } from '../../styles/styledComponents/ContainerApp'
 import { ContainerAppTopStyle, DivFlex } from '../../styles/styledComponents/MainAppStyled'
 import SideBarMenu from '../SideBarMenu/SideBarMenu'
@@ -10,6 +15,35 @@ import Idioma from './top/idioma/Idioma'
 import Ubicacion from './top/ubicacion/Ubicacion'
 
 const MainApp = () => {
+  const dispatch = useDispatch()
+    
+  const [loading, setLoading] = useState(true)	
+  const getFromFirebase = async () => {
+
+      const querySnapshot = await getDocs(collection(db, "dataprecios"));
+
+      querySnapshot.forEach((doc) => {
+          productos.push({
+            id: doc.id,
+            data: doc.data(),
+          })
+        });
+        dispatch(actionAdd(productos))
+        setLoading(false) 
+  }
+  
+  let productos = []
+  
+
+  useEffect(() => {
+      
+      getFromFirebase()       
+             
+  }, [])
+
+  if(loading){
+      return (<h1>Cargando</h1> )
+  }
   return (
     <>
     <ContainerAppStyle>
@@ -21,7 +55,7 @@ const MainApp = () => {
       <Idioma/>
     </ContainerAppTopStyle>
     <SliderApp/>
-    {/* <Productos/> */}
+    <Productos/>
     <Recetas/>
     </DivFlex>
     </ContainerAppStyle>

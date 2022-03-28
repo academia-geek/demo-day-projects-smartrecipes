@@ -16,7 +16,7 @@ export const ContainerAppTopStyle = styled.div`
 `
 
 export const SliderStyled = styled.div`
-  height: 300px;
+  height: 200px;
   background-color: green;
   border-radius: 24px;
 `
