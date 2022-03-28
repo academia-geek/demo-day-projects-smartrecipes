@@ -104,3 +104,8 @@ export const TextoReceta = styled.h3`
 export const ContainerTextoReceta = styled.div`
     width: 300px;
 `
+export const ButtonModal = styled.button`
+    position: absolute;
+    top: 50%;
+    padding: 50%;
+`
