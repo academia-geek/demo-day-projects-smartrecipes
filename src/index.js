@@ -6,9 +6,6 @@ import { store } from './redux/store/store';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { GoblalStyles } from './styles/styledComponents/goblalStyles';
 
-
-
-
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
