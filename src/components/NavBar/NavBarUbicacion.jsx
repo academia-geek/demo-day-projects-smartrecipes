@@ -1,17 +1,18 @@
 
 import React from 'react'
 
-import { useState } from 'react';
+
 import { Dropdown, SplitButton } from 'react-bootstrap';
 
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { actionFunctional, actionFunctionalPath } from '../../redux/action/actionFuntional';
 import { NavLocationStyled } from '../../styles/styledComponents/NavLocationStyled';
 import { TitleRecetas } from '../../styles/styledComponents/RecipesStyle';
 
 
-const NavBarUbicacion = ({cities}) => {
-    const [ciudades, setCiudades] = useState(cities);
+const NavBarUbicacion = () => {
+  
+    const {ciudades} = useSelector(store => store.funtional)
     const dispatch = useDispatch();
   const handleSelect = ({target : {textContent}}) => {
     let city = textContent;

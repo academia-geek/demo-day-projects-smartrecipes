@@ -2,7 +2,8 @@ import { funtionalTypes } from "../types/types"
 
 const initialState = {
   city: '',
-  path: ''
+  path: '',
+  ciudades: []
 }
 
 export const funtionalReducer = (state = initialState, action) => {
@@ -17,6 +18,12 @@ export const funtionalReducer = (state = initialState, action) => {
                 ...state,
                 path: action.payload,
             }
+        case funtionalTypes.setCiudades:
+            return {
+                ...state,
+                ciudades: action.payload,
+            }
+            
         default:
             return state
     }
