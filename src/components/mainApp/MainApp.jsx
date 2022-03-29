@@ -24,7 +24,7 @@ const MainApp = () => {
   const getFromFirebase = async () => {
     const querySnapshot = await getDocs(
       collection(db, `merqueo/${path}/Precios`)
-    ); 
+    );
 
     querySnapshot.forEach((doc) => {
       productos.push({
@@ -33,7 +33,7 @@ const MainApp = () => {
       });
     });
     dispatch(actionAdd(productos));
-    
+
   };
   let cities = [];
   const getCitiesFromFirebase = async () => {
@@ -50,7 +50,7 @@ const MainApp = () => {
   }
   useEffect(() => {
     getCitiesFromFirebase()
-  } , [])
+  }, [])
 
   return (
     <>
