@@ -13,3 +13,9 @@ export const actionFunctionalPath = (path) => {
     payload: path,
   }
 }
+export const actionFunctionalCiudades = (ciudades) => {
+  return {
+    type: funtionalTypes.setCiudades,
+    payload: ciudades,
+  }
+}

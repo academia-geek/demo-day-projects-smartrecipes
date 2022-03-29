@@ -13,5 +13,6 @@ export const addTypes = {
 
 export const funtionalTypes = {
     setCity : 'setCity',
-    setPath : 'setPath'
+    setPath : 'setPath',
+    setCiudades : 'setCiudades'
 }
