@@ -1,13 +1,12 @@
 import { useFormik } from 'formik'
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 import * as Yup from 'yup'
 import { searchAsync } from '../../../../redux/action/actionAdd'
 import { SeachBarStyled } from '../../../../styles/styledComponents/SearchBarStyled'
 const BarraBusqueda = () => {
-  const {uid} = useSelector(store => store.add)
-  console.log('uid en barra busqueda', uid)
+
   const dispatch = useDispatch()
   const formik = useFormik({
     initialValues: {
@@ -18,7 +17,7 @@ const BarraBusqueda = () => {
     }),
     onSubmit:({search}) => {
       console.log('busqueda', search)
-      dispatch(searchAsync(uid, search))
+      dispatch(searchAsync( search))
     }
   })
   return (
