@@ -4,7 +4,7 @@ import { ButtonLogin } from "../../styles/styledComponents/LoginStyled";
 import { SideBarStyled } from "../../styles/styledComponents/newSideBarMenu";
 import NavBarUbicacion from "../NavBar/NavBarUbicacion";
 
-const SideBarMenu = () => {
+const SideBarMenu = ({cities}) => {
   return (
     <>
     <SideBarStyled>
@@ -14,7 +14,7 @@ const SideBarMenu = () => {
           alt="logo"
           />
       </div>
-          <NavBarUbicacion/>
+          <NavBarUbicacion cities={cities}/>
       <div className="menu">
         <ul>
           <li>

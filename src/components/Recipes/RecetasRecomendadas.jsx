@@ -75,8 +75,9 @@ const RecetasRecomendadas = () => {
     <button onClick={toggle}>
           Abrir Detalles de la Receta
     </button>
-    <Modal active={active} toggle={toggle}>
+    <Modal active={active} toggle={toggle} key={i+5*8}>
       {dish.label}
+      {console.log(dish.label)}
       <DropdownButton align="center" variant="light" title="Ingredientes">
           {dish.ingredientLines !== undefined && dish.ingredientLines.map((each,i) => {
             return (
@@ -97,5 +98,6 @@ const RecetasRecomendadas = () => {
 
 )
 }
+
 
 export default RecetasRecomendadas

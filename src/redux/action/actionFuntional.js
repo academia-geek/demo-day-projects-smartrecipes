@@ -6,3 +6,10 @@ export const actionFunctional = (city) => {
     payload: city,
   }
 }
+
+export const actionFunctionalPath = (path) => {
+  return {
+    type: funtionalTypes.setPath,
+    payload: path,
+  }
+}
