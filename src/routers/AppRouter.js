@@ -10,6 +10,7 @@ import UserOption from "../components/landing/UserOption";
 import Welcome from "../components/landing/Welcome";
 import Login from "../components/login/Login";
 import Register from "../components/login/Register";
+import NavBarUbicacion from "../components/NavBar/NavBarUbicacion";
 import RecetaIndChef from "../components/Recipes/RecetaIndChef";
 import RecetasRecomendadas from "../components/Recipes/RecetasRecomendadas";
 import ZonaSocialRecetas from "../components/Recipes/RecetaZonaSocial";
@@ -29,6 +30,7 @@ const AppRouter = () => {
         <Route path="/zonasocialrecetas" element={<ZonaSocialRecetas />} />
         <Route path="/recetascompletas" element={<RecetasRecomendadas />} />
         <Route path="/recetaindchef" element={<RecetaIndChef />} />
+        <Route path="/navbarubicacion" element={<NavBarUbicacion />} />
 
         <Route path="/home" element={<ContainerPagPrincipal/>} />
         <Route path="/productos" element={<ListaProductos/>} />

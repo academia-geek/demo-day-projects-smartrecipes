@@ -1,6 +1,7 @@
 import { applyMiddleware, combineReducers, compose, createStore } from "redux";
 import thunk from "redux-thunk";
 import { addReducer } from "../reducers/addReducer";
+import { funtionalReducer } from "../reducers/funtionalReducer";
 import { loginReducer } from "../reducers/loginReducer";
 import { registerReducer } from "../reducers/registerReducer";
 
@@ -11,6 +12,7 @@ const reducers = combineReducers({
   login: loginReducer,
   register: registerReducer,
   add: addReducer,
+  funtional: funtionalReducer
 
 });
 

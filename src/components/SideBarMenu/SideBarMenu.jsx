@@ -2,16 +2,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ButtonLogin } from "../../styles/styledComponents/LoginStyled";
 import { SideBarStyled } from "../../styles/styledComponents/newSideBarMenu";
+import NavBarUbicacion from "../NavBar/NavBarUbicacion";
 
-const SideBarMenu = () => {
+const SideBarMenu = ({cities}) => {
   return (
+    <>
     <SideBarStyled>
       <div className="logo">
         <img
           src="https://res.cloudinary.com/davidcharif/image/upload/v1648315633/demoFakeApi/logoSmall_lumpae.png"
           alt="logo"
-        />
+          />
       </div>
+          <NavBarUbicacion cities={cities}/>
       <div className="menu">
         <ul>
           <li>
@@ -59,6 +62,7 @@ const SideBarMenu = () => {
         <button>Home</button>
       </div>
     </SideBarStyled>
+    </>
   );
 };
 

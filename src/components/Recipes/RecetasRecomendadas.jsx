@@ -9,9 +9,15 @@ import { DropdownButton } from 'react-bootstrap';
 import { Dropdown } from 'react-bootstrap';
 import { ColReceta, DivCard, Img, TitleRecetas } from '../../styles/styledComponents/RecipesStyle';
 import NavBarRecipes from './NavBarRecipes';
+import Modal from '../../Modal';
 
 const RecetasRecomendadas = () => {
   const [platos, setPlatos] = useState([]);
+  const [active, setActive] = useState(false);
+
+  const toggle = () => {
+    setActive(!active);
+  }
 
   useEffect(() => {
     async function fetchData() {
@@ -44,13 +50,7 @@ const RecetasRecomendadas = () => {
           <BiTimer /> {dish.time}  <BsFillPersonFill /> {dish.porciones}
           </div>
         </Card.Body>
-        <DropdownButton align="center" variant="light" title="Ingredientes">
-          {dish.ingredientLines !== undefined && dish.ingredientLines.map((each,i) => {
-            return (
-              <Dropdown.Item href="#action/3.i" key={`item-${i}`}>{each}</Dropdown.Item>
-            )
-          })}
-        </DropdownButton> 
+
         <Card.Body>
         <strong>Datos nutricionales:</strong>
         <br/>
@@ -72,16 +72,32 @@ const RecetasRecomendadas = () => {
           })}
       </Card.Body>
     </DropdownButton> 
+    <button onClick={toggle}>
+          Abrir Detalles de la Receta
+    </button>
+    <Modal active={active} toggle={toggle} key={i+5*8}>
+      {dish.label}
+      {console.log(dish.label)}
+      <DropdownButton align="center" variant="light" title="Ingredientes">
+          {dish.ingredientLines !== undefined && dish.ingredientLines.map((each,i) => {
+            return (
+              <Dropdown.Item href="#action/3.i" key={`item-${i}`}>{each}</Dropdown.Item>
+            )
+          })}
+        </DropdownButton> 
+    </Modal>
     </DivCard>
   </ColReceta>
 ))}
 </Row>
 
 <NavBarRecipes/>
+
 </>
 
 
 )
 }
+
 
 export default RecetasRecomendadas
