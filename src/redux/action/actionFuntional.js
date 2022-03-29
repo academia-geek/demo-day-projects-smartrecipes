@@ -19,3 +19,10 @@ export const actionFunctionalCiudades = (ciudades) => {
     payload: ciudades,
   }
 }
+
+export const actionFunctionalCurrentWatchableObject = (currentWatchableObject) => {
+  return {
+    type: funtionalTypes.currentWatchableObject,
+    payload: currentWatchableObject,
+  }
+}

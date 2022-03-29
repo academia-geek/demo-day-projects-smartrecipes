@@ -1,11 +1,8 @@
 import {
   collection,
-  doc,
-  getDoc,
   getDocs,
   query,
   where,
-  FieldPath,
   documentId,
 } from "firebase/firestore";
 import { db } from "../../firebase/firebaseConfig";
@@ -29,20 +26,16 @@ export const actionAddCiudad = (ciudad, uid, data) => {
   };
 };
 // Search
-export const searchAsync = (producto) => {
-  console.log("producto on search Async", producto);
+export const searchAsync = (producto, path) => {
+  
   return async (dispatch) => {
-    // const traerCollection = collection(db, "dataprecios").id('3utTuDXQpab1uPaHM9g1');
-    
-    const traerCollection = await collection(db, "merqueo/bogota/Precios");
-    // search on docSnap data
-
+    const traerCollection = await collection(db, `merqueo/${path}/Precios`);
+    console.log('buscando en ', `buscando en merqueo/${path}/Precios`)
     const q = await query(
       traerCollection,
-      where(documentId(), ">=", producto, '<=', producto + '\uf8ff')
+      where(documentId(), ">=", producto, "<=", documentId())
     );
     const datos = await getDocs(q);
-    console.log("datos", datos);
     const productos = [];
     datos.forEach((docu) => {
       console.log("docu.data()", docu.data());
@@ -52,8 +45,7 @@ export const searchAsync = (producto) => {
         data: docu.data(),
       });
     });
-   
-    
+    dispatch(searchSync(productos));
   };
 };
 
@@ -61,5 +53,10 @@ export const searchSync = (productos) => {
   return {
     type: addTypes.search,
     payload: productos,
+  };
+};
+export const resetSearchSync = () => {
+  return {
+    type: addTypes.reset,   
   };
 };
