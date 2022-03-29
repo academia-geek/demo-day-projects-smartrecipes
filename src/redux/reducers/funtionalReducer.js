@@ -23,7 +23,11 @@ export const funtionalReducer = (state = initialState, action) => {
                 ...state,
                 ciudades: action.payload,
             }
-            
+        case funtionalTypes.currentWatchableObject:
+            return {
+                ...state,
+                currentWatchableObject: action.payload,
+            }            
         default:
             return state
     }

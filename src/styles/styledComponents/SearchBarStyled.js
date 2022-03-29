@@ -2,26 +2,27 @@ import styled from "styled-components";
 
 export const SeachBarStyled = styled.div`
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: row; 
+  height: 50px;
+  width: 100%;  
   background-color: white;
-  border-radius: 10px;
-  padding: 8px 8px 8px 16px;
-  width: 100%;
-  .text{
-   
-   
-   color: #565959;
-   background-color: #F3F3F3;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    font-size: 12px;
-
-  }
+  border-radius: 10px;  
   form{
-    display: flex;
+  display: flex;
   flex-direction: row;
-  width: 90%;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  label{
+    width: 100%;
+    input{
+      padding: 0px 10px;
+      height: 50px;
+      width:90%;
+      border-radius: 10px;
+    }
+    }
+
   }
   .button{
     height: 100%;
