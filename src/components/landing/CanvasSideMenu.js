@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button, Offcanvas } from "react-bootstrap";
 import { render } from "react-dom";
 import { Link } from "react-router-dom";
+import { CanvasButton } from "../../styles/styledComponents/CanvasMenu";
 import { ButtonLogin } from "../../styles/styledComponents/LoginStyled";
 import { SideBarStyled } from "../../styles/styledComponents/newSideBarMenu";
 
@@ -13,9 +14,7 @@ const options = [
     },
 ];
 
-
-
-export default function OffCanvasExample({ name, ...props }) {
+export default function CanvasMenu({ name, ...props }) {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -23,12 +22,12 @@ export default function OffCanvasExample({ name, ...props }) {
 
     return (
         <>
-            <Button variant="primary" onClick={toggleShow} className="me-2">
+            <CanvasButton variant="primary" onClick={toggleShow} className="me-2 ">
                 click
-            </Button>
-            <Offcanvas show={show} onHide={handleClose} {...props}>
+            </CanvasButton>
+            <Offcanvas show={show} onHide={handleClose} scroll={true} backdrop={true} {...props}>
                 <Offcanvas.Header closeButton>
-                    <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+                    <Offcanvas.Title>Smart Recipes</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                     <SideBarStyled>
@@ -87,16 +86,6 @@ export default function OffCanvasExample({ name, ...props }) {
                     </SideBarStyled>
                 </Offcanvas.Body>
             </Offcanvas>
-        </>
-    );
-}
-
-function Example() {
-    return (
-        <>
-            {options.map((props, idx) => (
-                <OffCanvasExample key={idx} {...props} />
-            ))}
         </>
     );
 }
