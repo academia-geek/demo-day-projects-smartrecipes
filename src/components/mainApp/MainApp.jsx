@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { db } from "../../firebase/firebaseConfig";
 import { actionAdd } from "../../redux/action/actionAdd";
+import { actionFunctionalCiudades } from "../../redux/action/actionFuntional";
 
 import { ContainerAppStyle } from "../../styles/styledComponents/ContainerApp";
 import {
@@ -42,7 +43,7 @@ const MainApp = () => {
     querySnapshot.forEach((doc) => {
       cities.push(doc.data());
     })
-    console.log(cities)
+    dispatch(actionFunctionalCiudades(cities))
   }
 
   let productos = [];
