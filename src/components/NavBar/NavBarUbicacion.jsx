@@ -8,11 +8,12 @@ import { useDispatch } from 'react-redux';
 import { actionFunctional, actionFunctionalPath } from '../../redux/action/actionFuntional';
 import { NavLocationStyled } from '../../styles/styledComponents/NavLocationStyled';
 import { TitleRecetas } from '../../styles/styledComponents/RecipesStyle';
-import { urlciudades } from '../../utilities/urlRecipes';
 
 const NavBarUbicacion = ({cities}) => {
     const [ciudades, setCiudades] = useState(cities);
     const dispatch = useDispatch();
+    console.log('ubicación de prueba aiuda', ciudades)
+
   const handleSelect = ({target : {textContent}}) => {
     let city = textContent;
     dispatch(actionFunctional(textContent));
@@ -31,16 +32,9 @@ const NavBarUbicacion = ({cities}) => {
         let lowerCase = city.toLowerCase();
         let path = removeAccents(lowerCase);
         dispatch(actionFunctionalPath(path));
-    
-    
       }
       }
-    
-    
-
   };
-
-
 
   return (
     <NavLocationStyled>
