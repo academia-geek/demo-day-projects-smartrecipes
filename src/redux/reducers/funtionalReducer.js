@@ -35,7 +35,7 @@ export const funtionalReducer = (state = initialState, action) => {
                     data: action.payload.data
                 },                
             }
-                       
+
         default:
             return state
     }

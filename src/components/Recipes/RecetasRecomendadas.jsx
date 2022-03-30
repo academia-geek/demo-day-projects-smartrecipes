@@ -6,18 +6,18 @@ import { Row } from 'react-bootstrap';
 import { BiTimer } from "react-icons/bi";
 import { BsFillPersonFill } from "react-icons/bs";
 import { DropdownButton } from 'react-bootstrap';
-import { Dropdown } from 'react-bootstrap';
 import { ColReceta, DivCard, Img, TitleRecetas } from '../../styles/styledComponents/RecipesStyle';
 import NavBarRecipes from './NavBarRecipes';
-import Modal from '../../Modal';
+import { Button } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
+import MyVerticallyCenteredModal from './Modal';
+
 
 const RecetasRecomendadas = () => {
   const [platos, setPlatos] = useState([]);
-  const [active, setActive] = useState(false);
-
-  const toggle = () => {
-    setActive(!active);
-  }
+  
+  //modal
+  const [modalShow, setModalShow] = React.useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -37,6 +37,16 @@ const RecetasRecomendadas = () => {
   <ColReceta>
     <DivCard key={`menu-${i}`} >
       <Img variant="top" src={dish.image} className="card-menu-img"/>
+      
+      <Button variant="primary" onClick={() => setModalShow(true)} >
+        Detalles 
+      </Button>
+
+      <MyVerticallyCenteredModal 
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
+
       <DropdownButton align="center" variant="light" title="Información de la receta: ">
         <Card.Body>
           <Card.Title>{dish.label}</Card.Title>
@@ -72,7 +82,11 @@ const RecetasRecomendadas = () => {
           })}
       </Card.Body>
     </DropdownButton> 
-    <button onClick={toggle}>
+
+
+
+
+    {/* <button onClick={toggle}>
           Abrir Detalles de la Receta
     </button>
     <Modal active={active} toggle={toggle} key={i+5*8}>
@@ -85,7 +99,8 @@ const RecetasRecomendadas = () => {
             )
           })}
         </DropdownButton> 
-    </Modal>
+    </Modal> */}
+
     </DivCard>
   </ColReceta>
 ))}

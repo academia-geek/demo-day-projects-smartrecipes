@@ -16,45 +16,39 @@ export const CalendarioStyled = styled.div`
   margin: auto;
   background-color: white;
   text-align: center;
-  
-`
+`;
 
 export const SeguimientoPreciosStyled = styled.div`
   width: 100%;
-  display: flex;  
+  display: flex;
   flex-direction: row;
-  
-overflow-x: scroll;
- 
+  overflow-x: scroll;
   gap: 20px;
- 
   margin-bottom: 25px;
 `;
 
-
 export const ProductoStyled = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-between;
-height: 250px;
-cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 250px;
+  cursor: pointer;
   img {
     pointer-events: none;
-    width: 150px; 
+    width: 150px;
   }
-  .dataName{
+  .dataName {
     pointer-events: none;
     font-weight: 700;
     padding: 0%;
     margin: 0%;
-
   }
-  .dataPrice{
+  .dataPrice {
     pointer-events: none;
     font-weight: 400;
     text-align: center;
-    color: #8D96A8;
+    color: #8d96a8;
   }
 `;
 

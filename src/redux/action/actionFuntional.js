@@ -30,3 +30,19 @@ export const actionFunctionalCurrentWatchableObject = (currentWatchableObject) =
     },
   }
 }
+
+export const actionFunctionalCurrentWatchableRecipe = (currentWatchableRecipe) => {
+  const { id, label, ingredientLines, porciones, time, cautions, healthLabels } = currentWatchableRecipe
+  return {
+    type: funtionalTypes.currentWatchableRecipe,
+    payload: {
+      id,
+      label, 
+      ingredientLines, 
+      porciones, 
+      time, 
+      cautions, 
+      healthLabels
+    },
+  }
+}
