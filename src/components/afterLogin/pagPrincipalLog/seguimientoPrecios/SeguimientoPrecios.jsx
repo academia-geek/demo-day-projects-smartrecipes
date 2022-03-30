@@ -1,6 +1,7 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { actionFunctionalCurrentWatchableObject } from "../../../../redux/action/actionFuntional";
 
 import {
   
@@ -9,13 +10,17 @@ import {
 } from "../../../../styles/styledComponents/PagPrincipalStyles";
 
 const SeguimientoPrecios = ({ limit }) => {
+  const dispatch = useDispatch();
   const { productos } = useSelector((store) => store.add);
+  // empiza vacia
   const {productosBusqueda} = useSelector(store => store.add)
   // iterate object
   const activeProducts =  productosBusqueda !== 'undefined' && productosBusqueda.length > 0 ? productosBusqueda : productos;
   const handleCurrentProduct = ({target}) => {
-    let dataId = target.getAttribute('data-id');
-    console.log('dataId', dataId)
+    let dataId = target.getAttribute('data-id');    
+    // bring object that match with dataId
+    const currentProduct = activeProducts.find(product => product.id === dataId);
+    dispatch(actionFunctionalCurrentWatchableObject(currentProduct));
   }
 
   return (

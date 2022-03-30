@@ -13,6 +13,7 @@ import {
 import SideBarMenu from "../SideBarMenu/SideBarMenu";
 import Productos from "./dinamic/Productos";
 import Recetas from "./dinamic/Recetas";
+import SideBar from "./middle/SideBar";
 
 import SliderApp from "./middle/SliderApp";
 import BarraBusqueda from "./top/barraBusqueda/BarraBusqueda";
@@ -75,6 +76,7 @@ const MainApp = () => {
             <h3>Por favor elija una ciudad para continuar</h3>
           )}
         </DivFlex>
+        <SideBar/>
       </ContainerAppStyle>
     </>
   );
