@@ -7,15 +7,15 @@ const SideBar = () => {
   const {
     currentWatchableObject: { data },
   } = useSelector((store) => store.funtional);
-  console.log(Object.keys(data).length, "data");
+  
   const isUndefined = Object.keys(data).length === 0;
 
   if (isUndefined) {
-    console.log("SAD TIME!!!!!!!! 😕 🎈  ");
+    console.log("No render 😠😠😠😠😠😠");
     return null;
   } else {
     console.log("RENDER TIME!!!!!!!! 😲🔥  ");
-    console.log(data);
+   
   }
 
   return (
