@@ -1,36 +1,40 @@
 import { Button } from "react-bootstrap";
 import { Modal } from "react-bootstrap";
+import { UlStyled } from "../../../../styles/styledComponents/detalleListaStyled";
 
-function MyVerticallyCenteredModal({producto}) {
-  console.log(producto)
-  
+const ModalReceta = (props) => {
+  const { producto, onHide } = props;
+  console.log('producto en ModalReceta', producto[0].label)
   return (
     <Modal
-      // {...props}
+      {...props}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       dialogClassName="modal-90w"
       centered
     >
       <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Detalles de la receta
+        <Modal.Title className="contained-modal-title-center">
+         <p>{producto[0].label}</p>
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>{producto.label}</h4>
-        <p>
-        {producto.label}
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
+       
+        
+        <UlStyled >
+      {producto[0].healthLabels.map((label, index) => {
+        return (
+            <i key={index}><strong>{label}</strong></i>
+        );
+      })}
+      </UlStyled>
+        
       </Modal.Body>
       <Modal.Footer>
-        {/* <Button onClick={props.onHide}>Close</Button> */}
+        <Button onClick={onHide}>Close</Button>
       </Modal.Footer>
     </Modal>
   );
 }
 
-export default MyVerticallyCenteredModal;
+export default ModalReceta;
