@@ -73,7 +73,6 @@ const MainApp = () => {
   return (
     <>
       <ContainerAppStyle>
-        {/* <SideBarMenu cities={cities} /> */}
           {
              width > breakpoint && <DinamicMenu width={width} breakpoint={breakpoint} cities={cities}  />
           }
