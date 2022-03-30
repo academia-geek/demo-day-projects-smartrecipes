@@ -2,7 +2,6 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { SideBarProductsStyle } from "../../../styles/styledComponents/SideBar";
 
-
 const SideBar = () => {
   const {
     currentWatchableObject: { data },

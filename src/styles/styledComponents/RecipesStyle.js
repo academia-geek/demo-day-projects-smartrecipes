@@ -123,7 +123,12 @@ export const CardRecetas = styled.div`
     text-align: center;
 `
 export const ImgReceta = styled.img`
+    padding: 0.25rem;
     width: 100px;
     height: 100px;
-    border-radius: 50%
+    border-radius: 50%;
+    border: 2.5px solid #27A857;
+`
+export const ButtonParaModal = styled.button`
+    background-color: none;
 `
