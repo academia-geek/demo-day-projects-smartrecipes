@@ -25,6 +25,9 @@ export const SeguimientoPreciosStyled = styled.div`
   overflow-x: scroll;
   gap: 20px;
   margin-bottom: 25px;
+    @media only screen and (max-width: 600px) {
+      min-height: 200px;
+    }
 `;
 
 export const ProductoStyled = styled.div`
@@ -50,6 +53,11 @@ export const ProductoStyled = styled.div`
     text-align: center;
     color: #8d96a8;
   }
+    @media only screen and (max-width: 600px) {
+      img {
+        width: 100px;
+      }
+    }
 `;
 
 export const BotonPerfilUserStyled = styled.div`
