@@ -1,7 +1,7 @@
 import React from 'react'
 import { Carousel } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
-import { ButtonCarousel, CarouselStyled, SliderItem, SliderItem2, SliderItem3 } from '../../../styles/styledComponents/SlyderStyled'
+import { ButtonCarousel, CarouselStyled, colorPrimerBloque, colorSegundoBloque, colorTercerBloque, SliderItem, SliderItem2, SliderItem3 } from '../../../styles/styledComponents/SlyderStyled'
 
 const SliderApp = () => {
 
@@ -15,7 +15,7 @@ const SliderApp = () => {
   return (
 
       <CarouselStyled >
-        <SliderItem >
+        <SliderItem backgroundColor={colorPrimerBloque}>
           <img
             className="d-block w-100 imgCarousel"
             src="https://res.cloudinary.com/david-b/image/upload/v1648664078/sliderCurve_d0znp8.svg"
@@ -27,7 +27,7 @@ const SliderApp = () => {
             <ButtonCarousel onClick={handleClickSlider}>click</ButtonCarousel>
           </Carousel.Caption>
         </SliderItem>
-        <SliderItem2>
+        <SliderItem backgroundColor={colorSegundoBloque}>
           <img
             className="d-block w-100 imgCarousel"
             src="https://res.cloudinary.com/david-b/image/upload/v1648664078/sliderCurve_d0znp8.svg"
@@ -38,8 +38,8 @@ const SliderApp = () => {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <ButtonCarousel>click</ButtonCarousel>
           </Carousel.Caption>
-        </SliderItem2>
-        <SliderItem3>
+        </SliderItem>
+        <SliderItem backgroundColor={colorTercerBloque}>
           <img
             className="d-block w-100 imgCarousel"
             src="https://res.cloudinary.com/david-b/image/upload/v1648664078/sliderCurve_d0znp8.svg"
@@ -50,7 +50,7 @@ const SliderApp = () => {
             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
             <ButtonCarousel className='btnPink'>click</ButtonCarousel>
           </Carousel.Caption>
-        </SliderItem3>
+        </SliderItem>
       </CarouselStyled>
   )
 }
