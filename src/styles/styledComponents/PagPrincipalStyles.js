@@ -30,21 +30,31 @@ overflow-x: scroll;
  
   margin-bottom: 25px;
 `;
-export const ContainerImage = styled.div`
-  position: relative;
-  .bottom-right {
-    position: absolute;
-    bottom: -10%;
-    right: 10px;
-    color: red;
-    background-color: white;
-    font-weight: 900;
-  }
-`;
+
 
 export const ProductoStyled = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+height: 250px;
+cursor: pointer;
   img {
-    width: 150px;
+    pointer-events: none;
+    width: 150px; 
+  }
+  .dataName{
+    pointer-events: none;
+    font-weight: 700;
+    padding: 0%;
+    margin: 0%;
+
+  }
+  .dataPrice{
+    pointer-events: none;
+    font-weight: 400;
+    text-align: center;
+    color: #8D96A8;
   }
 `;
 
