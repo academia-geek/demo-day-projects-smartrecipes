@@ -99,7 +99,7 @@ const RecetasRecomendadas = () => {
 
 
 
-    <button onClick={toggle}>
+    {/* <button onClick={toggle}>
           Abrir Detalles de la Receta
     </button>
     <Modal active={active} toggle={toggle} key={i+5*8}>
@@ -112,7 +112,7 @@ const RecetasRecomendadas = () => {
             )
           })}
         </DropdownButton> 
-    </Modal>
+    </Modal> */}
 
     </DivCard>
   </ColReceta>
