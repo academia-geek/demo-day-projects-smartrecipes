@@ -1,13 +1,57 @@
 import React from 'react'
-import { SliderStyled } from '../../../styles/styledComponents/MainAppStyled'
+import { Carousel } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
+import { ButtonCarousel, CarouselStyled, SliderItem, SliderItem2, SliderItem3 } from '../../../styles/styledComponents/SlyderStyled'
 
 const SliderApp = () => {
+
+  const navigate = useNavigate()
+
+  const handleClickSlider = () => {
+    console.log('click');
+    navigate('/welcome')
+  }
+
   return (
-    <SliderStyled>
-      <h3>Tu calendario para esta semana</h3>
-      <h5>Top 5 ...</h5>
-      <button>Ver ahora</button>
-    </SliderStyled>
+
+      <CarouselStyled >
+        <SliderItem >
+          <img
+            className="d-block w-100 imgCarousel"
+            src="https://res.cloudinary.com/david-b/image/upload/v1648664078/sliderCurve_d0znp8.svg"
+            alt="First slide"
+          />
+          <Carousel.Caption>
+            <h3>Alimentate mejor con estos productos</h3>
+            <p>Top 5 Más economicas</p>
+            <ButtonCarousel onClick={handleClickSlider}>click</ButtonCarousel>
+          </Carousel.Caption>
+        </SliderItem>
+        <SliderItem2>
+          <img
+            className="d-block w-100 imgCarousel"
+            src="https://res.cloudinary.com/david-b/image/upload/v1648664078/sliderCurve_d0znp8.svg"
+            alt="second slide"
+          />
+          <Carousel.Caption>
+            <h3>Tu calendario para esta semana</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <ButtonCarousel>click</ButtonCarousel>
+          </Carousel.Caption>
+        </SliderItem2>
+        <SliderItem3>
+          <img
+            className="d-block w-100 imgCarousel"
+            src="https://res.cloudinary.com/david-b/image/upload/v1648664078/sliderCurve_d0znp8.svg"
+            alt="Third slide"
+          />
+          <Carousel.Caption>
+            <h3>Third slide label</h3>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            <ButtonCarousel className='btnPink'>click</ButtonCarousel>
+          </Carousel.Caption>
+        </SliderItem3>
+      </CarouselStyled>
   )
 }
 
