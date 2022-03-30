@@ -4,9 +4,9 @@ import RecetasInicio from '../../afterLogin/pagPrincipalLog/Recetas/RecetasInici
 
 const Recetas = () => {
   return (
-    <div>
+   
       <RecetasInicio />
-    </div>
+  
   )
 }
 

@@ -3,51 +3,53 @@ import { useState } from 'react'
 import { Modal } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
 import { CardGroup } from 'react-bootstrap'
+import { SeguimientoPreciosStyled } from '../../../../styles/styledComponents/PagPrincipalStyles'
 import { ButtonModal, ButtonParaModal, CardRecetas, ImgReceta } from '../../../../styles/styledComponents/RecipesStyle'
 import MyVerticallyCenteredModal from './ModalReceta'
 
-const CardReceta = ({resultado}) => {
-    const {dataServer} = resultado
+const CardReceta = ({dataServer}) => {
+   
     //modal
     const [modalShow, setModalShow] = React.useState(false);
-
-    //const dispatch = useDispatch();
-    //const { recetas } = useSelector((store) => store.add);
-  // empieza vacia
- //const {recetasBusqueda} = useSelector(store => store.add)
-  // iterate object
-  //const activeRecipes =  recetasBusqueda !== 'undefined' && recetasBusqueda.length > 0 ? recetasBusqueda : recetas;
-/*   const handleCurrentRecipe = ({target}) => {
-    let dataId = target.getAttribute('data-id');    
-    // bring object that match with dataId
-    const currentRecipe = recetas.find(recipe => recipe.id === dataId);
-    dispatch(actionFunctionalCurrentWatchableObject(currentRecipe));
-  } */
-return (
+    const [producto, setProducto] = useState('vacio');
+    const handleId = ({target}) => {
+        const id = target.getAttribute('data-id')
+        console.log('id', id)
+        const producto = dataServer.filter(producto => producto.id === id)
+        console.log('producto', producto)
+        setProducto(producto)
+    }
+    console.log('dataServer', dataServer)
+return (  
     <>
     <h3>Top Recetas</h3>
-    <CardGroup> 
-        {dataServer.map((p,i) => {
+    <SeguimientoPreciosStyled> 
+        {dataServer.map((producto,index) => {
             return(
-                <CardRecetas key={`index${i}`} data-id={p.id}  >
+                <CardRecetas key={`index${index}`} data-id={producto.id} onClick={(e) => {
+                    handleId(e)
+                }} >
                     <div>
-                        <ImgReceta src={p.image} alt='imagen-receta' />
-                        <p className='card-text text-capitalize'>{p.label}</p>
+                        <ImgReceta src={producto.image} alt='imagen-receta' />
+                        <p className='card-text text-capitalize'>{producto.label}</p>
                         
-                        <ButtonParaModal onClick={() => setModalShow(true)}>
+                        <ButtonParaModal data-id={producto.id} onClick={(e) => {
+                    handleId(e)
+                }}>
                             Detalles
                         </ButtonParaModal>
 
-                        <MyVerticallyCenteredModal dataServer = {dataServer}
+                       {/* {producto !== 'vacio' &&
+                        <MyVerticallyCenteredModal 
+                            producto = {producto}
                             show={modalShow}
                             onHide={() => setModalShow(false)}
-                        />
-
+                        />} */}
                     </div>
                 </CardRecetas>
                 )
             })}           
-    </CardGroup>
+    </SeguimientoPreciosStyled>
     </>
 )
 
