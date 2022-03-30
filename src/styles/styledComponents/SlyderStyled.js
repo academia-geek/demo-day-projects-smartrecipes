@@ -32,7 +32,7 @@ export const CarouselStyled = styled(Carousel)`
 `;
 
 export const SliderItem = styled(CarouselItem)`
-  background-color: ${(props) => props.backgroundColor};
+  background-color: ${(props) => props.backgroundcolor};
   max-height: 385px;
   border-radius: 5px;
   @media only screen and (max-width: 600px) {
