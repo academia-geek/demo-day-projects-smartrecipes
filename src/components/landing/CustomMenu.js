@@ -11,8 +11,9 @@ import { ContainerAppStyle } from '../../styles/styledComponents/ContainerApp'
 import { DivOptions } from '../../styles/styledComponents/LandingStyles'
 import { ButtonLogin } from '../../styles/styledComponents/LoginStyled'
 import MainApp from '../mainApp/MainApp'
-import SideBarMenu from '../SideBarMenu/SideBarMenu'
+
 import CardMenu from './CardMenu'
+
 
 
 const CustomMenu =  () => {
@@ -21,7 +22,7 @@ const CustomMenu =  () => {
     const [loading, setLoading] = useState(true)	
     const getFromFirebase = async () => {
 
-        const querySnapshot = await getDocs(collection(db, "dataprecios"));
+        const querySnapshot = await getDocs(collection(db, "dataprecios/Bogota/precios"));
 
         querySnapshot.forEach((doc) => {
             productos.push({
@@ -51,8 +52,7 @@ const CustomMenu =  () => {
         <>
      
         <MainApp/>
-        
-
+    
         {/*         
         <DivOptions >
             <Container className='titleMenu'>
