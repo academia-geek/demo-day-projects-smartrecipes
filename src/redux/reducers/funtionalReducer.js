@@ -3,7 +3,11 @@ import { funtionalTypes } from "../types/types"
 const initialState = {
   city: '',
   path: '',
-  ciudades: []
+  ciudades: [],
+  currentWatchableObject: {
+    id: '',
+    data:{}
+  },
 }
 
 export const funtionalReducer = (state = initialState, action) => {
@@ -23,7 +27,15 @@ export const funtionalReducer = (state = initialState, action) => {
                 ...state,
                 ciudades: action.payload,
             }
-            
+        case funtionalTypes.currentWatchableObject:
+            return {
+                ...state,
+                currentWatchableObject : {
+                    id: action.payload.id,
+                    data: action.payload.data
+                },                
+            }
+                       
         default:
             return state
     }

@@ -33,6 +33,11 @@ export const addReducer = (state = initialState, action) => {
                 ...state,
                 productosBusqueda: action.payload
             }
+        case addTypes.reset:
+            return {
+                ...state,
+                productosBusqueda: {}
+            }
         default:
             return state
     }

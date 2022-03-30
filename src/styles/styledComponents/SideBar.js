@@ -1,0 +1,20 @@
+import styled from "styled-components";
+
+export const SideBarProductsStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #FCAC5D;
+  .container-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+`
