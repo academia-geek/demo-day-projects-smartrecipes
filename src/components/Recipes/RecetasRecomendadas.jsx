@@ -82,7 +82,25 @@ const RecetasRecomendadas = () => {
           })}
       </Card.Body>
     </DropdownButton> 
-    
+
+
+
+
+    {/* <button onClick={toggle}>
+          Abrir Detalles de la Receta
+    </button>
+    <Modal active={active} toggle={toggle} key={i+5*8}>
+      {dish.label}
+      {console.log(dish.label)}
+      <DropdownButton align="center" variant="light" title="Ingredientes">
+          {dish.ingredientLines !== undefined && dish.ingredientLines.map((each,i) => {
+            return (
+              <Dropdown.Item href="#action/3.i" key={`item-${i}`}>{each}</Dropdown.Item>
+            )
+          })}
+        </DropdownButton> 
+    </Modal> */}
+
     </DivCard>
   </ColReceta>
 ))}
