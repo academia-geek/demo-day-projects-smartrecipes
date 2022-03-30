@@ -7,7 +7,7 @@ export const CanvasStyled = styled.div`
         top: 0;
         right: 0;
         padding: 10px;
-        
+
     }
 
 

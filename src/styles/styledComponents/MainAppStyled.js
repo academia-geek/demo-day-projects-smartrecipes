@@ -23,7 +23,7 @@ export const ContainerAppStyle = styled.div`
 `
 
 export const DivFlex = styled.div`
-width: 100%;
+width: 80%;
 padding: 15px;
   display: flex;
   flex-direction: column;
