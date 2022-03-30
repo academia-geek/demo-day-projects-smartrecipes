@@ -10,15 +10,16 @@ const RecetasInicio = () => {
     cargando? console.log('cargando...'):console.log(dataServer)
 
   return (
-    <div>
+    <>
       {
         cargando
         ?
         <h2>Cargando las recetas...</h2>
         :
-        <CardReceta resultado={estado} />
+        <CardReceta dataServer={dataServer} />
+        
       }
-    </div>
+    </>
   )
 }
 
