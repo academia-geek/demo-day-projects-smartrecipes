@@ -10,7 +10,7 @@ import {
   ContainerAppTopStyle,
   DivFlex,
 } from "../../styles/styledComponents/MainAppStyled";
-import SideBarMenu from "../SideBarMenu/SideBarMenu";
+import DinamicMenu from "../landing/DinamicMenu";
 import Productos from "./dinamic/Productos";
 import Recetas from "./dinamic/Recetas";
 import SideBar from "./middle/SideBar";
@@ -21,13 +21,18 @@ import Idioma from "./top/idioma/Idioma";
 import Ubicacion from "./top/ubicacion/Ubicacion";
 
 const MainApp = () => {
+
+  const [width, setWidth] = useState(window.innerWidth);
+  const breakpoint = 600;
+
+
   const dispatch = useDispatch();
   const { path } = useSelector((store) => store.funtional);
 
   const getFromFirebase = async () => {
     const querySnapshot = await getDocs(
       collection(db, `merqueo/${path}/Precios`)
-    ); 
+    );
 
     querySnapshot.forEach((doc) => {
       productos.push({
@@ -36,7 +41,7 @@ const MainApp = () => {
       });
     });
     dispatch(actionAdd(productos));
-    
+
   };
   let cities = [];
   const getCitiesFromFirebase = async () => {
@@ -53,13 +58,28 @@ const MainApp = () => {
   }
   useEffect(() => {
     getCitiesFromFirebase()
-  } , [])
+  }, [])
+
+  useEffect(() => {
+    const handleResizeWindow = () => setWidth(window.innerWidth);
+    // subscribe to window resize event "onComponentDidMount"
+    window.addEventListener("resize", handleResizeWindow);
+    return () => {
+      // unsubscribe "onComponentDestroy"
+      window.removeEventListener("resize", handleResizeWindow);
+    };
+  }, []);
 
   return (
     <>
       <ContainerAppStyle>
-        <SideBarMenu cities={cities} />
+          {
+             width > breakpoint && <DinamicMenu width={width} breakpoint={breakpoint} cities={cities}  />
+          }
         <DivFlex>
+          { 
+             width < breakpoint && <DinamicMenu width={width} breakpoint={breakpoint} />
+          }
           <ContainerAppTopStyle>
             <BarraBusqueda />
             <Ubicacion />
