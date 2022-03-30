@@ -15,7 +15,7 @@ const SliderApp = () => {
   return (
 
       <CarouselStyled >
-        <SliderItem backgroundColor={colorPrimerBloque}>
+        <SliderItem backgroundcolor={colorPrimerBloque}>
           <img
             className="d-block w-100 imgCarousel"
             src="https://res.cloudinary.com/david-b/image/upload/v1648664078/sliderCurve_d0znp8.svg"
@@ -27,7 +27,7 @@ const SliderApp = () => {
             <ButtonCarousel onClick={handleClickSlider}>click</ButtonCarousel>
           </Carousel.Caption>
         </SliderItem>
-        <SliderItem backgroundColor={colorSegundoBloque}>
+        <SliderItem backgroundcolor={colorSegundoBloque}>
           <img
             className="d-block w-100 imgCarousel"
             src="https://res.cloudinary.com/david-b/image/upload/v1648664078/sliderCurve_d0znp8.svg"
@@ -39,7 +39,7 @@ const SliderApp = () => {
             <ButtonCarousel>click</ButtonCarousel>
           </Carousel.Caption>
         </SliderItem>
-        <SliderItem backgroundColor={colorTercerBloque}>
+        <SliderItem backgroundcolor={colorTercerBloque}>
           <img
             className="d-block w-100 imgCarousel"
             src="https://res.cloudinary.com/david-b/image/upload/v1648664078/sliderCurve_d0znp8.svg"

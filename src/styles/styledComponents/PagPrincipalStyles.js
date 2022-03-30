@@ -20,11 +20,17 @@ export const CalendarioStyled = styled.div`
 
 export const SeguimientoPreciosStyled = styled.div`
   width: 100%;
+  min-height: 300px;
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
   gap: 20px;
   margin-bottom: 25px;
+  .card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 `;
 
 export const ProductoStyled = styled.div`
@@ -43,6 +49,10 @@ export const ProductoStyled = styled.div`
     font-weight: 700;
     padding: 0%;
     margin: 0%;
+    width: 100px;
+    overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
   }
   .dataPrice {
     pointer-events: none;
