@@ -14,6 +14,8 @@ const NavBarUbicacion = () => {
   
     const {ciudades} = useSelector(store => store.funtional)
     const dispatch = useDispatch();
+    console.log('ubicación de prueba aiuda', ciudades)
+
   const handleSelect = ({target : {textContent}}) => {
     let city = textContent;
 
@@ -41,8 +43,6 @@ const NavBarUbicacion = () => {
 
 
   };
-
-
 
   return (
     <NavLocationStyled>
