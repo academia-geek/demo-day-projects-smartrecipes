@@ -27,7 +27,10 @@ const SideBar = () => {
           <img src={data.img} alt=""></img>
           <p>{data.name}</p>
           </div>
-
+          <div className="container-historic">
+          <img src="https://res.cloudinary.com/davidcharif/image/upload/v1648602734/demoFakeApi/variacionPrecio_wqdpq5.png" alt="variacion"/>
+          <h3>Precios de la ultima semana</h3>
+          </div>
         </SideBarProductsStyle>
       )}
     </>
