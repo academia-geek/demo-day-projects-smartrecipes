@@ -109,3 +109,21 @@ export const ButtonModal = styled.button`
     top: 50%;
     padding: 50%;
 `
+export const ContainerRecetaPP = styled.div`
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+`
+export const CardRecetas = styled.div`
+    width: 200px;
+    height: auto;
+    padding: 0.75rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    text-align: center;
+`
+export const ImgReceta = styled.img`
+    width: 100px;
+    height: 100px;
+    border-radius: 50%
+`

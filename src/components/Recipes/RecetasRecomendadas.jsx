@@ -6,21 +6,18 @@ import { Row } from 'react-bootstrap';
 import { BiTimer } from "react-icons/bi";
 import { BsFillPersonFill } from "react-icons/bs";
 import { DropdownButton } from 'react-bootstrap';
-import { Dropdown } from 'react-bootstrap';
 import { ColReceta, DivCard, Img, TitleRecetas } from '../../styles/styledComponents/RecipesStyle';
 import NavBarRecipes from './NavBarRecipes';
 import { Button } from 'react-bootstrap';
 import { Modal } from 'react-bootstrap';
+import MyVerticallyCenteredModal from './Modal';
 
 
 const RecetasRecomendadas = () => {
   const [platos, setPlatos] = useState([]);
   
   //modal
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const [modalShow, setModalShow] = React.useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -41,24 +38,14 @@ const RecetasRecomendadas = () => {
     <DivCard key={`menu-${i}`} >
       <Img variant="top" src={dish.image} className="card-menu-img"/>
       
-      <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
+      <Button variant="primary" onClick={() => setModalShow(true)} >
+        Detalles 
       </Button>
 
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title></Modal.Title>
-        </Modal.Header>
-        <Modal.Body>{dish.label}</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Cerrar
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            ¿¿¿¿¿¿Poner acá el agregar a la semana?????
-          </Button>
-        </Modal.Footer>
-      </Modal>
+      <MyVerticallyCenteredModal 
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
 
       <DropdownButton align="center" variant="light" title="Información de la receta: ">
         <Card.Body>
@@ -95,22 +82,7 @@ const RecetasRecomendadas = () => {
           })}
       </Card.Body>
     </DropdownButton> 
-
-
-    <button onClick={toggle}>
-          Abrir Detalles de la Receta
-    </button>
-    <Modal active={active} toggle={toggle} key={i+5*8}>
-      {dish.label}
-      {console.log(dish.label)}
-      <DropdownButton align="center" variant="light" title="Ingredientes">
-          {dish.ingredientLines !== undefined && dish.ingredientLines.map((each,i) => {
-            return (
-              <Dropdown.Item href="#action/3.i" key={`item-${i}`}>{each}</Dropdown.Item>
-            )
-          })}
-        </DropdownButton> 
-    </Modal>
+    
     </DivCard>
   </ColReceta>
 ))}
