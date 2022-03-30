@@ -31,6 +31,9 @@ export const SeguimientoPreciosStyled = styled.div`
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+    @media only screen and (max-width: 600px) {
+      min-height: 200px;
+    }
 `;
 
 export const ProductoStyled = styled.div`
@@ -60,6 +63,11 @@ white-space: nowrap;
     text-align: center;
     color: #8d96a8;
   }
+    @media only screen and (max-width: 600px) {
+      img {
+        width: 100px;
+      }
+    }
 `;
 
 export const BotonPerfilUserStyled = styled.div`
