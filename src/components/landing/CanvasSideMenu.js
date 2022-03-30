@@ -1,20 +1,13 @@
 import { useState } from "react";
-import { Button, Offcanvas } from "react-bootstrap";
-import { render } from "react-dom";
+import { Offcanvas } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { CanvasButton } from "../../styles/styledComponents/CanvasMenu";
 import { ButtonLogin } from "../../styles/styledComponents/LoginStyled";
 import { SideBarStyled } from "../../styles/styledComponents/newSideBarMenu";
+import NavBarUbicacion from "../NavBar/NavBarUbicacion";
 
-const options = [
-    {
-        name: 'Enable both scrolling & backdrop',
-        scroll: true,
-        backdrop: true,
-    },
-];
 
-export default function CanvasMenu({ name, ...props }) {
+export default function CanvasMenu({ cities }) {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -25,7 +18,7 @@ export default function CanvasMenu({ name, ...props }) {
             <CanvasButton variant="primary" onClick={toggleShow} className="me-2 ">
                 click
             </CanvasButton>
-            <Offcanvas show={show} onHide={handleClose} scroll={true} backdrop={true} {...props}>
+            <Offcanvas show={show} onHide={handleClose} scroll={true} backdrop={true}>
                 <Offcanvas.Header closeButton>
                     <Offcanvas.Title>Smart Recipes</Offcanvas.Title>
                 </Offcanvas.Header>
@@ -37,6 +30,7 @@ export default function CanvasMenu({ name, ...props }) {
                                 alt="logo"
                             />
                         </div>
+                        <NavBarUbicacion cities={cities} />
                         <div className="menu">
                             <ul>
                                 <li>

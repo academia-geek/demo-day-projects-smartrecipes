@@ -10,7 +10,7 @@ import {
   ContainerAppTopStyle,
   DivFlex,
 } from "../../styles/styledComponents/MainAppStyled";
-import SideBarMenu from "../SideBarMenu/SideBarMenu";
+import DinamicMenu from "../landing/DinamicMenu";
 import Productos from "./dinamic/Productos";
 import Recetas from "./dinamic/Recetas";
 
@@ -20,6 +20,11 @@ import Idioma from "./top/idioma/Idioma";
 import Ubicacion from "./top/ubicacion/Ubicacion";
 
 const MainApp = () => {
+
+  const [width, setWidth] = useState(window.innerWidth);
+  const breakpoint = 600;
+
+
   const dispatch = useDispatch();
   const { path } = useSelector((store) => store.funtional);
 
@@ -54,11 +59,27 @@ const MainApp = () => {
     getCitiesFromFirebase()
   }, [])
 
+  useEffect(() => {
+    const handleResizeWindow = () => setWidth(window.innerWidth);
+    // subscribe to window resize event "onComponentDidMount"
+    window.addEventListener("resize", handleResizeWindow);
+    return () => {
+      // unsubscribe "onComponentDestroy"
+      window.removeEventListener("resize", handleResizeWindow);
+    };
+  }, []);
+
   return (
     <>
       <ContainerAppStyle>
-        <SideBarMenu cities={cities} />
+        {/* <SideBarMenu cities={cities} /> */}
+          {
+             width > breakpoint && <DinamicMenu width={width} breakpoint={breakpoint} cities={cities}  />
+          }
         <DivFlex>
+          { 
+             width < breakpoint && <DinamicMenu width={width} breakpoint={breakpoint} />
+          }
           <ContainerAppTopStyle>
             <BarraBusqueda />
             <Ubicacion />

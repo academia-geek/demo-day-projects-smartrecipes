@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import SideBarMenu from '../SideBarMenu/SideBarMenu';
 import CanvasMenu from './CanvasSideMenu';
 
-const DinamicMenu = ({width, breakpoint}) => {
+const DinamicMenu = ({width, breakpoint, cities}) => {
 
     if (width > breakpoint) {
         return (
-            <SideBarMenu />
+            <SideBarMenu cities={cities} />
         );
     }
     return (
-        <CanvasMenu />
+        <CanvasMenu cities={cities} /> 
     );
 }
 
