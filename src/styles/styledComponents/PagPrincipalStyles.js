@@ -16,36 +16,58 @@ export const CalendarioStyled = styled.div`
   margin: auto;
   background-color: white;
   text-align: center;
-  
-`
+`;
 
 export const SeguimientoPreciosStyled = styled.div`
   width: 100%;
-  display: flex;  
+  min-height: 300px;
+  display: flex;
   flex-direction: row;
-  
-overflow-x: scroll;
- 
+  overflow-x: scroll;
   gap: 20px;
- 
   margin-bottom: 25px;
-`;
-export const ContainerImage = styled.div`
-  position: relative;
-  .bottom-right {
-    position: absolute;
-    bottom: -10%;
-    right: 10px;
-    color: red;
-    background-color: white;
-    font-weight: 900;
+  .card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
+    @media only screen and (max-width: 600px) {
+      min-height: 200px;
+    }
 `;
 
 export const ProductoStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 250px;
+  cursor: pointer;
   img {
+    pointer-events: none;
     width: 150px;
   }
+  .dataName {
+    pointer-events: none;
+    font-weight: 700;
+    padding: 0%;
+    margin: 0%;
+    width: 100px;
+    overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+  }
+  .dataPrice {
+    pointer-events: none;
+    font-weight: 400;
+    text-align: center;
+    color: #8d96a8;
+  }
+    @media only screen and (max-width: 600px) {
+      img {
+        width: 100px;
+      }
+    }
 `;
 
 export const BotonPerfilUserStyled = styled.div`

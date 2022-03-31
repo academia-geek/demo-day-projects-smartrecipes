@@ -11,17 +11,18 @@ import { ContainerAppStyle } from '../../styles/styledComponents/ContainerApp'
 import { DivOptions } from '../../styles/styledComponents/LandingStyles'
 import { ButtonLogin } from '../../styles/styledComponents/LoginStyled'
 import MainApp from '../mainApp/MainApp'
-import SideBarMenu from '../SideBarMenu/SideBarMenu'
+
 import CardMenu from './CardMenu'
+
 
 
 const CustomMenu =  () => {
     const dispatch = useDispatch()
-    const [data, setData] = useState([])
+    
     const [loading, setLoading] = useState(true)	
     const getFromFirebase = async () => {
 
-        const querySnapshot = await getDocs(collection(db, "dataprecios"));
+        const querySnapshot = await getDocs(collection(db, "dataprecios/Bogota/precios"));
 
         querySnapshot.forEach((doc) => {
             productos.push({
@@ -29,18 +30,16 @@ const CustomMenu =  () => {
               data: doc.data(),
             })
           });
+          dispatch(actionAdd(productos))
     }
     
     let productos = []
     
 
     useEffect(() => {
-        fetchProduct(productsUrl)
-            .then(data => setData(data))
-        dispatch(actionAdd(data))
+        
+        getFromFirebase()       
         setLoading(false)        
-        getFromFirebase()
-        console.log('productos', productos)
     }, [])
 
     if(loading){
@@ -53,8 +52,7 @@ const CustomMenu =  () => {
         <>
      
         <MainApp/>
-        
-
+    
         {/*         
         <DivOptions >
             <Container className='titleMenu'>

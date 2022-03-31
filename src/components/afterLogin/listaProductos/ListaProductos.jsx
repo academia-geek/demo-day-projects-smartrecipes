@@ -3,12 +3,13 @@ import { useSelector } from "react-redux";
 import SeguimientoPrecios from "../pagPrincipalLog/seguimientoPrecios/SeguimientoPrecios";
 
 const ListaProductos = () => {
-  const { productos } = useSelector((store) => store.add);
+  const {city} = useSelector(store => store.funtional)
   return (
     <>
       <h3>Seguimiento de precios</h3>
+      <p>Ciudad : <strong>{city}</strong></p>
       <p>Productos con más variacion</p>
-      <SeguimientoPrecios data={productos} limit={20} />
+      <SeguimientoPrecios limit={20} />
     </>
   );
 };

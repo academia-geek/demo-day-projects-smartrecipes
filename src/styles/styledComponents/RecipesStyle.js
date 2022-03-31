@@ -104,3 +104,31 @@ export const TextoReceta = styled.h3`
 export const ContainerTextoReceta = styled.div`
     width: 300px;
 `
+export const ButtonModal = styled.button`
+    position: absolute;
+    top: 50%;
+    padding: 50%;
+`
+export const ContainerRecetaPP = styled.div`
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+`
+export const CardRecetas = styled.div`
+    width: 200px;
+    height: auto;
+    padding: 0.75rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    text-align: center;
+`
+export const ImgReceta = styled.img`
+    padding: 0.25rem;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2.5px solid #27A857;
+`
+export const ButtonParaModal = styled.button`
+    background-color: none;
+`

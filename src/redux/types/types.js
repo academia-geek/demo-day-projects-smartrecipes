@@ -7,5 +7,15 @@ export const types = {
 export const addTypes = {
     addProductos : 'addProductos',
     addRecetas : 'addRecetas',
+    addProductosCiudad : 'addProductosCiudad',
+    search : 'search',
+    reset: 'reset'
+}
 
+export const funtionalTypes = {
+    setCity : 'setCity',
+    setPath : 'setPath',
+    setCiudades : 'setCiudades',
+    currentWatchableObject: 'currentWatchableObject',
+    closeSide: 'closeSide',
 }

@@ -4,7 +4,6 @@ export const BarraBusquedaStyled = styled.input`
   width: 80%;
   height: 30px;
   border-radius: 10px;
-
 `
 
 export const ContainerAppTopStyle = styled.div`
@@ -13,12 +12,6 @@ export const ContainerAppTopStyle = styled.div`
   width: 100%;
   height: 100px;
   margin-top: 10px;
-`
-
-export const SliderStyled = styled.div`
-  height: 300px;
-  background-color: green;
-  border-radius: 24px;
 `
 
 export const ContainerAppStyle = styled.div`
@@ -30,7 +23,9 @@ export const ContainerAppStyle = styled.div`
 `
 
 export const DivFlex = styled.div`
-width: 90%;
+height: 100vh;
+width: 70%;
+overflow-y: scroll;
 padding: 15px;
   display: flex;
   flex-direction: column;

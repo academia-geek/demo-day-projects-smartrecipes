@@ -2,45 +2,51 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ButtonLogin } from "../../styles/styledComponents/LoginStyled";
 import { SideBarStyled } from "../../styles/styledComponents/newSideBarMenu";
+import NavBarUbicacion from "../NavBar/NavBarUbicacion";
+import { BsGrid, BsHeart, BsCalendarWeek} from "react-icons/bs";
+import { HiOutlineLogout } from "react-icons/hi";
+import { IoSettingsOutline } from "react-icons/io5";
 
-const SideBarMenu = () => {
+const SideBarMenu = ({cities}) => {
   return (
+    <>
     <SideBarStyled>
       <div className="logo">
         <img
           src="https://res.cloudinary.com/davidcharif/image/upload/v1648315633/demoFakeApi/logoSmall_lumpae.png"
           alt="logo"
-        />
+          />
       </div>
+          <NavBarUbicacion cities={cities}/>
       <div className="menu">
         <ul>
           <li>
             <div>
-              <i>Icon</i>
+              <i><BsGrid/></i>
               <p>Categorias</p>
             </div>
           </li>
           <li>
             <div>
-              <i>Icon</i>
+              <i><BsHeart/></i>
               <p>Recetas Favoritas</p>
             </div>
           </li>
           <li>
             <div>
-              <i>Icon</i>
+              <i><BsCalendarWeek/></i>
               <p>Calendario</p>
             </div>
           </li>
           <li>
             <div>
-              <i>Icon</i>
+              <i><IoSettingsOutline/></i>
               <p>Configuracion</p>
             </div>
           </li>
           <li>
             <div>
-              <i>Icon</i>
+              <i><HiOutlineLogout/></i>
               <p>Logout</p>
             </div>
           </li>
@@ -59,6 +65,7 @@ const SideBarMenu = () => {
         <button>Home</button>
       </div>
     </SideBarStyled>
+    </>
   );
 };
 
