@@ -1,9 +1,5 @@
 import React from "react";
 
-
-import React from 'react'
-
-
 import { Dropdown, SplitButton } from 'react-bootstrap';
 
 import { useDispatch, useSelector } from 'react-redux';
