@@ -1,8 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 
-
-
-
 export const GoblalStyles = createGlobalStyle`
 
 
@@ -12,10 +9,16 @@ export const GoblalStyles = createGlobalStyle`
 body{
 height: 100vh;
 width: 100%;
-  background-size: cover; 
-  font-family: 'Roboto', sans-serif;
-  background-color: white;
+margin: 0;
+padding: 0;
+
+font-family: 'Nunito', sans-serif;
+background-color: white;
+#root{
+  height: auto;
+  width:auto;
+  }
  }
  
  
-`
+`;

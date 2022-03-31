@@ -22,7 +22,7 @@ const AppRouter = () => {
       <Routes>
         <Route path="/" element={< Logo />} />
         <Route path="/welcome" element={< Welcome />} />
-        <Route path="/options" element={< UserOption />} />
+   
         <Route path="/u-select" element={< CustomMenu />} />
         <Route path="/login" element={< Login />} />
         <Route path="/register" element={<Register />} />
