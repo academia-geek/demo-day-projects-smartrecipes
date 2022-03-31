@@ -1,5 +1,6 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { actionFunctionalCloseSide } from "../../../redux/action/actionFuntional";
 import { SideBarProductsStyle } from "../../../styles/styledComponents/SideBar";
 
 const SideBar = () => {
@@ -8,20 +9,16 @@ const SideBar = () => {
   } = useSelector((store) => store.funtional);
   
   const isUndefined = Object.keys(data).length === 0;
-
-  if (isUndefined) {
-    console.log("No render 😠😠😠😠😠😠");
-    return null;
-  } else {
-    console.log("RENDER TIME!!!!!!!! 😲🔥  ");
-   
+  const dispatch = useDispatch();
+  const handleClose = () => {
+    console.log("close");
+    dispatch(actionFunctionalCloseSide())
   }
-
   return (
     <>
+    <button onClick={() => handleClose()}>Close Side Bar</button>
       {!isUndefined && (
-        <SideBarProductsStyle>
-          
+        <SideBarProductsStyle>          
           <div className="container-img">
           <img src={data.img} alt=""></img>
           <p>{data.name}</p>

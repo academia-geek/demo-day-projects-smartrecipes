@@ -1,213 +1,128 @@
 import { Button, Container } from "react-bootstrap";
 import styled from "styled-components";
+import { VerdeLima } from "./ColoresEstilos";
 
 // Logo
 export const DivLogo = styled.div`
-    background-color: #C9E265;
-    height: 100vh;
-    .logoContainer {
-        background-color: #C9E265;
-        height: auto;
-    }
-    @media only screen and (max-height: 680px) {
-        padding-top: 1rem;
-        height: 780px;
-    }
-    @media only screen and (max-width: 610px) {
-        padding-top: 2.5rem;
-        height: 100vh;
-    }
+  background-color: #c9e265;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 export const ImgLogo = styled.img`
-    display: block;
-    margin: 0px auto 0px;
-    padding-top: 2.5rem;
-    @media only screen and (max-width: 600px) {
-        width: 90%;
-    }
+  margin: 0px auto 0px;
+  padding-top: 2.5rem;
+  @media only screen and (max-width: 600px) {
+    width: 50%;
+    height: auto;
+  }
 `;
 
 export const ButtonLogo = styled(Button)`
-    background-color: #FF5757;
+  background-color: #ff5757;
+  color: #ffffff;
+  border: none;
+  width: 15%;
+  min-width: 180px;
+  width: 90%;
+  font-size: 20px;
+  display: block;
+  padding: 0.3rem;
+  margin: 2rem auto 0px;
+  text-align: center;
+
+  &:hover {
+    background-color: #008037;
     color: #ffffff;
-    border: none;
-    width: 15%;
-    min-width: 180px;
-    font-size: 17px;
-    display: block;
-    margin: 2rem auto 0px;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    &:hover {
-        background-color: #008037;
-        color: #ffffff;
-    }
-    &:focus {
-        outline: none;
-        background-color: #FF5757;
-        color: #ffffff;
-    }
-    @media only screen and (max-width: 600px) {
-        margin: 2.5rem auto 0px;
-        width: 60%;
-        min-width: 0px;
-    }
-    @media only screen and (min-height: 800px) {
-        position: relative;
-        top: 4rem;
-    }
+  }
+  &:focus {
+    outline: none;
+    background-color: #ff5757;
+    color: #ffffff;
+  }
 `;
 
 // Welcome
 export const WelcomeContainer = styled(Container)`
-    height: 85vh;
-    .TitleWelcome {
-        text-align: center;
-        color: #FF5757;
-        margin: 2rem 0;
-        padding: 2rem 0px 3rem;
-        font-family: 'Roboto', sans-serif;
-        font-size: 31px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 36px;
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    }
-    .SubtitleWelcome {
-        text-align: center;
-        color: #FFFF;
-        margin: 2rem 0;
-        padding: 2rem 0px 3rem;
-        font-family: 'Roboto', sans-serif;
-        font-size: 28px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 36px;
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  img{
+    width: 100%;
+    height: auto;
+    background-repeat: repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  .titleWelcome {
+    margin: 0px auto 0px;
+  }
+  background-color: ${VerdeLima};
+  height: 100vh;
+  width: 100vw;
+  @media only screen and (max-width: 600px) {
     .TextWelcome {
-        text-align: center;
-        color: #FFFF;
-        width: 50%;
-        margin: 5rem auto 10rem;
-        font-family: 'Roboto', sans-serif;
-        font-size: 25px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 36px;
-        letter-spacing: 0em;
-        text-align: center;
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      width: 80%;
+      margin: 5rem auto 6rem;
     }
-    
-    @media only screen and (max-width: 600px) {
-        .TextWelcome {
-            width: 80%;
-            margin: 5rem auto 6rem;
-        }
-    }
+  }
 `;
 
 export const NextButton = styled(Button)`
-    background-color: #FF5757;
+  background-color: #ff5757;
+  color: #ffffff;
+  border: none;
+  width: 15%;
+  min-width: 180px;
+  font-size: 17px;
+  display: block;
+  margin: 2rem auto 0px;
+  text-align: center;
+
+  &:hover {
+    background-color: #008037;
     color: #ffffff;
-    border: none;
-    width: 15%;
-    min-width: 180px;
-    font-size: 17px;
-    display: block;
-    margin: 2rem auto 0px;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    &:hover {
-        background-color: #008037;
-        color: #ffffff;
-    }
-    &:focus {
-        outline: none;
-        background-color: #FF5757;
-        color: #ffffff;
-    }
-    @media only screen and (max-width: 600px) {
-        margin: 2.5rem auto 0px;
-        width: 60%;
-        min-width: 0px;
-    }
+  }
+  &:focus {
+    outline: none;
+    background-color: #ff5757;
+    color: #ffffff;
+  }
+  @media only screen and (max-width: 600px) {
+    margin: 2.5rem auto 0px;
+    width: 60%;
+    min-width: 0px;
+  }
 `;
 
 // UserOptions
 export const OptionsContainer = styled(Container)`
-    height: 85vh;
-    .TitleOptions {
-        text-align: center;
-        color: #FF5757;
-        margin: 2rem 0;
-        padding: 2rem 0px 3rem;
-        font-family: 'Roboto', sans-serif;
-        font-size: 31px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 36px;
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  height: 85vh;
+
+  @media only screen and (max-width: 600px) {
+    .TextWelcome {
+      width: 80%;
+      margin: 5rem auto 6rem;
     }
-    .SubtitleOptions {
-        text-align: center;
-        color: #FFFF;
-        margin: 2rem 0;
-        padding: 2rem 0px 3rem;
-        font-family: 'Roboto', sans-serif;
-        font-size: 28px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 36px;
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    }
-    .TextOptions {
-        text-align: center;
-        color: #FFFF;
-        width: 50%;
-        margin: 5rem auto 10rem;
-        font-family: 'Roboto', sans-serif;
-        font-size: 25px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 36px;
-        letter-spacing: 0em;
-        text-align: center;
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    }
-    
-    @media only screen and (max-width: 600px) {
-        .TextWelcome {
-            width: 80%;
-            margin: 5rem auto 6rem;
-        }
-    }
+  }
 `;
 
 //Custom Menu
 export const DivOptions = styled.div`
-    
-    height: 100vh;
-    .titleMenu {
-        background-image: url(https://res.cloudinary.com/david-b/image/upload/v1648067424/AG/demoday/vegetables_1_hgzxx2.svg);
-        text-align: center;
-        height: 86px;
-    }
-    .titleMenu > h4 {
-        font-family: 'Roboto';
-        font-weight: 700;
-        font-size: 30px;
-        line-height: 90px;
-        text-shadow: -1px 0 #FFFF, 0 1px #FFFF, 1px 0 #FFFF, 0 -1px #FFFF;
-    }
-    .cardTitle {
-        background-color: green;
-    }
-    @media only screen and (max-width: 610px) {
-        padding-top: 2.5rem;
-        height: auto;
-        
-    }
+  height: 100vh;
+  .titleMenu {
+    background-image: url(https://res.cloudinary.com/david-b/image/upload/v1648067424/AG/demoday/vegetables_1_hgzxx2.svg);
+    text-align: center;
+    height: 86px;
+  }
+
+  .cardTitle {
+    background-color: green;
+  }
+  @media only screen and (max-width: 610px) {
+    padding-top: 2.5rem;
+    height: auto;
+  }
 `;

@@ -1,6 +1,6 @@
 import { SplitButton } from "react-bootstrap";
 import styled from "styled-components";
-import { VerdeLima } from "./ColoresEstilos";
+import { naranja, VerdeLima } from "./ColoresEstilos";
 
 
 export const SideBarStyled = styled.div`
@@ -8,9 +8,9 @@ export const SideBarStyled = styled.div`
 top: 0px; */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: center;  
   background-color: ${VerdeLima};
+
   width: 300px;
   z-index: 2;
   height:100vh;
@@ -31,6 +31,7 @@ top: 0px; */
   .iconSideBar:hover {
     color: #643A71;
   }
+
   ul{
     list-style: none;
     margin-top: 20px;
@@ -38,6 +39,10 @@ top: 0px; */
     div{
       display: flex;
       flex-direction: row;
+      gap: 1.2rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: ${naranja}
     }
   }
   .secondImg {
