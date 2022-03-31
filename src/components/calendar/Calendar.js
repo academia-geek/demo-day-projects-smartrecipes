@@ -1,19 +1,9 @@
 import axios from 'axios';
-<<<<<<< HEAD
-import React from 'react'
-import { useEffect } from 'react';
-import { useState } from 'react';
-import { Accordion } from 'react-bootstrap';
-import { FiCalendar } from "react-icons/fi";
-import { DivInformation, DivMonth, DivWeekly, SubTitleCal, TitleCalendar } from '../../styles/styledComponents/CalendarStyled';
-import { urlRD } from '../../utilities/urlRecipes';
-=======
 import React, { useEffect, useState } from 'react'
 import { Accordion } from 'react-bootstrap';
 import { FiCalendar } from "react-icons/fi";
-import { DivInformation, DivMonth, DivWeekly, SubTitleCal, TitleCalendar } from '../../styles/styledComponents/CalendarStyled';
+import { DivInformation, DivWeekly, SubTitleCal, TitleCalendar } from '../../styles/styledComponents/CalendarStyled';
 import { urlRA, urlRC, urlRD } from '../../utilities/urlRecipes';
->>>>>>> 71f43ceb3e4721b462dfb83f7fc5b751d32b2a77
 import AlmuerzoCard from './AlmuerzoCard';
 import CenaCard from './CenaCard';
 import DesayunoCard from './DesayunoCard';
@@ -39,8 +29,7 @@ const Calendar = () => {
 
     if(isLoading) {
         return <div>Cargando...</div>
-        }
-                
+        }            
     return (
         <div>
             <TitleCalendar> Calendario <FiCalendar /> </TitleCalendar>
@@ -99,19 +88,11 @@ const Calendar = () => {
                           
                       </Accordion>
                     )
-                
-
-            
-      
-                          
-           
-
-            </DivWeekly>
+    </DivWeekly>
 
             <DivInformation>
                 <SubTitleCal>Detalles del menú</SubTitleCal>
             </DivInformation>
-
 
         </div>
     )
