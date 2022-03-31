@@ -7,6 +7,7 @@ import { Dropdown, SplitButton } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { actionFunctional, actionFunctionalPath } from '../../redux/action/actionFuntional';
 import { NavLocationStyled } from '../../styles/styledComponents/NavLocationStyled';
+import { SplitStyled } from '../../styles/styledComponents/newSideBarMenu';
 import { TitleRecetas } from '../../styles/styledComponents/RecipesStyle';
 
 
@@ -48,13 +49,13 @@ const NavBarUbicacion = () => {
     <NavLocationStyled>
       <TitleRecetas>Elige tu ciudad</TitleRecetas>
 
-      <SplitButton variant="light" title="Ciudades" id="segmented-button-dropdown-1">
+      <SplitStyled variant="light" title="Ciudades" id="segmented-button-dropdown-1">
         {ciudades !== undefined && ciudades.map((city, i) => {
           return (
             <Dropdown.Item href="#action/3.i" key={`item-${i}`} onClick={(e) => handleSelect(e)} >{city.ciudad}</Dropdown.Item>
           )
         })}
-      </SplitButton>
+      </SplitStyled>
     </NavLocationStyled>
 
   )

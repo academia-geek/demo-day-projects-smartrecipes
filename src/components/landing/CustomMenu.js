@@ -1,6 +1,6 @@
 import { collection, getDocs } from 'firebase/firestore'
 import React, { useEffect, useState } from 'react'
-import { Container } from 'react-bootstrap'
+import { Container, Spinner } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { db } from '../../firebase/firebaseConfig'
@@ -35,18 +35,14 @@ const CustomMenu =  () => {
     
     let productos = []
     
-
     useEffect(() => {
-        
         getFromFirebase()       
         setLoading(false)        
     }, [])
 
     if(loading){
-        return (<h1>Cargando</h1> )
+        return <Spinner animation="border" variant="success" style={{display:'block', margin:'35% auto '}}/>
     }
-   
-
 
     return (
         <>
