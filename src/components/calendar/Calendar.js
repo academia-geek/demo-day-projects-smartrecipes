@@ -1,4 +1,5 @@
 import axios from 'axios';
+<<<<<<< HEAD
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -6,125 +7,104 @@ import { Accordion } from 'react-bootstrap';
 import { FiCalendar } from "react-icons/fi";
 import { DivInformation, DivMonth, DivWeekly, SubTitleCal, TitleCalendar } from '../../styles/styledComponents/CalendarStyled';
 import { urlRD } from '../../utilities/urlRecipes';
+=======
+import React, { useEffect, useState } from 'react'
+import { Accordion } from 'react-bootstrap';
+import { FiCalendar } from "react-icons/fi";
+import { DivInformation, DivMonth, DivWeekly, SubTitleCal, TitleCalendar } from '../../styles/styledComponents/CalendarStyled';
+import { urlRA, urlRC, urlRD } from '../../utilities/urlRecipes';
+>>>>>>> 71f43ceb3e4721b462dfb83f7fc5b751d32b2a77
 import AlmuerzoCard from './AlmuerzoCard';
 import CenaCard from './CenaCard';
 import DesayunoCard from './DesayunoCard';
 
 const Calendar = () => {
-
-    const [dishes, setDishes] = useState([]);
-
+    const [almuerzos, setAlmuerzos] = useState([]);
+    const [desayuno, setDesayuno] = useState([]);
+    const [cena, setCena] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+   
     useEffect(() => {
         async function fetchData() {
-            const dataServer = await axios.get(urlRD);
-                // console.log(dataServer.data)
-            setDishes(dataServer.data)
+            const dataServer = await axios.get(urlRA);                
+            setAlmuerzos(dataServer.data)
+            const dataCena = await axios.get(urlRC);                
+            setCena(dataCena.data)
+            const dataDesayuno = await axios.get(urlRD);
+            setDesayuno(dataDesayuno.data)
+            setIsLoading(false);
         }
         fetchData()
     }, [])
 
-    // console.log(dishes)
-    let desayuno = dishes;
-    
-    console.log(desayuno[0])
-    console.log(desayuno[1])
-    console.log(desayuno[2])
-
+    if(isLoading) {
+        return <div>Cargando...</div>
+        }
+                
     return (
         <div>
             <TitleCalendar> Calendario <FiCalendar /> </TitleCalendar>
-{/*             <DivMonth >
-                <SubTitleCal> Detallado Mensual</SubTitleCal>
-            </DivMonth> */}
-
             <DivWeekly>
                 <SubTitleCal> Detallado Semanal </SubTitleCal>
 
-{/* Plan Común */}
-                <Accordion defaultActiveKey="0" flush>
-                    <Accordion.Item eventKey="0">
-                        <Accordion.Header> Lunes </Accordion.Header>
-                        <Accordion.Body>
+                      <Accordion defaultActiveKey="0" flush>
+                          <Accordion.Item eventKey="0">
+                              <Accordion.Header> Lunes </Accordion.Header>
+                              <Accordion.Body>
+                                  
+                                 <h2>DESAYUNO</h2>
+                              <DesayunoCard dish={desayuno[0]}/>
+                                  <h2>ALMUERZO</h2>
+                              <AlmuerzoCard dish={almuerzos[0]}/>
+                                  <h2>CENA</h2>
+                              <CenaCard dish={cena[0]}/>    
+      
+                              </Accordion.Body>
+                          </Accordion.Item>
+                          <Accordion.Item eventKey="1">
+                              <Accordion.Header>Martes</Accordion.Header>
+                              <Accordion.Body>                   
+                              </Accordion.Body>
+                          </Accordion.Item>
+                          <Accordion.Item eventKey="2">
+                              <Accordion.Header>Miercoles</Accordion.Header>
+                              <Accordion.Body>
+                         
+                              </Accordion.Body>
+                          </Accordion.Item>
+                          <Accordion.Item eventKey="3">
+                              <Accordion.Header>Jueves</Accordion.Header>
+                              <Accordion.Body>
+                               
+                              </Accordion.Body>
+                          </Accordion.Item>
+                          <Accordion.Item eventKey="4">
+                              <Accordion.Header>Viernes</Accordion.Header>
+                              <Accordion.Body>
+                                
+                              </Accordion.Body>
+                          </Accordion.Item>
+                          <Accordion.Item eventKey="5">
+                              <Accordion.Header>Sábado</Accordion.Header>
+                              <Accordion.Body>
+                                
+                              </Accordion.Body>
+                          </Accordion.Item>
+                          <Accordion.Item eventKey="6">
+                              <Accordion.Header>Domingo</Accordion.Header>
+                              <Accordion.Body>
+                            
+                              </Accordion.Body>
+                          </Accordion.Item>
+                          
+                      </Accordion>
+                    )
+                
 
-                            <h2>DESAYUNO</h2>
-
-
-                            <h2>ALMUERZO</h2>
-                        {/* <AlmuerzoCard /> */}
-                            <h2>CENA</h2>
-                        {/* <CenaCard />     */}
-
-                        </Accordion.Body>
-                    </Accordion.Item>
-                    <Accordion.Item eventKey="1">
-                        <Accordion.Header>Martes</Accordion.Header>
-                        <Accordion.Body>
-                        <h2>DESAYUNO</h2>
-                        {/* <DesayunoCard /> */}
-
-                        </Accordion.Body>
-                    </Accordion.Item>
-                    <Accordion.Item eventKey="2">
-                        <Accordion.Header>Miercoles</Accordion.Header>
-                        <Accordion.Body>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                            est laborum.
-                        </Accordion.Body>
-                    </Accordion.Item>
-                    <Accordion.Item eventKey="3">
-                        <Accordion.Header>Jueves</Accordion.Header>
-                        <Accordion.Body>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                            est laborum.
-                        </Accordion.Body>
-                    </Accordion.Item>
-                    <Accordion.Item eventKey="4">
-                        <Accordion.Header>Viernes</Accordion.Header>
-                        <Accordion.Body>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                            est laborum.
-                        </Accordion.Body>
-                    </Accordion.Item>
-                    <Accordion.Item eventKey="5">
-                        <Accordion.Header>Sábado</Accordion.Header>
-                        <Accordion.Body>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                            est laborum.
-                        </Accordion.Body>
-                    </Accordion.Item>
-                    <Accordion.Item eventKey="6">
-                        <Accordion.Header>Domingo</Accordion.Header>
-                        <Accordion.Body>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                            est laborum.
-                        </Accordion.Body>
-                    </Accordion.Item>
-                </Accordion>
+            
+      
+                          
+           
 
             </DivWeekly>
 

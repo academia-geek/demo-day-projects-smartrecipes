@@ -23,10 +23,10 @@ export const ContainerAppStyle = styled.div`
 `
 
 export const DivFlex = styled.div`
-width: 80%;
-height: 100%;
+height: 100vh;
+width: 70%;
+overflow-y: scroll;
 padding: 15px;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
 `

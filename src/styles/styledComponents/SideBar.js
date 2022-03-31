@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const SideBarProductsStyle = styled.div`
   display: flex;
-  flex-direction: column;
-  width: 100%;
+  flex-direction: column;  
   gap:30px;
   align-items: center;
   justify-content: center;

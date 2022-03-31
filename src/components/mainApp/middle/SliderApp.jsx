@@ -1,7 +1,7 @@
 import React from 'react'
 import { Carousel } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
-import { ButtonCarousel, CarouselStyled, colorPrimerBloque, colorSegundoBloque, colorTercerBloque, SliderItem, SliderItem2, SliderItem3 } from '../../../styles/styledComponents/SlyderStyled'
+import { ButtonCarousel, CarouselStyled, colorPrimerBloque, colorSegundoBloque, colorTercerBloque, SliderItem, } from '../../../styles/styledComponents/SlyderStyled'
 
 const SliderApp = () => {
 

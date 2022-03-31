@@ -35,6 +35,14 @@ export const funtionalReducer = (state = initialState, action) => {
                     data: action.payload.data
                 },                
             }
+        case funtionalTypes.closeSide:
+            return {
+                ...state,
+                currentWatchableObject : {
+                    id: '',
+                    data:{}
+                },
+            }
 
         default:
             return state
