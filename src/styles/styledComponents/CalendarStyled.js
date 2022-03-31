@@ -9,14 +9,12 @@ export const TitleCalendar = styled.h4`
     font-family: roboto;
     text-align: center;
 `
-
 export const SubTitleCal = styled.h4`
    color:  black;
    font-size: 18px;
    font-family: roboto;
    text-align: center;
 `
-
 export const DivMonth = styled(Container)`
    background-color:  pink;
    @media only screen and (max-width: 600px) {
@@ -28,4 +26,10 @@ export const DivWeekly = styled(Container)`
    @media only screen and (max-width: 600px) {
         width:90%;
     }
+`
+export const DivInformation =styled(Container)`
+background-color:  #643A71;
+@media only screen and (max-width: 600px) {
+     width:90%;
+ }
 `
