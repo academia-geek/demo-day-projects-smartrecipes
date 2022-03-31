@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { db } from "../../firebase/firebaseConfig";
 import { actionAdd } from "../../redux/action/actionAdd";
 import { actionFunctionalCiudades } from "../../redux/action/actionFuntional";
-
+import Split from 'react-split'
 import { ContainerAppStyle } from "../../styles/styledComponents/ContainerApp";
 import {
   ContainerAppTopStyle,
@@ -76,10 +76,23 @@ const MainApp = () => {
           {
              width > breakpoint && <DinamicMenu width={width} breakpoint={breakpoint} cities={cities}  />
           }
+      <Split className="split"
+        sizes={[70, 20]}
+        
+        gutterSize={10}
+        snapOffset={10}
+        direction="vertical"
+        onDragEnd={() => {
+          console.log("drag end");
+        }}
+
+        
+        >
         <DivFlex>
           { 
              width < breakpoint && <DinamicMenu width={width} breakpoint={breakpoint} />
           }
+
           <ContainerAppTopStyle>
             <BarraBusqueda />
             <Ubicacion />
@@ -97,6 +110,7 @@ const MainApp = () => {
           )}
         </DivFlex>
         <SideBar/>
+      </Split> 
       </ContainerAppStyle>
     </>
   );
