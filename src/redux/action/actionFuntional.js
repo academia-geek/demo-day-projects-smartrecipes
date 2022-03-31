@@ -30,6 +30,11 @@ export const actionFunctionalCurrentWatchableObject = (currentWatchableObject) =
     },
   }
 }
+export const actionFunctionalCloseSide = () => {
+  return {
+    type: funtionalTypes.closeSide,
+  }
+}
 
 export const actionFunctionalCurrentWatchableRecipe = (currentWatchableRecipe) => {
   const { id, label, ingredientLines, porciones, time, cautions, healthLabels } = currentWatchableRecipe

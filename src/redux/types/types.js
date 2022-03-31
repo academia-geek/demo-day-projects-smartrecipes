@@ -17,4 +17,5 @@ export const funtionalTypes = {
     setPath : 'setPath',
     setCiudades : 'setCiudades',
     currentWatchableObject: 'currentWatchableObject',
+    closeSide: 'closeSide',
 }
