@@ -8,15 +8,7 @@ import { NavLocationStyled } from '../../styles/styledComponents/NavLocationStyl
 import { SplitStyled } from '../../styles/styledComponents/newSideBarMenu';
 import { TitleRecetas } from '../../styles/styledComponents/RecipesStyle';
 
-import { Dropdown, SplitButton } from "react-bootstrap";
 
-
-import { useDispatch, useSelector } from "react-redux";
-import {
-  actionFunctional,
-  actionFunctionalPath,
-} from "../../redux/action/actionFuntional";
-import { NavLocationStyled } from "../../styles/styledComponents/NavLocationStyled";
 
 const NavBarUbicacion = () => {
   const { ciudades } = useSelector((store) => store.funtional);
