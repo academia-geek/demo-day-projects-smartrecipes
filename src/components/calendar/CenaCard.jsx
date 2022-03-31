@@ -1,47 +1,26 @@
-import axios from 'axios';
-import React from 'react'
-import { useEffect } from 'react';
-import { useState } from 'react';
-import { Card } from 'react-bootstrap';
-import { urlRC } from '../../utilities/urlRecipes';
 
-const CenaCard = () => {
+import React from "react";
 
-    const [dishes, setDishes] = useState([]);
+import { Card } from "react-bootstrap";
 
-    useEffect(() => {
-        async function fetchData() {
-            const dataServer = await axios.get(urlRC);
-                console.log(dataServer.data)
-            setDishes(dataServer.data)
-        }
-        fetchData()
-    }, [])
 
+const CenaCard = ({ dish }) => {
   return (
-    <div>
-
-      {dishes.map((dish, i) => (
-        <div key={`dish-${i}`} >
-                <Card className="container-card">
-                    {/* <Card.Img variant="top" src={dish.image} className="imagen-menu-card" /> */}
-                    <Card.Body className="body-menu-card">
-                        <Card.Title className="title-menu">{dish.title}</Card.Title>
-                        <Card.Text>
-                            Preparation Time: {dish.readyInMinutes}' 
-                            <br/>
-                            Diet type: {dish.diets.join(', ')}
-                            <br/>
-                        </Card.Text>
-                      
-                    </Card.Body>
-                </Card>      
-
-        </div>
-      ))}
-
+    <div key={`dish`}>
+      <Card className="container-card">
+        {/* <Card.Img variant="top" src={dish.image} className="imagen-menu-card" /> */}
+        <Card.Body className="body-menu-card">
+          <Card.Title className="title-menu">{dish.title}</Card.Title>
+          <Card.Text>
+            Preparation Time: {dish.readyInMinutes}'
+            <br />
+            Diet type: {dish.diets.join(", ")}
+            <br />
+          </Card.Text>
+        </Card.Body>
+      </Card>
     </div>
-  )
-}
+  );
+};
 
-export default CenaCard
+export default CenaCard;
