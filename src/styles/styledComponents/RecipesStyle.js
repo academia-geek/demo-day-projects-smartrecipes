@@ -14,10 +14,9 @@ export const ColReceta = styled.div`
 `
 export const TitleRecetas = styled.h1`
     text-align: center;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin-bottom: 15px;
+    margin-top: 15px;
     background-color: #F19C79;
-    padding: 0.25rem;
     text-shadow: white 0 -1px;
 `
 export const SubTitleRecetas = styled.h2`

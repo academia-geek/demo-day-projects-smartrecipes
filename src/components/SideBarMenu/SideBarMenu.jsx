@@ -22,31 +22,31 @@ const SideBarMenu = ({cities}) => {
         <ul>
           <li>
             <div>
-              <i><BsGrid/></i>
+              <i><BsGrid className="iconSideBar"/></i>
               <p>Categorias</p>
             </div>
           </li>
           <li>
             <div>
-              <i><BsHeart/></i>
+              <i><BsHeart className="iconSideBar"/></i>
               <p>Recetas Favoritas</p>
             </div>
           </li>
           <li>
             <div>
-              <i><BsCalendarWeek/></i>
+              <i><BsCalendarWeek className="iconSideBar"/></i>
               <p>Calendario</p>
             </div>
           </li>
           <li>
             <div>
-              <i><IoSettingsOutline/></i>
+              <i><IoSettingsOutline className="iconSideBar"/></i>
               <p>Configuracion</p>
             </div>
           </li>
           <li>
             <div>
-              <i><HiOutlineLogout/></i>
+              <i><HiOutlineLogout className="iconSideBar"/></i>
               <p>Logout</p>
             </div>
           </li>
@@ -55,6 +55,7 @@ const SideBarMenu = ({cities}) => {
         <img
           src="https://res.cloudinary.com/davidcharif/image/upload/v1648315820/demoFakeApi/imagenSideBar_brl1vb.png"
           alt="girl juggling fruits"
+          className="secondImg"
         />
         <Link to="/login" style={{ textDecoration: "none" }}>
           <ButtonLogin> Login </ButtonLogin>
