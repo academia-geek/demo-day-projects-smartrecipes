@@ -1,36 +1,36 @@
 import React from 'react'
 import { Accordion } from 'react-bootstrap';
 import { FiCalendar } from "react-icons/fi";
-import { DivMonth, DivWeekly, SubTitleCal, TitleCalendar } from '../../styles/styledComponents/CalendarStyled';
-
+import { DivInformation, DivMonth, DivWeekly, SubTitleCal, TitleCalendar } from '../../styles/styledComponents/CalendarStyled';
+import AlmuerzoCard from './AlmuerzoCard';
+import CenaCard from './CenaCard';
+import DesayunoCard from './DesayunoCard';
 
 const Calendar = () => {
+
     return (
         <div>
             <TitleCalendar> Calendario <FiCalendar /> </TitleCalendar>
-
-            <DivMonth >
-
+{/*             <DivMonth >
                 <SubTitleCal> Detallado Mensual</SubTitleCal>
-
-
-            </DivMonth>
+            </DivMonth> */}
 
             <DivWeekly>
-
                 <SubTitleCal> Detallado Semanal </SubTitleCal>
 
+{/* Plan Común */}
                 <Accordion defaultActiveKey="0" flush>
                     <Accordion.Item eventKey="0">
                         <Accordion.Header> Lunes </Accordion.Header>
                         <Accordion.Body>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                            est laborum.
+                            
+                            <h2>DESAYUNO</h2>
+                        <DesayunoCard />
+                            <h2>ALMUERZO</h2>
+                        <AlmuerzoCard />
+                            <h2>CENA</h2>
+                        <CenaCard />    
+
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="1">
@@ -108,6 +108,11 @@ const Calendar = () => {
                 </Accordion>
 
             </DivWeekly>
+
+            <DivInformation>
+                <SubTitleCal>Detalles del menú</SubTitleCal>
+            </DivInformation>
+
 
         </div>
     )
