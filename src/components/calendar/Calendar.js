@@ -34,8 +34,8 @@ const Calendar = () => {
         <div>
             <TitleCalendar> Calendario <FiCalendar /> </TitleCalendar>
             <DivWeekly>
-                <SubTitleCal> Detallado Semanal </SubTitleCal>
-
+                <SubTitleCal> Detallado Semanal </SubTitleCal>             
+                  
                       <Accordion defaultActiveKey="0" flush>
                           <Accordion.Item eventKey="0">
                               <Accordion.Header> Lunes </Accordion.Header>
