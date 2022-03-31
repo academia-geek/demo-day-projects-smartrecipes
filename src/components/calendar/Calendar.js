@@ -1,12 +1,34 @@
+import axios from 'axios';
 import React from 'react'
+import { useEffect } from 'react';
+import { useState } from 'react';
 import { Accordion } from 'react-bootstrap';
 import { FiCalendar } from "react-icons/fi";
 import { DivInformation, DivMonth, DivWeekly, SubTitleCal, TitleCalendar } from '../../styles/styledComponents/CalendarStyled';
+import { urlRD } from '../../utilities/urlRecipes';
 import AlmuerzoCard from './AlmuerzoCard';
 import CenaCard from './CenaCard';
 import DesayunoCard from './DesayunoCard';
 
 const Calendar = () => {
+
+    const [dishes, setDishes] = useState([]);
+
+    useEffect(() => {
+        async function fetchData() {
+            const dataServer = await axios.get(urlRD);
+                // console.log(dataServer.data)
+            setDishes(dataServer.data)
+        }
+        fetchData()
+    }, [])
+
+    // console.log(dishes)
+    let desayuno = dishes;
+    
+    console.log(desayuno[0])
+    console.log(desayuno[1])
+    console.log(desayuno[2])
 
     return (
         <div>
@@ -23,26 +45,23 @@ const Calendar = () => {
                     <Accordion.Item eventKey="0">
                         <Accordion.Header> Lunes </Accordion.Header>
                         <Accordion.Body>
-                            
+
                             <h2>DESAYUNO</h2>
-                        <DesayunoCard />
+
+
                             <h2>ALMUERZO</h2>
-                        <AlmuerzoCard />
+                        {/* <AlmuerzoCard /> */}
                             <h2>CENA</h2>
-                        <CenaCard />    
+                        {/* <CenaCard />     */}
 
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="1">
                         <Accordion.Header>Martes</Accordion.Header>
                         <Accordion.Body>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                            est laborum.
+                        <h2>DESAYUNO</h2>
+                        {/* <DesayunoCard /> */}
+
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="2">

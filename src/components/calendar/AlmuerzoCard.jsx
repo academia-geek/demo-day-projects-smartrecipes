@@ -18,9 +18,11 @@ const AlmuerzoCard = () => {
         fetchData()
     }, [])
 
+    console.log()
+
   return (
     <div>
-
+      
       {dishes.map((dish, i) => (
         <div key={`dish-${i}`} >
                 <Card className="container-card">
