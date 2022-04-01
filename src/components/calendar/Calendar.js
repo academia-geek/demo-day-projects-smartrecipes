@@ -1,110 +1,120 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-import { Accordion } from 'react-bootstrap';
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { Accordion } from "react-bootstrap";
 import { FiCalendar } from "react-icons/fi";
-import { DivInformation, DivWeekly, SubTitleCal, TitleCalendar } from '../../styles/styledComponents/CalendarStyled';
-import { urlRA, urlRC, urlRD } from '../../utilities/urlRecipes';
-import AlmuerzoCard from './AlmuerzoCard';
-import CenaCard from './CenaCard';
-import DesayunoCard from './DesayunoCard';
+
+import {
+  DivInformation,
+  DivMonth,
+  DivWeekly,
+  SubTitleCal,
+  TitleCalendar,
+} from "../../styles/styledComponents/CalendarStyled";
+import { urlRA, urlRC, urlRD } from "../../utilities/urlRecipes";
+import AlmuerzoCard from "./AlmuerzoCard";
+import CenaCard from "./CenaCard";
+import DesayunoCard from "./DesayunoCard";
+
 
 const Calendar = () => {
-    const [almuerzos, setAlmuerzos] = useState([]);
-    const [desayuno, setDesayuno] = useState([]);
-    const [cena, setCena] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
-   
-    useEffect(() => {
-        async function fetchData() {
-            const dataServer = await axios.get(urlRA);                
-            setAlmuerzos(dataServer.data)
-            const dataCena = await axios.get(urlRC);                
-            setCena(dataCena.data)
-            const dataDesayuno = await axios.get(urlRD);
-            setDesayuno(dataDesayuno.data)
-            setIsLoading(false);
-        }
-        fetchData()
-    }, [])
+  const [almuerzo, setAlmuerzos] = useState([]);
+  const [desayuno, setDesayuno] = useState([]);
+  const [cena, setCena] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [superRecipes, setSuperRecipes] = useState([]);
+  const [filtros, setFiltros] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      const dataAlmuerzo = await axios.get(urlRA);
+      setAlmuerzos(dataAlmuerzo.data);
+      const dataCena = await axios.get(urlRC);
+      setCena(dataCena.data);
+      const dataDesayuno = await axios.get(urlRD);
+      setDesayuno(dataDesayuno.data);
+      setSuperRecipes({
+        desayuno: dataDesayuno.data,
+        cena: dataCena.data,
+        almuerzo: dataAlmuerzo.data,
+      });
+      setIsLoading(false);
+    }
+    fetchData();
+  }, []);
 
-    if(isLoading) {
-        return <div>Cargando...</div>
-        }
-                
-    return (
-        <div>
-            <TitleCalendar> Calendario <FiCalendar /> </TitleCalendar>
-            <DivWeekly>
-                <SubTitleCal> Detallado Semanal </SubTitleCal>             
-                  
-                      <Accordion defaultActiveKey="0" flush>
-                          <Accordion.Item eventKey="0">
-                              <Accordion.Header> Lunes </Accordion.Header>
-                              <Accordion.Body>
-                                  
-                                 <h2>DESAYUNO</h2>
-                              <DesayunoCard dish={desayuno[0]}/>
-                                  <h2>ALMUERZO</h2>
-                              <AlmuerzoCard dish={almuerzos[0]}/>
-                                  <h2>CENA</h2>
-                              <CenaCard dish={cena[0]}/>    
-      
-                              </Accordion.Body>
-                          </Accordion.Item>
-                          <Accordion.Item eventKey="1">
-                              <Accordion.Header>Martes</Accordion.Header>
-                              <Accordion.Body>                   
-                              </Accordion.Body>
-                          </Accordion.Item>
-                          <Accordion.Item eventKey="2">
-                              <Accordion.Header>Miercoles</Accordion.Header>
-                              <Accordion.Body>
-                         
-                              </Accordion.Body>
-                          </Accordion.Item>
-                          <Accordion.Item eventKey="3">
-                              <Accordion.Header>Jueves</Accordion.Header>
-                              <Accordion.Body>
-                               
-                              </Accordion.Body>
-                          </Accordion.Item>
-                          <Accordion.Item eventKey="4">
-                              <Accordion.Header>Viernes</Accordion.Header>
-                              <Accordion.Body>
-                                
-                              </Accordion.Body>
-                          </Accordion.Item>
-                          <Accordion.Item eventKey="5">
-                              <Accordion.Header>Sábado</Accordion.Header>
-                              <Accordion.Body>
-                                
-                              </Accordion.Body>
-                          </Accordion.Item>
-                          <Accordion.Item eventKey="6">
-                              <Accordion.Header>Domingo</Accordion.Header>
-                              <Accordion.Body>
-                            
-                              </Accordion.Body>
-                          </Accordion.Item>
-                          
-                      </Accordion>
-                    )
-                
+  if (isLoading) {
+    return <div>Cargando...</div>;
+  }
 
-            
-      
-                          
-           
+  // retornar una sola vez el componente pero con los datos iterados
 
-            </DivWeekly>
-
-            <DivInformation>
-                <SubTitleCal>Detalles del menú</SubTitleCal>
-            </DivInformation>
+  const dias = [
+    "Lunes",
+    "Martes",
+    "Miercoles",
+    "Jueves",
+    "Viernes",
+    "Sabado",
+    "Domingo",
+  ];
+  //Implementar filtros de los ingredientes
+  
 
 
-        </div>
-    )
-}
+  return (
+    <div>
+      <TitleCalendar>
+        {" "}
+        Calendario <FiCalendar />{" "}
+      </TitleCalendar>
+      <div>
+      <button>Filtro 1</button>
+      <button>Filtro 2</button>
+      <button>Filtro 3</button>
+      </div>
+      <DivWeekly>
+        <SubTitleCal> Detallado Semanal </SubTitleCal>
 
-export default Calendar
+        <Accordion defaultActiveKey="0" flush>
+          {dias.map((dia, index) => {
+            return AccordionItemFunc(index, dia, superRecipes);
+          })}
+        </Accordion>
+      </DivWeekly>
+
+      <DivInformation>
+        <SubTitleCal>Detalles del menú</SubTitleCal>
+      </DivInformation>
+    </div>
+  );
+};
+
+export default Calendar;
+
+const AccordionItemFunc = (index, dia, objRecetas) => {
+  let stringIndex = index.toString();  
+  return (
+    <Accordion.Item eventKey={stringIndex} key={index}>
+      <Accordion.Header> {dia} </Accordion.Header>
+      <Accordion.Body>
+        <h2>DESAYUNO 🥞🥞🥞</h2>
+        <DesayunoCard dish={objRecetas.desayuno[index]} />
+        <p>Precio por porcion {objRecetas.desayuno.pricePerServing}</p>
+        <p>Puntos saludables {objRecetas.desayuno.totalHealth}</p>
+        <p>Tiempo de preparacion {objRecetas.desayuno.readyInMinutes}</p>
+
+        <h2>ALMUERZO 🍕🍕🍕</h2>
+        <AlmuerzoCard dish={objRecetas.almuerzo[index]} />
+        <p>Precio por porcion {objRecetas.almuerzo.pricePerServing}</p>
+        <p>Puntos saludables {objRecetas.almuerzo.totalHealth}</p>
+        <p>Tiempo de preparacion {objRecetas.almuerzo.readyInMinutes}</p>
+
+        <h2>CENA 🍝🍝🍝</h2>
+        <CenaCard dish={objRecetas.cena[index]} />
+        <p>Precio por porcion {objRecetas.cena.pricePerServing}</p>
+        <p>Puntos saludables {objRecetas.cena.totalHealth}</p>
+        <p>Tiempo de preparacion {objRecetas.cena.readyInMinutes}</p>
+
+      </Accordion.Body>
+    </Accordion.Item>
+  );
+};
