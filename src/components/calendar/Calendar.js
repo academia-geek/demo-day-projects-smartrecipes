@@ -2,9 +2,10 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Accordion } from "react-bootstrap";
 import { FiCalendar } from "react-icons/fi";
+
 import {
   DivInformation,
-  DivMonth,
+  
   DivWeekly,
   SubTitleCal,
   TitleCalendar,
@@ -14,12 +15,17 @@ import AlmuerzoCard from "./AlmuerzoCard";
 import CenaCard from "./CenaCard";
 import DesayunoCard from "./DesayunoCard";
 
+
 const Calendar = () => {
   const [almuerzo, setAlmuerzos] = useState([]);
   const [desayuno, setDesayuno] = useState([]);
   const [cena, setCena] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [superRecipes, setSuperRecipes] = useState([]);
+  console.log('superRecipes', superRecipes)
+  const resetFilters = () => {
+      setSuperRecipes(desayuno,almuerzo,cena)
+  }    
   useEffect(() => {
     async function fetchData() {
       const dataAlmuerzo = await axios.get(urlRA);
@@ -52,6 +58,40 @@ const Calendar = () => {
     "Sabado",
     "Domingo",
   ];
+  //Implementar filtros de los ingredientes
+  const handleVeg = () => {
+    let {desayuno, cena, almuerzo} = superRecipes;
+    desayuno = desayuno.filter(dish => dish.vegetarian === true);
+    cena = cena.filter(dish => dish.vegetarian === true);
+    almuerzo = almuerzo.filter(dish => dish.vegetarian === true);
+    setSuperRecipes({
+        desayuno,
+        cena,
+        almuerzo
+    })
+  }
+  const handleGluten = () => {
+    let {desayuno, cena, almuerzo} = superRecipes;
+    desayuno = desayuno.filter(dish => dish.glutenFree === true);
+    cena = cena.filter(dish => dish.glutenFree === true);
+    almuerzo = almuerzo.filter(dish => dish.glutenFree === true);
+    setSuperRecipes({
+        desayuno,
+        cena,
+        almuerzo
+    })
+    }
+const handleVegan = () => {
+    let {desayuno, cena, almuerzo} = superRecipes;
+    desayuno = desayuno.filter(dish => dish.vegan === true);
+    cena = cena.filter(dish => dish.vegan === true);
+    almuerzo = almuerzo.filter(dish => dish.vegan === true);
+    setSuperRecipes({
+        desayuno,
+        cena,
+        almuerzo
+    })
+    }
 
   return (
     <div>
@@ -59,6 +99,12 @@ const Calendar = () => {
         {" "}
         Calendario <FiCalendar />{" "}
       </TitleCalendar>
+      <div>
+      <button onClick={() => handleVeg()}>Filtro VEGETARIANOS</button>
+      <button onClick={() => handleGluten()}>Filtro GLUTEN</button>
+      <button onClick={() => handleVegan()}>Filtro VEGANOS</button>
+      <button onClick={() => resetFilters()}>RESET FILTERS</button>
+      </div>
       <DivWeekly>
         <SubTitleCal> Detallado Semanal </SubTitleCal>
 
@@ -79,17 +125,29 @@ const Calendar = () => {
 export default Calendar;
 
 const AccordionItemFunc = (index, dia, objRecetas) => {
-  let stringIndex = index.toString();
+  let stringIndex = index.toString();  
   return (
     <Accordion.Item eventKey={stringIndex} key={index}>
       <Accordion.Header> {dia} </Accordion.Header>
       <Accordion.Body>
         <h2>DESAYUNO</h2>
         <DesayunoCard dish={objRecetas.desayuno[index]} />
-        <h2>ALMUERZO</h2>
+        <p>Precio por porcion {objRecetas.desayuno[index].pricePerServing}</p>
+        <p>Puntos saludables {objRecetas.desayuno[index].healthScore}</p>
+        <p>Tiempo de preparacion {objRecetas.desayuno[index].readyInMinutes}</p>
+
+        <h2>ALMUERZO 🍕🍕🍕</h2>
         <AlmuerzoCard dish={objRecetas.almuerzo[index]} />
-        <h2>CENA</h2>
+        <p>Precio por porcion {objRecetas.almuerzo[index].pricePerServing}</p>
+        <p>Puntos saludables {objRecetas.almuerzo[index].healthScore}</p>
+        <p>Tiempo de preparacion {objRecetas.almuerzo[index].readyInMinutes} minutos</p>
+
+        <h2>CENA 🍝🍝🍝</h2>
         <CenaCard dish={objRecetas.cena[index]} />
+        <p>Precio por porcion {objRecetas.cena[index].pricePerServing}</p>
+        <p>Puntos saludables {objRecetas.cena[index].healthScore}</p>
+        <p>Tiempo de preparacion {objRecetas.cena[index].readyInMinutes} minutos</p>
+
       </Accordion.Body>
     </Accordion.Item>
   );

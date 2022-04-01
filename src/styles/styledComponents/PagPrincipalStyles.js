@@ -19,8 +19,7 @@ export const CalendarioStyled = styled.div`
 `;
 
 export const SeguimientoPreciosStyled = styled.div`
-  width: 100%;
-  min-height: 300px;
+  width: 100%;  
   display: flex;
   
   flex-direction: row;
@@ -38,6 +37,7 @@ export const SeguimientoPreciosStyled = styled.div`
 `;
 
 export const ProductoStyled = styled.div`
+min-height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;

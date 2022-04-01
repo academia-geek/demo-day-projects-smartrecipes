@@ -16,19 +16,24 @@ const SideBar = () => {
   }
   return (
     <>
-    <button onClick={() => handleClose()}>Close Side Bar</button>
-      {!isUndefined && (
+      {!isUndefined ? (
         <SideBarProductsStyle>          
+          <button onClick={() => handleClose()}>Close Side Bar</button>
           <div className="container-img">
           <img src={data.img} alt=""></img>
+          <p>Peso : {data.weight}</p>
           <p>{data.name}</p>
           </div>
+          
           <div className="container-historic">
           <img src="https://res.cloudinary.com/davidcharif/image/upload/v1648602734/demoFakeApi/variacionPrecio_wqdpq5.png" alt="variacion"/>
+          
           <h3>Precios de la ultima semana</h3>
+          <h3>Promedio COP${data.price}</h3>
           </div>
         </SideBarProductsStyle>
-      )}
+      )
+    :<div></div>}
     </>
   );
 };

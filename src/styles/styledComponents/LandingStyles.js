@@ -32,7 +32,7 @@ export const ButtonLogo = styled(Button)`
   padding: 0.3rem;
   margin: 2rem auto 0px;
   text-align: center;
-
+  max-width: 350px;
   &:hover {
     background-color: #008037;
     color: #ffffff;
