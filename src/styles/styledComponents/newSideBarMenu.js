@@ -10,7 +10,6 @@ top: 0px; */
   flex-direction: column;
   align-items: center;  
   background-color: ${VerdeLima};
-
   width: 300px;
   z-index: 2;
   height:100vh;

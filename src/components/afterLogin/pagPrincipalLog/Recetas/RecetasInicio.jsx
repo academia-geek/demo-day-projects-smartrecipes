@@ -4,7 +4,7 @@ import CardReceta from './CardReceta'
 import UseFetch from './UseFetch'
 
 const RecetasInicio = () => {
-    const [url, setUrl] = useState('https://recetas-demoday.herokuapp.com/recetas')
+    const [url ] = useState('https://recetas-demoday.herokuapp.com/recetas')
     const estado = UseFetch(url);
     const {cargando, dataServer} = estado
     cargando? console.log('cargando...'):console.log(dataServer)

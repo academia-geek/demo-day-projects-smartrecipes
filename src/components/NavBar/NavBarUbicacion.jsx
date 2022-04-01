@@ -1,13 +1,10 @@
 import React from "react";
-
-import { Dropdown, SplitButton } from 'react-bootstrap';
-
+import { Dropdown } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { actionFunctional, actionFunctionalPath } from '../../redux/action/actionFuntional';
 import { NavLocationStyled } from '../../styles/styledComponents/NavLocationStyled';
 import { SplitStyled } from '../../styles/styledComponents/newSideBarMenu';
 import { TitleRecetas } from '../../styles/styledComponents/RecipesStyle';
-
 
 
 const NavBarUbicacion = () => {
