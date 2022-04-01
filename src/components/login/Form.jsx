@@ -1,17 +1,15 @@
 import React from "react";
 import { Field, Formik, ErrorMessage, Form } from "formik";
-
-import {
-  ButtonLogin,
-  FormLogin,
-} from "../../styles/styledComponents/LoginStyled";
+import { FormLogin } from "../../styles/styledComponents/LoginStyled";
 import * as Yup from "yup";
 // import fileUpload2 from "../../helpers/fileUpload2";
 import fileUpload from "../../helpers/fileUpload";
 import { useDispatch } from "react-redux";
 import { registroEmailPasswordNombre } from "../../redux/action/actionRegister";
 import { useNavigate } from "react-router-dom";
+
 let url = ''
+
 export const FormRegister = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
