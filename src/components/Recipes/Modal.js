@@ -1,6 +1,6 @@
 import { Button } from "react-bootstrap";
 import { Modal } from "react-bootstrap";
-
+import React from "react";
 function MyVerticallyCenteredModal(props) {
     return (
       <Modal

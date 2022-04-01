@@ -1,13 +1,9 @@
 import { useState } from "react";
 import { Offcanvas } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import { CanvasButton } from "../../styles/styledComponents/CanvasMenu";
 import { CanvasStyled } from "../../styles/styledComponents/CanvasStyled";
-import { ButtonLogin } from "../../styles/styledComponents/LoginStyled";
-import { SideBarStyled } from "../../styles/styledComponents/newSideBarMenu";
-import NavBarUbicacion from "../NavBar/NavBarUbicacion";
 import SideBarMenu from "../SideBarMenu/SideBarMenu";
-
+import React from "react";
 
 export default function CanvasMenu({ cities }) {
     const [show, setShow] = useState(false);

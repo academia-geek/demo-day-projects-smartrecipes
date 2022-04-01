@@ -79,8 +79,7 @@ const MainApp = () => {
           sizes={[100, 0]}
           minSize={[100, 20]}
           gutterSize={20}
-          snapOffset={0}
-          //One column
+          snapOffset={0}          
         >
           <DivFlex>
             {width < breakpoint && (
@@ -97,7 +96,7 @@ const MainApp = () => {
             {path !== "" ? (
               <>
                 <Productos />
-                <Recetas />
+              <Recetas />
               </>
             ) : (
               <h3>Por favor elija una ciudad para continuar</h3>

@@ -14,10 +14,9 @@ export const ColReceta = styled.div`
 `
 export const TitleRecetas = styled.h1`
     text-align: center;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin-bottom: 15px;
+    margin-top: 15px;
     background-color: #F19C79;
-    padding: 0.25rem;
     text-shadow: white 0 -1px;
 `
 export const SubTitleRecetas = styled.h2`
@@ -115,8 +114,8 @@ export const ContainerRecetaPP = styled.div`
     align-items: center;
 `
 export const CardRecetas = styled.div`
-    width: 200px;
-    height: auto;
+    width: 150px;
+    height: 200px;
     padding: 0.75rem;
     padding-bottom: 0;
     margin-bottom: 0;

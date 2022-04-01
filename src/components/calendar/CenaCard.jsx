@@ -14,7 +14,7 @@ const CenaCard = ({ dish }) => {
           <Card.Text>
             Preparation Time: {dish.readyInMinutes}'
             <br />
-            Diet type: {dish.diets.join(", ")}
+            {/* Diet type: {dish.diets.join(", ")} */}
             <br />
           </Card.Text>
         </Card.Body>

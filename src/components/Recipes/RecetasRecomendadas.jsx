@@ -9,7 +9,6 @@ import { DropdownButton } from 'react-bootstrap';
 import { ColReceta, DivCard, Img, TitleRecetas } from '../../styles/styledComponents/RecipesStyle';
 import NavBarRecipes from './NavBarRecipes';
 import { Button } from 'react-bootstrap';
-import { Modal } from 'react-bootstrap';
 import MyVerticallyCenteredModal from './Modal';
 
 

@@ -1,19 +1,10 @@
 import { collection, getDocs } from 'firebase/firestore'
 import React, { useEffect, useState } from 'react'
-import { Container } from 'react-bootstrap'
+import {  Spinner } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
 import { db } from '../../firebase/firebaseConfig'
-import { fetchProduct } from '../../helpers/fetchProduct'
-import { productsUrl } from '../../helpers/producsUrl'
 import { actionAdd } from '../../redux/action/actionAdd'
-import { ContainerAppStyle } from '../../styles/styledComponents/ContainerApp'
-import { DivOptions } from '../../styles/styledComponents/LandingStyles'
-import { ButtonLogin } from '../../styles/styledComponents/LoginStyled'
 import MainApp from '../mainApp/MainApp'
-
-import CardMenu from './CardMenu'
-
 
 
 const CustomMenu =  () => {
@@ -35,18 +26,14 @@ const CustomMenu =  () => {
     
     let productos = []
     
-
     useEffect(() => {
-        
         getFromFirebase()       
         setLoading(false)        
     }, [])
 
     if(loading){
-        return (<h1>Cargando</h1> )
+        return <Spinner animation="border" variant="success" style={{display:'block', margin:'35% auto '}}/>
     }
-   
-
 
     return (
         <>
