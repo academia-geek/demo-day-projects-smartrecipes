@@ -5,7 +5,7 @@ import { FiCalendar } from "react-icons/fi";
 
 import {
   DivInformation,
-  DivMonth,
+  
   DivWeekly,
   SubTitleCal,
   TitleCalendar,
@@ -23,7 +23,9 @@ const Calendar = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [superRecipes, setSuperRecipes] = useState([]);
   console.log('superRecipes', superRecipes)
-  const [filtros, setFiltros] = useState([]);
+  const resetFilters = () => {
+      setSuperRecipes(desayuno,almuerzo,cena)
+  }    
   useEffect(() => {
     async function fetchData() {
       const dataAlmuerzo = await axios.get(urlRA);
@@ -102,6 +104,7 @@ const handleVegan = () => {
       <button onClick={() => handleVeg()}>Filtro VEGETARIANOS</button>
       <button onClick={() => handleGluten()}>Filtro GLUTEN</button>
       <button onClick={() => handleVegan()}>Filtro VEGANOS</button>
+      <button onClick={() => resetFilters()}>RESET FILTERS</button>
       </div>
       <DivWeekly>
         <SubTitleCal> Detallado Semanal </SubTitleCal>
