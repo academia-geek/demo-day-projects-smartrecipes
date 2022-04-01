@@ -96,21 +96,21 @@ const AccordionItemFunc = (index, dia, objRecetas) => {
       <Accordion.Body>
         <h2>DESAYUNO 🥞🥞🥞</h2>
         <DesayunoCard dish={objRecetas.desayuno[index]} />
-        <p>Precio por porcion {objRecetas.desayuno.pricePerServing}</p>
-        <p>Puntos saludables {objRecetas.desayuno.totalHealth}</p>
-        <p>Tiempo de preparacion {objRecetas.desayuno.readyInMinutes}</p>
+        <p>Precio por porcion {objRecetas.desayuno[index].pricePerServing}</p>
+        <p>Puntos saludables {objRecetas.desayuno[index].healthScore}</p>
+        <p>Tiempo de preparacion {objRecetas.desayuno[index].readyInMinutes}</p>
 
         <h2>ALMUERZO 🍕🍕🍕</h2>
         <AlmuerzoCard dish={objRecetas.almuerzo[index]} />
-        <p>Precio por porcion {objRecetas.almuerzo.pricePerServing}</p>
-        <p>Puntos saludables {objRecetas.almuerzo.totalHealth}</p>
-        <p>Tiempo de preparacion {objRecetas.almuerzo.readyInMinutes}</p>
+        <p>Precio por porcion {objRecetas.almuerzo[index].pricePerServing}</p>
+        <p>Puntos saludables {objRecetas.almuerzo[index].healthScore}</p>
+        <p>Tiempo de preparacion {objRecetas.almuerzo[index].readyInMinutes}</p>
 
         <h2>CENA 🍝🍝🍝</h2>
         <CenaCard dish={objRecetas.cena[index]} />
-        <p>Precio por porcion {objRecetas.cena.pricePerServing}</p>
-        <p>Puntos saludables {objRecetas.cena.totalHealth}</p>
-        <p>Tiempo de preparacion {objRecetas.cena.readyInMinutes}</p>
+        <p>Precio por porcion {objRecetas.cena[index].pricePerServing}</p>
+        <p>Puntos saludables {objRecetas.cena[index].healthScore}</p>
+        <p>Tiempo de preparacion {objRecetas.cena[index].readyInMinutes}</p>
 
       </Accordion.Body>
     </Accordion.Item>
