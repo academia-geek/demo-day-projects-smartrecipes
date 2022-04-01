@@ -16,9 +16,9 @@ const SideBar = () => {
   }
   return (
     <>
-    <button onClick={() => handleClose()}>Close Side Bar</button>
-      {!isUndefined && (
+      {!isUndefined ? (
         <SideBarProductsStyle>          
+          <button onClick={() => handleClose()}>Close Side Bar</button>
           <div className="container-img">
           <img src={data.img} alt=""></img>
           <p>{data.name}</p>
@@ -28,7 +28,8 @@ const SideBar = () => {
           <h3>Precios de la ultima semana</h3>
           </div>
         </SideBarProductsStyle>
-      )}
+      )
+    :<div></div>}
     </>
   );
 };

@@ -114,8 +114,8 @@ export const ContainerRecetaPP = styled.div`
     align-items: center;
 `
 export const CardRecetas = styled.div`
-    width: 200px;
-    height: auto;
+    width: 150px;
+    height: 200px;
     padding: 0.75rem;
     padding-bottom: 0;
     margin-bottom: 0;

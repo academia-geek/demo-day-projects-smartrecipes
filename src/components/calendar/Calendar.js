@@ -20,6 +20,7 @@ const Calendar = () => {
   const [cena, setCena] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [superRecipes, setSuperRecipes] = useState([]);
+  console.log('superRecipes', superRecipes)
   const [filtros, setFiltros] = useState([]);
   useEffect(() => {
     async function fetchData() {
@@ -55,8 +56,39 @@ const Calendar = () => {
     "Domingo",
   ];
   //Implementar filtros de los ingredientes
-  
-
+  const handleVeg = () => {
+    let {desayuno, cena, almuerzo} = superRecipes;
+    desayuno = desayuno.filter(dish => dish.vegetarian === true);
+    cena = cena.filter(dish => dish.vegetarian === true);
+    almuerzo = almuerzo.filter(dish => dish.vegetarian === true);
+    setSuperRecipes({
+        desayuno,
+        cena,
+        almuerzo
+    })
+  }
+  const handleGluten = () => {
+    let {desayuno, cena, almuerzo} = superRecipes;
+    desayuno = desayuno.filter(dish => dish.glutenFree === true);
+    cena = cena.filter(dish => dish.glutenFree === true);
+    almuerzo = almuerzo.filter(dish => dish.glutenFree === true);
+    setSuperRecipes({
+        desayuno,
+        cena,
+        almuerzo
+    })
+    }
+const handleVegan = () => {
+    let {desayuno, cena, almuerzo} = superRecipes;
+    desayuno = desayuno.filter(dish => dish.vegan === true);
+    cena = cena.filter(dish => dish.vegan === true);
+    almuerzo = almuerzo.filter(dish => dish.vegan === true);
+    setSuperRecipes({
+        desayuno,
+        cena,
+        almuerzo
+    })
+    }
 
   return (
     <div>
@@ -65,9 +97,9 @@ const Calendar = () => {
         Calendario <FiCalendar />{" "}
       </TitleCalendar>
       <div>
-      <button>Filtro 1</button>
-      <button>Filtro 2</button>
-      <button>Filtro 3</button>
+      <button onClick={() => handleVeg()}>Filtro VEGETARIANOS</button>
+      <button onClick={() => handleGluten()}>Filtro GLUTEN</button>
+      <button onClick={() => handleVegan()}>Filtro VEGANOS</button>
       </div>
       <DivWeekly>
         <SubTitleCal> Detallado Semanal </SubTitleCal>
@@ -104,13 +136,13 @@ const AccordionItemFunc = (index, dia, objRecetas) => {
         <AlmuerzoCard dish={objRecetas.almuerzo[index]} />
         <p>Precio por porcion {objRecetas.almuerzo[index].pricePerServing}</p>
         <p>Puntos saludables {objRecetas.almuerzo[index].healthScore}</p>
-        <p>Tiempo de preparacion {objRecetas.almuerzo[index].readyInMinutes}</p>
+        <p>Tiempo de preparacion {objRecetas.almuerzo[index].readyInMinutes} minutos</p>
 
         <h2>CENA 🍝🍝🍝</h2>
         <CenaCard dish={objRecetas.cena[index]} />
         <p>Precio por porcion {objRecetas.cena[index].pricePerServing}</p>
         <p>Puntos saludables {objRecetas.cena[index].healthScore}</p>
-        <p>Tiempo de preparacion {objRecetas.cena[index].readyInMinutes}</p>
+        <p>Tiempo de preparacion {objRecetas.cena[index].readyInMinutes} minutos</p>
 
       </Accordion.Body>
     </Accordion.Item>
