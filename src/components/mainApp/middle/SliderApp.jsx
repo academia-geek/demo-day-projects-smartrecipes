@@ -46,8 +46,8 @@ const SliderApp = () => {
             alt="Third slide"
           />
           <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            <h3>¿Conocías estos productos? </h3>
+            <p>Conoce sus beneficios</p>
             <ButtonCarousel className='btnPink'>click</ButtonCarousel>
           </Carousel.Caption>
         </SliderItem>

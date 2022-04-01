@@ -37,14 +37,14 @@ const WelcomeNew = () => {
             Te sugerimos recetas acordes a tu estilo de vida, tus preferencias y tus intereses.
             ¡Prueba cosas nuevas y diferentes!
           </p>
-          </div>
+        </div>
           <div className='imgContainer'>
             <img alt='girl' src='https://res.cloudinary.com/davidcharif/image/upload/v1648820705/demoFakeApi/Plan--5ec7b84e01d0360018d4c0e8_eiyizw.png'/>
           </div>
       </div>
       <div>
         <div>
-          <img alt='Img'/>      
+          <img alt='Img'src='https://res.cloudinary.com/davidcharif/image/upload/v1648315820/demoFakeApi/imagenSideBar_brl1vb.png'/>      
         </div>      
           <h2>Planea tus comidas y compras</h2>
       </div>
