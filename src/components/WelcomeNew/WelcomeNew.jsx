@@ -8,7 +8,7 @@ const WelcomeNew = () => {
         <h1>Bienvenido a SmartRecipes</h1>
       </div>
       <div className='firstText'>
-        <p>Recetas inteligentes para una epoca inteligente</p>
+        <p>Recetas inteligentes para una época inteligente</p>
       </div>
       <div>
       <h3>¿Qué es SmartRecipes?</h3>

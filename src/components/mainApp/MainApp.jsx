@@ -94,10 +94,10 @@ const MainApp = () => {
             </ContainerAppTopStyle>
             <SliderApp />
 
+            <Recetas />
             {path !== "" ? (
               <>
                 <Productos />
-                <Recetas />
               </>
             ) : (
               <h3>Por favor elija una ciudad para continuar</h3>

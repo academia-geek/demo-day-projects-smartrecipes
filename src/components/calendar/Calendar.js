@@ -20,6 +20,7 @@ const Calendar = () => {
   const [cena, setCena] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [superRecipes, setSuperRecipes] = useState([]);
+  const [filtros, setFiltros] = useState([]);
   useEffect(() => {
     async function fetchData() {
       const dataAlmuerzo = await axios.get(urlRA);
@@ -53,6 +54,9 @@ const Calendar = () => {
     "Sabado",
     "Domingo",
   ];
+  //Implementar filtros de los ingredientes
+  
+
 
   return (
     <div>
@@ -60,6 +64,11 @@ const Calendar = () => {
         {" "}
         Calendario <FiCalendar />{" "}
       </TitleCalendar>
+      <div>
+      <button>Filtro 1</button>
+      <button>Filtro 2</button>
+      <button>Filtro 3</button>
+      </div>
       <DivWeekly>
         <SubTitleCal> Detallado Semanal </SubTitleCal>
 
@@ -80,17 +89,29 @@ const Calendar = () => {
 export default Calendar;
 
 const AccordionItemFunc = (index, dia, objRecetas) => {
-  let stringIndex = index.toString();
+  let stringIndex = index.toString();  
   return (
     <Accordion.Item eventKey={stringIndex} key={index}>
       <Accordion.Header> {dia} </Accordion.Header>
       <Accordion.Body>
         <h2>DESAYUNO 🥞🥞🥞</h2>
         <DesayunoCard dish={objRecetas.desayuno[index]} />
+        <p>Precio por porcion {objRecetas.desayuno.pricePerServing}</p>
+        <p>Puntos saludables {objRecetas.desayuno.totalHealth}</p>
+        <p>Tiempo de preparacion {objRecetas.desayuno.readyInMinutes}</p>
+
         <h2>ALMUERZO 🍕🍕🍕</h2>
         <AlmuerzoCard dish={objRecetas.almuerzo[index]} />
+        <p>Precio por porcion {objRecetas.almuerzo.pricePerServing}</p>
+        <p>Puntos saludables {objRecetas.almuerzo.totalHealth}</p>
+        <p>Tiempo de preparacion {objRecetas.almuerzo.readyInMinutes}</p>
+
         <h2>CENA 🍝🍝🍝</h2>
         <CenaCard dish={objRecetas.cena[index]} />
+        <p>Precio por porcion {objRecetas.cena.pricePerServing}</p>
+        <p>Puntos saludables {objRecetas.cena.totalHealth}</p>
+        <p>Tiempo de preparacion {objRecetas.cena.readyInMinutes}</p>
+
       </Accordion.Body>
     </Accordion.Item>
   );
