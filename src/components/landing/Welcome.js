@@ -1,6 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { ButtonLogo, WelcomeContainer } from '../../styles/styledComponents/LandingStyles'
 import WelcomeNew from '../WelcomeNew/WelcomeNew'
 
 

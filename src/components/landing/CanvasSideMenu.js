@@ -3,7 +3,7 @@ import { Offcanvas } from "react-bootstrap";
 import { CanvasButton } from "../../styles/styledComponents/CanvasMenu";
 import { CanvasStyled } from "../../styles/styledComponents/CanvasStyled";
 import SideBarMenu from "../SideBarMenu/SideBarMenu";
-
+import React from "react";
 
 export default function CanvasMenu({ cities }) {
     const [show, setShow] = useState(false);
