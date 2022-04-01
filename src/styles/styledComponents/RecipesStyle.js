@@ -120,6 +120,10 @@ export const CardRecetas = styled.div`
     padding-bottom: 0;
     margin-bottom: 0;
     text-align: center;
+    &:active, :hover, :focus {
+        transform:scale(1.25);
+        box-shadow: 0 0 5px #00BBA6;
+    }
 `
 export const ImgReceta = styled.img`
     padding: 0.25rem;
@@ -130,4 +134,9 @@ export const ImgReceta = styled.img`
 `
 export const ButtonParaModal = styled.button`
     background-color: none;
+    &:focus {
+        transform:scale(1.15);
+        border-color: #ffc600;
+        box-shadow: 0 0 10px #ffc600;
+    }
 `
