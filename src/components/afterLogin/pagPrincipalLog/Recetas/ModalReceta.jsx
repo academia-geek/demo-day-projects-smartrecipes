@@ -12,6 +12,8 @@ const ModalReceta = (props) => {
       aria-labelledby="contained-modal-title-vcenter"
       dialogClassName="modal-90w"
       centered
+      className="estilo-modal"
+
     >
       <Modal.Header closeButton>
         <Modal.Title className="contained-modal-title-center">

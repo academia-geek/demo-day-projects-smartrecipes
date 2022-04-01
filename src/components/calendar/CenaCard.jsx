@@ -9,11 +9,12 @@ const CenaCard = ({ dish }) => {
         {/* <Card.Img variant="top" src={dish.image} className="imagen-menu-card" /> */}
         <Card.Body className="body-menu-card">
           <Card.Title className="title-menu">{dish.title}</Card.Title>
-          <ul>
-            <li>Tiempo de preparación: {dish.readyInMinutes}</li>
-            <li>Tipo de dieta: {dish.diets.join(", ")}</li>
-            <li>Precio total: $ {dish.pricePerServing}</li>
-          </ul>
+          <Card.Text>
+            Preparation Time: {dish.readyInMinutes}'
+            <br />
+            {/* Diet type: {dish.diets.join(", ")} */}
+            <br />
+          </Card.Text>
         </Card.Body>
       </Card>
     </div>
