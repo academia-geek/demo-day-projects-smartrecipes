@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Accordion } from 'react-bootstrap';
 import { FiCalendar } from "react-icons/fi";
-import { DivInformation, DivMonth, DivWeekly, SubTitleCal, TitleCalendar } from '../../styles/styledComponents/CalendarStyled';
+import { DivInformation, DivWeekly, SubTitleCal, TitleCalendar } from '../../styles/styledComponents/CalendarStyled';
 import { urlRA, urlRC, urlRD } from '../../utilities/urlRecipes';
 import AlmuerzoCard from './AlmuerzoCard';
 import CenaCard from './CenaCard';

@@ -1,11 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import { Modal } from "react-bootstrap";
-import { Button } from "react-bootstrap";
-import { CardGroup } from "react-bootstrap";
 import { SeguimientoPreciosStyled } from "../../../../styles/styledComponents/PagPrincipalStyles";
 import {
-  ButtonModal,
   ButtonParaModal,
   CardRecetas,
   ImgReceta,

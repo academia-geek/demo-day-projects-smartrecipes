@@ -1,12 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { productsUrl } from "../../../../helpers/producsUrl";
+import React, { useState } from "react";
 import MainApp from "../../../mainApp/MainApp";
-import BotonPerfilUser from "../botonPerfilUsuario/BotonPerfilUser";
-import Calendario from "../calendarioPagPrincipal/Calendario";
 
-import Header from "../header/Header";
-
-import SeguimientoPrecios from "../seguimientoPrecios/SeguimientoPrecios";
 
 const ContainerPagPrincipal = () => {
   const [data, setData] = useState([]);
