@@ -33,7 +33,7 @@ const SideBar = () => {
           </div>
         </SideBarProductsStyle>
       )
-    :<div></div>}
+    :<div>No hay nada aqui 🤗</div>}
     </>
   );
 };

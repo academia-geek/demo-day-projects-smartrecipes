@@ -9,7 +9,7 @@ const ListaProductos = () => {
       <h3>Seguimiento de precios</h3>
       <p>Ciudad : <strong>{city}</strong></p>
       <p>Productos con más variacion</p>
-      <SeguimientoPrecios limit={20} />
+      <SeguimientoPrecios />
     </>
   );
 };

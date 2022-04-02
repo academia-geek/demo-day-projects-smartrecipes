@@ -16,11 +16,13 @@ export const TitleRecetas = styled.h1`
     text-align: center;
     margin-bottom: 15px;
     margin-top: 15px;
+    font-size: 10px;
     background-color: #F19C79;
     text-shadow: white 0 -1px;
 `
 export const SubTitleRecetas = styled.h2`
     margin-top: 0;
+    
     text-align: center;
     padding: 0.25rem;
     text-shadow: white 0 -1px;
@@ -114,17 +116,22 @@ export const ContainerRecetaPP = styled.div`
     align-items: center;
 `
 export const CardRecetas = styled.div`
-    width: 150px;
-    height: 200px;
+    height: 160px;
     padding: 0.75rem;
     padding-bottom: 0;
     margin-bottom: 0;
     text-align: center;
+    .card-text {
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 `
 export const ImgReceta = styled.img`
     padding: 0.25rem;
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
     border-radius: 50%;
     border: 2.5px solid #27A857;
 `
