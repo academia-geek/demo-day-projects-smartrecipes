@@ -35,7 +35,7 @@ const SeguimientoPrecios = ({ limit }) => {
             return (
               <ProductoStyled key={index} data-id={producto.id} onClick={(e) => handleCurrentProduct(e)}>
                
-                  <img alt="producto1" src={producto.data.img}></img>
+                  <img loading="lazy" alt="producto1" src={producto.data.img}></img>
               
                 <p className="dataName">{producto.data.name}</p>
                   <p className="dataPrice">${producto.data.price} - {producto.data.weight}</p>

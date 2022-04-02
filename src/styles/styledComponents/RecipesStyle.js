@@ -114,17 +114,22 @@ export const ContainerRecetaPP = styled.div`
     align-items: center;
 `
 export const CardRecetas = styled.div`
-    width: 150px;
-    height: 200px;
+    height: 160px;
     padding: 0.75rem;
     padding-bottom: 0;
     margin-bottom: 0;
     text-align: center;
+    .card-text {
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 `
 export const ImgReceta = styled.img`
     padding: 0.25rem;
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
     border-radius: 50%;
     border: 2.5px solid #27A857;
 `

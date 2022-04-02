@@ -14,10 +14,7 @@ padding: 0;
 
 font-family: 'Nunito', sans-serif;
 background-color: white;
-#root{
-  height: auto;
-  width:auto;
-  }
+
  }
  
  

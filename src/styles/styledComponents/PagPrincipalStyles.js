@@ -26,35 +26,32 @@ export const SeguimientoPreciosStyled = styled.div`
   overflow-x: scroll;
   gap: 20px;
   margin-bottom: 25px;
-  .card-text {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
+ 
     @media only screen and (max-width: 600px) {
       min-height: 200px;
     }
 `;
 
 export const ProductoStyled = styled.div`
-min-height: 300px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 250px;
+  height: 160px;
   cursor: pointer;
   img {
     pointer-events: none;
-    width: 150px;
+    width: 85px;
+    height: 85px;
   }
   .dataName {
     pointer-events: none;
     font-weight: 700;
-    padding: 0%;
-    margin: 0%;
-    width: 100px;
+    padding: 0%;   
+    width: 120px;
     overflow: hidden;
+    text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
   }

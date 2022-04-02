@@ -19,6 +19,7 @@ import SliderApp from "./middle/SliderApp";
 import BarraBusqueda from "./top/barraBusqueda/BarraBusqueda";
 import Idioma from "./top/idioma/Idioma";
 import Ubicacion from "./top/ubicacion/Ubicacion";
+import { ContainerDataStyled } from "../../styles/styledComponents/ContainerData";
 
 const MainApp = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -94,7 +95,7 @@ const MainApp = () => {
           className="split"
           //Two columns
           sizes={[100, 0]}
-          minSize={[100, 20]}
+          minSize={[0, 50]}
           gutterSize={20}
           snapOffset={0}          
         >
@@ -112,7 +113,7 @@ const MainApp = () => {
 
             {path !== "" ? (
               <>
-                <Productos />
+              <Productos />
               <Recetas />
               </>
             ) : (
