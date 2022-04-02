@@ -28,7 +28,7 @@ const MainApp = () => {
   const { path } = useSelector((store) => store.funtional);
 
   const getFromFirebase = async () => {
-    if(localStorage.getItem('productos') === null){
+    if(localStorage.getItem(`productos${path}`) === null){
     const querySnapshot = await getDocs(
       collection(db, `merqueo/${path}/Precios`)
     );
