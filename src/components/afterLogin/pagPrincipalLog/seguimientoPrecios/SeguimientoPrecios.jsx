@@ -10,6 +10,7 @@ import {
 } from "../../../../styles/styledComponents/PagPrincipalStyles";
 
 const SeguimientoPrecios = ({ limit }) => {
+  
   const dispatch = useDispatch();
   const { productos } = useSelector((store) => store.add);
   // empiza vacia
@@ -21,6 +22,9 @@ const SeguimientoPrecios = ({ limit }) => {
     // bring object that match with dataId
     const currentProduct = activeProducts.find(product => product.id === dataId);
     dispatch(actionFunctionalCurrentWatchableObject(currentProduct));
+  }
+  if(limit === undefined){
+    limit = activeProducts.length;
   }
 
   return (
