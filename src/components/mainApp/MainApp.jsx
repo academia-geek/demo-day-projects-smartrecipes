@@ -28,6 +28,7 @@ const MainApp = () => {
   const { path } = useSelector((store) => store.funtional);
 
   const getFromFirebase = async () => {
+    if(localStorage.getItem('productos') === null){
     const querySnapshot = await getDocs(
       collection(db, `merqueo/${path}/Precios`)
     );
@@ -38,15 +39,29 @@ const MainApp = () => {
         data: doc.data(),
       });
     });
+    localStorage.setItem(`productos${path}`, JSON.stringify(productos));
     dispatch(actionAdd(productos));
+  } else {
+    productos = JSON.parse(localStorage.getItem(`productos${path}`));
+    dispatch(actionAdd(productos));
+  }
   };
   let cities = [];
   const getCitiesFromFirebase = async () => {
+    //check local storage 
+    let localStorageCities =  JSON.parse(localStorage.getItem('cities'));
+    console.log('localStorageCities', localStorageCities)
+    if(localStorageCities === null){
+
     const querySnapshot = await getDocs(collection(db, "lista"));
     querySnapshot.forEach((doc) => {
       cities.push(doc.data());
     });
+    localStorage.setItem("cities", JSON.stringify(cities));
     dispatch(actionFunctionalCiudades(cities));
+   }else {
+     dispatch(actionFunctionalCiudades(localStorageCities))
+   }
   };
 
   let productos = [];
@@ -55,6 +70,8 @@ const MainApp = () => {
   }
   useEffect(() => {
     getCitiesFromFirebase();
+    // save on localstorage
+    
   }, []);
 
   useEffect(() => {
@@ -89,7 +106,7 @@ const MainApp = () => {
             <ContainerAppTopStyle>
               <BarraBusqueda />
               <Ubicacion />
-              <Idioma />
+              {/* <Idioma /> */}
             </ContainerAppTopStyle>
             <SliderApp />
 

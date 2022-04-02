@@ -10,7 +10,7 @@ top: 0px; */
   flex-direction: column;
   align-items: center;  
   background-color: ${VerdeLima};
-  width: 300px;
+  width: 180px;
   z-index: 2;
   height:100vh;
   top: 0px;
@@ -18,13 +18,13 @@ top: 0px; */
     padding-top: 3rem;
   }
   .menu {
-    min-width: 240px;
-    width: 85%;
+    
+   
   }
   .iconSideBar {
-    margin-right: 35px;
+    margin-right: 15px;
     color: #FF5757;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
   }
   .iconSideBar:hover {
@@ -37,9 +37,8 @@ top: 0px; */
     
     div{
       display: flex;
-      flex-direction: row;
-      gap: 1.2rem;
-      font-size: 1.2rem;
+      flex-direction: row;      
+      font-size: 18px;
       font-weight: 700;
       color: ${naranja}
     }

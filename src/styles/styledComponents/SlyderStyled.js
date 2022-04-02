@@ -6,7 +6,7 @@ export const colorSegundoBloque = "#643A71";
 export const colorTercerBloque = "#FF5757";
 
 export const SliderStyled = styled.div`
-  height: 500px;
+  
   background-color: green;
   border-radius: 24px;
   border: 1px solid red;
@@ -33,8 +33,8 @@ export const CarouselStyled = styled(Carousel)`
 
 export const SliderItem = styled(CarouselItem)`
   background-color: ${({backgroundcolor}) => backgroundcolor};
-  max-height: 385px;
-  border-radius: 5px;
+  max-height: 200px;
+  border-radius: 15px;
   @media only screen and (max-width: 600px) {
     width: 100%;
     height: 280px;
