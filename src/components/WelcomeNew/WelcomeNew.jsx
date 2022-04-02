@@ -51,7 +51,7 @@ const WelcomeNew = () => {
           <p>Planea tus comidas y compras</p>
         </div>
       </div>
-      <Link to='/u-select'>
+      <Link to='/home'>
       <ButtonLogin>Continua</ButtonLogin>
       </Link>
       <img alt="incribite"/>

@@ -20,10 +20,16 @@ import BarraBusqueda from "./top/barraBusqueda/BarraBusqueda";
 import Idioma from "./top/idioma/Idioma";
 import Ubicacion from "./top/ubicacion/Ubicacion";
 import { ContainerDataStyled } from "../../styles/styledComponents/ContainerData";
+import { useLocation } from "react-router-dom";
+import CalendarLocal from "../calendar/Calendar";
+import { Spinner } from "react-bootstrap";
 
 const MainApp = () => {
+  let location = useLocation(); 
+  let pathName = location.pathname;
   const [width, setWidth] = useState(window.innerWidth);
   const breakpoint = 600;
+  const [isLoading, setIsLoading] = useState(true);
 
   const dispatch = useDispatch();
   const { path } = useSelector((store) => store.funtional);
@@ -63,6 +69,7 @@ const MainApp = () => {
    }else {
      dispatch(actionFunctionalCiudades(localStorageCities))
    }
+   setIsLoading(false)
   };
 
   let productos = [];
@@ -84,6 +91,11 @@ const MainApp = () => {
       window.removeEventListener("resize", handleResizeWindow);
     };
   }, []);
+  
+  if(isLoading){
+    return <Spinner animation="border" variant="success" style={{display:'block', margin:'35% auto '}}/>
+}
+
 
   return (
     <>
@@ -111,7 +123,7 @@ const MainApp = () => {
             </ContainerAppTopStyle>
             <SliderApp />
 
-            {path !== "" ? (
+            {path !== "" && pathName === '/home' ? (
               <>
               <Productos />
               <Recetas />
@@ -119,6 +131,7 @@ const MainApp = () => {
             ) : (
               <h3>Por favor elija una ciudad para continuar</h3>
             )}
+            {pathName === '/calendario' && <CalendarLocal/>}
           </DivFlex>
           <SideBar />
         </Split>

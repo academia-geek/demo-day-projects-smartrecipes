@@ -3,35 +3,47 @@ import styled from "styled-components";
 import { naranja, VerdeLima } from "./ColoresEstilos";
 
 export const SideBarStyled = styled.div`
-  /* position: absolute;
-top: 0px; */
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: ${VerdeLima};
   width: 180px;
   z-index: 2;
   height: 100vh;
   top: 0px;
   .logo img {
-    padding-top: 3rem;
+    padding-top: 0.2rem;
     width: 100px;
   }
-
-  ul {
-    list-style: none;
-    margin-top: 20px;
+  .menu {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    ul {
+      padding: 0;
+      list-style: none;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
   }
-  .secondImg {
-    display: block;
-    margin: 0px auto;
-  }
-  button {
-    border-radius: 10px;
-    width: 90%;
+  .footer{
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    width: 100%;
+    .secondImg {      
+      height: 150px;
+      margin: 0px auto;
+    }
+    button {
+      border-radius: 10px;
+      width: 90%;
+    }
   }
 `;
 export const SplitStyled = styled(SplitButton)`
@@ -51,10 +63,10 @@ export const SplitStyled = styled(SplitButton)`
 `;
 
 export const DivCategoryStyle = styled.div`
-
+  padding: 10px;
   cursor: pointer;
   .iconSideBar {
-    margin-right: 15px;
+    margin-right: 5px;
   }
   p {
     margin: 0px;

@@ -13,7 +13,7 @@ const SideBarMenu = ({cities}) => {
     <SideBarStyled>
       <div className="logo">
         <img
-          src="https://res.cloudinary.com/davidcharif/image/upload/v1648315633/demoFakeApi/logoSmall_lumpae.png"
+          src="https://res.cloudinary.com/davidcharif/image/upload/v1648916285/demoFakeApi/logoHQ_th0u6x.png"
           alt="logo"
           />
       </div>
@@ -61,9 +61,10 @@ const SideBarMenu = ({cities}) => {
             </DivCategoryStyle>
           </li>
         </ul>
-
+      </div>
+      <div className="footer">
         <img
-          src="https://res.cloudinary.com/davidcharif/image/upload/v1648315820/demoFakeApi/imagenSideBar_brl1vb.png"
+          src="https://res.cloudinary.com/davidcharif/image/upload/v1648916203/demoFakeApi/healthyEating_xe1aga.png"
           alt="girl juggling fruits"
           className="secondImg"
         />

@@ -16,11 +16,13 @@ export const TitleRecetas = styled.h1`
     text-align: center;
     margin-bottom: 15px;
     margin-top: 15px;
+    font-size: 10px;
     background-color: #F19C79;
     text-shadow: white 0 -1px;
 `
 export const SubTitleRecetas = styled.h2`
     margin-top: 0;
+    
     text-align: center;
     padding: 0.25rem;
     text-shadow: white 0 -1px;
