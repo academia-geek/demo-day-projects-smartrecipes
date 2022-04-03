@@ -10,13 +10,14 @@ import {
   SubTitleCal,
   TitleCalendar,
 } from "../../styles/styledComponents/CalendarStyled";
+import { ContainerCalendar } from "../../styles/styledComponents/ContainerCalendar";
 import { urlRA, urlRC, urlRD } from "../../utilities/urlRecipes";
 import AlmuerzoCard from "./AlmuerzoCard";
 import CenaCard from "./CenaCard";
 import DesayunoCard from "./DesayunoCard";
 
 
-const Calendar = () => {
+const CalendarLocal = () => {
   const [almuerzo, setAlmuerzos] = useState([]);
   const [desayuno, setDesayuno] = useState([]);
   const [cena, setCena] = useState([]);
@@ -94,7 +95,7 @@ const handleVegan = () => {
     }
 
   return (
-    <div>
+    <ContainerCalendar>
       <TitleCalendar>
         {" "}
         Calendario <FiCalendar />{" "}
@@ -118,11 +119,11 @@ const handleVegan = () => {
       <DivInformation>
         <SubTitleCal>Detalles del menú</SubTitleCal>
       </DivInformation>
-    </div>
+    </ContainerCalendar>
   );
 };
 
-export default Calendar;
+export default CalendarLocal;
 
 const AccordionItemFunc = (index, dia, objRecetas) => {
   let stringIndex = index.toString();  

@@ -121,4 +121,40 @@ export const WelcomeNewStyled = styled.div`
     }
 }
 }
+.thirdBlock{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  .imgContainer{    
+    width: 50%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+    //Shadow img
+    img{    
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  }
+  .textContainer{
+    padding: 2rem;
+    width: 50%;
+    height: 100%;
+    p{
+      font-size: 54px;
+      font-weight: 700;
+      color: ${naranja};
+      text-align: center;
+    }
+  }
+}
+
+
+
   `

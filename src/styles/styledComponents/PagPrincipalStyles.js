@@ -19,42 +19,36 @@ export const CalendarioStyled = styled.div`
 `;
 
 export const SeguimientoPreciosStyled = styled.div`
-  width: 100%;  
   display: flex;
-  
   flex-direction: row;
   overflow-x: scroll;
+  max-width: 70vw;
   gap: 20px;
   margin-bottom: 25px;
-  .card-text {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  @media only screen and (max-width: 600px) {
+    min-height: 200px;
   }
-    @media only screen and (max-width: 600px) {
-      min-height: 200px;
-    }
 `;
 
 export const ProductoStyled = styled.div`
-min-height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 250px;
+  height: 160px;
   cursor: pointer;
   img {
     pointer-events: none;
-    width: 150px;
+    width: 85px;
+    height: 85px;
   }
   .dataName {
     pointer-events: none;
     font-weight: 700;
     padding: 0%;
-    margin: 0%;
-    width: 100px;
+    width: 120px;
     overflow: hidden;
+    text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
@@ -63,16 +57,21 @@ min-height: 300px;
     font-weight: 400;
     text-align: center;
     color: #8d96a8;
+    width: 120px;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
-    @media only screen and (max-width: 600px) {
-      img {
-        width: 100px;
-      }
-      .dataPrice {
-        font-weight: 400;
-        font-size: 0.8rem;
-      }
+  @media only screen and (max-width: 600px) {
+    img {
+      width: 100px;
     }
+    .dataPrice {
+      font-weight: 400;
+      font-size: 0.8rem;
+    }
+  }
 `;
 
 export const BotonPerfilUserStyled = styled.div`
