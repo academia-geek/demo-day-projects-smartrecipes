@@ -9,22 +9,22 @@ export const BarraBusquedaStyled = styled.input`
 export const ContainerAppTopStyle = styled.div`
   display: flex;
   flex-direction: row;
-  width: 100%;
-  height: 100px;
+  /* width: 100%;
+  height: 100px; */
   margin-top: 10px;
 `
 
 export const ContainerAppStyle = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100px;
+  /* width: 100vw;
+  height: 100px; Probando solo spliJs */
   margin-top: 10px;
 `
 
 export const DivFlex = styled.div`
-height: 100vh;
-width: 70%;
+/* height: 100vh;
+max-width: 70vw;  Probando solo spliJs */
 overflow-y: scroll;
 padding: 15px;
   display: flex;

@@ -7,12 +7,10 @@ import { actionAdd, changeActiveView } from "../../../redux/action/actionAdd";
 import { ContainerMainProductos } from "../../../styles/styledComponents/ContainerMainProductos";
 import SeguimientoPrecios from "../pagPrincipalLog/seguimientoPrecios/SeguimientoPrecios";
 
-const ListaProductos = () => {
-  
+const ListaProductos = () => {  
   const {city, path} = useSelector(store => store.funtional)
   const {activeLook} = useSelector(store => store.add)
-  const dispatch = useDispatch();
-  
+  const dispatch = useDispatch();  
   const getFromFirebaseJumbo = async () => {
     const initialCompany = 'jumbo'
     if(localStorage.getItem(`productos${path}${initialCompany}`) === null){

@@ -8,7 +8,7 @@ export const SideBarStyled = styled.div`
   align-items: center;
   justify-content: center;
   background-color: ${VerdeLima};
-  width: 180px;
+  /* max-width: 15vw; probando solo Split.Js*/
   z-index: 2;
   height: 100vh;
   top: 0px;
@@ -23,6 +23,7 @@ export const SideBarStyled = styled.div`
     align-items: center;
     justify-content: center;
     ul {
+      width: 90%;
       padding: 0;
       list-style: none;
       margin-top: 20px;
@@ -47,7 +48,7 @@ export const SideBarStyled = styled.div`
   }
 `;
 export const SplitStyled = styled(SplitButton)`
-  width: 70%;
+  
   .dropdown-toggle {
     background-color: #ff5757;
     width: 30px !important;
