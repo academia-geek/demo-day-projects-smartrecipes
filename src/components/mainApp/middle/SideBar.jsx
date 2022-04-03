@@ -30,12 +30,42 @@ const SideBar = () => {
           <Line  
           datasetIdKey='id'
              data={{
-              labels: ['04/02/2022', '04/02/2022', '04/02/2022'],
+              labels: ['04/02/2022', '04/03/2022', '04/04/2022','04/05/2022'],
               datasets: [
                 {
                   id: 1,
-                  label: '',
-                  data: [3900, 4200, 3400],
+                  label: 'Merqueo',
+                  data: [4000,4000,3100,3500],
+                  fill: false,
+                  borderColor: '#fe000056',
+                  backgroundColor: '#ff0000',
+                  pointBorderColor: '#000000',
+                  pointBackgroundColor: '#ff0000',
+                  pointBorderWidth: 1,
+                  pointHoverRadius: 5,
+                  pointHoverBackgroundColor: '#4bc0c0',
+                  pointHoverBorderColor: '#4bc0c0',
+                  pointHoverBorderWidth: 2,
+                  pointRadius: 1,
+                  pointHitRadius: 10,
+                
+                }, {
+                  id: 2,
+                  label: 'Jumbo',
+                  data: [4000,3600,2500,3600],
+                  fill: false,
+                  borderColor: '#25dc00',
+                  backgroundColor: '#4cff4f',
+                  pointBorderColor: '#0b6b00',
+                  pointBackgroundColor: '#2f00ff',
+                  pointBorderWidth: 1,
+                  pointHoverRadius: 5,
+                  pointHoverBackgroundColor: '#4bc0c0',
+                  pointHoverBorderColor: '#4bc0c0',
+                  pointHoverBorderWidth: 2,
+                  pointRadius: 1,
+                  pointHitRadius: 10,
+                  
                 }
               ],
             }}          
@@ -46,7 +76,11 @@ const SideBar = () => {
           </div>
         </SideBarProductsStyle>
       )
-    :<div>No hay nada aqui 🤗</div>}
+    :<>
+      <SideBarProductsStyle>
+        <h3>Selecciona productos para compararlos</h3>
+      </SideBarProductsStyle>
+    </>}
     </>
   );
 };

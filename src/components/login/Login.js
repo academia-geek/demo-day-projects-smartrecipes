@@ -9,7 +9,7 @@ import { FcGoogle } from "react-icons/fc";
 import { ImFacebook2 } from "react-icons/im";
 
 
-const Login = () => {
+const       Login = () => {
 
     const dispatch = useDispatch();
 const navigate = useNavigate()

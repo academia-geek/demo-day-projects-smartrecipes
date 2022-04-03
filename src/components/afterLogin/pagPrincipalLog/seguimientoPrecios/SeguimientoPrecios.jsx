@@ -1,6 +1,5 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 import { actionFunctionalCurrentWatchableObject } from "../../../../redux/action/actionFuntional";
 
 import {
@@ -11,15 +10,10 @@ import {
 const SeguimientoPrecios = ({ limit }) => {
   const dispatch = useDispatch();
   const { productos:{merqueo,jumbo}, activeLook } = useSelector(store => store.add);
- 
-  console.log(merqueo,'merqueo');
- 
-  console.log('jumbo', jumbo)
-  const isActive = () => {
-   
+
+  const isActive = () => {   
     return activeLook === "merqueo";
-  };
-  console.log("is active", isActive())
+  };  
   // empiza vacia
   const { productosBusqueda } = useSelector((store) => store.add);
   // iterate object
@@ -30,13 +24,12 @@ const SeguimientoPrecios = ({ limit }) => {
     let dataId = target.getAttribute("data-id");
     const currentProduct = activeProducts.find(
       (product) => product.id === dataId
-    );
+    )
     dispatch(actionFunctionalCurrentWatchableObject(currentProduct));
   };
   if (limit === undefined) {
     limit = activeProducts.length;
   }
-
   return (
     <SeguimientoPreciosStyled>
       {activeProducts.map((producto, index) => {
@@ -45,10 +38,8 @@ const SeguimientoPrecios = ({ limit }) => {
             <ProductoStyled
               key={index}
               data-id={producto.id}
-              onClick={(e) => handleCurrentProduct(e)}
-            >
-              <img loading="lazy" alt="producto1" src={producto.data.img}></img>
-
+              onClick={(e) => handleCurrentProduct(e)}>
+              <img loading="lazy" alt="producto1" src={producto.data.img}/>
               <p className="dataName">{producto.data.name}</p>
               <p className="dataPrice">
                 ${producto.data.price} - {producto.data.weight}

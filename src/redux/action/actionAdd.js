@@ -41,9 +41,10 @@ export const searchAsync = (producto, path, activeLook) => {
     if(activeLook === 'merqueo'){
     const traerCollection = await collection(db, `merqueo/${path}/Precios`);
     console.log('buscando en ', `buscando en merqueo/${path}/Precios`)
+    
     const q = await query(
       traerCollection,
-      where(documentId(), ">=", producto, "<=", documentId())
+      where(documentId(), ">=", producto)
     );
     const datos = await getDocs(q);
     const productos = [];
@@ -61,7 +62,7 @@ export const searchAsync = (producto, path, activeLook) => {
     console.log('buscando en ', `buscando en jumbo`)
     const q = await query(
       traerCollection,
-      where(documentId(), ">=", producto, "<=", producto + 'z')
+      where(documentId(), ">=", producto)
     );
     const datos = await getDocs(q);
     const productos = [];

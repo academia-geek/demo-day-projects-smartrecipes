@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const SideBarProductsStyle = styled.div`
   display: flex;
+  /* max-width: 30vw; Probando Split.js */
   flex-direction: column;  
   gap:30px;
   align-items: center;
@@ -16,6 +17,9 @@ export const SideBarProductsStyle = styled.div`
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    img{
+      height: 150px;
+    }
   }
   .container-historic{
     display: flex;

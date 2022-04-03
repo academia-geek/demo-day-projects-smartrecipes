@@ -8,17 +8,7 @@ import { DivFlex } from "../../styles/styledComponents/MainAppStyled";
 //import { register } from '../../redux/action/actionRegister';
 
 const Register = () => {
-  //const dispatch = useDispatch()
-
-  return (
-    <ContainerAppStyle>
-      <SideBarMenu />
-      <DivFlex>
-      <SliderApp/>
-      <FormRegister />
-      </DivFlex>
-    </ContainerAppStyle>
-  );
+  return <FormRegister />;
 };
 
 export default Register;

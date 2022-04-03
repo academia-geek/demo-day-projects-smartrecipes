@@ -19,21 +19,18 @@ export const CalendarioStyled = styled.div`
 `;
 
 export const SeguimientoPreciosStyled = styled.div`
-  width: 100%;  
   display: flex;
-  
   flex-direction: row;
   overflow-x: scroll;
+  max-width: 70vw;
   gap: 20px;
   margin-bottom: 25px;
- 
-    @media only screen and (max-width: 600px) {
-      min-height: 200px;
-    }
+  @media only screen and (max-width: 600px) {
+    min-height: 200px;
+  }
 `;
 
 export const ProductoStyled = styled.div`
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,7 +45,7 @@ export const ProductoStyled = styled.div`
   .dataName {
     pointer-events: none;
     font-weight: 700;
-    padding: 0%;   
+    padding: 0%;
     width: 120px;
     overflow: hidden;
     text-align: center;
@@ -60,16 +57,21 @@ export const ProductoStyled = styled.div`
     font-weight: 400;
     text-align: center;
     color: #8d96a8;
+    width: 120px;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
-    @media only screen and (max-width: 600px) {
-      img {
-        width: 100px;
-      }
-      .dataPrice {
-        font-weight: 400;
-        font-size: 0.8rem;
-      }
+  @media only screen and (max-width: 600px) {
+    img {
+      width: 100px;
     }
+    .dataPrice {
+      font-weight: 400;
+      font-size: 0.8rem;
+    }
+  }
 `;
 
 export const BotonPerfilUserStyled = styled.div`

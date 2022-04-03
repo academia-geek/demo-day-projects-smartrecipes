@@ -2,9 +2,7 @@ import { Button, Col, Form } from "react-bootstrap";
 import styled from "styled-components";
 
 export const DivLogin = styled.div`
-position: absolute;
-  top: 0%;
-  
+
   padding-top: 6rem;
   padding-bottom: 5.5rem;
   width: 100%;
