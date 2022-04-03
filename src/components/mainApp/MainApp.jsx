@@ -130,13 +130,17 @@ const MainApp = () => {
             {width < breakpoint && (
               <DinamicMenu width={width} breakpoint={breakpoint} />
             )}
-
+{/* Render only on condition according to the path */}
+            {pathName !== "/register" && 
+            <>
             <ContainerAppTopStyle>
               <BarraBusqueda />
               <Ubicacion />
               {/* <Idioma /> */}
             </ContainerAppTopStyle>
             <SliderApp />
+            </>
+            }
 
             {path !== "" && pathName === "/home" ? (
               <ContainerDataMain>
@@ -144,7 +148,7 @@ const MainApp = () => {
                 <Recetas />
               </ContainerDataMain>
             ) : (
-              <h3>Por favor elija una ciudad para continuar</h3>
+              pathName === "/home" && <h3>Por favor elija una ciudad para continuar</h3>
             )}
             {pathName === "/calendario" && <CalendarLocal />}
             {pathName === "/login" && <Login />}
