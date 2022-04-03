@@ -132,7 +132,7 @@ const MainApp = () => {
               <DinamicMenu width={width} breakpoint={breakpoint} />
             )}
 {/* Render only on condition according to the path */}
-            {pathName !== "/register" && 
+            {(pathName !== "/register" || pathName === '/blog') && 
             <>
             <ContainerAppTopStyle>
               <BarraBusqueda />
