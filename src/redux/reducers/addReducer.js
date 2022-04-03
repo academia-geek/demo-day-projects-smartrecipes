@@ -1,10 +1,14 @@
 import { addTypes } from "../types/types"
 
 const initialState = {
-  productos : {},
+  productos : {
+      merqueo : {},
+      jumbo: {}
+  },
+  activeLook: 'merqueo',
   recetas: {},
   productosCiudad: {},
-  productosBusqueda: {}
+  productosBusqueda: {},
 }
 
 export const addReducer = (state = initialState, action) => {
@@ -12,7 +16,10 @@ export const addReducer = (state = initialState, action) => {
         case addTypes.addProductos:
             return {
                 ...state,
-                productos: action.payload
+                productos:{
+                    ...state.productos,
+                    [action.payload.provedor]: action.payload.productos
+                }
             }
         case  addTypes.addRecetas:
             return {
@@ -38,6 +45,12 @@ export const addReducer = (state = initialState, action) => {
                 ...state,
                 productosBusqueda: {}
             }
+        case addTypes.activeLook:
+            return {
+                ...state,
+                activeLook: action.payload
+            }
+            
         default:
             return state
     }

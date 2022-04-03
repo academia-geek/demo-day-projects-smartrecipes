@@ -30,15 +30,14 @@ const MainApp = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const breakpoint = 600;
   const [isLoading, setIsLoading] = useState(true);
-
+  
   const dispatch = useDispatch();
   const { path } = useSelector((store) => store.funtional);
-
-  const getFromFirebase = async () => {
-    if(localStorage.getItem(`productos${path}`) === null){
+  const getFromFirebase = async () => {    
+    const initialCompany = 'merqueo'
+    if(localStorage.getItem(`productos${path}${initialCompany}`) === null){
     const querySnapshot = await getDocs(
-      collection(db, `merqueo/${path}/Precios`)
-    );
+      collection(db, `${initialCompany}/${path}/Precios`)    );
 
     querySnapshot.forEach((doc) => {
       productos.push({
@@ -46,12 +45,13 @@ const MainApp = () => {
         data: doc.data(),
       });
     });
-    localStorage.setItem(`productos${path}`, JSON.stringify(productos));
-    dispatch(actionAdd(productos));
+    localStorage.setItem(`productos${path}${initialCompany}`, JSON.stringify(productos));
+    dispatch(actionAdd(productos,initialCompany));
   } else {
-    productos = JSON.parse(localStorage.getItem(`productos${path}`));
-    dispatch(actionAdd(productos));
+    productos = JSON.parse(localStorage.getItem(`productos${path}${initialCompany}`));
+    dispatch(actionAdd(productos,initialCompany));
   }
+    ;
   };
   let cities = [];
   const getCitiesFromFirebase = async () => {
@@ -71,7 +71,6 @@ const MainApp = () => {
    }
    setIsLoading(false)
   };
-
   let productos = [];
   if (path !== "") {
     getFromFirebase();

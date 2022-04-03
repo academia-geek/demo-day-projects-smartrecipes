@@ -2,7 +2,8 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { actionFunctionalCloseSide } from "../../../redux/action/actionFuntional";
 import { SideBarProductsStyle } from "../../../styles/styledComponents/SideBar";
-
+import 'chart.js/auto';
+import { Chart, Line } from 'react-chartjs-2';
 const SideBar = () => {
   const {
     currentWatchableObject: { data },
@@ -26,7 +27,19 @@ const SideBar = () => {
           </div>
           
           <div className="container-historic">
-          <img src="https://res.cloudinary.com/davidcharif/image/upload/v1648602734/demoFakeApi/variacionPrecio_wqdpq5.png" alt="variacion"/>
+          <Line  
+          datasetIdKey='id'
+             data={{
+              labels: ['04/02/2022', '04/02/2022', '04/02/2022'],
+              datasets: [
+                {
+                  id: 1,
+                  label: '',
+                  data: [3900, 4200, 3400],
+                }
+              ],
+            }}          
+          />
           
           <h3>Precios de la ultima semana</h3>
           <h3>Promedio COP${data.price}</h3>
