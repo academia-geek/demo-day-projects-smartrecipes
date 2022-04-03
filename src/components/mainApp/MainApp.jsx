@@ -27,6 +27,7 @@ import Login from "../login/Login";
 import Register from "../login/Register";
 import { ContainerDataMain } from "../../styles/styledComponents/ContainerDataMain";
 import ListaProductos from "../afterLogin/listaProductos/ListaProductos";
+import Blog from "./dinamic/Blog";
 
 const MainApp = () => {
   let location = useLocation();
@@ -141,6 +142,7 @@ const MainApp = () => {
             <SliderApp />
             </>
             }
+            {path === '/blog' && <Blog />}
 
             {path !== "" && pathName === "/home" ? (
               <ContainerDataMain>
