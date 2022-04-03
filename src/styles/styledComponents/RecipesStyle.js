@@ -1,3 +1,4 @@
+import { Modal } from "react-bootstrap";
 import styled from "styled-components";
 
 export const Img = styled.img`
@@ -139,4 +140,18 @@ export const ButtonParaModal = styled.button`
         border-color: #ffc600;
         box-shadow: 0 0 10px #ffc600;
     }
+`
+
+export const ModalIngredientes = styled(Modal)`
+    background-color:red;
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0 0 0 / 20%)!important;
+}
+
 `
