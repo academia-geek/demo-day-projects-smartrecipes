@@ -8,6 +8,7 @@ import { SeachBarStyled } from "../../../../styles/styledComponents/SearchBarSty
 const BarraBusqueda = () => {
   const dispatch = useDispatch();
   const {path} = useSelector((store) => store.funtional);
+  const {activeLook} = useSelector((store) => store.add);
   const formatSearch = (searchBar) => {
     return searchBar
       .toLowerCase()
@@ -24,7 +25,7 @@ const BarraBusqueda = () => {
     }),
     onSubmit: ({ searchBar }) => {
       if(searchBar !== ""){
-      dispatch(searchAsync(formatSearch(searchBar), path));
+      dispatch(searchAsync(formatSearch(searchBar), path, activeLook));
       }
       dispatch(resetSearchSync());
     }
