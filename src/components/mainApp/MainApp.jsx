@@ -132,7 +132,7 @@ const MainApp = () => {
               <DinamicMenu width={width} breakpoint={breakpoint} />
             )}
             {/* Render only on condition according to the path */}
-            {(pathName !== "/register") && (pathName !== '/blog') && (pathName !== '/calendario') && 
+            {(pathName !== "/register")  && (pathName !== '/calendario') && 
             <>
             <ContainerAppTopStyle>
               <BarraBusqueda />
@@ -142,7 +142,7 @@ const MainApp = () => {
             <SliderApp />
             </>
             }
-            {path === '/blog' && <Blog />}
+            
 
             {path !== "" && pathName === "/home" ? (
               <ContainerDataMain>
@@ -153,6 +153,7 @@ const MainApp = () => {
               pathName === "/home" && <h3>Por favor elija una ciudad para continuar</h3>
             )}
             {pathName === "/login" && <Login />}
+            {pathName === '/blog' && <Blog />}
             {pathName === "/register" && <Register />}
             {pathName === "/config" && <Configuracion />}
             {pathName === "/calendario" && <CalendarLocal />}
