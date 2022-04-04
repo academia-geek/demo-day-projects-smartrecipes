@@ -36,8 +36,8 @@ const AppRouter = () => {
 
         <Route path="/home" element={<MainApp />} />
         <Route path="/productos" element={<ListaProductos />} />
-        <Route path="/calendario" element={<CalendarContainer />} />
-        <Route path="/config" element={<Configuracion />} />
+        <Route path="/calendario" element={<MainApp />} />
+        <Route path="/config" element={<MainApp />} />
       </Routes>
     </BrowserRouter>
     </>

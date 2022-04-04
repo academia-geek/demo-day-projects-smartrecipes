@@ -1,9 +1,16 @@
 import React from 'react'
-import MainApp from '../../mainApp/MainApp'
+import { ConfiguracionStyled } from '../../../styles/styledComponents/ConfiguracionStyled'
 
 const Configuracion = () => {
   return (
-    <MainApp/>
+
+    <ConfiguracionStyled>
+      <h1> User configuration</h1>
+      <p>Profile : </p> 
+      <p>Change password : </p>
+      <p>Logout : </p>
+
+    </ConfiguracionStyled>
   )
 }
 

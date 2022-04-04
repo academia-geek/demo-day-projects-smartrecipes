@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const SideBarProductsStyle = styled.div`
   display: flex;
-  /* max-width: 30vw; Probando Split.js */
+  height: 100vh;
+  overflow-y: scroll;
   flex-direction: column;  
   gap:30px;
   align-items: center;

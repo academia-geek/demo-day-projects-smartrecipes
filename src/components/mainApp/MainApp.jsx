@@ -28,6 +28,7 @@ import Register from "../login/Register";
 import { ContainerDataMain } from "../../styles/styledComponents/ContainerDataMain";
 import ListaProductos from "../afterLogin/listaProductos/ListaProductos";
 import Blog from "./dinamic/Blog";
+import Configuracion from "../afterLogin/Configuracion/Configuracion";
 
 const MainApp = () => {
   let location = useLocation();
@@ -115,10 +116,10 @@ const MainApp = () => {
         <Split
           className="split"
           //Two columns
-          sizes={[25,65,10]}
+          sizes={[15,70,15]}
       // minSize={[100,100,50]}
       // maxSize={[100,100,0]}
-          gutterSize={30}
+          gutterSize={10}
         >
           {width > breakpoint && (
             <DinamicMenu
@@ -131,8 +132,8 @@ const MainApp = () => {
             {width < breakpoint && (
               <DinamicMenu width={width} breakpoint={breakpoint} />
             )}
-{/* Render only on condition according to the path */}
-            {(pathName !== "/register") && (pathName !== '/blog') && 
+            {/* Render only on condition according to the path */}
+            {(pathName !== "/register") && (pathName !== '/blog') && (pathName !== '/calendario') && 
             <>
             <ContainerAppTopStyle>
               <BarraBusqueda />
@@ -152,9 +153,10 @@ const MainApp = () => {
             ) : (
               pathName === "/home" && <h3>Por favor elija una ciudad para continuar</h3>
             )}
-            {pathName === "/calendario" && <CalendarLocal />}
             {pathName === "/login" && <Login />}
             {pathName === "/register" && <Register />}
+            {pathName === "/config" && <Configuracion />}
+            {pathName === "/calendario" && <CalendarLocal />}
           </DivFlex>
           <SideBar />
         </Split>

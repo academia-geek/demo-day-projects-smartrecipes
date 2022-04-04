@@ -75,7 +75,7 @@ const SideBarMenu = ({cities}) => {
           <ButtonLogin> Registro </ButtonLogin>
         </Link>
         <Link to='/home'>
-        <button>Home</button>
+        <ButtonLogin type='button'>Home</ButtonLogin>
         </Link>
       </div>
     </SideBarStyled>

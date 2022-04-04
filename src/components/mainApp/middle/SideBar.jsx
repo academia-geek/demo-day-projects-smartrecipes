@@ -78,7 +78,10 @@ const SideBar = () => {
       )
     :<>
       <SideBarProductsStyle>
-        <h3>Selecciona productos para compararlos</h3>
+        <div>
+          <h3>Esta es tu barra auxiliar</h3>
+          <p>Se adaptara a la pagina en dónde estes</p>
+        </div>
       </SideBarProductsStyle>
     </>}
     </>
