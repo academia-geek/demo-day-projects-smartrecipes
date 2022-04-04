@@ -50,7 +50,6 @@ const CalendarLocal = () => {
   }
 
   // retornar una sola vez el componente pero con los datos iterados
-
   const dias = [
     "Lunes",
     "Martes",
@@ -132,7 +131,7 @@ const AccordionItemFunc = (index, dia, objRecetas) => {
     <Accordion.Item eventKey={stringIndex} key={index}>
       <Accordion.Header> {dia} </Accordion.Header>
       <Accordion.Body>
-        <h2>DESAYUNO 🥞🥞🥞</h2>
+        <h2>DESAYUNO</h2>
         <DesayunoCard dish={objRecetas.desayuno[index]} />
         <p>Precio por porcion {objRecetas.desayuno[index].pricePerServing}</p>
         <p>Puntos saludables {objRecetas.desayuno[index].healthScore}</p>
@@ -154,3 +153,4 @@ const AccordionItemFunc = (index, dia, objRecetas) => {
     </Accordion.Item>
   );
 };
+

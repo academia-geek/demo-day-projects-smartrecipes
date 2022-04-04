@@ -1,10 +1,8 @@
-
 import React from "react";
-
 import { Card } from "react-bootstrap";
 
-
 const CenaCard = ({ dish }) => {
+  console.log(dish)
   return (
     <div key={`dish`}>
       <Card className="container-card">
