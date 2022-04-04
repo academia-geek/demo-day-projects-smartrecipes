@@ -17,7 +17,6 @@ import SideBar from "./middle/SideBar";
 
 import SliderApp from "./middle/SliderApp";
 import BarraBusqueda from "./top/barraBusqueda/BarraBusqueda";
-import Idioma from "./top/idioma/Idioma";
 import Ubicacion from "./top/ubicacion/Ubicacion";
 import { ContainerDataStyled } from "../../styles/styledComponents/ContainerData";
 import { useLocation } from "react-router-dom";
