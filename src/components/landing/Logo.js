@@ -1,16 +1,14 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import {
   ButtonLogo,
   ContainerLanding,
-  DivLogo,
+
   FirstRow,
-  ImgCol,
+
   ImgLogo,
-  LogoCol,
-  LogoContainer,
-  LogoDiv,
+
   TextLanding,
 
 } from "../../styles/styledComponents/LandingStyles";
@@ -43,8 +41,9 @@ const Logo = () => {
         </Col>
         <Col>
          <TextLanding>Ver solo recetas</TextLanding>
-
-         
+         <ButtonLogo>Click</ButtonLogo>
+         </Col> 
+         </Row>        
 
     </ContainerLanding>
 
