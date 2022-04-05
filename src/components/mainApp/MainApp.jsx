@@ -40,8 +40,7 @@ const MainApp = () => {
       <ContainerAppStyle>
         <Split
           className="split"
-          sizes={[15, 70, 15]}
-          minSize={[200, 700, 350]}
+         
           // maxSize={[200,700,100]}
           gutterSize={10}
         >       

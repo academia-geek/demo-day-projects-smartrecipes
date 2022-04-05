@@ -74,9 +74,9 @@ export const FormRegister = () => {
         const values1 = { ...values, photo }
 
         setTimeout(() => {
-          alert(JSON.stringify(values1, null, 2));
+          
           dispatch(registroEmailPasswordNombre(values1))
-          navigate('/login')
+          navigate('/home')
           setSubmitting(false);
         }, 400);
       }}
@@ -84,18 +84,6 @@ export const FormRegister = () => {
     >
       {(props) => (
         <FormLogin as={Form} className="form-signin">
-          {/* 
-          This first checkbox will result in a boolean value being stored. Note that the `value` prop
-          on the <Field/> is omitted
-        */}
-
-          {/* 
-          Multiple checkboxes with the same name attribute, but different
-          value attributes will be considered a "checkbox group". Formik will automagically
-          bind the checked values to a single array for your benefit. All the add and remove
-          logic will be taken care of for you.
-        */}
-
           <FormLogin.Group className="mb-3" controlId="formBasicName">
             <FormLogin.Label>Nombre</FormLogin.Label>
             <FormLogin.Control

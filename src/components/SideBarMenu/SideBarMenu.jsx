@@ -26,7 +26,7 @@ const SideBarMenu = () => {
             <DivCategoryStyle>
               <Link to="/ingredientPrices">
               <i><BsGrid className="iconSideBar"/></i>
-              <p>Precio actual de tus ingredientes</p>
+              <p>Precio ingredientes</p>
               </Link>
             </DivCategoryStyle>
           </li>

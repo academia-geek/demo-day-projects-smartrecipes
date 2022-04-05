@@ -42,7 +42,7 @@ const ListaProductos = () => {
     
   return (
     <ContainerMainProductos>
-      <h3>Seguimiento de precios</h3>
+      <h3>Precio actual de tus ingredientes</h3>
       <p>Empresa : {activeLook}</p>
       <p>Ciudad : <strong>{city}</strong></p>
       <div className="containerButton">        
