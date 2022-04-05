@@ -45,11 +45,9 @@ const ListaProductos = () => {
       <h3>Seguimiento de precios</h3>
       <p>Empresa : {activeLook}</p>
       <p>Ciudad : <strong>{city}</strong></p>
-      
-         <div className="containerButton">
-        
+      <div className="containerButton">        
         <button type="button">Todos los productos</button>
-        
+       
       <p>Productos con más variacion</p>
       
       </div>

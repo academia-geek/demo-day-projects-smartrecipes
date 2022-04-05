@@ -8,6 +8,16 @@ const initialState = {
     id: '',
     data:{}
   },
+  currentWatchableRecipe: {
+    id: '',
+    label: '',
+    ingredientLines: [],
+    porciones: '',
+    time: '',
+    cautions: [],
+    healthLabels: []
+    
+  }
 }
 
 export const funtionalReducer = (state = initialState, action) => {
@@ -35,6 +45,20 @@ export const funtionalReducer = (state = initialState, action) => {
                     data: action.payload.data
                 },                
             }
+        case funtionalTypes.currentWatchableRecipe: {
+            return {
+                ...state,
+                currentWatchableRecipe : {
+                    id: action.payload.id,
+                    label: action.payload.label,
+                    ingredientLines: action.payload.ingredientLines,
+                    porciones: action.payload.porciones,
+                    time: action.payload.time,
+                    cautions: action.payload.cautions,
+                    healthLabels: action.payload.healthLabels
+                }
+        }
+    }
         case funtionalTypes.closeSide:
             return { 
                 ...state,

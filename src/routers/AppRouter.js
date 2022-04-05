@@ -26,6 +26,7 @@ const AppRouter = () => {
           <Route path="/register" element={<MainApp />} />
           <Route path="/blog" element={<MainApp />} />
           <Route path="/ingredientPrices" element={<IngredientPricesApp />} />
+          <Route path="/recetas" element={<IngredientPricesApp />} />
           <Route path="/zonasocialrecetas" element={<ZonaSocialRecetas />} />
           {/* <Route path="/recetascompletas" element={<RecetasRecomendadas />} /> */}
           <Route path="/recetaindchef" element={<RecetaIndChef />} />
