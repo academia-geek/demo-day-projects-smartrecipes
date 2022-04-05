@@ -5,14 +5,10 @@ import AppRouter from './routers/AppRouter';
 import { store } from './redux/store/store';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { GoblalStyles } from './styles/styledComponents/goblalStyles';
+import App from './App';
 
 ReactDOM.render(
-  <Provider store={store}>
-    <React.StrictMode>
-      <GoblalStyles />
-      <AppRouter />
-    </React.StrictMode>
-  </Provider>,
+  <App/>,
   document.getElementById('root')
 );
 

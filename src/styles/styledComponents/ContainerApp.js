@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { VerdeLima } from "./ColoresEstilos";
 
 export const ContainerAppStyle = styled.div`
 
@@ -9,7 +10,7 @@ export const ContainerAppStyle = styled.div`
 }
 
 .gutter {
-    background-color: red;
+    background-color:${VerdeLima};
     background-repeat: no-repeat;
     background-position: 50%;
 }

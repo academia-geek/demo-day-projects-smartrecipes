@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { actionFunctionalCloseSide } from "../../../redux/action/actionFuntional";
 import { SideBarProductsStyle } from "../../../styles/styledComponents/SideBar";
 import 'chart.js/auto';
-import { Chart, Line } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 const SideBar = () => {
   const {
     currentWatchableObject: { data },
@@ -19,9 +19,9 @@ const SideBar = () => {
     <>
       {!isUndefined ? (
         <SideBarProductsStyle>          
-          <button onClick={() => handleClose()}>Close Side Bar</button>
+          <button onClick={() => handleClose()}>Delete product</button>
           <div className="container-img">
-          <img src={data.img} alt=""></img>
+          <img src={data.img} alt=""/>
           <p>Peso : {data.weight}</p>
           <p>{data.name}</p>
           </div>
