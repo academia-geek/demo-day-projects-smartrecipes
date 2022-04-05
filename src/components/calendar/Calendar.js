@@ -4,19 +4,19 @@ import { Accordion } from "react-bootstrap";
 import { FiCalendar } from "react-icons/fi";
 
 import {
-  DivInformation,
-  
+  DivInformation,  
   DivWeekly,
   SubTitleCal,
   TitleCalendar,
 } from "../../styles/styledComponents/CalendarStyled";
+import { ContainerCalendar } from "../../styles/styledComponents/ContainerCalendar";
 import { urlRA, urlRC, urlRD } from "../../utilities/urlRecipes";
 import AlmuerzoCard from "./AlmuerzoCard";
 import CenaCard from "./CenaCard";
 import DesayunoCard from "./DesayunoCard";
 
 
-const Calendar = () => {
+const CalendarLocal = () => {
   const [almuerzo, setAlmuerzos] = useState([]);
   const [desayuno, setDesayuno] = useState([]);
   const [cena, setCena] = useState([]);
@@ -49,7 +49,6 @@ const Calendar = () => {
   }
 
   // retornar una sola vez el componente pero con los datos iterados
-
   const dias = [
     "Lunes",
     "Martes",
@@ -95,7 +94,7 @@ const handleVegan = () => {
     }
 
   return (
-    <div>
+    <ContainerCalendar>
       <TitleCalendar>
         {" "}
         Calendario <FiCalendar />{" "}
@@ -119,11 +118,11 @@ const handleVegan = () => {
       <DivInformation>
         <SubTitleCal>Detalles del menú</SubTitleCal>
       </DivInformation>
-    </div>
+    </ContainerCalendar>
   );
 };
 
-export default Calendar;
+export default CalendarLocal;
 
 const AccordionItemFunc = (index, dia, objRecetas) => {
   let stringIndex = index.toString();  
@@ -131,7 +130,7 @@ const AccordionItemFunc = (index, dia, objRecetas) => {
     <Accordion.Item eventKey={stringIndex} key={index}>
       <Accordion.Header> {dia} </Accordion.Header>
       <Accordion.Body>
-        <h2>DESAYUNO 🥞🥞🥞</h2>
+        <h2>DESAYUNO</h2>
         <DesayunoCard dish={objRecetas.desayuno[index]} />
         <p>Precio por porcion {objRecetas.desayuno[index].pricePerServing}</p>
         <p>Puntos saludables {objRecetas.desayuno[index].healthScore}</p>
@@ -153,3 +152,4 @@ const AccordionItemFunc = (index, dia, objRecetas) => {
     </Accordion.Item>
   );
 };
+

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { ButtonLogin } from '../../styles/styledComponents/LoginStyled'
 import { WelcomeNewStyled } from '../../styles/styledComponents/WelcomeStyled'
 
 const WelcomeNew = () => {
@@ -42,14 +43,16 @@ const WelcomeNew = () => {
             <img alt='girl' src='https://res.cloudinary.com/davidcharif/image/upload/v1648820705/demoFakeApi/Plan--5ec7b84e01d0360018d4c0e8_eiyizw.png'/>
           </div>
       </div>
-      <div>
-        <div>
+      <div className='thirdBlock'>
+        <div className='imgContainer'>
           <img alt='Img'src='https://res.cloudinary.com/davidcharif/image/upload/v1648315820/demoFakeApi/imagenSideBar_brl1vb.png'/>      
-        </div>      
-          <h2>Planea tus comidas y compras</h2>
+        </div>   
+        <div className='textContainer'>   
+          <p>Disfruta tu experiencia!</p>
+        </div>
       </div>
-      <Link to='/u-select'>
-      <button>Continua</button>
+      <Link to='/home'>
+      <ButtonLogin><p>Continua</p></ButtonLogin>
       </Link>
       <img alt="incribite"/>
     </WelcomeNewStyled>

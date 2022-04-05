@@ -37,17 +37,10 @@ export const actionFunctionalCloseSide = () => {
 }
 
 export const actionFunctionalCurrentWatchableRecipe = (currentWatchableRecipe) => {
-  const { id, label, ingredientLines, porciones, time, cautions, healthLabels } = currentWatchableRecipe
+  console.log('currentWatchableRecipe', currentWatchableRecipe)
+
   return {
     type: funtionalTypes.currentWatchableRecipe,
-    payload: {
-      id,
-      label, 
-      ingredientLines, 
-      porciones, 
-      time, 
-      cautions, 
-      healthLabels
-    },
+    payload: currentWatchableRecipe,
   }
 }

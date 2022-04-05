@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { actionFunctionalCurrentWatchableRecipe } from "../../../../redux/action/actionFuntional";
 import { SeguimientoPreciosStyled } from "../../../../styles/styledComponents/PagPrincipalStyles";
 import {
   ButtonParaModal,
@@ -12,14 +14,16 @@ const CardReceta = ({ dataServer }) => {
   //modal
   const [modalShow, setModalShow] = useState(false);
   const [productoEstado, setProducto] = useState("vacio");
+  const dispatch = useDispatch();
   console.log("Producto estado es vacio ? ", productoEstado === "vacio");
   const handleId = ({ target }) => {
     const label = target.getAttribute("data-label");
-    const productoFiltro = dataServer.filter(
-      (producto) => producto.label === label
-    );    
+    const productoFiltro = dataServer.find(
+      (producto) => producto.label === label      
+    )
     setProducto(productoFiltro);
     setModalShow(true);
+    dispatch(actionFunctionalCurrentWatchableRecipe(productoFiltro))
 
   };
 
@@ -46,11 +50,11 @@ const CardReceta = ({ dataServer }) => {
                     <ButtonParaModal data-label={producto.label} onClick={(e) => setModalShow(e)}>
                       Detalles
                     </ButtonParaModal>
-                    <ModalReceta
+                    {/* <ModalReceta
                       producto={productoEstado}
                       show={modalShow}
                       onHide={() => setModalShow(false)}
-                    />
+                    /> */}
                   </>
                 )}
               </div>

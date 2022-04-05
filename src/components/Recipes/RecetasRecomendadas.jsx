@@ -9,7 +9,7 @@ import { DropdownButton } from 'react-bootstrap';
 import { ColReceta, DivCard, Img, TitleRecetas } from '../../styles/styledComponents/RecipesStyle';
 import NavBarRecipes from './NavBarRecipes';
 import { Button } from 'react-bootstrap';
-import MyVerticallyCenteredModal from './Modal';
+// import MyVerticallyCenteredModal from './Modal';
 
 
 const RecetasRecomendadas = () => {
@@ -41,10 +41,10 @@ const RecetasRecomendadas = () => {
         Detalles 
       </Button>
 
-      <MyVerticallyCenteredModal 
+      {/* <MyVerticallyCenteredModal 
         show={modalShow}
         onHide={() => setModalShow(false)}
-      />
+      /> */}
 
       <DropdownButton align="center" variant="light" title="Información de la receta: ">
         <Card.Body>

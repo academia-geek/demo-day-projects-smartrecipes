@@ -9,7 +9,8 @@ export const addTypes = {
     addRecetas : 'addRecetas',
     addProductosCiudad : 'addProductosCiudad',
     search : 'search',
-    reset: 'reset'
+    reset: 'reset',
+    activeLook: 'activeLook'
 }
 
 export const funtionalTypes = {
@@ -17,5 +18,6 @@ export const funtionalTypes = {
     setPath : 'setPath',
     setCiudades : 'setCiudades',
     currentWatchableObject: 'currentWatchableObject',
-    closeSide: 'closeSide',
+    currentWatchableRecipe: 'currentWatchableRecipe',
+    closeSide: 'closeSide'
 }

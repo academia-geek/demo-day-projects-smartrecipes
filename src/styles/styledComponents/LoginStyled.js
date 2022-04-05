@@ -1,20 +1,51 @@
 import { Button, Col, Form } from "react-bootstrap";
 import styled from "styled-components";
 
+ 
 export const DivLogin = styled.div`
-position: absolute;
-  top: 0%;
-  
   padding-top: 6rem;
   padding-bottom: 5.5rem;
   width: 100%;
   z-index: 2;
-  
-  `;
+`;
+
+
+
+export const LoginCol = styled(Col)`
+  background-color: #C9E265;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: center;
+
+`;
+
+//styled of div 
+export const LoginStyled = styled.div`
+  background-color: #ffffff;
+  width: 479px;
+  height: 500px;
+  border-radius: 50px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  .login-text {
+    text-align: center;
+    padding: 2rem 0px;
+  }
+  h4 {
+    text-align: center;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 90%;
+    height: 420px;
+    .login-text {
+      padding: 15px 0px;
+    }
+  }
+`
+
 
 export const FormLogin = styled(Form)`
-
-  width: 35%;
+  width: 75%;
   display: block;
   margin: 15px Auto;
   font-family: "Roboto";
@@ -32,8 +63,6 @@ export const FormLogin = styled(Form)`
     color: red;
     margin: 0px;
     padding: 0px;
-    
-    
   }
 `;
 
@@ -42,12 +71,15 @@ export const ButtonLogin = styled(Button)`
   color: #FFFF;
   border: none;
   width: 50%;
-  font-size: 15px;
   display: block;
   margin: 10px Auto 0px;
-  text-align: center;
+  p{
+    text-align: center;    
+    font-size: 30px;
+    text-decoration: none;
+  }
   &:hover {
-    background-color: #008037;
+    background-color: #ed6f6f;
     color: #ffffff;
   }
   &:focus {

@@ -1,59 +1,72 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ButtonLogin } from "../../styles/styledComponents/LoginStyled";
-import { SideBarStyled } from "../../styles/styledComponents/newSideBarMenu";
+import { DivCategoryStyle, SideBarStyled } from "../../styles/styledComponents/newSideBarMenu";
 import NavBarUbicacion from "../NavBar/NavBarUbicacion";
 import { BsGrid, BsHeart, BsCalendarWeek} from "react-icons/bs";
 import { HiOutlineLogout } from "react-icons/hi";
 import { IoSettingsOutline } from "react-icons/io5";
+import { useSelector } from "react-redux";
 
-const SideBarMenu = ({cities}) => {
+const SideBarMenu = () => {
+  const {ciudades} = useSelector(store => store.funtional);
   return (
     <>
     <SideBarStyled>
       <div className="logo">
         <img
-          src="https://res.cloudinary.com/davidcharif/image/upload/v1648315633/demoFakeApi/logoSmall_lumpae.png"
+          src="https://res.cloudinary.com/davidcharif/image/upload/v1648916285/demoFakeApi/logoHQ_th0u6x.png"
           alt="logo"
           />
       </div>
-          <NavBarUbicacion cities={cities}/>
+        <NavBarUbicacion cities={ciudades}/>
       <div className="menu">
         <ul>
           <li>
-            <div>
+            <DivCategoryStyle>
+              <Link to="/ingredientPrices">
               <i><BsGrid className="iconSideBar"/></i>
-              <p>Categorias</p>
-            </div>
+              <p>Precio ingredientes</p>
+              </Link>
+            </DivCategoryStyle>
           </li>
           <li>
-            <div>
+            <DivCategoryStyle>
+              <Link to="/recetas">
               <i><BsHeart className="iconSideBar"/></i>
-              <p>Recetas Favoritas</p>
-            </div>
+              <p>Recetas</p>
+              </Link>
+            </DivCategoryStyle>
           </li>
           <li>
-            <div>
+            <DivCategoryStyle>
+              <Link to="/calendario">
               <i><BsCalendarWeek className="iconSideBar"/></i>
               <p>Calendario</p>
-            </div>
+              </Link>
+            </DivCategoryStyle>
           </li>
           <li>
-            <div>
+            <DivCategoryStyle>
+              <Link to="/config">
               <i><IoSettingsOutline className="iconSideBar"/></i>
               <p>Configuracion</p>
-            </div>
+              </Link>
+            </DivCategoryStyle>
           </li>
           <li>
-            <div>
+            <DivCategoryStyle>
+              <Link to="/logout">
               <i><HiOutlineLogout className="iconSideBar"/></i>
               <p>Logout</p>
-            </div>
+              </Link>
+            </DivCategoryStyle>
           </li>
         </ul>
-
+      </div>
+      <div className="footer">
         <img
-          src="https://res.cloudinary.com/davidcharif/image/upload/v1648315820/demoFakeApi/imagenSideBar_brl1vb.png"
+          src="https://res.cloudinary.com/davidcharif/image/upload/v1648916203/demoFakeApi/healthyEating_xe1aga.png"
           alt="girl juggling fruits"
           className="secondImg"
         />
@@ -63,7 +76,9 @@ const SideBarMenu = ({cities}) => {
         <Link to="/register" style={{ textDecoration: "none" }}>
           <ButtonLogin> Registro </ButtonLogin>
         </Link>
-        <button>Home</button>
+        <Link to='/home'>
+        <ButtonLogin type='button'>Home</ButtonLogin>
+        </Link>
       </div>
     </SideBarStyled>
     </>

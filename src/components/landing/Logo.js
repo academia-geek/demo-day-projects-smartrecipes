@@ -1,23 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
+import { Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import {
   ButtonLogo,
-  DivLogo,
+  ContainerLanding,
+  FirstRow,
   ImgLogo,
+  TextLanding,
 } from "../../styles/styledComponents/LandingStyles";
+import { FormLogin, LoginCol } from "../../styles/styledComponents/LoginStyled";
+import FormRegister from "../login/Form";
+import Login from "../login/Login";
+import Register from "../login/Register";
 
 const Logo = () => {
+  const [showLogin, setShowLogin] = useState(true);
   return (
-    <DivLogo>
-      <ImgLogo
-        alt="logo"
-        loading="lazy"
-        src="https://res.cloudinary.com/david-b/image/upload/v1648052111/AG/demoday/Group_17_epsd1a.png"
-      />
-      <Link to="/welcome" style={{ textDecoration: "none" }}>
-        <ButtonLogo>Siguiente</ButtonLogo>
-      </Link>
-    </DivLogo>
+    <ContainerLanding fluid>
+      <FirstRow>
+        <Col xs={12} md={6} lg={6}>
+          <ImgLogo
+            alt="logo"
+            loading="lazy"
+            src="https://res.cloudinary.com/david-b/image/upload/v1649123221/AG/demoday/smartr_rwk08x.svg"
+          />
+        </Col>
+        <LoginCol xs={12} md={6} lg={6}>
+          {showLogin && <Login setLogin={setShowLogin}/>}
+          {!showLogin && <Register setLogin={setShowLogin} />}
+          
+        </LoginCol>
+      </FirstRow>
+      <Row>
+        <Col>
+          <TextLanding>Ver solo precio de los ingredientes</TextLanding>
+
+          <Link to="/ingredientPrices" style={{ textDecoration: "none" }}>
+            <ButtonLogo>Click</ButtonLogo>
+          </Link>
+        </Col>
+        <Col>
+          <TextLanding>Ver solo recetas</TextLanding>
+          
+          <Link to="/recetas" style={{ textDecoration: "none" }}>
+            <ButtonLogo>Click</ButtonLogo>
+          </Link>
+        </Col>
+      </Row>
+    </ContainerLanding>
   );
 };
 

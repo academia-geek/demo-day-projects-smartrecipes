@@ -1,5 +1,5 @@
 import { collection, getDocs } from "firebase/firestore";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { db } from "../../firebase/firebaseConfig";
 import { actionAdd } from "../../redux/action/actionAdd";
@@ -11,98 +11,68 @@ import {
   DivFlex,
 } from "../../styles/styledComponents/MainAppStyled";
 import DinamicMenu from "../landing/DinamicMenu";
-import Productos from "./dinamic/Productos";
 import Recetas from "./dinamic/Recetas";
 import SideBar from "./middle/SideBar";
 
 import SliderApp from "./middle/SliderApp";
 import BarraBusqueda from "./top/barraBusqueda/BarraBusqueda";
-import Idioma from "./top/idioma/Idioma";
 import Ubicacion from "./top/ubicacion/Ubicacion";
+import { useLocation } from "react-router-dom";
+import CalendarLocal from "../calendar/Calendar";
+import { Spinner } from "react-bootstrap";
+import Login from "../login/Login";
+import Register from "../login/Register";
+import { ContainerDataMain } from "../../styles/styledComponents/ContainerDataMain";
+import ListaProductos from "../afterLogin/listaProductos/ListaProductos";
+import Blog from "./dinamic/Blog";
+import Configuracion from "../afterLogin/Configuracion/Configuracion";
+import { ResizeContext } from "../../context/ResizeContext";
+
 
 const MainApp = () => {
-  const [width, setWidth] = useState(window.innerWidth);
-  const breakpoint = 600;
+  let location = useLocation();
+  let pathName = location.pathname;
+  const {width,breakpoint} = useContext(ResizeContext);
 
-  const dispatch = useDispatch();
-  const { path } = useSelector((store) => store.funtional);
-
-  const getFromFirebase = async () => {
-    const querySnapshot = await getDocs(
-      collection(db, `merqueo/${path}/Precios`)
-    );
-
-    querySnapshot.forEach((doc) => {
-      productos.push({
-        id: doc.id,
-        data: doc.data(),
-      });
-    });
-    dispatch(actionAdd(productos));
-  };
-  let cities = [];
-  const getCitiesFromFirebase = async () => {
-    const querySnapshot = await getDocs(collection(db, "lista"));
-    querySnapshot.forEach((doc) => {
-      cities.push(doc.data());
-    });
-    dispatch(actionFunctionalCiudades(cities));
-  };
-
-  let productos = [];
-  if (path !== "") {
-    getFromFirebase();
-  }
-  useEffect(() => {
-    getCitiesFromFirebase();
-  }, []);
-
-  useEffect(() => {
-    const handleResizeWindow = () => setWidth(window.innerWidth);
-    // subscribe to window resize event "onComponentDidMount"
-    window.addEventListener("resize", handleResizeWindow);
-    return () => {
-      // unsubscribe "onComponentDestroy"
-      window.removeEventListener("resize", handleResizeWindow);
-    };
-  }, []);
 
   return (
     <>
       <ContainerAppStyle>
-        {width > breakpoint && (
-          <DinamicMenu width={width} breakpoint={breakpoint} cities={cities} />
-        )}
         <Split
           className="split"
-          //Two columns
-          sizes={[100, 0]}
-          minSize={[100, 20]}
-          gutterSize={20}
-          snapOffset={0}          
-        >
+         
+          // maxSize={[200,700,100]}
+          gutterSize={10}
+        >       
+          {width > breakpoint && (
+            <DinamicMenu
+              width={width}
+              breakpoint={breakpoint}
+              // cities={cities}
+            />
+          )}
           <DivFlex>
             {width < breakpoint && (
               <DinamicMenu width={width} breakpoint={breakpoint} />
             )}
-
-            <ContainerAppTopStyle>
-              <BarraBusqueda />
-              <Ubicacion />
-              <Idioma />
-            </ContainerAppTopStyle>
-            <SliderApp />
-
-            {path !== "" ? (
+            {/* Render only on condition according to the path */}
+            {pathName === "/home" && (
               <>
-                <Productos />
-              <Recetas />
+                <ContainerAppTopStyle>
+                  <BarraBusqueda />
+                  <Ubicacion />
+                  {/* <Idioma /> */}
+                </ContainerAppTopStyle>
               </>
-            ) : (
-              <h3>Por favor elija una ciudad para continuar</h3>
             )}
-          </DivFlex>
-          <SideBar />
+
+            {pathName === "/home" && <SliderApp />}          
+            {pathName === "/login" && <Login />}
+            {pathName === "/blog" && <Blog />}
+            {pathName === "/register" && <Register />}
+            {pathName === "/config" && <Configuracion />}
+            {pathName === "/calendario" && <CalendarLocal />}
+          </DivFlex>                    
         </Split>
       </ContainerAppStyle>
     </>

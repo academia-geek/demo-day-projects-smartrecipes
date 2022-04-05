@@ -1,3 +1,4 @@
+import { Modal } from "react-bootstrap";
 import styled from "styled-components";
 
 export const Img = styled.img`
@@ -16,11 +17,13 @@ export const TitleRecetas = styled.h1`
     text-align: center;
     margin-bottom: 15px;
     margin-top: 15px;
+    font-size: 10px;
     background-color: #F19C79;
     text-shadow: white 0 -1px;
 `
 export const SubTitleRecetas = styled.h2`
     margin-top: 0;
+    
     text-align: center;
     padding: 0.25rem;
     text-shadow: white 0 -1px;
@@ -114,20 +117,44 @@ export const ContainerRecetaPP = styled.div`
     align-items: center;
 `
 export const CardRecetas = styled.div`
-    width: 150px;
-    height: 200px;
+    height: 160px;
     padding: 0.75rem;
     padding-bottom: 0;
     margin-bottom: 0;
     text-align: center;
+    .card-text {
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 `
 export const ImgReceta = styled.img`
     padding: 0.25rem;
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
     border-radius: 50%;
     border: 2.5px solid #27A857;
 `
 export const ButtonParaModal = styled.button`
     background-color: none;
+    &:focus {
+        transform:scale(1.15);
+        border-color: #ffc600;
+        box-shadow: 0 0 10px #ffc600;
+    }
+`
+
+export const ModalIngredientes = styled(Modal)`
+    background-color:red;
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0 0 0 / 20%)!important;
+}
+
 `

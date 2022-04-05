@@ -7,9 +7,9 @@ const SliderApp = () => {
 
   const navigate = useNavigate()
 
-  const handleClickSlider = () => {
+  const handleClickBlog = () => {
     console.log('click');
-    navigate('/welcome')
+    navigate('/blog')
   }
 
   return (
@@ -22,9 +22,9 @@ const SliderApp = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>Alimentate mejor con estos productos</h3>
+            <h3>Ir al blog</h3>
             <p>Top 5 Más economicas</p>
-            <ButtonCarousel onClick={handleClickSlider}>click</ButtonCarousel>
+            <ButtonCarousel onClick={() => handleClickBlog()}>click</ButtonCarousel>
           </Carousel.Caption>
         </SliderItem>
         <SliderItem backgroundcolor={colorSegundoBloque}>
@@ -34,7 +34,7 @@ const SliderApp = () => {
             alt="second slide"
           />
           <Carousel.Caption>
-            <h3>Tu calendario para esta semana</h3>
+            <h3>Ir al Blog</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <ButtonCarousel>click</ButtonCarousel>
           </Carousel.Caption>

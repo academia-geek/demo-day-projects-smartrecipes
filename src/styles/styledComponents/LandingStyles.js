@@ -1,22 +1,47 @@
-import { Button, Container } from "react-bootstrap";
+
+import { Button, Col, Container, Row } from "react-bootstrap";
+
 import styled from "styled-components";
 import { VerdeLima } from "./ColoresEstilos";
 
 // Logo
 export const DivLogo = styled.div`
   background-color: #c9e265;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  height: 80%; //ser auto 
+  display: inline;
+  /* flex-direction: column;
+  justify-content: center; */
 `;
 
-export const ImgLogo = styled.img`
-  margin: 0px auto 0px;
-  padding-top: 2.5rem;
+
+// Container Landing Page 
+export const ContainerLanding = styled(Container)`
+  background-color: #C9E265;
+  min-height: 100vh;
+  height: auto;
+`;
+
+export const FirstRow = styled(Row)`
+  background-color: #C9E265;
+  padding-top: 50px;
   @media only screen and (max-width: 600px) {
-    width: 50%;
+    padding-top: 0;
+  }
+`;
+export const ImgLogo = styled.img`
+  display: block;
+  margin: 0px auto 0px;
+  width: 34%;
+  min-width: 479px;
+  max-width: 479px;
+  min-height: 620px;
+  background-color: #c9e265;
+  @media only screen and (max-width: 600px) {
+    width: 40%;
+    min-width: auto;
     height: auto;
+    min-height: 0;
+    padding-top: 0;
   }
 `;
 
@@ -24,17 +49,17 @@ export const ButtonLogo = styled(Button)`
   background-color: #ff5757;
   color: #ffffff;
   border: none;
-  width: 15%;
   min-width: 180px;
-  width: 90%;
+  width: 25%;
   font-size: 20px;
   display: block;
   padding: 0.3rem;
   margin: 2rem auto 0px;
   text-align: center;
   max-width: 350px;
+  border-radius: 20px;
   &:hover {
-    background-color: #008037;
+    background-color: #ed6f6f;
     color: #ffffff;
   }
   &:focus {
@@ -42,7 +67,21 @@ export const ButtonLogo = styled(Button)`
     background-color: #ff5757;
     color: #ffffff;
   }
+  @media only screen and (max-width: 600px) {
+    display: block;
+    padding: 0.3rem;
+    margin: 20px auto;
+  }
 `;
+
+//h4 -- TextLanding
+export const TextLanding = styled.h4`
+  text-align: center;
+  padding-top: 3rem;
+  @media only screen and (max-width: 600px) {
+    padding-top: 20px;
+  }
+`
 
 // Welcome
 export const WelcomeContainer = styled(Container)`

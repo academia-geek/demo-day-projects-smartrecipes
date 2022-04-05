@@ -12,13 +12,14 @@ const ModalReceta = (props) => {
       aria-labelledby="contained-modal-title-vcenter"
       dialogClassName="modal-90w"
       centered
+      className="modalStyle"
     >
-      <Modal.Header closeButton>
+      <Modal.Header closeButton className="modalHeader" style={{backgroundcolor:'red'}}>
         <Modal.Title className="contained-modal-title-center">
          <p>{producto[0].label}</p>
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>
+      <Modal.Body className='modalBody'>
        
         
         <UlStyled >

@@ -39,7 +39,7 @@ const NavBarUbicacion = () => {
       <SplitStyled variant="light" title="Ciudades" id="segmented-button-dropdown-1">
         {ciudades !== undefined && ciudades.map((city, i) => {
           return (
-            <Dropdown.Item href="#action/3.i" key={`item-${i}`} onClick={(e) => handleSelect(e)} >{city.ciudad}</Dropdown.Item>
+            <Dropdown.Item key={`item-${i}`} onClick={(e) => handleSelect(e)} >{city.ciudad}</Dropdown.Item>
           )
         })}
       </SplitStyled>
