@@ -9,13 +9,47 @@ export const DivLogin = styled.div`
   z-index: 2;
 `;
 
+
 export const LoginCol = styled(Col)`
   background-color: pink;
 `;
 
-export const FormLogin = styled(Form)`
 
-  width: 55%;
+export const LoginCol = styled(Col)`
+  background-color: #C9E265;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: center;
+
+`;
+
+//styled of div 
+export const LoginStyled = styled.div`
+  background-color: #ffffff;
+  width: 479px;
+  height: 500px;
+  border-radius: 50px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  .login-text {
+    text-align: center;
+    padding: 2rem 0px;
+  }
+  h4 {
+    text-align: center;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 90%;
+    height: 420px;
+    .login-text {
+      padding: 15px 0px;
+    }
+  }
+`
+
+
+export const FormLogin = styled(Form)`
+  width: 75%;
   display: block;
   margin: 15px Auto;
   font-family: "Roboto";
@@ -33,8 +67,6 @@ export const FormLogin = styled(Form)`
     color: red;
     margin: 0px;
     padding: 0px;
-    
-    
   }
 `;
 
@@ -51,7 +83,7 @@ export const ButtonLogin = styled(Button)`
     text-decoration: none;
   }
   &:hover {
-    background-color: #008037;
+    background-color: #ed6f6f;
     color: #ffffff;
   }
   &:focus {
