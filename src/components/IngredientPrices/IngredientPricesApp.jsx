@@ -15,12 +15,16 @@ import { actionFunctionalCiudades } from '../../redux/action/actionFuntional'
 import { Spinner } from 'react-bootstrap'
 import BarraBusqueda from '../mainApp/top/barraBusqueda/BarraBusqueda'
 import Ubicacion from '../mainApp/top/ubicacion/Ubicacion'
+import { useLocation } from 'react-router-dom'
+import Recetas from '../mainApp/dinamic/Recetas'
 
 
 
 const IngredientPricesApp = () => {
    const {width,breakpoint} = useContext(ResizeContext);
   const [isLoading, setIsLoading] = useState(true);
+  let location = useLocation();
+  let pathName = location.pathname;
   const dispatch = useDispatch();
   const { path } = useSelector((store) => store.funtional);
   const getFromFirebase = async () => {
@@ -111,7 +115,8 @@ const IngredientPricesApp = () => {
                 </ContainerAppTopStyle>
             {/* Render only on condition according to the path */}  
             <ContainerDataMain>
-                <ListaProductos />
+                {pathName === '/ingredientPrices' && <ListaProductos />}``
+                {pathName === '/recetas' && <Recetas />}
                 {/* <Recetas /> */}
               </ContainerDataMain>
                </DivFlex>

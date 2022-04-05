@@ -31,7 +31,8 @@ const SeguimientoPrecios = ({ limit }) => {
     limit = activeProducts.length;
   }
   return (
-    <SeguimientoPreciosStyled>
+    <>
+    {merqueo.length > 0 && <SeguimientoPreciosStyled>
       {activeProducts.map((producto, index) => {
         if (index < limit) {
           return (
@@ -45,12 +46,16 @@ const SeguimientoPrecios = ({ limit }) => {
                 ${producto.data.price} - {producto.data.weight}
               </p>
             </ProductoStyled>
-          );
-        }
-        return "";
-      })}     
+          )
+        }        
+      return null
+      })
+      
+      }     
     </SeguimientoPreciosStyled>
-  );
-};
+
+}</>
+  )
+}
 
 export default SeguimientoPrecios;

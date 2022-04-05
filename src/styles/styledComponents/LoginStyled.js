@@ -10,10 +10,6 @@ export const DivLogin = styled.div`
 `;
 
 
-export const LoginCol = styled(Col)`
-  background-color: pink;
-`;
-
 
 export const LoginCol = styled(Col)`
   background-color: #C9E265;
