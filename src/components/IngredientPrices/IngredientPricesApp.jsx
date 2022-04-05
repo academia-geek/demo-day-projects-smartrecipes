@@ -17,6 +17,7 @@ import BarraBusqueda from '../mainApp/top/barraBusqueda/BarraBusqueda'
 import Ubicacion from '../mainApp/top/ubicacion/Ubicacion'
 import { useLocation } from 'react-router-dom'
 import Recetas from '../mainApp/dinamic/Recetas'
+import SideBarRecetas from '../mainApp/middle/SideBarRecetas'
 
 
 
@@ -120,7 +121,7 @@ const IngredientPricesApp = () => {
                 {/* <Recetas /> */}
               </ContainerDataMain>
                </DivFlex>
-          <SideBar />          
+          {pathName ===  '/recetas' ? <SideBarRecetas /> : <SideBar />}        
         </Split>
       </ContainerAppStyle>
     </>

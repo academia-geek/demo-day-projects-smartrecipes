@@ -18,7 +18,7 @@ const CardReceta = ({ dataServer }) => {
   console.log("Producto estado es vacio ? ", productoEstado === "vacio");
   const handleId = ({ target }) => {
     const label = target.getAttribute("data-label");
-    const productoFiltro = dataServer.filter(
+    const productoFiltro = dataServer.find(
       (producto) => producto.label === label      
     )
     setProducto(productoFiltro);

@@ -33,3 +33,12 @@ export const SideBarProductsStyle = styled.div`
     align-items: center;
   }
 `
+
+export const ContainerIngredientLines = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 400px;
+  overflow-y: scroll;
+  
+`
