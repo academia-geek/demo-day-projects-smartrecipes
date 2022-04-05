@@ -9,10 +9,10 @@ import { FcGoogle } from "react-icons/fc";
 import { ImFacebook2 } from "react-icons/im";
 
 
-const       Login = () => {
+const Login = () => {
 
     const dispatch = useDispatch();
-const navigate = useNavigate()
+    const navigate = useNavigate()
     const [values, handleInputChange] = useForm({
         email: '',
         password: ''
@@ -37,9 +37,7 @@ const navigate = useNavigate()
     }
 
     return (
-     
-       
-        <DivLogin>
+        <div>
             <FormLogin onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Correo</Form.Label>
@@ -80,9 +78,9 @@ const navigate = useNavigate()
                 <Link to="/Calendar" className='registerLogin'>Calendario</Link>
 
             </FormLogin>
+        </div>
 
-        </DivLogin>
-      
+
     )
 }
 
