@@ -14,6 +14,7 @@ export const SliderStyled = styled.div`
 
 export const CarouselStyled = styled(Carousel)`
   border-radius: 5px;
+  padding: 20px;
   .imgCarousel {
     opacity: 0.3;
   }

@@ -8,10 +8,9 @@ export const WelcomeNewStyled = styled.div`
   background-color:${VerdeLima};
   display: flex;
   flex-direction: column;
-  gap:100px;
   .title {
     h1{
-    font-size: 128px;
+    font-size: 5rem;
     font-weight:700;   
     text-align: center;
     margin-top: 20px;
@@ -27,7 +26,7 @@ export const WelcomeNewStyled = styled.div`
     align-items: center;
     padding: 20px;
     p{
-      font-size: 24px;
+      font-size: 2rem;
       margin: 0%;
       font-weight: 700;
       color: white;
@@ -41,7 +40,7 @@ export const WelcomeNewStyled = styled.div`
   .innerTitle{
     text-align: center;
     h3{
-      font-size: 85px;
+      font-size: 3rem;
       font-weight: 700;
       color: ${naranja};
     }
@@ -54,9 +53,8 @@ export const WelcomeNewStyled = styled.div`
     width: 100%;
     align-items: center;
     margin-bottom: 2rem;
-
-    .firstImgContainer{
-      width: 50%;  
+    .imgContainer{
+      width: 25%;  
       left: 0%;
       //Shadow img
       img{
@@ -70,7 +68,7 @@ export const WelcomeNewStyled = styled.div`
       width: 50%;
       height: 100%;
     p{      
-      font-size: 54px;
+      font-size: 2rem;
       font-weight: 700;      
       color: ${naranja};
     }
@@ -85,6 +83,7 @@ export const WelcomeNewStyled = styled.div`
   margin-bottom: 2rem;
   gap: 1rem;
   img{
+    width: 150px;
     border-radius: 25px;
     //hover 
     &:hover{
@@ -114,7 +113,7 @@ export const WelcomeNewStyled = styled.div`
     width: 50%;
     height: 100%;
     p{
-      font-size: 54px;
+      font-size: 2rem;
       font-weight: 700;
       color: ${naranja};
       text-align: center;
@@ -154,7 +153,9 @@ export const WelcomeNewStyled = styled.div`
     }
   }
 }
-
+a{
+  text-decoration: none;
+}
 
 
   `

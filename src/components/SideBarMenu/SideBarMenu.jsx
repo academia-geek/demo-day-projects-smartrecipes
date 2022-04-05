@@ -6,8 +6,10 @@ import NavBarUbicacion from "../NavBar/NavBarUbicacion";
 import { BsGrid, BsHeart, BsCalendarWeek} from "react-icons/bs";
 import { HiOutlineLogout } from "react-icons/hi";
 import { IoSettingsOutline } from "react-icons/io5";
+import { useSelector } from "react-redux";
 
-const SideBarMenu = ({cities}) => {
+const SideBarMenu = () => {
+  const {ciudades} = useSelector(store => store.funtional);
   return (
     <>
     <SideBarStyled>
@@ -17,22 +19,22 @@ const SideBarMenu = ({cities}) => {
           alt="logo"
           />
       </div>
-          <NavBarUbicacion cities={cities}/>
+        <NavBarUbicacion cities={ciudades}/>
       <div className="menu">
         <ul>
           <li>
             <DivCategoryStyle>
-              <Link to="">
+              <Link to="/ingredientPrices">
               <i><BsGrid className="iconSideBar"/></i>
-              <p>Categorias</p>
+              <p>Precio actual de tus ingredientes</p>
               </Link>
             </DivCategoryStyle>
           </li>
           <li>
             <DivCategoryStyle>
-              <Link to="">
+              <Link to="/recetas">
               <i><BsHeart className="iconSideBar"/></i>
-              <p>Recetas Favoritas</p>
+              <p>Recetas</p>
               </Link>
             </DivCategoryStyle>
           </li>
@@ -75,7 +77,7 @@ const SideBarMenu = ({cities}) => {
           <ButtonLogin> Registro </ButtonLogin>
         </Link>
         <Link to='/home'>
-        <button>Home</button>
+        <ButtonLogin type='button'>Home</ButtonLogin>
         </Link>
       </div>
     </SideBarStyled>

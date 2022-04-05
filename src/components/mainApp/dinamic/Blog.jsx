@@ -1,8 +1,9 @@
 import React from 'react'
+import { BlogContainer } from '../../../styles/styledComponents/BlogContainer'
 
 const Blog = () => {
   return (
-    <div>
+    <BlogContainer>
 
     <main className="contenedor seccion contenido-centrado">
         <h1>Blog: Zona Salud</h1>
@@ -69,7 +70,7 @@ const Blog = () => {
 
     </main>
 
-    </div>
+    </BlogContainer>
   )
 }
 

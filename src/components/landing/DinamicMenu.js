@@ -2,15 +2,15 @@ import React from 'react'
 import SideBarMenu from '../SideBarMenu/SideBarMenu';
 import CanvasMenu from './CanvasSideMenu';
 
-const DinamicMenu = ({width, breakpoint, cities}) => {
+const DinamicMenu = ({width, breakpoint}) => {
 
     if (width > breakpoint) {
         return (
-            <SideBarMenu cities={cities} />
+            <SideBarMenu />
         );
     }
     return (
-        <CanvasMenu cities={cities} /> 
+        <CanvasMenu  /> 
     );
 }
 

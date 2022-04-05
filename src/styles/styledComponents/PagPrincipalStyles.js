@@ -21,7 +21,11 @@ export const CalendarioStyled = styled.div`
 export const SeguimientoPreciosStyled = styled.div`
   display: flex;
   flex-direction: row;
-  overflow-x: scroll;
+  height: 750px;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow-y : scroll;
+  /* overflow-x: scroll; */
   max-width: 70vw;
   gap: 20px;
   margin-bottom: 25px;
