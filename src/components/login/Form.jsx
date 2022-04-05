@@ -14,21 +14,21 @@ export const FormRegister = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const handleFileChange = async (e) => {
-    const file = e.target.files[0];  
-    
+    const file = e.target.files[0];
+
     url = await fileUpload(file)
-    .then((res) => {
-        console.log('res' , res);
+      .then((res) => {
+        console.log('res', res);
         return res
       })
       .catch((err) => {
-        console.log('error' , err);
+        console.log('error', err);
       });
-   
-      console.log('url en file change', url)
+
+    console.log('url en file change', url)
   };
-    //ESTE ES INDEFINIDO
-   
+  //ESTE ES INDEFINIDO
+
   ;
   const initialValues = {
     name: "",
@@ -59,8 +59,8 @@ export const FormRegister = () => {
       .oneOf([Yup.ref("password")], "Las contraseñas no coinciden"),
     // validate file Yup
     // handle file change Yup
-   
-    
+
+
   });
 
   return (
@@ -68,10 +68,10 @@ export const FormRegister = () => {
       initialValues={initialValues}
       onSubmit={(values, { setSubmitting }) => {
         console.log('url en file on submit', url)
-        let {photo} = values
+        let { photo } = values
 
         photo = url
-        const values1 = {...values, photo}
+        const values1 = { ...values, photo }
 
         setTimeout(() => {
           alert(JSON.stringify(values1, null, 2));
@@ -144,14 +144,14 @@ export const FormRegister = () => {
           </FormLogin.Group>
           <FormLogin.Group className="mb-3" controlId="formUploadImg">
             <FormLogin.Label>Foto de perfil</FormLogin.Label>
-            <input                    
+            <input
               className={props.errors.photo ? "error" : ""}
-              type="file"             
+              type="file"
               name="photo"
               onChange={handleFileChange}
-              // value is external from Formik 
-           
-              
+            // value is external from Formik 
+
+
             />
 
             <ErrorMessage
@@ -176,66 +176,94 @@ export const FormRegister = () => {
               component="small"
             />
           </FormLogin.Group>
-          <FormLogin.Label>
+          <FormLogin.Label className="checkAsk">
+            ¿Posee Alergias?
             <FormLogin.Check as={Field} type="checkbox" name="alergia" />
-            {`Alergias ${props.values.alergia}`}
+            {/* {`Alergias ${props.values.alergia}`} */}
           </FormLogin.Label>
 
           {props.values.alergia && (
             <FormLogin.Group>
-              <FormLogin.Label>Alergias</FormLogin.Label>
-              <div id="checkbox-group">Checked</div>
-              <div role="group" aria-labelledby="checkbox-group">
-                <FormLogin.Label>Soja</FormLogin.Label>
-                <Field
-                  type="checkbox"
-                  id="alergia1"
-                  name="checked"
-                  value="Soja"
-                />
-                <FormLogin.Label>Pescado</FormLogin.Label>
-                <Field
-                  type="checkbox"
-                  id="alergia2"
-                  name="checked"
-                  value="Pescado"
-                />
-                <FormLogin.Label>Mariscos</FormLogin.Label>
-                <Field
-                  type="checkbox"
-                  id="alergia3"
-                  name="checked"
-                  value="Mariscos"
-                />
-                <FormLogin.Label>Lacteos</FormLogin.Label>
-                <Field
-                  type="checkbox"
-                  id="alergia4"
-                  name="checked"
-                  value="Lacteos"
-                />
-                <FormLogin.Label>Mani</FormLogin.Label>
-                <Field
-                  type="checkbox"
-                  id="alergia5"
-                  name="checked"
-                  value="Mani"
-                />
-                <FormLogin.Label>Apio</FormLogin.Label>
-                <Field
-                  type="checkbox"
-                  id="alergia6"
-                  name="checked"
-                  value="Apio"
-                />
-                <FormLogin.Label>Mostaza</FormLogin.Label>
+              <FormLogin.Label>¿Cuales?</FormLogin.Label>
+              <div id="checkbox-group">Por favor, seleccione sus alérgenos
+                <div role="group" aria-labelledby="checkbox-group">
+                  <FormLogin.Label className="checkAlerg">
+                    Soja
+                    <FormLogin.Check as={Field}
+                      className='checkBox'
+                      type="checkbox"
+                      id="alergia1"
+                      name="checked"
+                      value="Soja"
+                    />
+                  </FormLogin.Label>
 
-                <Field
-                  type="checkbox"
-                  id="alergia7"
-                  name="checked"
-                  value="Mostaza"
-                />
+                  <FormLogin.Label className="checkAlerg">
+                    Pescado
+                    <FormLogin.Check as={Field}
+                      className='checkBox'
+                      type="checkbox"
+                      id="alergia2"
+                      name="checked"
+                      value="Pescado"
+                    />
+                  </FormLogin.Label>
+
+                  <FormLogin.Label className="checkAlerg">
+                    Mariscos
+                    <FormLogin.Check as={Field}
+                      className='checkBox'
+                      type="checkbox"
+                      id="alergia3"
+                      name="checked"
+                      value="Mariscos"
+                    />
+                  </FormLogin.Label>
+
+                  <FormLogin.Label className="checkAlerg">
+                    Lacteos
+                    <FormLogin.Check as={Field}
+                      className='checkBox'
+                      type="checkbox"
+                      id="alergia4"
+                      name="checked"
+                      value="Lacteos"
+                    />
+                  </FormLogin.Label>
+
+                  <FormLogin.Label className="checkAlerg">
+                    Mani
+                    <FormLogin.Check as={Field}
+                      className='checkBox'
+                      type="checkbox"
+                      id="alergia5"
+                      name="checked"
+                      value="Mani"
+                    />
+                  </FormLogin.Label>
+
+                  <FormLogin.Label className="checkAlerg">
+                    Apio
+                    <FormLogin.Check as={Field}
+                      className='checkBox'
+                      type="checkbox"
+                      id="alergia6"
+                      name="checked"
+                      value="Apio"
+                    />
+                  </FormLogin.Label>
+
+                  <FormLogin.Label className="checkAlerg">
+                    Mostaza
+                    <FormLogin.Check as={Field}
+                      className='checkBox'
+                      type="checkbox"
+                      id="alergia7"
+                      name="checked"
+                      value="Mostaza"
+                    />
+                  </FormLogin.Label>
+                </div>
               </div>
             </FormLogin.Group>
           )}

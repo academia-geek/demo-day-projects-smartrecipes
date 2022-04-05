@@ -1,18 +1,21 @@
 import { Button, Col, Form } from "react-bootstrap";
 import styled from "styled-components";
 
+ 
 export const DivLogin = styled.div`
-
   padding-top: 6rem;
   padding-bottom: 5.5rem;
   width: 100%;
   z-index: 2;
-  
-  `;
+`;
+
+export const LoginCol = styled(Col)`
+  background-color: pink;
+`;
 
 export const FormLogin = styled(Form)`
 
-  width: 35%;
+  width: 55%;
   display: block;
   margin: 15px Auto;
   font-family: "Roboto";

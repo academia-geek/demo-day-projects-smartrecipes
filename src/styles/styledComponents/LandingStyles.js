@@ -1,19 +1,26 @@
-import { Button, Container } from "react-bootstrap";
+import { Button, Col, Container } from "react-bootstrap";
 import styled from "styled-components";
 import { VerdeLima } from "./ColoresEstilos";
 
 // Logo
 export const DivLogo = styled.div`
   background-color: #c9e265;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  height: 80%; //ser auto 
+  display: inline;
+  /* flex-direction: column;
+  justify-content: center; */
+`;
+
+export const ImgCol = styled(Col)`
+  background-color: aquamarine;
 `;
 
 export const ImgLogo = styled.img`
+  display: block;
   margin: 0px auto 0px;
   padding-top: 2.5rem;
+  width: 50%;
+  background-color: red;
   @media only screen and (max-width: 600px) {
     width: 50%;
     height: auto;
