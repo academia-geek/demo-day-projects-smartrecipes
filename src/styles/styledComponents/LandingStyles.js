@@ -1,4 +1,6 @@
+
 import { Button, Col, Container, Row } from "react-bootstrap";
+
 import styled from "styled-components";
 import { VerdeLima } from "./ColoresEstilos";
 
@@ -11,8 +13,8 @@ export const DivLogo = styled.div`
   justify-content: center; */
 `;
 
-// Container Landing Page 
 
+// Container Landing Page 
 export const ContainerLanding = styled(Container)`
   background-color: #C9E265;
   min-height: 100vh;
@@ -26,9 +28,6 @@ export const FirstRow = styled(Row)`
     padding-top: 0;
   }
 `;
-
-
-
 export const ImgLogo = styled.img`
   display: block;
   margin: 0px auto 0px;

@@ -12,12 +12,14 @@ import {
   LogoContainer,
   LogoDiv,
   TextLanding,
+
 } from "../../styles/styledComponents/LandingStyles";
 import { LoginCol } from "../../styles/styledComponents/LoginStyled";
 import Login from "../login/Login";
 
 const Logo = () => {
   return (
+
     <ContainerLanding fluid>
       <FirstRow>
         <Col xs={12} md={6} lg={6}>
@@ -34,18 +36,18 @@ const Logo = () => {
       <Row>
         <Col>
           <TextLanding>Ver solo precio de los ingredientes</TextLanding>
+
           <Link to="/welcome" style={{ textDecoration: "none" }}>
             <ButtonLogo>Click</ButtonLogo>
           </Link>
         </Col>
         <Col>
-          <TextLanding>Ver solo recetas</TextLanding>
-          <Link to="/welcome" style={{ textDecoration: "none" }}>
-            <ButtonLogo>Click</ButtonLogo>
-          </Link>
-        </Col>
-      </Row>
+         <TextLanding>Ver solo recetas</TextLanding>
+
+         
+
     </ContainerLanding>
+
   );
 };
 

@@ -37,8 +37,10 @@ const Login = () => {
     }
 
     return (
+
         <LoginStyled>
             <h4 className='login-text'>Inicia Sesión</h4>
+
             <FormLogin onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Correo</Form.Label>
@@ -79,7 +81,9 @@ const Login = () => {
                 <Link to="/register" className='registerLogin'>Registrarse</Link>
 
             </FormLogin>
+
         </LoginStyled>
+
 
 
     )

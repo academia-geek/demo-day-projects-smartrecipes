@@ -9,6 +9,12 @@ export const DivLogin = styled.div`
   z-index: 2;
 `;
 
+
+export const LoginCol = styled(Col)`
+  background-color: pink;
+`;
+
+
 export const LoginCol = styled(Col)`
   background-color: #C9E265;
   display: flex;
@@ -40,6 +46,7 @@ export const LoginStyled = styled.div`
     }
   }
 `
+
 
 export const FormLogin = styled(Form)`
   width: 75%;
