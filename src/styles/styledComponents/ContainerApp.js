@@ -1,18 +1,16 @@
 import styled from "styled-components";
+import { VerdeLima } from "./ColoresEstilos";
 
 export const ContainerAppStyle = styled.div`
-  /* display: flex;
-  flex-direction: row; 
-  width: 100vw;
-  height: 100vh; */
+
   .split {   
-      /* width: 100%; */
+
      display: flex;
     flex-direction: row;
 }
 
 .gutter {
-    background-color: red;
+    background-color:${VerdeLima};
     background-repeat: no-repeat;
     background-position: 50%;
 }

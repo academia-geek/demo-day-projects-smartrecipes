@@ -4,8 +4,7 @@ import { Accordion } from "react-bootstrap";
 import { FiCalendar } from "react-icons/fi";
 
 import {
-  DivInformation,
-  
+  DivInformation,  
   DivWeekly,
   SubTitleCal,
   TitleCalendar,

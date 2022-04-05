@@ -40,10 +40,13 @@ export const ButtonLogin = styled(Button)`
   color: #FFFF;
   border: none;
   width: 50%;
-  font-size: 15px;
   display: block;
   margin: 10px Auto 0px;
-  text-align: center;
+  p{
+    text-align: center;    
+    font-size: 30px;
+    text-decoration: none;
+  }
   &:hover {
     background-color: #008037;
     color: #ffffff;

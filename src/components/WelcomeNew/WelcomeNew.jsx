@@ -48,11 +48,11 @@ const WelcomeNew = () => {
           <img alt='Img'src='https://res.cloudinary.com/davidcharif/image/upload/v1648315820/demoFakeApi/imagenSideBar_brl1vb.png'/>      
         </div>   
         <div className='textContainer'>   
-          <p>Planea tus comidas y compras</p>
+          <p>Disfruta tu experiencia!</p>
         </div>
       </div>
       <Link to='/home'>
-      <ButtonLogin>Continua</ButtonLogin>
+      <ButtonLogin><p>Continua</p></ButtonLogin>
       </Link>
       <img alt="incribite"/>
     </WelcomeNewStyled>
