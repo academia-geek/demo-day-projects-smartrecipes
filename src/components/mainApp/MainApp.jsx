@@ -17,7 +17,6 @@ import SideBar from "./middle/SideBar";
 
 import SliderApp from "./middle/SliderApp";
 import BarraBusqueda from "./top/barraBusqueda/BarraBusqueda";
-import Idioma from "./top/idioma/Idioma";
 import Ubicacion from "./top/ubicacion/Ubicacion";
 import { ContainerDataStyled } from "../../styles/styledComponents/ContainerData";
 import { useLocation } from "react-router-dom";
@@ -27,6 +26,7 @@ import Login from "../login/Login";
 import Register from "../login/Register";
 import { ContainerDataMain } from "../../styles/styledComponents/ContainerDataMain";
 import ListaProductos from "../afterLogin/listaProductos/ListaProductos";
+import Blog from "./dinamic/Blog";
 
 const MainApp = () => {
   let location = useLocation();
@@ -131,7 +131,7 @@ const MainApp = () => {
               <DinamicMenu width={width} breakpoint={breakpoint} />
             )}
 {/* Render only on condition according to the path */}
-            {pathName !== "/register" && 
+            {(pathName !== "/register") && (pathName !== '/blog') && 
             <>
             <ContainerAppTopStyle>
               <BarraBusqueda />
@@ -141,6 +141,7 @@ const MainApp = () => {
             <SliderApp />
             </>
             }
+            {path === '/blog' && <Blog />}
 
             {path !== "" && pathName === "/home" ? (
               <ContainerDataMain>
