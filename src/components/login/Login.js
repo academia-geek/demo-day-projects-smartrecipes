@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
 import { login, loginFacebook, loginGoogle } from '../../redux/action/actionLogin';
-import { ButtonLogin, DivLogin, FormLogin, IconCol } from '../../styles/styledComponents/LoginStyled';
+import { ButtonLogin, DivLogin, FormLogin, IconCol, LoginStyled } from '../../styles/styledComponents/LoginStyled';
 import { FcGoogle } from "react-icons/fc";
 import { ImFacebook2 } from "react-icons/im";
 
@@ -37,7 +37,8 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <LoginStyled>
+            <h4 className='login-text'>Inicia Sesión</h4>
             <FormLogin onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Correo</Form.Label>
@@ -58,10 +59,12 @@ const Login = () => {
                         value={password}
                         onChange={handleInputChange} />
                 </Form.Group>
+                
                 <ButtonLogin variant="primary" type="submit">
                     Ingresar
                 </ButtonLogin>
-
+                <hr/>
+                <h4>Redes sociales</h4>
                 <IconCol>
                     <FcGoogle
                         className='iconLogin'
@@ -74,11 +77,9 @@ const Login = () => {
                 </IconCol>
 
                 <Link to="/register" className='registerLogin'>Registrarse</Link>
-                <br/>
-                <Link to="/Calendar" className='registerLogin'>Calendario</Link>
 
             </FormLogin>
-        </div>
+        </LoginStyled>
 
 
     )
