@@ -52,7 +52,7 @@ const MainApp = () => {
       <ContainerAppStyle>
         <Split
           className="split"
-         sizes={width > breakpoint ? [100] : [15, 100]}
+         sizes={width < breakpoint ? [100] : [15, 85]}
           // maxSize={[200,700,100]}
           gutterSize={10}
         >       

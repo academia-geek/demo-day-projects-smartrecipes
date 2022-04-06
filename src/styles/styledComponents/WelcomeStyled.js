@@ -41,22 +41,28 @@ export const WelcomeNewStyled = styled.div`
       width: 50%;
 
       .textVar1 {
-      background-color: ${naranja};
+      background-color: white;
       cursor: pointer;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-      padding: 20px;
+      
+      padding: 2rem;
       p {
         font-size: 2rem;
-        margin: 0%;
+        
         font-weight: 700;
-        color: white;
-        text-align: center;
+        color: ${naranja};
+        
       }  
       @media (max-width: 1000px) {
         flex-direction: row;
+      }
+      &:hover {
+        background-color: ${naranja};
+        p{
+          color: white;
+        }
       }
     }
     .textVar2 {
@@ -67,11 +73,11 @@ export const WelcomeNewStyled = styled.div`
           font-weight: 700;
           color: ${naranja};
         }
-      }
-      &:hover{
-        background-color: ${naranja};
-        p{
-          color:white;
+        &:hover{
+          background-color: ${naranja};
+          p{
+            color:white;
+          }
         }
       }
     }
