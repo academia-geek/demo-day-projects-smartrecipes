@@ -72,7 +72,7 @@ const MainApp = () => {
               <>
                 <ContainerAppTopStyle>
                   <BarraBusqueda />
-                  <Ubicacion />
+                  {/* <Ubicacion /> */}
                   {/* <Idioma /> */}
                 </ContainerAppTopStyle>
               </>

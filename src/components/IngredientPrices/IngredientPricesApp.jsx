@@ -111,12 +111,12 @@ const IngredientPricesApp = () => {
             )}
              <ContainerAppTopStyle>
                   <BarraBusqueda />
-                  <Ubicacion />
+                  {/* <Ubicacion /> */}
                   {/* <Idioma /> */}
                 </ContainerAppTopStyle>
             {/* Render only on condition according to the path */}  
             <ContainerDataMain>
-                {pathName === '/ingredientPrices' && <ListaProductos />}``
+                {pathName === '/ingredientPrices' && <ListaProductos />}
                 {pathName === '/recetas' && <Recetas />}
                 {/* <Recetas /> */}
               </ContainerDataMain>
