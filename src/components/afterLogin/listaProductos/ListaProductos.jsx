@@ -34,6 +34,7 @@ const ListaProductos = () => {
     }
   };
   let productos = [];
+  const valueStore = true;
   const handleJumbo = () => {
     getFromFirebaseJumbo();
   }
@@ -50,7 +51,7 @@ const ListaProductos = () => {
  
       <div className="containerButton">
         <ButtonPrice onClick={() => handleMerqueo()}></ButtonPrice>
-        <ButtonPrice jumbo onClick={() => handleJumbo()}></ButtonPrice>
+        <ButtonPrice jumbo={valueStore.toString()} onClick={() => handleJumbo()}></ButtonPrice>
       </div>
       <SeguimientoPrecios />
 
