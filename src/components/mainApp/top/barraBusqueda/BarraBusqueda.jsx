@@ -7,8 +7,8 @@ import { resetSearchSync, searchAsync } from "../../../../redux/action/actionAdd
 import { SeachBarStyled } from "../../../../styles/styledComponents/SearchBarStyled";
 const BarraBusqueda = () => {
   const dispatch = useDispatch();
-  const {path} = useSelector((store) => store.funtional);
-  const {activeLook} = useSelector((store) => store.add);
+  const { path } = useSelector((store) => store.funtional);
+  const { activeLook } = useSelector((store) => store.add);
   const formatSearch = (searchBar) => {
     return searchBar
       .toLowerCase()
@@ -24,31 +24,28 @@ const BarraBusqueda = () => {
       searchBar: Yup.string(),
     }),
     onSubmit: ({ searchBar }) => {
-      if(searchBar !== ""){
-      dispatch(searchAsync(formatSearch(searchBar), path, activeLook));
+      if (searchBar !== "") {
+        dispatch(searchAsync(formatSearch(searchBar), path, activeLook));
       }
       dispatch(resetSearchSync());
     }
   });
   return (
-    <SeachBarStyled>
-      <div className="text">
-        <p>Selecciona Categoria</p>
-      </div>
-      <form onSubmit={formik.handleSubmit}>
-        <label className="searchBar" htmlFor="searchBar">
-          <input
-            type="text"
-            name="searchBar"
-            onChange={formik.handleChange}
-            placeholder="Busca verduras o recetas"/>
-        </label>
-        <button type="submit" className="button">
-          <img
-            src="https://res.cloudinary.com/davidcharif/image/upload/v1647251188/sprint3-proyecto/search_rxhhm2.png"
-            alt="magnifyng Glass"
-          />
-        </button>
+    <SeachBarStyled fluid>
+      <form onSubmit={formik.handleSubmit} className="searcForm">
+          <label className="searchBar" htmlFor="searchBar">
+            <input
+              type="text"
+              name="searchBar"
+              onChange={formik.handleChange}
+              placeholder="Busca verduras o recetas" />
+          </label>
+          <button type="submit" className="button">
+            <img
+              src="https://res.cloudinary.com/davidcharif/image/upload/v1647251188/sprint3-proyecto/search_rxhhm2.png"
+              alt="magnifyng Glass"
+            />
+          </button>
       </form>
     </SeachBarStyled>
   );
