@@ -25,7 +25,6 @@ export const ContainerMainProductos = styled.div`
 
 export const ButtonPrice = styled(Button)`
   background-color:  #ffffff;
-  border: none;
   width: 40%;
   height: 65px;
   max-width: 250px;
@@ -33,8 +32,10 @@ export const ButtonPrice = styled(Button)`
     : "url('https://res.cloudinary.com/david-b/image/upload/c_scale,w_150/v1649214238/AG/demoday/Merqueo-PW_1_lntogc_rprjdy.png')"};
   background-repeat: no-repeat;
   background-position: center;
-  border: 2.5px solid #C9E265;
+  border: ${props => props.jumbo ? "2.5px solid #4DB852"
+    : "2.5px solid #D0006F"};
   border-radius: 50px;
+  margin: 10px 0px 12px;
   p{
     text-align: center;    
     font-size: 30px;
