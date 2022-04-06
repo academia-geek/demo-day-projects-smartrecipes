@@ -1,6 +1,7 @@
 export const types = {
     login: 'login',
     logout: 'logout',
+    addUserData: 'addUserData',
     register: 'register',
     registerUser: 'registerUser',
 }

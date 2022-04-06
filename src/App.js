@@ -10,7 +10,7 @@ import { ResizeContext } from "./context/ResizeContext";
 
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
-  const breakpoint = 600;
+  const breakpoint = 850;
   
   useEffect(() => {
     const handleResizeWindow = () => setWidth(window.innerWidth);

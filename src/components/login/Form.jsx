@@ -73,10 +73,9 @@ export const FormRegister = () => {
         photo = url
         const values1 = { ...values, photo }
 
-        setTimeout(() => {
-          
+        setTimeout(() => {          
           dispatch(registroEmailPasswordNombre(values1))
-          navigate('/home')
+          navigate('/')
           setSubmitting(false);
         }, 400);
       }}
