@@ -26,7 +26,7 @@ const SideBarMenu = () => {
             <DivCategoryStyle>
               <Link to="/ingredientPrices">
               <i><BsGrid className="iconSideBar"/></i>
-              <p>Precio actual de tus ingredientes</p>
+              <p>Precio ingredientes</p>
               </Link>
             </DivCategoryStyle>
           </li>
@@ -60,6 +60,10 @@ const SideBarMenu = () => {
               <i><HiOutlineLogout className="iconSideBar"/></i>
               <p>Logout</p>
               </Link>
+              <Link to="/blog">
+              <i><HiOutlineLogout className="iconSideBar"/></i>
+              <p>Blog</p>
+              </Link>
             </DivCategoryStyle>
           </li>
         </ul>
@@ -70,10 +74,10 @@ const SideBarMenu = () => {
           alt="girl juggling fruits"
           className="secondImg"
         />
-        <Link to="/login" style={{ textDecoration: "none" }}>
+        <Link to="/" style={{ textDecoration: "none" }}>
           <ButtonLogin> Login </ButtonLogin>
         </Link>
-        <Link to="/register" style={{ textDecoration: "none" }}>
+        <Link to="/" style={{ textDecoration: "none" }}>
           <ButtonLogin> Registro </ButtonLogin>
         </Link>
         <Link to='/home'>

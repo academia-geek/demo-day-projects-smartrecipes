@@ -9,7 +9,7 @@ import { FcGoogle } from "react-icons/fc";
 import { ImFacebook2 } from "react-icons/im";
 
 
-const Login = () => {
+const Login = ({setLogin}) => {
 
     const dispatch = useDispatch();
     const navigate = useNavigate()
@@ -23,7 +23,7 @@ const Login = () => {
     const handleLogin = (e) => {
         e.preventDefault();
         dispatch(login(email, password))
-        navigate('/home')
+        
     }
 
     const handleGoogle = () => {
@@ -34,6 +34,10 @@ const Login = () => {
     const handleFacebook = () => {
         dispatch(loginFacebook());
         navigate('/home')
+    }
+
+    const handleRegister = () => {
+        setLogin(false)
     }
 
     return (
@@ -78,7 +82,7 @@ const Login = () => {
                     />
                 </IconCol>
 
-                <Link to="/register" className='registerLogin'>Registrarse</Link>
+                <button onClick={()=> handleRegister()} className='registerLogin'>Registrarse</button>
 
             </FormLogin>
 

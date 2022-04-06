@@ -14,14 +14,19 @@ import {
 
 import { registerUserSync } from "./actionRegister";
 import { types } from "../types/types";
+import { useNavigate } from "react-router-dom";
 
 export const login = (email, password) => {
+
+  // const navigate = useNavigate()
   return (dispatch) => {
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password)
       .then(({ user }) => {
         dispatch(loginSincrono(user.uid, user.displayName));
+        console.log(user)
         console.log("Bienvenid@");
+        // navigate('/home')
       })
       .catch((e) => {
         console.log("El usuario no existe");

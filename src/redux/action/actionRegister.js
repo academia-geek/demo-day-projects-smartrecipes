@@ -11,14 +11,12 @@ import { types } from "../types/types";
 
 
 export const registroEmailPasswordNombre = (values) => {
-  const {name, email, repeatPassword , photo, alergia, checked   } = values
-  
+  const {name, email, repeatPassword , photo, alergia, checked   } = values  
   return (dispatch) => {
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, repeatPassword)
       .then(async ({ user }) => {
         await updateProfile(auth.currentUser, { displayName: name });
-
         dispatch(registerSincrono(user.email, user.uid, user.displayName)
         
         );
@@ -33,9 +31,10 @@ export const registroEmailPasswordNombre = (values) => {
         };
         addDoc(collection(db, "usuarios"), newUser)
           .then((resp) => {
-            dispatch(
-              registerUserSync(user.displayName, user.email, user.uid, photo)
-            );
+            console.log("Agregado");
+            // dispatch(
+            //   registerUserSync(user.displayName, user.email, user.uid, photo)
+            // );
           })
           .catch((error) => {
             console.log(error);
@@ -82,6 +81,6 @@ export const registerSincrono = (email, password, name) => {
 export const registerUserSync = (nombre, email, uid, photo) => {
   return {
     type: types.registerUser,
-    payload: { nombre, email, uid, photo }
+    payload: {  }
   };
 };

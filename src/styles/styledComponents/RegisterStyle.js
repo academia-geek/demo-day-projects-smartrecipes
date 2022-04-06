@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { VerdeLima } from "./ColoresEstilos";
 
 export const DivRegister = styled.div`
-    background-color: beige;
-    height: 100vh;
+    background-color: ${VerdeLima};
+
     .form-check-input {
         display: inline-block;
     }

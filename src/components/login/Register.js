@@ -8,10 +8,14 @@ import { DivRegister } from "../../styles/styledComponents/RegisterStyle";
 //import { useDispatch } from 'react-redux';
 //import { register } from '../../redux/action/actionRegister';
 
-const Register = () => {
+const Register = ({setLogin}) => {
+  const handleLogin = () => {
+    setLogin(true)
+  }
   return (
   <DivRegister >
-    <FormRegister />
+    <button type="button" onClick={()=>handleLogin()}>Login</button>
+    <FormRegister setLogin={setLogin} />
   </DivRegister>); 
 };
 

@@ -11,7 +11,7 @@ const Blog = () => {
 
                 <ImagenBlog alt='' src='https://res.cloudinary.com/sarapalacio01/image/upload/v1649189389/DemoDay/platano-reposteria-recetas_para_horno_425218574_133273192_1706x960_o5m8xf.jpg' />
             <>
-                <AnchorBlog href="entrada.html" class="texto-blog">
+                <AnchorBlog href="entrada.html" className="texto-blog">
                     <h4>Cocina zero-waste: Aprende 3 recetas deliciosas con cáscara de plátano</h4>
                 </AnchorBlog>
                     <p>Escrito el: <span>20/03/2022</span> por: <span>Admin</span> </p>
