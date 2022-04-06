@@ -92,8 +92,8 @@ const IngredientPricesApp = () => {
       <ContainerAppStyle>
         <Split
           className="split"
-          sizes={[15, 70, 15]}
-          minSize={[200, 700, 350]}
+          sizes={width > breakpoint ? [15, 70, 15] : [75,15]}
+          minSize={width > breakpoint ? [200, 700, 350] : [750,350]}
           // maxSize={[200,700,100]}
           gutterSize={10}
         >
@@ -111,12 +111,12 @@ const IngredientPricesApp = () => {
             )}
              <ContainerAppTopStyle>
                   <BarraBusqueda />
-                  <Ubicacion />
+                  {/* <Ubicacion /> */}
                   {/* <Idioma /> */}
                 </ContainerAppTopStyle>
             {/* Render only on condition according to the path */}  
             <ContainerDataMain>
-                {pathName === '/ingredientPrices' && <ListaProductos />}``
+                {pathName === '/ingredientPrices' && <ListaProductos />}
                 {pathName === '/recetas' && <Recetas />}
                 {/* <Recetas /> */}
               </ContainerDataMain>

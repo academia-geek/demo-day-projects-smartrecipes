@@ -10,9 +10,9 @@ import NavBarUbicacion from "../components/NavBar/NavBarUbicacion";
 import RecetaIndChef from "../components/Recipes/RecetaIndChef";
 import RecetasRecomendadas from "../components/Recipes/RecetasRecomendadas";
 import ZonaSocialRecetas from "../components/Recipes/RecetaZonaSocial";
-import CalendarContainer from "../components/calendar/CalendarContainer";
 import MainApp from "../components/mainApp/MainApp";
 import IngredientPricesApp from "../components/IngredientPrices/IngredientPricesApp";
+import { ProtectedRoutes } from "./ProtectedRoutes";
 
 const AppRouter = () => {
   return (
@@ -31,10 +31,13 @@ const AppRouter = () => {
           <Route path="/recetascompletas" element={<RecetasRecomendadas />} />
           <Route path="/recetaindchef" element={<RecetaIndChef />} />
           <Route path="/navbarubicacion" element={<NavBarUbicacion />} />
-          <Route path="/home" element={<MainApp />} />
-          <Route path="/productos" element={<ListaProductos />} />
-          <Route path="/calendario" element={<MainApp />} />
+          <Route element={<ProtectedRoutes/>}>
+            <Route path="/home" element={<MainApp />} />
+            <Route path="/calendario" element={<MainApp />} />
           <Route path="/config" element={<MainApp />} />
+          </Route>
+          <Route path="/productos" element={<ListaProductos />} />
+          
         </Routes>
       </BrowserRouter>
     </>

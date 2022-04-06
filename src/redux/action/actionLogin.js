@@ -5,47 +5,30 @@ import {
 } from "firebase/auth";
 import { facebook, google, db } from "../../firebase/firebaseConfig";
 
-
 import {
   addDoc,
   collection,
- 
+
 } from "@firebase/firestore";
 
 import { registerUserSync } from "./actionRegister";
 import { types } from "../types/types";
 
+
 export const login = (email, password) => {
+  // const navigate = useNavigate()
   return (dispatch) => {
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password)
-      .then(({ user }) => {
-        dispatch(loginSincrono(user.uid, user.displayName));
-        console.log("Bienvenid@");
+      .then(({ user }) => {        
+        dispatch(loginSincrono(user.uid))
+        console.log("Bienvenid@")       
       })
       .catch((e) => {
         console.log("El usuario no existe");
       });
   };
 };
-// export const logoutAsincrono = () =>{
-//
-//     return (dispatch) =>{
-//
-//        const auth = getAuth();
-//
-//         signInWithEmailAndPassword(auth,email,password)
-//        .then(({user}) =>{
-//              dispatch(
-//                 loginSincrono(user.uid,user.displayName)
-//              )
-//              console.log('Bienvenid@');
-//        })
-//        .catch(e =>{
-//             console.log('El usuario no existe');
-//        })
-//     }
-// }
 
 export const loginGoogle = () => {
   return (dispatch) => {
@@ -107,14 +90,12 @@ export const loginFacebook = () => {
   };
 };
 
-export const loginSincrono = (displayName, email, uid, photoURL) => {
+export const loginSincrono = ( uid) => {
+  console.log('entrando a login sincrono')
   return {
     type: types.login,
     payload: {
-      displayName,
-      email,
-      uid,
-      photoURL,
+      uid
     },
   };
 };
@@ -124,4 +105,16 @@ export const logoutSincrono = () => {
     type: types.logout,
   };
 };
+export const actionAddUserData = (userData)=>{
+  return{
+    type: types.addUserData,
+    payload: userData
+  }
+}
 
+export const addFavorite = (favorite) => {
+  return{
+    type: types.addFavorites,
+    payload: favorite
+  }
+}

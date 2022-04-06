@@ -1,18 +1,19 @@
 import { Button, Carousel, CarouselItem } from "react-bootstrap";
 import styled from "styled-components";
+import { VerdeLima } from "./ColoresEstilos";
 
 export const colorPrimerBloque = "#1AA928";
 export const colorSegundoBloque = "#643A71";
 export const colorTercerBloque = "#FF5757";
 
-export const SliderStyled = styled.div`
-  
+export const SliderStyled = styled.div`  
   background-color: green;
   border-radius: 24px;
   border: 1px solid red;
 `;
 
 export const CarouselStyled = styled(Carousel)`
+background-color: white;
   border-radius: 5px;
   padding: 20px;
   .imgCarousel {

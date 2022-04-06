@@ -3,7 +3,7 @@ import {
   createUserWithEmailAndPassword,
   updateProfile,
 } from "@firebase/auth";
-import { addDoc, collection } from "firebase/firestore";
+import { setDoc, collection, doc } from "firebase/firestore";
 import { db } from "../../firebase/firebaseConfig";
 import { types } from "../types/types";
 
@@ -11,18 +11,13 @@ import { types } from "../types/types";
 
 
 export const registroEmailPasswordNombre = (values) => {
-  const {name, email, repeatPassword , photo, alergia, checked   } = values
-  
+  const {name, email, repeatPassword , photo, alergia, checked   } = values  
   return (dispatch) => {
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, repeatPassword)
       .then(async ({ user }) => {
-        await updateProfile(auth.currentUser, { displayName: name });
-
-        dispatch(registerSincrono(user.email, user.uid, user.displayName)
+        await updateProfile(auth.currentUser, { displayName: name })      
         
-        );
-        // dispatch(registerUserAsync(name,email,user.uid,img))
         const newUser = {
           name: user.displayName,
           email: user.email,
@@ -31,14 +26,12 @@ export const registroEmailPasswordNombre = (values) => {
           alergia,
           checked
         };
-        addDoc(collection(db, "usuarios"), newUser)
+        setDoc(doc(db, "usuarios", user.uid),{...newUser})
           .then((resp) => {
-            dispatch(
-              registerUserSync(user.displayName, user.email, user.uid, photo)
-            );
+            console.log("Agregado");   
           })
           .catch((error) => {
-            console.log(error);
+            console.log('error', error);
           });
       })
       .catch((e) => {
@@ -82,6 +75,6 @@ export const registerSincrono = (email, password, name) => {
 export const registerUserSync = (nombre, email, uid, photo) => {
   return {
     type: types.registerUser,
-    payload: { nombre, email, uid, photo }
+    payload: {  }
   };
 };
