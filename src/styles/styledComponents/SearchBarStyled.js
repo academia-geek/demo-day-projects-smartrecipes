@@ -4,31 +4,36 @@ import { VerdeLima } from "./ColoresEstilos";
 export const SeachBarStyled = styled.div`
 
   display: flex;
+  justify-content: center;
   flex-direction: row; 
-  height: 50px;
+  height: 40px;
   width: 100%;  
   background-color: white;
   border-radius: 10px;  
   form{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
+  display: contents;
+  width: 80%;
   height: 100%;
-  align-items: center;
   label{
-    width: 100%;
+    width: auto;
     input{
       padding: 0px 10px;
-      height: 50px;
-      width:90%;
-      border-radius: 10px;
+      height: 40px;
+      width:480px;
+      min-width: 420px;
+      border-radius: 0px;
+      border-top-left-radius : 6px;
+      border-bottom-left-radius: 6px;
+      border: 2.5px solid #C9E265;
     }
-    }
+  }
 
   }
   .button{
     height: 100%;
-    background-color: #F0AD64;
+    background-color: #C9E265;
     border: 0px;
+    border-top-right-radius : 6px;
+    border-bottom-right-radius: 6px;
   }
 `
