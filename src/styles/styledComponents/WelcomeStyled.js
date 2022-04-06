@@ -3,7 +3,7 @@ import { naranja, VerdeLima } from "./ColoresEstilos";
 
 export const WelcomeNewStyled = styled.div`
   padding: 30px;
-  height: 1000px;
+  height: 900px;
   overflow-y: scroll;
   width: 100%;
   background-color: white;
@@ -15,7 +15,7 @@ export const WelcomeNewStyled = styled.div`
     flex-direction: row;
     align-items: center;
   justify-content: flex-start;
-  margin-bottom: 100px;
+
     h1 {
       width: 50%;
       font-size: 3rem;
@@ -35,7 +35,8 @@ export const WelcomeNewStyled = styled.div`
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
+
    
     .left{
       width: 50%;
@@ -54,7 +55,11 @@ export const WelcomeNewStyled = styled.div`
         font-weight: 700;
         color: ${naranja};
         
-      }  
+      }
+      .containerAlergies {
+        line-height: 25px;
+      }
+     
       @media (max-width: 1000px) {
         flex-direction: row;
       }
@@ -85,7 +90,7 @@ export const WelcomeNewStyled = styled.div`
   .image{
     width: 50%;
     img{
-      width: max-content;
+      width: fit-content;
     }
   }
   

@@ -14,7 +14,7 @@ export const SideBarStyled = styled.div`
   top: 0px;
   .logo img {
     padding-top: 0.2rem;
-    width: 100px;
+    width: 200px;
   }
   .menu {
     width: 100%;

@@ -2,6 +2,7 @@ export const types = {
     login: 'login',
     logout: 'logout',
     addUserData: 'addUserData',
+    addFavorites: 'addFavorites',
     register: 'register',
     registerUser: 'registerUser',
 }

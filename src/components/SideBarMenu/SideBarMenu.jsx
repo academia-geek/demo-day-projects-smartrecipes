@@ -10,16 +10,18 @@ import { useSelector } from "react-redux";
 
 const SideBarMenu = () => {
   const {ciudades} = useSelector(store => store.funtional);
+  const {isAuth} = useSelector(store => store.login);
+  const pathName = window.location.pathname;
   return (
     <>
     <SideBarStyled>
       <div className="logo">
         <img
-          src="https://res.cloudinary.com/davidcharif/image/upload/v1648916285/demoFakeApi/logoHQ_th0u6x.png"
+          src="https://res.cloudinary.com/davidcharif/image/upload/v1649250792/demoFakeApi/SMART_rECIPES_ldf9wl.svg"
           alt="logo"
           />
       </div>
-        <NavBarUbicacion cities={ciudades}/>
+        {pathName === '/ingredientPrices' && <NavBarUbicacion cities={ciudades}/>}
       <div className="menu">
         <ul>
           <li>
@@ -74,14 +76,19 @@ const SideBarMenu = () => {
           alt="girl juggling fruits"
           className="secondImg"
         />
-        <Link to="/" style={{ textDecoration: "none" }}>
+
+        {!isAuth && 
+          <>
+          <Link to="/" style={{ textDecoration: "none" }}>
           <ButtonLogin> Login </ButtonLogin>
         </Link>
         <Link to="/" style={{ textDecoration: "none" }}>
           <ButtonLogin> Registro </ButtonLogin>
         </Link>
+        </>
+        }
         <Link to='/home'>
-        <ButtonLogin type='button'>Home</ButtonLogin>
+        <ButtonLogin type='button' style={{textDecoration: "none"}}>Home</ButtonLogin>
         </Link>
       </div>
     </SideBarStyled>

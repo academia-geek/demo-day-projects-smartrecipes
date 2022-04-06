@@ -17,7 +17,7 @@ export const TitleRecetas = styled.h1`
     text-align: center;
     margin-bottom: 15px;
     margin-top: 15px;
-    font-size: 10px;
+    font-size: 25px;
     background-color: #F19C79;
     text-shadow: white 0 -1px;
 `

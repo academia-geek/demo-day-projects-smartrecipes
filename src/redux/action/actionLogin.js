@@ -111,3 +111,10 @@ export const actionAddUserData = (userData)=>{
     payload: userData
   }
 }
+
+export const addFavorite = (favorite) => {
+  return{
+    type: types.addFavorites,
+    payload: favorite
+  }
+}

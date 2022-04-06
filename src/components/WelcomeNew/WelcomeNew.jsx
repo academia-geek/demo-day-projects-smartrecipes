@@ -1,9 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { WelcomeNewStyled } from "../../styles/styledComponents/WelcomeStyled";
 
 const WelcomeNew = () => {
-  const { userData } = useSelector((store) => store.login);
+  const { userData, favorites } = useSelector((store) => store.login);
+
   return (
     <WelcomeNewStyled>
       <div className="title">
@@ -12,13 +14,39 @@ const WelcomeNew = () => {
       </div>
       <div className="block1">
         <div className='left'>
+          <Link to='/recetas'>
         <div className="textVar1">
-          <p>No tienes recetas favoritas, ¿qué tal si agregas unas?</p>
+          {favorites.length <= 0 ? <p>No tienes recetas favoritas, ¿qué tal si agregas unas?</p> : 
+          <>
+          <p>Estas son tus recetas favoritas</p>
+          <div>
+            {favorites.map((item, index) => (
+              <div key={index}>
+                <img src={item.image} style={{width: '200px'}} alt="" /> 
+                <p>{item.label}</p>
+              </div>
+            ))}
+          </div>
+          </>
+          }
         </div>
+        
+        </Link>
+      
         <div className="textVar2">
           <p>
             Deseamos conocerte más, ¿quieres agregar productos que no sean de tu
             agrado?
+          </p>
+        </div>
+        <div className="textVar1">
+          <p>
+            Alergias : 
+              <div className="containerAlergies">
+            {userData.alergia ? userData.checked.map((item, index) => {
+              return <p key={index}>{item}</p> 
+            }) : "No hay alergias"}
+            </div>
           </p>
         </div>
         </div>

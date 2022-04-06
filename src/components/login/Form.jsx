@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 let url = ''
 
-export const FormRegister = () => {
+export const FormRegister = ({setLogin}) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const handleFileChange = async (e) => {
@@ -75,7 +75,8 @@ export const FormRegister = () => {
 
         setTimeout(() => {          
           dispatch(registroEmailPasswordNombre(values1))
-          navigate('/')
+          alert('Tu usuario fue creado con éxito')
+          setLogin(true)
           setSubmitting(false);
         }, 400);
       }}
