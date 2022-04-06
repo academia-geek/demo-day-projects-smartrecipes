@@ -5,24 +5,27 @@ import { actionFunctionalCloseSide } from '../../../redux/action/actionFuntional
 import { ContainerIngredientLines, SideBarProductsStyle } from '../../../styles/styledComponents/SideBar';
 import { BiTimer } from "react-icons/bi";
 import { BsFillPersonFill } from "react-icons/bs"
+import { addFavorite } from '../../../redux/action/actionLogin';
 const SideBarRecetas = () => {
   const {
     currentWatchableRecipe,
   } = useSelector((store) => store.funtional);
   const data = currentWatchableRecipe;
-  console.log('data', data)
   const isUndefined = Object.keys(currentWatchableRecipe).length === 0;
-  console.log('isUndefined', isUndefined)
+  const {isAuth} = useSelector((store) => store.login)
   const dispatch = useDispatch();
   const handleClose = () => {
-    console.log("close");
     dispatch(actionFunctionalCloseSide());
   };
+  const handleFav = () => {
+    dispatch(addFavorite(data))
+    alert('Que bueno que te gusta esta receta')
+  }
   return (
     <>
       {!isUndefined ? (
         <SideBarProductsStyle>
-          <button onClick={() => handleClose()}>Delete product</button>
+          <button onClick={() => handleClose()}>Vaciar barra</button>
           <div className="container-img">
             <h3>{data.label}</h3>
             <div>
@@ -48,7 +51,9 @@ const SideBarRecetas = () => {
             <p>{each}</p>
           )
         })}
+
       </DropdownButton>  
+        {isAuth && <button className='btn btn-secondary' onClick={() => handleFav()}> Agregar a favoritos</button>}
     
            
           </div>

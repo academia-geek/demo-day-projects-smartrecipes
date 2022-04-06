@@ -2,7 +2,8 @@ import { types } from "../types/types";
 const initialState = {
     isAuth: false,
     userId: null,
-    userData: {} 
+    userData: {},
+    favorites: [], 
 }
 
 export const loginReducer = (state = initialState, action) => {
@@ -32,7 +33,13 @@ export const loginReducer = (state = initialState, action) => {
             return {
                 ...state,
                 userData: action.payload
-            }          
+            } 
+        case types.addFavorites:
+            return{
+                ...state,
+                favorites: [...state.favorites, action.payload]
+               
+            }         
         default:
             return state;
     }

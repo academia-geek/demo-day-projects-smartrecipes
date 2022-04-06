@@ -10,7 +10,6 @@ import NavBarUbicacion from "../components/NavBar/NavBarUbicacion";
 import RecetaIndChef from "../components/Recipes/RecetaIndChef";
 import RecetasRecomendadas from "../components/Recipes/RecetasRecomendadas";
 import ZonaSocialRecetas from "../components/Recipes/RecetaZonaSocial";
-import CalendarContainer from "../components/calendar/CalendarContainer";
 import MainApp from "../components/mainApp/MainApp";
 import IngredientPricesApp from "../components/IngredientPrices/IngredientPricesApp";
 import { ProtectedRoutes } from "./ProtectedRoutes";

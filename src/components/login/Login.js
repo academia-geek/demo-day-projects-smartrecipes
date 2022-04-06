@@ -23,9 +23,10 @@ const Login = ({setLogin}) => {
     const handleLogin = (e) => {
         e.preventDefault();
         dispatch(login(email, password))          
-        navigate('/home')      
+        setTimeout(()=> {
 
-        
+            navigate('/home')              
+        },500)
     }
 
     const handleGoogle = () => {
