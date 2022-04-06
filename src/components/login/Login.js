@@ -22,18 +22,20 @@ const Login = ({setLogin}) => {
 
     const handleLogin = (e) => {
         e.preventDefault();
-        dispatch(login(email, password))
+        dispatch(login(email, password))          
+        navigate('/home')      
+
         
     }
 
     const handleGoogle = () => {
-        dispatch(loginGoogle());
-        navigate('/home')
+        dispatch(loginGoogle())
+                
     }
 
     const handleFacebook = () => {
-        dispatch(loginFacebook());
-        navigate('/home')
+        dispatch(loginFacebook())
+       
     }
 
     const handleRegister = () => {

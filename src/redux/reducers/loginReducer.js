@@ -1,22 +1,17 @@
 import { types } from "../types/types";
 const initialState = {
     isAuth: false,
-    user: {
-        displayName: "",
-        email: "",
-        photoUrl: "",
-        uid: "",
-        alergia:[],
-        checked:'',
-    },
+    userId: null,
+    userData: {} 
 }
 
 export const loginReducer = (state = initialState, action) => {
     switch (action.type) {
         case types.login:
             return {
+                ...state,
                 isAuth: true,
-                user: action.payload,
+                userId: action.payload,
             };
         case types.logout:
             return {
@@ -32,6 +27,11 @@ export const loginReducer = (state = initialState, action) => {
             return {
                 isAuth: false,
                 user: {},
+            }
+        case types.addUserData:
+            return {
+                ...state,
+                userData: action.payload
             }          
         default:
             return state;
