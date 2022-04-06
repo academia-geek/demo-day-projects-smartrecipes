@@ -31,10 +31,9 @@ export const FirstRow = styled(Row)`
 export const ImgLogo = styled.img`
   display: block;
   margin: 0px auto 0px;
-  width: 34%;
-  min-width: 479px;
-  max-width: 479px;
-  min-height: 620px;
+  
+ 
+  height: 700px;
   background-color: #c9e265;
   @media only screen and (max-width: 600px) {
     width: 40%;

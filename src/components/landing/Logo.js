@@ -22,7 +22,7 @@ const Logo = () => {
           <ImgLogo
             alt="logo"
             loading="lazy"
-            src="https://res.cloudinary.com/david-b/image/upload/v1649123221/AG/demoday/smartr_rwk08x.svg"
+            src="https://res.cloudinary.com/davidcharif/image/upload/v1649204946/demoFakeApi/SMART_rECIPES_sjhwff.png"
           />
         </Col>
         <LoginCol xs={12} md={6} lg={6}>

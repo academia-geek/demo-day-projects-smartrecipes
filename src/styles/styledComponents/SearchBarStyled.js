@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import { VerdeLima } from "./ColoresEstilos";
 
 export const SeachBarStyled = styled.div`
+
   display: flex;
   flex-direction: row; 
   height: 50px;

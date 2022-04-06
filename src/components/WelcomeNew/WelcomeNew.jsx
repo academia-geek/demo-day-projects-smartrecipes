@@ -51,10 +51,8 @@ const WelcomeNew = () => {
           <p>Disfruta tu experiencia!</p>
         </div>
       </div>
-      <Link to='/home'>
-      <ButtonLogin><p>Continua</p></ButtonLogin>
-      </Link>
-      <img alt="incribite"/>
+   
+     
     </WelcomeNewStyled>
   )
 }

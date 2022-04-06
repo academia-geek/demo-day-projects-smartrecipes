@@ -3,9 +3,10 @@ import styled from 'styled-components';
 import { naranja, VerdeLima } from './ColoresEstilos';
 
 export const WelcomeNewStyled = styled.div`
-  height: 100%;
+  height: 700px;
+  overflow-y: scroll;
   width: 100%;
-  background-color:${VerdeLima};
+  background-color:white;
   display: flex;
   flex-direction: column;
   .title {

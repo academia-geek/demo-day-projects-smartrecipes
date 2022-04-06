@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const BlogContainer = styled.div`
     border: 1px solid blue;
+    height: 1000px;
     width: 100%;
     padding: 10px;
     margin: 0px;

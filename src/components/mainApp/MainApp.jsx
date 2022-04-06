@@ -27,6 +27,7 @@ import ListaProductos from "../afterLogin/listaProductos/ListaProductos";
 import Blog from "./dinamic/Blog";
 import Configuracion from "../afterLogin/Configuracion/Configuracion";
 import { ResizeContext } from "../../context/ResizeContext";
+import WelcomeNew from "../WelcomeNew/WelcomeNew";
 
 
 const MainApp = () => {
@@ -40,7 +41,7 @@ const MainApp = () => {
       <ContainerAppStyle>
         <Split
           className="split"
-         
+         sizes={[25,75]}
           // maxSize={[200,700,100]}
           gutterSize={10}
         >       
@@ -65,8 +66,13 @@ const MainApp = () => {
                 </ContainerAppTopStyle>
               </>
             )}
-
-            {pathName === "/home" && <SliderApp />}          
+            
+            {pathName === "/home" &&( 
+            <>
+            <SliderApp />
+            <WelcomeNew/>
+            </>
+            )}          
             {pathName === "/login" && <Login />}
             {pathName === "/blog" && <Blog />}
             {pathName === "/register" && <Register />}
