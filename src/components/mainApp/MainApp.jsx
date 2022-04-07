@@ -71,7 +71,7 @@ const MainApp = () => {
             {pathName === "/home" && (
               <>
                 <ContainerAppTopStyle>
-                  <BarraBusqueda />
+                  {/* <BarraBusqueda /> */}
                   {/* <Ubicacion /> */}
                   {/* <Idioma /> */}
                 </ContainerAppTopStyle>

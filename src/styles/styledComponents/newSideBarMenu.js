@@ -50,7 +50,7 @@ export const SideBarStyled = styled.div`
 export const SplitStyled = styled(SplitButton)`
   
   .dropdown-toggle {
-    background-color: #ff5757;
+    background-color: #00ba51;
     width: 30px !important;
     color: #ffff;
   }
