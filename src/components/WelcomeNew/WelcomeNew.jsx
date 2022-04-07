@@ -40,14 +40,14 @@ const WelcomeNew = () => {
           </p>
         </div>
         <div className="textVar1">
-          <p>
-            Alergias : 
+          <div>
+           <p> Alergias : </p>
               <div className="containerAlergies">
             {userData.alergia ? userData.checked.map((item, index) => {
               return <p key={index}>{item}</p> 
             }) : "No hay alergias"}
             </div>
-          </p>
+          </div>
         </div>
         </div>
       <div className="image">
@@ -56,7 +56,7 @@ const WelcomeNew = () => {
           alt="sad"
         />
       </div>
-
+            
       </div>
       {/* <div className="firstBlock">
         <div>

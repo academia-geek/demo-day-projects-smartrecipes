@@ -1,6 +1,6 @@
 import React from "react";
 import { Field, Formik, ErrorMessage, Form } from "formik";
-import { FormLogin } from "../../styles/styledComponents/LoginStyled";
+import { ButtonLogin, FormLogin, LoginStyled } from "../../styles/styledComponents/LoginStyled";
 import * as Yup from "yup";
 // import fileUpload2 from "../../helpers/fileUpload2";
 import fileUpload from "../../helpers/fileUpload";
@@ -64,6 +64,7 @@ export const FormRegister = ({setLogin}) => {
   });
 
   return (
+    <LoginStyled>
     <Formik
       initialValues={initialValues}
       onSubmit={(values, { setSubmitting }) => {
@@ -257,10 +258,11 @@ export const FormRegister = ({setLogin}) => {
           )}
           {/*  <Link to="/register" className='registerLogin'>Registrarse</Link> */}
 
-          <button type="submit">Submit</button>
+          <ButtonLogin type="submit">Submit</ButtonLogin>
         </FormLogin>
       )}
     </Formik>
+    </LoginStyled>
   );
 };
 

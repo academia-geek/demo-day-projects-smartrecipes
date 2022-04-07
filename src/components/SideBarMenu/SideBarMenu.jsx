@@ -6,12 +6,17 @@ import NavBarUbicacion from "../NavBar/NavBarUbicacion";
 import { BsGrid, BsHeart, BsCalendarWeek} from "react-icons/bs";
 import { HiOutlineLogout } from "react-icons/hi";
 import { IoSettingsOutline } from "react-icons/io5";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { logoutSincrono } from "../../redux/action/actionLogin";
 
 const SideBarMenu = () => {
   const {ciudades} = useSelector(store => store.funtional);
   const {isAuth} = useSelector(store => store.login);
   const pathName = window.location.pathname;
+  const dispatch = useDispatch();
+  const handleLogout = () => {
+    dispatch(logoutSincrono())
+  }
   return (
     <>
     <SideBarStyled>
@@ -58,16 +63,21 @@ const SideBarMenu = () => {
           </li>
           <li>
             <DivCategoryStyle>
-              <Link to="/logout">
-              <i><HiOutlineLogout className="iconSideBar"/></i>
-              <p>Logout</p>
-              </Link>
               <Link to="/blog">
               <i><HiOutlineLogout className="iconSideBar"/></i>
               <p>Blog</p>
               </Link>
             </DivCategoryStyle>
           </li>
+          {isAuth && 
+          <li>
+            <DivCategoryStyle>
+              <ButtonLogin onClick={()=> handleLogout()}>
+              <i><HiOutlineLogout className="iconSideBar"/></i>
+              <p>Logout</p>
+              </ButtonLogin>
+            </DivCategoryStyle>
+          </li>}
         </ul>
       </div>
       <div className="footer">
