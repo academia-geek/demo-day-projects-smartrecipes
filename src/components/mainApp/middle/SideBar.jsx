@@ -68,7 +68,7 @@ const SideBar = () => {
 
     setDates(historicDatesFormated);
     setPrices(historicPricesFormated);
-    console.log(brand);
+    
   };
 
   useEffect(() => {
