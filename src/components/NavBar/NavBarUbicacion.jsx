@@ -34,7 +34,7 @@ const NavBarUbicacion = () => {
   return (
 
     <NavLocationStyled>
-      <TitleRecetas>Elige tu ciudad</TitleRecetas>
+      <TitleRecetas>Selecciona tu ubicación</TitleRecetas>
 
       <SplitStyled variant="light" title="Ciudades" id="segmented-button-dropdown-1">
         {ciudades !== undefined && ciudades.map((city, i) => {

@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { Navigate, Outlet } from 'react-router-dom';
 
 const useAuth = () => {
-  const auth = useSelector((state) => state.login.isAuth);
+  const auth = useSelector(store => store.login.isAuth);
   return auth;
 }
 export const ProtectedRoutes = () => {

@@ -1,11 +1,10 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Configuracion from "../components/afterLogin/Configuracion/Configuracion";
+
 import ListaProductos from "../components/afterLogin/listaProductos/ListaProductos";
 import Logo from "../components/landing/Logo";
 import Welcome from "../components/landing/Welcome";
-import Login from "../components/login/Login";
-import Register from "../components/login/Register";
+
 import NavBarUbicacion from "../components/NavBar/NavBarUbicacion";
 import RecetaIndChef from "../components/Recipes/RecetaIndChef";
 import RecetasRecomendadas from "../components/Recipes/RecetasRecomendadas";

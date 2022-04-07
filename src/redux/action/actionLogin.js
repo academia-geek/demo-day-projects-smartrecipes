@@ -15,17 +15,19 @@ import { registerUserSync } from "./actionRegister";
 import { types } from "../types/types";
 
 
+
 export const login = (email, password) => {
-  // const navigate = useNavigate()
+
   return (dispatch) => {
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password)
       .then(({ user }) => {        
-        dispatch(loginSincrono(user.uid))
-        console.log("Bienvenid@")       
+        dispatch(loginSincrono(user.uid))        
+        console.log("Bienvenid@") 
+        return true      
       })
-      .catch((e) => {
-        console.log("El usuario no existe");
+      .catch(e => {
+        console.log("El usuario no existe")
       });
   };
 };
@@ -89,7 +91,6 @@ export const loginFacebook = () => {
       });
   };
 };
-
 export const loginSincrono = ( uid) => {
   console.log('entrando a login sincrono')
   return {
@@ -99,7 +100,6 @@ export const loginSincrono = ( uid) => {
     },
   };
 };
-
 export const logoutSincrono = () => {
   return {
     type: types.logout,
@@ -111,7 +111,6 @@ export const actionAddUserData = (userData)=>{
     payload: userData
   }
 }
-
 export const addFavorite = (favorite) => {
   return{
     type: types.addFavorites,

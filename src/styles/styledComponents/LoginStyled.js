@@ -23,8 +23,10 @@ export const LoginCol = styled(Col)`
 //styled of div 
 export const LoginStyled = styled.div`
   background-color: #ffffff;
+  padding: 2rem;
   width: 479px;
-  height: 500px;
+  
+  max-height: contain;
   border-radius: 50px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   .login-text {
@@ -47,8 +49,7 @@ export const LoginStyled = styled.div`
 export const FormLogin = styled(Form)`
   width: 75%;
   display: block;
-  margin: 15px Auto;
-  font-family: "Roboto";
+  margin: 15px Auto; 
   font-weight: 400;
   font-size: 14px;
   height: auto;
@@ -79,12 +80,12 @@ export const ButtonLogin = styled(Button)`
     text-decoration: none;
   }
   &:hover {
-    background-color: #ed6f6f;
+    background-color: #00ba51;
     color: #ffffff;
   }
   &:focus {
     outline: none;
-    background-color: #FF5757;
+    background-color: #00ba51;
     color: #ffffff;
   }
   @media only screen and (max-width: 600px) {

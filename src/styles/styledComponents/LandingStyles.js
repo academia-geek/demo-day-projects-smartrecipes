@@ -58,12 +58,12 @@ export const ButtonLogo = styled(Button)`
   max-width: 350px;
   border-radius: 20px;
   &:hover {
-    background-color: #ed6f6f;
+    background-color: #00ba51;
     color: #ffffff;
   }
   &:focus {
     outline: none;
-    background-color: #ff5757;
+    background-color: #00ba51;
     color: #ffffff;
   }
   @media only screen and (max-width: 600px) {
