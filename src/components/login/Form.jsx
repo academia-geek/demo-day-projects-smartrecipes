@@ -1,6 +1,6 @@
 import React from "react";
 import { Field, Formik, ErrorMessage, Form } from "formik";
-import { FormLogin } from "../../styles/styledComponents/LoginStyled";
+import { ButtonLogin, FormLogin, LoginStyled } from "../../styles/styledComponents/LoginStyled";
 import * as Yup from "yup";
 // import fileUpload2 from "../../helpers/fileUpload2";
 import fileUpload from "../../helpers/fileUpload";
@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 let url = ''
 
-export const FormRegister = () => {
+export const FormRegister = ({setLogin}) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const handleFileChange = async (e) => {
@@ -64,6 +64,7 @@ export const FormRegister = () => {
   });
 
   return (
+    <LoginStyled>
     <Formik
       initialValues={initialValues}
       onSubmit={(values, { setSubmitting }) => {
@@ -73,10 +74,10 @@ export const FormRegister = () => {
         photo = url
         const values1 = { ...values, photo }
 
-        setTimeout(() => {
-          alert(JSON.stringify(values1, null, 2));
+        setTimeout(() => {          
           dispatch(registroEmailPasswordNombre(values1))
-          navigate('/login')
+          alert('Tu usuario fue creado con éxito')
+          setLogin(true)
           setSubmitting(false);
         }, 400);
       }}
@@ -84,18 +85,6 @@ export const FormRegister = () => {
     >
       {(props) => (
         <FormLogin as={Form} className="form-signin">
-          {/* 
-          This first checkbox will result in a boolean value being stored. Note that the `value` prop
-          on the <Field/> is omitted
-        */}
-
-          {/* 
-          Multiple checkboxes with the same name attribute, but different
-          value attributes will be considered a "checkbox group". Formik will automagically
-          bind the checked values to a single array for your benefit. All the add and remove
-          logic will be taken care of for you.
-        */}
-
           <FormLogin.Group className="mb-3" controlId="formBasicName">
             <FormLogin.Label>Nombre</FormLogin.Label>
             <FormLogin.Control
@@ -269,10 +258,11 @@ export const FormRegister = () => {
           )}
           {/*  <Link to="/register" className='registerLogin'>Registrarse</Link> */}
 
-          <button type="submit">Submit</button>
+          <ButtonLogin type="submit">Submit</ButtonLogin>
         </FormLogin>
       )}
     </Formik>
+    </LoginStyled>
   );
 };
 

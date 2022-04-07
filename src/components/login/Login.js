@@ -9,31 +9,47 @@ import { FcGoogle } from "react-icons/fc";
 import { ImFacebook2 } from "react-icons/im";
 
 
-const Login = () => {
-
+const Login = ({setLogin}) => {
     const dispatch = useDispatch();
     const navigate = useNavigate()
     const [values, handleInputChange] = useForm({
         email: '',
         password: ''
     })
-
     const { email, password } = values;
 
     const handleLogin = (e) => {
         e.preventDefault();
-        dispatch(login(email, password))
-        navigate('/home')
+        const emailTrim = email.trim();
+        dispatch(login(emailTrim, password))          
+        setTimeout(()=> {
+            alert("Bienvenid@")
+            navigate('/home')              
+        },500)
     }
 
     const handleGoogle = () => {
-        dispatch(loginGoogle());
-        navigate('/home')
+        dispatch(loginGoogle())
+        setTimeout(()=> {
+            alert("Bienvenid@")
+            navigate('/home')              
+        },500)
+
+
+                
     }
 
     const handleFacebook = () => {
-        dispatch(loginFacebook());
-        navigate('/home')
+        dispatch(loginFacebook())
+        setTimeout(()=> {
+            alert("Bienvenid@")
+            navigate('/home')              
+        },500)
+       
+    }
+
+    const handleRegister = () => {
+        setLogin(false)
     }
 
     return (
@@ -78,7 +94,7 @@ const Login = () => {
                     />
                 </IconCol>
 
-                <Link to="/register" className='registerLogin'>Registrarse</Link>
+                <ButtonLogin onClick={()=> handleRegister()} className='registerLogin'>Registrarse</ButtonLogin>
 
             </FormLogin>
 

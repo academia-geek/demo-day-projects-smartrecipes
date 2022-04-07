@@ -1,59 +1,63 @@
 import { collection, getDocs } from "firebase/firestore";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 import { db } from "../../../firebase/firebaseConfig";
 import { actionAdd, changeActiveView } from "../../../redux/action/actionAdd";
-import { ContainerMainProductos } from "../../../styles/styledComponents/ContainerMainProductos";
+import { ButtonPrice, ContainerMainProductos } from "../../../styles/styledComponents/ContainerMainProductos";
 import SeguimientoPrecios from "../pagPrincipalLog/seguimientoPrecios/SeguimientoPrecios";
 
-const ListaProductos = () => {  
-  const {city, path} = useSelector(store => store.funtional)
-  const {activeLook} = useSelector(store => store.add)
-  const dispatch = useDispatch();  
+const ListaProductos = () => {
+  const { city, path } = useSelector(store => store.funtional)
+  const { productos:{merqueo,jumbo}, activeLook } = useSelector(store => store.add);
+  const dispatch = useDispatch();
   const getFromFirebaseJumbo = async () => {
     const initialCompany = 'jumbo'
-    if(localStorage.getItem(`productos${path}${initialCompany}`) === null){
-    const querySnapshot = await getDocs(
-      collection(db, `cornershop/${path}/precios-jumbo`)
-    );
-    querySnapshot.forEach((doc) => {
-      productos.push({
-        id: doc.id,
-        data: doc.data(),
+    if (localStorage.getItem(`productos${path}${initialCompany}`) === null) {
+      const querySnapshot = await getDocs(
+        collection(db, `cornershop/${path}/precios-jumbo`)
+      );
+      querySnapshot.forEach((doc) => {
+        productos.push({
+          id: doc.id,
+          data: doc.data(),
+        });
       });
-    });
-    localStorage.setItem(`productos${path}${initialCompany}`, JSON.stringify(productos));
-    dispatch(actionAdd(productos,initialCompany));
-    dispatch(changeActiveView(initialCompany))
-  } else {
-    productos = JSON.parse(localStorage.getItem(`productos${path}${initialCompany}`));
-    dispatch(actionAdd(productos,initialCompany));
-    dispatch(changeActiveView(initialCompany))
-  }
+      localStorage.setItem(`productos${path}${initialCompany}`, JSON.stringify(productos));
+      dispatch(actionAdd(productos, initialCompany));
+      dispatch(changeActiveView(initialCompany))
+    } else {
+      productos = JSON.parse(localStorage.getItem(`productos${path}${initialCompany}`));
+      dispatch(actionAdd(productos, initialCompany));
+      dispatch(changeActiveView(initialCompany))
+    }
   };
   let productos = [];
+  const valueStore = true;
   const handleJumbo = () => {
-    getFromFirebaseJumbo();    
+    getFromFirebaseJumbo();
   }
   const handleMerqueo = () => {
     dispatch(changeActiveView('merqueo'));
   }
-    
+  const activeCount = activeLook === 'merqueo' ? Object.values(merqueo).length : Object.values(jumbo).length;
+
   return (
     <ContainerMainProductos>
-      <h3>Seguimiento de precios</h3>
+      <h3>Precio actual de tus ingredientes</h3>
+      { city !== '' ? <>
       <p>Empresa : {activeLook}</p>
       <p>Ciudad : <strong>{city}</strong></p>
-      <div className="containerButton">        
-        <button type="button">Todos los productos</button>
-       
-      <p>Productos con más variacion</p>
-      
+      <h5>Todos los productos</h5> 
+      <p>Tenemos {activeCount} productos para comparar</p>
+      <div className="containerButton">
+        <ButtonPrice onClick={() => handleMerqueo()}></ButtonPrice>
+        <ButtonPrice jumbo={valueStore.toString()} onClick={() => handleJumbo()}></ButtonPrice>
       </div>
-      <button onClick={() => handleMerqueo()}>Merqueo</button>
-      <button onClick={()=>handleJumbo()}>Jumbo</button>
+      </>
+      : <p>Para empezar elige una ciudad</p>
+      }
       <SeguimientoPrecios />
+
     </ContainerMainProductos>
   );
 };

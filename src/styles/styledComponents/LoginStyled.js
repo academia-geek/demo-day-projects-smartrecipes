@@ -67,7 +67,7 @@ export const FormLogin = styled(Form)`
 `;
 
 export const ButtonLogin = styled(Button)`
-  background-color: #FF5757;
+  background-color: #008f3e;
   color: #FFFF;
   border: none;
   width: 50%;

@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const BlogContainer = styled.div`
+
+    height: 1000px;
+
     width: 100%;
     padding: 10px;
     margin: 0px;

@@ -1,9 +1,6 @@
-import { collection, getDocs } from "firebase/firestore";
-import { useContext, useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { db } from "../../firebase/firebaseConfig";
-import { actionAdd } from "../../redux/action/actionAdd";
-import { actionFunctionalCiudades } from "../../redux/action/actionFuntional";
+import { doc, getDoc } from "firebase/firestore";
+import { useContext, useEffect } from "react";
+
 import Split from "react-split";
 import { ContainerAppStyle } from "../../styles/styledComponents/ContainerApp";
 import {
@@ -11,9 +8,6 @@ import {
   DivFlex,
 } from "../../styles/styledComponents/MainAppStyled";
 import DinamicMenu from "../landing/DinamicMenu";
-import Recetas from "./dinamic/Recetas";
-import SideBar from "./middle/SideBar";
-
 import SliderApp from "./middle/SliderApp";
 import BarraBusqueda from "./top/barraBusqueda/BarraBusqueda";
 import Ubicacion from "./top/ubicacion/Ubicacion";
@@ -27,12 +21,30 @@ import ListaProductos from "../afterLogin/listaProductos/ListaProductos";
 import Blog from "./dinamic/Blog";
 import Configuracion from "../afterLogin/Configuracion/Configuracion";
 import { ResizeContext } from "../../context/ResizeContext";
+import WelcomeNew from "../WelcomeNew/WelcomeNew";
+
+import { db } from "../../firebase/firebaseConfig";
+import { actionAddUserData } from "../../redux/action/actionLogin";
+import { useDispatch, useSelector } from "react-redux";
 
 
 const MainApp = () => {
-  let location = useLocation();
-  let pathName = location.pathname;
+  const location = useLocation();
+  const pathName = location.pathname;
+  const dispatch = useDispatch()
+  const {userId} = useSelector(store => store.login)
+  const uid = Object.values(userId)[0]
+  console.log('uui',uid)
   const {width,breakpoint} = useContext(ResizeContext);
+  const getUserData = async () => {
+    const docRef = doc(db, "usuarios", uid);
+    const docSnap = await getDoc(docRef);
+    const userData = docSnap.data()
+    dispatch(actionAddUserData(userData))
+  }
+  useEffect(()=>{
+    getUserData()
+  },[])
 
 
   return (
@@ -40,8 +52,7 @@ const MainApp = () => {
       <ContainerAppStyle>
         <Split
           className="split"
-          sizes={[15, 70, 15]}
-          minSize={[200, 700, 350]}
+         sizes={width < breakpoint ? [100] : [15, 85]}
           // maxSize={[200,700,100]}
           gutterSize={10}
         >       
@@ -61,13 +72,18 @@ const MainApp = () => {
               <>
                 <ContainerAppTopStyle>
                   <BarraBusqueda />
-                  <Ubicacion />
+                  {/* <Ubicacion /> */}
                   {/* <Idioma /> */}
                 </ContainerAppTopStyle>
               </>
             )}
-
-            {pathName === "/home" && <SliderApp />}          
+            
+            {pathName === "/home" &&( 
+            <>
+            {/* <SliderApp /> */}
+            <WelcomeNew/>
+            </>
+            )}          
             {pathName === "/login" && <Login />}
             {pathName === "/blog" && <Blog />}
             {pathName === "/register" && <Register />}
