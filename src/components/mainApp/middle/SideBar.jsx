@@ -63,6 +63,7 @@ const SideBar = () => {
       }
     });
     let innerAverage = accumulate / length;
+    innerAverage = innerAverage.toFixed(2);
     setAverage(innerAverage);
 
     setDates(historicDatesFormated);

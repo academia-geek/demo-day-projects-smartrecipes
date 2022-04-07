@@ -22,9 +22,8 @@ const Login = ({setLogin}) => {
         e.preventDefault();
         const emailTrim = email.trim();
         dispatch(login(emailTrim, password))          
-        setTimeout(()=> {
-            alert("Bienvenid@")
-            navigate('/home')              
+        setTimeout(()=> {            
+            navigate('/home')                
         },500)
     }
 
