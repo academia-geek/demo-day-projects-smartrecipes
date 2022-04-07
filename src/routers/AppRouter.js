@@ -24,7 +24,7 @@ const AppRouter = () => {
           <Route path="/u-select " element={<MainApp />} />
           <Route path="/login" element={<MainApp />} />
           <Route path="/register" element={<MainApp />} />
-          <Route path="/blog" element={<MainApp />} />
+          
           <Route path="/ingredientPrices" element={<IngredientPricesApp />} />
           <Route path="/recetas" element={<IngredientPricesApp />} />
           <Route path="/zonasocialrecetas" element={<ZonaSocialRecetas />} />
@@ -34,6 +34,7 @@ const AppRouter = () => {
           <Route element={<ProtectedRoutes/>}>
             <Route path="/home" element={<MainApp />} />
             <Route path="/calendario" element={<MainApp />} />
+            <Route path="/blog" element={<MainApp />} />
           <Route path="/config" element={<MainApp />} />
           </Route>
           <Route path="/productos" element={<ListaProductos />} />

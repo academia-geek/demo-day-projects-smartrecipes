@@ -1,2 +1,2 @@
 export const VerdeLima = '#c9e265'
-export const naranja = '#ff5757'
+export const naranja = ' #008f3e'

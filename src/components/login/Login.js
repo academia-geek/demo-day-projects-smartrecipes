@@ -10,32 +10,41 @@ import { ImFacebook2 } from "react-icons/im";
 
 
 const Login = ({setLogin}) => {
-
     const dispatch = useDispatch();
     const navigate = useNavigate()
     const [values, handleInputChange] = useForm({
         email: '',
         password: ''
     })
-
     const { email, password } = values;
 
     const handleLogin = (e) => {
         e.preventDefault();
-        dispatch(login(email, password))          
+        const emailTrim = email.trim();
+        dispatch(login(emailTrim, password))          
         setTimeout(()=> {
-
+            alert("Bienvenid@")
             navigate('/home')              
         },500)
     }
 
     const handleGoogle = () => {
         dispatch(loginGoogle())
+        setTimeout(()=> {
+            alert("Bienvenid@")
+            navigate('/home')              
+        },500)
+
+
                 
     }
 
     const handleFacebook = () => {
         dispatch(loginFacebook())
+        setTimeout(()=> {
+            alert("Bienvenid@")
+            navigate('/home')              
+        },500)
        
     }
 
@@ -85,7 +94,7 @@ const Login = ({setLogin}) => {
                     />
                 </IconCol>
 
-                <button onClick={()=> handleRegister()} className='registerLogin'>Registrarse</button>
+                <ButtonLogin onClick={()=> handleRegister()} className='registerLogin'>Registrarse</ButtonLogin>
 
             </FormLogin>
 

@@ -45,7 +45,7 @@ export const ImgLogo = styled.img`
 `;
 
 export const ButtonLogo = styled(Button)`
-  background-color: #ff5757;
+  background-color: #008f3e;
   color: #ffffff;
   border: none;
   min-width: 180px;

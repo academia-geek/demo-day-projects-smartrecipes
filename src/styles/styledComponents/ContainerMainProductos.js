@@ -10,8 +10,7 @@ export const ContainerMainProductos = styled.div`
   }
   h5 {
     text-align: center;
-    margin-right: 15px;
-    font-family: 'Nunito';
+    margin-right: 15px; 
     font-weight: 600;
     font-size: 20px;
     color: #3B470B;
