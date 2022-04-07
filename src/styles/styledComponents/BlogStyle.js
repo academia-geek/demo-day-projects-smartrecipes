@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 
 export const BlogContainer = styled.div`
-    border: 1px solid blue;
     width: 100%;
     padding: 10px;
     margin: 0px;
     overflow-y: scroll;
 `
 export const MainBlog = styled.main`
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -28,13 +26,12 @@ export const ImagenBlog= styled.img`
 `
 
 export const ArticleBlog = styled.article`
-    border: 1px solid purple;
     padding: 1rem;
     text-align: center;
 `
 
 export const TitleBlogInicial = styled.p`
-    color: blue;
+    color: gray;
     font-style: italic;
 `
 export const AnchorBlog = styled.a`
