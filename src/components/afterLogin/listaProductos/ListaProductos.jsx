@@ -1,8 +1,6 @@
 import { collection, getDocs } from "firebase/firestore";
 import React from "react";
-import { Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 import { db } from "../../../firebase/firebaseConfig";
 import { actionAdd, changeActiveView } from "../../../redux/action/actionAdd";
 import { ButtonPrice, ContainerMainProductos } from "../../../styles/styledComponents/ContainerMainProductos";
@@ -10,7 +8,7 @@ import SeguimientoPrecios from "../pagPrincipalLog/seguimientoPrecios/Seguimient
 
 const ListaProductos = () => {
   const { city, path } = useSelector(store => store.funtional)
-  const { activeLook } = useSelector(store => store.add)
+  const { productos:{merqueo,jumbo}, activeLook } = useSelector(store => store.add);
   const dispatch = useDispatch();
   const getFromFirebaseJumbo = async () => {
     const initialCompany = 'jumbo'
@@ -41,18 +39,23 @@ const ListaProductos = () => {
   const handleMerqueo = () => {
     dispatch(changeActiveView('merqueo'));
   }
+  const activeCount = activeLook === 'merqueo' ? Object.values(merqueo).length : Object.values(jumbo).length;
 
   return (
     <ContainerMainProductos>
       <h3>Precio actual de tus ingredientes</h3>
+      { city !== '' ? <>
       <p>Empresa : {activeLook}</p>
       <p>Ciudad : <strong>{city}</strong></p>
-      <h5>Todos los productos</h5>
- 
+      <h5>Todos los productos</h5> 
+      <p>Tenemos {activeCount} productos para comparar</p>
       <div className="containerButton">
         <ButtonPrice onClick={() => handleMerqueo()}></ButtonPrice>
         <ButtonPrice jumbo={valueStore.toString()} onClick={() => handleJumbo()}></ButtonPrice>
       </div>
+      </>
+      : <p>Para empezar elige una ciudad</p>
+      }
       <SeguimientoPrecios />
 
     </ContainerMainProductos>

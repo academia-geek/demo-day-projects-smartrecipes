@@ -5,6 +5,7 @@ import { ContainerAppStyle } from "../../styles/styledComponents/ContainerApp";
 import SliderApp from "../mainApp/middle/SliderApp";
 import { DivFlex } from "../../styles/styledComponents/MainAppStyled";
 import { DivRegister } from "../../styles/styledComponents/RegisterStyle";
+import { ButtonLogin } from "../../styles/styledComponents/LoginStyled";
 //import { useDispatch } from 'react-redux';
 //import { register } from '../../redux/action/actionRegister';
 
@@ -14,7 +15,7 @@ const Register = ({setLogin}) => {
   }
   return (
   <DivRegister >
-    <button type="button" onClick={()=>handleLogin()}>Login</button>
+    <ButtonLogin type="button" onClick={()=>handleLogin()}>Login</ButtonLogin>
     <FormRegister setLogin={setLogin} />
   </DivRegister>); 
 };

@@ -14,7 +14,7 @@ import { ContainerDataMain } from '../../styles/styledComponents/ContainerDataMa
 import { actionFunctionalCiudades } from '../../redux/action/actionFuntional'
 import { Spinner } from 'react-bootstrap'
 import BarraBusqueda from '../mainApp/top/barraBusqueda/BarraBusqueda'
-import Ubicacion from '../mainApp/top/ubicacion/Ubicacion'
+
 import { useLocation } from 'react-router-dom'
 import Recetas from '../mainApp/dinamic/Recetas'
 import SideBarRecetas from '../mainApp/middle/SideBarRecetas'

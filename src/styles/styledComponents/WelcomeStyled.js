@@ -64,7 +64,7 @@ export const WelcomeNewStyled = styled.div`
         flex-direction: row;
       }
       &:hover {
-        background-color: ${naranja};
+        background-color: #0193FD;
         p{
           color: white;
         }
@@ -79,7 +79,7 @@ export const WelcomeNewStyled = styled.div`
           color: ${naranja};
         }
         &:hover{
-          background-color: ${naranja};
+          background-color: #0193FD;
           p{
             color:white;
           }
